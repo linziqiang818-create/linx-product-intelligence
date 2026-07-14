@@ -1,3 +1,5 @@
+import { hasKnownCategory, hasRecognizedMaterial } from "./selection-policy.ts";
+
 export type Grade = "A" | "B" | "C" | "D";
 export type RecommendationDecision = "优先跟进" | "有条件跟进" | "需要优化" | "待核算" | "暂不建议";
 export type DataStatus = "complete" | "needs_data";
@@ -36,21 +38,26 @@ export function hasSuspiciousPackage(packageDimensionsCm: string | undefined, pa
   return dimensions.length >= 3 && Math.max(...dimensions.slice(0, 3)) < 30 && Number(packageGrossKg ?? 0) > 15;
 }
 
-export function dataStatusFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined): DataStatus {
-  return hasMissingPackage(packageDimensionsCm, packageGrossKg) || hasSuspiciousPackage(packageDimensionsCm, packageGrossKg)
+export type SelectionDataContext = { category?: string; material?: string; price?: number };
+
+export function dataStatusFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined, context?: SelectionDataContext): DataStatus {
+  return dataIssuesFor(packageDimensionsCm, packageGrossKg, context).length
     ? "needs_data"
     : "complete";
 }
 
-export function dataIssuesFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined) {
+export function dataIssuesFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined, context?: SelectionDataContext) {
   const issues: string[] = [];
   if (Number(packageGrossKg ?? 0) <= 0) issues.push("缺少包装重量");
   if (packageNumbers(packageDimensionsCm).length < 3) issues.push("缺少包装尺寸");
   else if (hasSuspiciousPackage(packageDimensionsCm, packageGrossKg)) issues.push("包装尺寸疑似单位错误");
+  if (context && !hasKnownCategory(context.category ?? "")) issues.push("类目待确认");
+  if (context && !hasRecognizedMaterial(context.material ?? "")) issues.push("材质待确认");
+  if (context && Number(context.price ?? 0) <= 0) issues.push("售价待确认");
   return issues;
 }
 
-export function dataWarningFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined) {
-  const issues = dataIssuesFor(packageDimensionsCm, packageGrossKg);
+export function dataWarningFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined, context?: SelectionDataContext) {
+  const issues = dataIssuesFor(packageDimensionsCm, packageGrossKg, context);
   return issues.length ? `数据待补：${issues.join("、")}；补齐前不参与推荐或不推荐分类` : "";
 }
