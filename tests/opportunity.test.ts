@@ -44,10 +44,12 @@ test("rejects a popular product that the company should not develop", () => {
   assert.equal(result.score, 0);
 });
 
-test("does not recommend records with missing packaging data", () => {
+test("treats missing packaging as data status instead of a recommendation conclusion", () => {
   const result = assess({ ...base, packageGrossKg: 0, packageDimensionsCm: "" });
   assert.equal(result.qualified, true);
-  assert.equal(result.decision, "待核算");
+  assert.equal(result.decision, "需要优化");
+  assert.equal(result.dataStatus, "needs_data");
+  assert.deepEqual(result.dataWarnings, ["缺少完整包装重量或尺寸"]);
   assert.ok(result.reasons.includes("缺少完整包装重量或尺寸，不能进入推荐榜"));
 });
 

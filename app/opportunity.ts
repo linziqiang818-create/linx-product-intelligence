@@ -17,6 +17,7 @@ export type OpportunityInput = {
 };
 
 export type Decision = "优先跟进" | "有条件跟进" | "需要优化" | "暂不建议" | "待核算";
+export type AssessmentDataStatus = "complete" | "needs_data";
 
 const glassTerms = /\bglass\b|tempered|mirror|玻璃|镜面/i;
 const upholsteredTerms = /sofa|couch|recliner|accent chair|upholstered|mattress|bed frame|沙发|床垫|软包/i;
@@ -154,9 +155,11 @@ export function assess(input: OpportunityInput) {
   const qualified = blockers.length === 0 && companyFit >= 58;
   const score = qualified ? clamp(companyFit * 0.35 + hiddenOpportunity * 0.35 + demand * 0.15 + margin * 0.15) : 0;
 
-  let decision: Decision = "待核算";
+  const dataStatus: AssessmentDataStatus = packageKnown ? "complete" : "needs_data";
+  const dataWarnings = !packageKnown ? ["缺少完整包装重量或尺寸"] : [];
+  let decision: Decision = "需要优化";
   if (!qualified) decision = "暂不建议";
-  else if (!packageKnown || !marginKnown) decision = "待核算";
+  else if (!packageKnown || !marginKnown) decision = "需要优化";
   else if (effectiveMargin < 15) decision = "暂不建议";
   else if (input.packageGrossKg > 49) decision = "需要优化";
   else if (companyFit >= 80 && hiddenOpportunity >= 80 && score >= 80 && effectiveMargin >= 21) decision = "优先跟进";
@@ -181,6 +184,8 @@ export function assess(input: OpportunityInput) {
 
   return {
     decision,
+    dataStatus,
+    dataWarnings,
     qualified,
     score,
     companyFit,
