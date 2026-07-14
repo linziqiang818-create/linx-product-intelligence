@@ -17,6 +17,10 @@ export function gradeFromDecision(decision: RecommendationDecision): Grade {
   return "D";
 }
 
+export function gradeWithDataStatus(decision: RecommendationDecision, dataStatus: DataStatus): Grade {
+  return dataStatus === "needs_data" ? "C" : gradeFromDecision(decision);
+}
+
 function packageNumbers(packageDimensionsCm: string | undefined) {
   return (String(packageDimensionsCm ?? "").match(/[\d.]+/g) ?? [])
     .map(Number)
@@ -38,12 +42,15 @@ export function dataStatusFor(packageDimensionsCm: string | undefined, packageGr
     : "complete";
 }
 
+export function dataIssuesFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined) {
+  const issues: string[] = [];
+  if (Number(packageGrossKg ?? 0) <= 0) issues.push("缺少包装重量");
+  if (packageNumbers(packageDimensionsCm).length < 3) issues.push("缺少包装尺寸");
+  else if (hasSuspiciousPackage(packageDimensionsCm, packageGrossKg)) issues.push("包装尺寸疑似单位错误");
+  return issues;
+}
+
 export function dataWarningFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined) {
-  if (hasMissingPackage(packageDimensionsCm, packageGrossKg)) {
-    return "数据待补：缺少完整包装重量或尺寸，等级最高为 C";
-  }
-  if (hasSuspiciousPackage(packageDimensionsCm, packageGrossKg)) {
-    return "数据待补：包装尺寸疑似单位错误，等级最高为 C";
-  }
-  return "";
+  const issues = dataIssuesFor(packageDimensionsCm, packageGrossKg);
+  return issues.length ? `数据待补：${issues.join("、")}；补齐前不参与推荐或不推荐分类` : "";
 }

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { assess, type OpportunityInput } from "../app/opportunity.ts";
+import { gradeWithDataStatus } from "../app/recommendation-grade.ts";
 
 const base: OpportunityInput = {
   asin: "TEST-ASIN",
@@ -41,16 +42,48 @@ test("rejects a popular product that the company should not develop", () => {
   });
   assert.equal(result.qualified, false);
   assert.equal(result.decision, "暂不建议");
+  assert.equal(result.hardRejected, true);
+  assert.ok(result.hardRejectReasons.some((reason) => reason.includes("纯金属")));
   assert.equal(result.score, 0);
 });
 
-test("treats missing packaging as data status instead of a recommendation conclusion", () => {
-  const result = assess({ ...base, packageGrossKg: 0, packageDimensionsCm: "" });
-  assert.equal(result.qualified, true);
-  assert.equal(result.decision, "需要优化");
-  assert.equal(result.dataStatus, "needs_data");
-  assert.deepEqual(result.dataWarnings, ["缺少完整包装重量或尺寸"]);
-  assert.ok(result.reasons.includes("缺少完整包装重量或尺寸，不能进入推荐榜"));
+test("keeps missing weight, missing dimensions, and suspicious units out of D", () => {
+  const cases = [
+    { input: { ...base, packageGrossKg: 0 }, warning: "缺少包装重量" },
+    { input: { ...base, packageDimensionsCm: "" }, warning: "缺少包装尺寸" },
+    { input: { ...base, packageGrossKg: 47.2, packageDimensionsCm: "9.91 x 5.08 x 3.05 cm" }, warning: "包装尺寸疑似单位错误" },
+  ];
+
+  for (const { input, warning } of cases) {
+    const result = assess(input);
+    assert.equal(result.dataStatus, "needs_data");
+    assert.equal(result.hardRejected, false);
+    assert.ok(result.dataWarnings.includes(warning));
+    assert.notEqual(gradeWithDataStatus(result.decision, result.dataStatus), "D");
+  }
+});
+
+test("restores normal grading after packaging data is completed", () => {
+  const pending = assess({ ...base, packageGrossKg: 0 });
+  const completed = assess(base);
+  assert.equal(pending.dataStatus, "needs_data");
+  assert.equal(completed.dataStatus, "complete");
+  assert.equal(gradeWithDataStatus(completed.decision, completed.dataStatus), "A");
+});
+
+test("keeps confirmed glass and upholstered supply-chain mismatches in D", () => {
+  const cases = [
+    { title: "Tempered Glass Display Cabinet", material: "Tempered glass and steel", reason: "玻璃" },
+    { title: "Upholstered Accent Chair", material: "Fabric and foam", reason: "软体" },
+  ];
+
+  for (const item of cases) {
+    const result = assess({ ...base, ...item });
+    assert.equal(result.dataStatus, "complete");
+    assert.equal(result.hardRejected, true);
+    assert.equal(gradeWithDataStatus(result.decision, result.dataStatus), "D");
+    assert.ok(result.hardRejectReasons.some((reason) => reason.includes(item.reason)));
+  }
 });
 
 test("does not mistake a crowded mature listing for a hidden opportunity", () => {
@@ -66,5 +99,6 @@ test("does not mistake a crowded mature listing for a hidden opportunity", () =>
     priceUplift: 0,
   });
   assert.ok(result.hiddenOpportunity < 48);
-  assert.equal(result.decision, "暂不建议");
+  assert.equal(result.hardRejected, false);
+  assert.equal(result.decision, "需要优化");
 });

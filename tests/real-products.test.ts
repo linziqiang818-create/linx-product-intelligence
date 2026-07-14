@@ -1,7 +1,14 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { dataStatusFor, gradeFromDecision, gradeLabels, hasSuspiciousPackage } from "../app/recommendation-grade.ts";
+import {
+  dataIssuesFor,
+  dataStatusFor,
+  gradeFromDecision,
+  gradeLabels,
+  gradeWithDataStatus,
+  hasSuspiciousPackage,
+} from "../app/recommendation-grade.ts";
 
 type RealProduct = { asin: string; title: string; imageUrl: string; sourceUrl: string; estimatedMargin: number; importedAt: string };
 const products = JSON.parse(readFileSync(new URL("../app/real-products.json", import.meta.url), "utf8")) as RealProduct[];
@@ -39,8 +46,18 @@ test("detects impossible furniture package dimensions before ranking", () => {
   assert.equal(hasSuspiciousPackage("110 x 58 x 19 cm", 32), false);
 });
 
-test("tracks missing or suspicious packaging as a separate data status", () => {
-  assert.equal(dataStatusFor("", 0), "needs_data");
+test("routes missing or suspicious packaging to data pending without assigning D", () => {
+  assert.equal(dataStatusFor("110 x 58 x 19 cm", 0), "needs_data");
+  assert.deepEqual(dataIssuesFor("110 x 58 x 19 cm", 0), ["缺少包装重量"]);
+  assert.equal(dataStatusFor("", 32), "needs_data");
+  assert.deepEqual(dataIssuesFor("", 32), ["缺少包装尺寸"]);
   assert.equal(dataStatusFor("9.91 x 5.08 x 3.05 cm", 47.2), "needs_data");
+  assert.deepEqual(dataIssuesFor("9.91 x 5.08 x 3.05 cm", 47.2), ["包装尺寸疑似单位错误"]);
+  assert.equal(gradeWithDataStatus("暂不建议", "needs_data"), "C");
+});
+
+test("returns a product to normal grading after packaging data is completed", () => {
   assert.equal(dataStatusFor("110 x 58 x 19 cm", 32), "complete");
+  assert.equal(gradeWithDataStatus("优先跟进", "complete"), "A");
+  assert.equal(gradeWithDataStatus("暂不建议", "complete"), "D");
 });

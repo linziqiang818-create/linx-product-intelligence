@@ -1,3 +1,5 @@
+import { dataIssuesFor, dataStatusFor } from "./recommendation-grade.ts";
+
 export type OpportunityInput = {
   asin: string;
   title: string;
@@ -89,14 +91,17 @@ export function assess(input: OpportunityInput) {
     girthIn >= 105 ? "围长达到 105 in" : "",
   ].filter(Boolean);
 
-  const blockers = [
+  const hardRejectReasons = [
     isGlass ? "玻璃或镜面产品不在当前开发范围" : "",
     isUpholstered ? "软体家具不匹配现有板式家具供应链" : "",
     isUnsupported ? "类目超出现有室内板式家具能力" : "",
     isCommodity ? "纯金属或标准化商品，缺少公司优势" : "",
-    !hasCasegoodForm ? "未识别到公司可承接的家具形态" : "",
     cannotShip ? "包装尺寸或重量超过当前可发范围" : "",
     input.price < 100 ? "售价低于 100 美元目标价格带" : "",
+  ].filter(Boolean);
+  const fitConcerns = [
+    !hasCasegoodForm ? "暂未识别到公司擅长的家具形态" : "",
+    !hasPanelMaterial ? "板式家具材质信息不足或不明确" : "",
   ].filter(Boolean);
 
   let companyFit = 0;
@@ -119,6 +124,9 @@ export function assess(input: OpportunityInput) {
     : 0;
   const effectiveMargin = input.estimatedMargin > 0 ? input.estimatedMargin : modelMargin;
   const marginKnown = effectiveMargin > 0;
+  if (packageKnown && marginKnown && effectiveMargin < 15) {
+    hardRejectReasons.push(`预计利润率 ${effectiveMargin}% 低于 15% 硬门槛`);
+  }
 
   const demand = clamp(
     Math.log10(input.monthlySales + 1) * 24 +
@@ -152,19 +160,20 @@ export function assess(input: OpportunityInput) {
       Math.max(0, freightTriggers.length - 1) * 6,
   );
   const margin = !marginKnown ? 0 : clamp(effectiveMargin * 4.5);
-  const qualified = blockers.length === 0 && companyFit >= 58;
-  const score = qualified ? clamp(companyFit * 0.35 + hiddenOpportunity * 0.35 + demand * 0.15 + margin * 0.15) : 0;
+  const hardRejected = hardRejectReasons.length > 0;
+  const qualified = !hardRejected && companyFit >= 58;
+  const score = hardRejected ? 0 : clamp(companyFit * 0.35 + hiddenOpportunity * 0.35 + demand * 0.15 + margin * 0.15);
 
-  const dataStatus: AssessmentDataStatus = packageKnown ? "complete" : "needs_data";
-  const dataWarnings = !packageKnown ? ["缺少完整包装重量或尺寸"] : [];
+  const dataStatus: AssessmentDataStatus = dataStatusFor(input.packageDimensionsCm, input.packageGrossKg);
+  const dataWarnings = dataIssuesFor(input.packageDimensionsCm, input.packageGrossKg);
   let decision: Decision = "需要优化";
-  if (!qualified) decision = "暂不建议";
+  if (hardRejected) decision = "暂不建议";
   else if (!packageKnown || !marginKnown) decision = "需要优化";
-  else if (effectiveMargin < 15) decision = "暂不建议";
+  else if (companyFit < 58) decision = "需要优化";
   else if (input.packageGrossKg > 49) decision = "需要优化";
   else if (companyFit >= 80 && hiddenOpportunity >= 80 && score >= 80 && effectiveMargin >= 21) decision = "优先跟进";
   else if (hiddenOpportunity >= 48 && score >= 55 && effectiveMargin >= 16) decision = "有条件跟进";
-  else decision = "暂不建议";
+  else decision = "需要优化";
 
   const fitReasons = [
     hasPanelMaterial ? "匹配板式家具材料体系" : "",
@@ -173,19 +182,23 @@ export function assess(input: OpportunityInput) {
     ...affinity.map((item) => `匹配${item}`),
   ].filter(Boolean);
   const reasons = [
-    ...blockers,
-    !packageKnown ? "缺少完整包装重量或尺寸，不能进入推荐榜" : "",
-    ...(qualified ? hiddenSignals : []),
+    ...hardRejectReasons,
+    ...fitConcerns,
+    dataWarnings.length ? `数据待补：${dataWarnings.join("、")}，补齐前不进入推荐榜` : "",
+    ...(!hardRejected ? hiddenSignals : []),
     ...freightTriggers,
   ].filter(Boolean);
   const trendElements = elements.filter(([pattern]) => pattern.test(text)).map(([, label]) => label);
   const confidence = packageKnown && input.monthlySales > 0 && input.launchDays > 0 ? "高" : packageKnown ? "中" : "低";
-  const categoryVerdict = !qualified ? "不匹配公司能力" : affinity.length >= 2 ? "核心能力赛道" : "相邻机会赛道";
+  const categoryVerdict = hardRejected ? "已触发硬性淘汰条件" : companyFit < 58 ? "公司适配度待验证" : affinity.length >= 2 ? "核心能力赛道" : "相邻机会赛道";
 
   return {
     decision,
     dataStatus,
     dataWarnings,
+    hardRejected,
+    hardRejectReasons,
+    fitConcerns,
     qualified,
     score,
     companyFit,
@@ -200,7 +213,7 @@ export function assess(input: OpportunityInput) {
     categoryVerdict,
     fitReasons,
     hiddenSignals,
-    blockers,
+    blockers: hardRejectReasons,
     reasons,
     longestIn,
     secondIn,
