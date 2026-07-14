@@ -16,7 +16,15 @@ const samples:Product[]=[
  {asin:"B0C9BOOK03",title:"5 Tier Industrial Bookshelf with Drawer",category:"书房 / 书架",price:89.99,rating:4.5,reviews:3900,bsr:310,dimensions:"23.6 × 11.8 × 62.2 in",weight:33,material:"Particle board + steel",variants:"Brown / greige",sellingPoints:"开放式、抽屉、窄深度",painPoints:"摇晃；抽屉不顺滑",sourceUrl:"https://amazon.com/dp/B0C9BOOK03",note:"可做可调脚垫+背板加固的公寓型版本",complexity:2,differentiation:3,returnRisk:"低"},
  {asin:"B0D0NIGHT04",title:"LED Nightstand Set of 2 with USB Ports",category:"卧室 / 床头柜",price:159.99,rating:3.9,reviews:520,bsr:5600,dimensions:"19.7 × 15.7 × 23.6 in",weight:55,material:"MDF + LED",variants:"White / black",sellingPoints:"两件套、RGB 灯、USB",painPoints:"灯带故障；运输破损；安装复杂",sourceUrl:"https://amazon.com/dp/B0D0NIGHT04",note:"电子件和两件套的售后风险偏高",complexity:5,differentiation:2,returnRisk:"高"}
 ];
-function compute(p:Product,w:Weights){const company=assess({asin:p.asin,title:p.title,category:p.category,price:p.price,monthlySales:p.monthlySales??0,launchDays:p.launchDays??9999,salesGrowth:p.salesGrowth??0,rating:p.rating,reviews:p.reviews,packageGrossKg:p.packageGrossKg??p.weight/2.205,packageDimensionsCm:p.packageDimensionsCm??p.dimensions,material:p.material,estimatedMargin:p.estimatedMargin??0,priceUplift:p.priceUplift??0,sourceUrl:p.sourceUrl});const dev=company.development;const diff=p.differentiation*20;const market=company.demand;const risk=company.cannotShip||company.isGlass?0:company.development;return{dev,diff,market,risk,total:company.score,reasons:company.reasons,company};}
+function compute(p:Product,w:Weights){
+ const company=assess({asin:p.asin,title:p.title,category:p.category,price:p.price,monthlySales:p.monthlySales??0,launchDays:p.launchDays??9999,salesGrowth:p.salesGrowth??0,rating:p.rating,reviews:p.reviews,packageGrossKg:p.packageGrossKg??p.weight/2.205,packageDimensionsCm:p.packageDimensionsCm??p.dimensions,material:p.material,estimatedMargin:p.estimatedMargin??0,priceUplift:p.priceUplift??0,sourceUrl:p.sourceUrl});
+ const dev=company.companyFit;
+ const diff=Math.round((company.hiddenOpportunity*.7)+(Math.min(5,Math.max(1,p.differentiation))*20*.3));
+ const market=company.demand;
+ const risk=company.qualified?Math.max(0,100-company.freightTriggers.length*15-(p.returnRisk==="高"?35:p.returnRisk==="中"?15:0)):0;
+ const total=company.qualified?Math.round((dev*w.development+diff*w.differentiation+market*w.market+risk*w.risk)/Math.max(1,w.development+w.differentiation+w.market+w.risk)):0;
+ return{dev,diff,market,risk,total,reasons:company.reasons,company};
+}
 function saveFile(name:string,content:string,type="text/plain;charset=utf-8"){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;a.click();URL.revokeObjectURL(a.href)}
 function blank():Product{return{asin:"",title:"",category:"客厅 / 边几",price:0,rating:0,reviews:0,bsr:99999,dimensions:"",weight:0,material:"",variants:"",sellingPoints:"",painPoints:"",sourceUrl:"",note:"",complexity:3,differentiation:3,returnRisk:"中"}}
 function num(v:unknown){const match=String(v??"").replace(/,/g,"").match(/-?\d+(?:\.\d+)?/);return Number(match?.[0])||0}
