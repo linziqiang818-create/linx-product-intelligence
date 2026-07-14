@@ -12,8 +12,8 @@ test("server renders the furniture selection workbench", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>北极星选品｜美国站室内家具<\/title>/i);
-  assert.match(html, /北极星选品/);
+  assert.match(html, /<title>LINX｜AI Product Intelligence<\/title>/i);
+  assert.match(html, /LIN/);
   assert.match(html, /机会筛选/);
   assert.match(html, /收藏夹/);
   assert.match(html, /选择当前结果/);
