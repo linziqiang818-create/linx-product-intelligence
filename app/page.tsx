@@ -3,6 +3,7 @@
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
 import { assess } from "./opportunity";
+import { demoProducts } from "./demo-products";
 
 type Risk = "低" | "中" | "高";
 type Product = { asin:string; title:string; category:string; price:number; rating:number; reviews:number; bsr:number; dimensions:string; weight:number; material:string; variants:string; sellingPoints:string; painPoints:string; sourceUrl:string; note:string; complexity:number; differentiation:number; returnRisk:Risk; monthlySales?:number; launchDays?:number; salesGrowth?:number; packageGrossKg?:number; packageDimensionsCm?:string; estimatedMargin?:number; priceUplift?:number };
@@ -10,12 +11,7 @@ type Weights = { development:number; differentiation:number; market:number; risk
 const fields: (keyof Product)[] = ["asin","title","category","price","monthlySales","launchDays","salesGrowth","estimatedMargin","packageGrossKg","packageDimensionsCm","priceUplift","rating","reviews","bsr","dimensions","weight","material","variants","sellingPoints","painPoints","sourceUrl","note","complexity","differentiation","returnRisk"];
 const labels: Record<keyof Product,string> = { asin:"ASIN",title:"英文标题",category:"类目",price:"价格(USD)",monthlySales:"月销量",launchDays:"上架天数",salesGrowth:"销量环比增长率",estimatedMargin:"已报价利润率(可选覆盖)",packageGrossKg:"单箱包装毛重(kg)",packageDimensionsCm:"包装尺寸(cm)",priceUplift:"改款提价潜力(可选覆盖)",rating:"评分",reviews:"评论数",bsr:"BSR",dimensions:"尺寸",weight:"重量(lb)",material:"材质",variants:"颜色/变体",sellingPoints:"卖点",painPoints:"差评痛点",sourceUrl:"来源链接",note:"中文备注",complexity:"结构复杂度(1-5)",differentiation:"差异化空间(1-5)",returnRisk:"退货风险" };
 const defaults:Weights={development:35,differentiation:25,market:20,risk:20,threshold:62};
-const samples:Product[]=[
- {asin:"B0C7SIDE01",title:"Narrow C Shaped End Table with Charging Station",category:"客厅 / 边几",price:39.99,rating:4.4,reviews:2180,bsr:680,dimensions:"15.7 × 10.6 × 24 in",weight:11,material:"MDF + steel",variants:"Rustic brown / black",sellingPoints:"窄缝、带充电、可滑入沙发",painPoints:"插座位置不便；板材边缘易磕碰",sourceUrl:"https://amazon.com/dp/B0C7SIDE01",note:"可将插座改为双侧隐藏式，增加可替换收纳篮",complexity:2,differentiation:4,returnRisk:"低"},
- {asin:"B0C8STOR02",title:"Fluted Storage Cabinet with Adjustable Shelf",category:"玄关 / 收纳柜",price:119.99,rating:4.2,reviews:860,bsr:2140,dimensions:"31.5 × 15.7 × 34.6 in",weight:48,material:"Engineered wood",variants:"Natural oak / walnut",sellingPoints:"波纹门、可调层板",painPoints:"安装耗时；门缝不齐",sourceUrl:"https://amazon.com/dp/B0C8STOR02",note:"关注预装五金与窄深度玄关尺寸",complexity:3,differentiation:4,returnRisk:"中"},
- {asin:"B0C9BOOK03",title:"5 Tier Industrial Bookshelf with Drawer",category:"书房 / 书架",price:89.99,rating:4.5,reviews:3900,bsr:310,dimensions:"23.6 × 11.8 × 62.2 in",weight:33,material:"Particle board + steel",variants:"Brown / greige",sellingPoints:"开放式、抽屉、窄深度",painPoints:"摇晃；抽屉不顺滑",sourceUrl:"https://amazon.com/dp/B0C9BOOK03",note:"可做可调脚垫+背板加固的公寓型版本",complexity:2,differentiation:3,returnRisk:"低"},
- {asin:"B0D0NIGHT04",title:"LED Nightstand Set of 2 with USB Ports",category:"卧室 / 床头柜",price:159.99,rating:3.9,reviews:520,bsr:5600,dimensions:"19.7 × 15.7 × 23.6 in",weight:55,material:"MDF + LED",variants:"White / black",sellingPoints:"两件套、RGB 灯、USB",painPoints:"灯带故障；运输破损；安装复杂",sourceUrl:"https://amazon.com/dp/B0D0NIGHT04",note:"电子件和两件套的售后风险偏高",complexity:5,differentiation:2,returnRisk:"高"}
-];
+const samples:Product[]=demoProducts;
 function compute(p:Product,w:Weights){
  const company=assess({asin:p.asin,title:p.title,category:p.category,price:p.price,monthlySales:p.monthlySales??0,launchDays:p.launchDays??9999,salesGrowth:p.salesGrowth??0,rating:p.rating,reviews:p.reviews,packageGrossKg:p.packageGrossKg??p.weight/2.205,packageDimensionsCm:p.packageDimensionsCm??p.dimensions,material:p.material,estimatedMargin:p.estimatedMargin??0,priceUplift:p.priceUplift??0,sourceUrl:p.sourceUrl});
  const dev=company.companyFit;
@@ -33,8 +29,8 @@ function sellerProduct(r:Record<string,unknown>):Product { const text=(v:unknown
 export default function Home(){
  const [tab,setTab]=useState("机会筛选"),[products,setProducts]=useState<Product[]>(samples),[weights,setWeights]=useState<Weights>(defaults),[editing,setEditing]=useState<Product|null>(null),[notice,setNotice]=useState("");
  const [filters,setFilters]=useState({search:"",category:"全部",risk:"全部",min:0,maxWeight:999});
- useEffect(()=>{const raw=localStorage.getItem("furniture-radar-v1");if(raw)try{const d=JSON.parse(raw);setProducts(d.products??samples);setWeights(d.weights??defaults)}catch{}},[]);
- useEffect(()=>localStorage.setItem("furniture-radar-v1",JSON.stringify({products,weights})),[products,weights]);
+ useEffect(()=>{const raw=localStorage.getItem("furniture-radar-v2");if(raw)try{const d=JSON.parse(raw);setProducts(d.products??samples);setWeights(d.weights??defaults)}catch{}},[]);
+ useEffect(()=>localStorage.setItem("furniture-radar-v2",JSON.stringify({products,weights})),[products,weights]);
  const rows=useMemo(()=>products.map(p=>({...p,score:compute(p,weights)})).filter(p=>(filters.category==="全部"||p.category===filters.category)&&(filters.risk==="全部"||p.returnRisk===filters.risk)&&p.score.total>=filters.min&&p.weight<=filters.maxWeight&&`${p.asin} ${p.title}`.toLowerCase().includes(filters.search.toLowerCase())).sort((a,b)=>b.score.total-a.score.total),[products,weights,filters]);
  const recommended=useMemo(()=>rows.filter(p=>p.score.company.decision==="优先跟进"||p.score.company.decision==="有条件跟进"),[rows]);
  const cats=["全部",...Array.from(new Set(products.map(p=>p.category)))];

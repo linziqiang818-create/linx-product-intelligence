@@ -138,10 +138,10 @@ export function assess(input: OpportunityInput) {
   ].filter(Boolean);
   const crowdingPenalty = input.reviews >= 3000 ? 20 : input.reviews >= 1000 ? 10 : 0;
   const hiddenOpportunity = clamp(
-    demand * 0.42 +
-      Math.min(24, Math.max(0, reviewVelocity) * 18) +
-      hiddenSignals.length * 7 +
-      (input.reviews < 300 ? 8 : 0) -
+    demand * 0.34 +
+      Math.min(20, Math.max(0, reviewVelocity) * 12) +
+      hiddenSignals.length * 5 +
+      (input.reviews < 300 ? 6 : 0) -
       crowdingPenalty,
   );
 
@@ -159,7 +159,7 @@ export function assess(input: OpportunityInput) {
   else if (!packageKnown || !marginKnown) decision = "待核算";
   else if (effectiveMargin < 15) decision = "暂不建议";
   else if (input.packageGrossKg > 49) decision = "需要优化";
-  else if (hiddenOpportunity >= 62 && score >= 65 && effectiveMargin >= 18) decision = "优先跟进";
+  else if (companyFit >= 80 && hiddenOpportunity >= 80 && score >= 80 && effectiveMargin >= 21) decision = "优先跟进";
   else if (hiddenOpportunity >= 48 && score >= 55 && effectiveMargin >= 16) decision = "有条件跟进";
   else decision = "暂不建议";
 
