@@ -193,6 +193,21 @@ test("applies product-level calibration without generalizing it to neighboring p
   assert.equal(uncertainProduct.decision, "需要优化");
 });
 
+test("uses second-round interest for ranking without turning low interest into D", () => {
+  const priority = assess({ ...base, asin: "B0F6BP73WJ", title: "Fluted Coffee Bar Cabinet with Fridge and Wine Storage", category: "Bar Cabinets" });
+  const low = assess({ ...base, asin: "B0FJ2H1DG6", title: "Metal Loft Bed with Desk and Drawers", category: "Beds" });
+  const unseenBed = assess({ ...base, asin: "UNSEENBED1", title: "Metal Loft Bed with Desk and Drawers", category: "Beds" });
+  assert.equal(priority.interestTier, "priority");
+  assert.ok(priority.interestAdjustment > 0);
+  assert.equal(priority.decision, "有条件跟进");
+  assert.equal(low.interestTier, "low");
+  assert.ok(low.interestAdjustment < 0);
+  assert.equal(low.hardRejected, false);
+  assert.equal(low.decision, "需要优化");
+  assert.equal(unseenBed.interestTier, "unrated");
+  assert.equal(unseenBed.hardRejected, false);
+});
+
 test("routes uncertain category or material to data pending instead of D", () => {
   const unknownMaterial = assess({ ...base, material: "" });
   const unknownCategory = assess({ ...base, category: "Other" });

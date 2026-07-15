@@ -116,7 +116,7 @@ export default function CalibrationPanel({ products }: { products: CalibrationDi
   if (!current) return <section className="panel"><div className="empty"><b>暂无可校准产品</b></div></section>;
   return <section className="calibration-shell">
     <div className="calibration-head panel">
-      <div><span className="eyebrow">LINX CALIBRATION · ROUND {activeCalibrationRound}</span><h2>第二轮校准</h2><p>先判断是否符合开发边界；若理论可开发，再单独判断你对这个方向的真实兴趣。兴趣只影响排序，不等于确定立项。</p></div>
+      <div><span className="eyebrow">LINX CALIBRATION · ROUND {activeCalibrationRound}</span><h2>第 {activeCalibrationRound} 轮校准</h2><p>先判断是否符合开发边界；若理论可开发，再单独判断你对这个方向的真实兴趣。兴趣只影响排序，不等于确定立项。</p></div>
       <div className="calibration-progress"><b>{answered}/{products.length}</b><span>已判断</span><i><em style={{ width: `${products.length ? answered / products.length * 100 : 0}%` }} /></i></div>
     </div>
 
@@ -151,12 +151,12 @@ export default function CalibrationPanel({ products }: { products: CalibrationDi
     </div>}
 
     {answered > 0 && <div className="panel calibration-summary">
-      <div className="section-title"><div><span className="eyebrow">CALIBRATION SUMMARY</span><h2>第二轮校准摘要</h2></div><div className="actions"><button onClick={() => download("LINX校准反馈.json", JSON.stringify(state, null, 2))}>导出校准反馈</button><button onClick={resetRound}>重做本轮</button></div></div>
+      <div className="section-title"><div><span className="eyebrow">CALIBRATION SUMMARY</span><h2>第 {activeCalibrationRound} 轮校准摘要</h2></div><div className="actions"><button onClick={() => download("LINX校准反馈.json", JSON.stringify(state, null, 2))}>导出校准反馈</button><button onClick={resetRound}>重做本轮</button></div></div>
       <div className="summary-grid"><span><b>{summary.develop}</b>理论可开发</span><span><b>{summary.reject}</b>不适合</span><span><b>{summary.uncertain}</b>不确定</span><span><b>{summary.hardRules.length}</b>候选硬规则</span></div>
       <p><b>兴趣分层：</b>优先研究 {summary.priorityInterest} 个 · 普通备选 {summary.normalInterest} 个 · 理论可行但没兴趣 {summary.lowInterest} 个</p>
       {summary.topReasons.length > 0 && <p><b>主要原因：</b>{summary.topReasons.map(([reason, count]) => `${reason} ${count}次`).join(" · ")}</p>}
       {summary.hardRules.length > 0 && <p><b>候选硬规则：</b>{summary.hardRules.map((item) => `${products.find((product) => product.asin === item.asin)?.category ?? item.asin}（${item.reasons.join("、") || "待补原因"}）`).join("；")}</p>}
-      <p className="calibration-note">完成第二轮后，LINX 会分别校准“能不能做”和“想不想优先做”，避免把理论可行误当成强推荐。</p>
+      <p className="calibration-note">完成本轮后，LINX 会继续分别校准“能不能做”和“想不想优先做”，避免把理论可行误当成强推荐。</p>
     </div>}
   </section>;
 }

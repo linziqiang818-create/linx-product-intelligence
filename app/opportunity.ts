@@ -1,5 +1,5 @@
 import { dataIssuesFor, dataStatusFor } from "./recommendation-grade.ts";
-import { calibratedHardRejectReason, calibratedProductDisposition } from "./company-calibration.ts";
+import { calibratedHardRejectReason, calibratedInterestProfile, calibratedProductDisposition } from "./company-calibration.ts";
 import {
   glassTerms,
   isStandardizedMetalCommodity,
@@ -89,6 +89,7 @@ export function assess(input: OpportunityInput) {
     ? `用户校准确认：此具体产品不进入开发清单（${calibratedDisposition.reasons.join("、") || "单品排除"}）`
     : "";
   const calibratedUncertain = calibratedDisposition?.verdict === "uncertain";
+  const calibratedInterest = calibratedInterestProfile(input);
   const hasCasegoodForm = casegoodTerms.test(text);
   const hasStructure = structuralTerms.test(text);
   const affinity = companyAffinity.filter(([pattern]) => pattern.test(text)).map(([, label]) => label);
@@ -179,7 +180,7 @@ export function assess(input: OpportunityInput) {
   const hardRejected = hardRejectReasons.length > 0;
   const qualified = !hardRejected && companyFit >= selectionPolicy.decision.minimumCompanyFit;
   const baseScore = companyFit * selectionPolicy.score.companyFit + hiddenOpportunity * selectionPolicy.score.hiddenOpportunity + demand * selectionPolicy.score.demand;
-  const score = hardRejected ? 0 : clamp(baseScore * (1 - marginWeight) + marginScore * marginWeight);
+  const score = hardRejected ? 0 : clamp(baseScore * (1 - marginWeight) + marginScore * marginWeight + calibratedInterest.adjustment);
 
   const dataContext = { category: input.category, material: input.material, price: input.price };
   const dataStatus: AssessmentDataStatus = dataStatusFor(input.packageDimensionsCm, input.packageGrossKg, dataContext);
@@ -187,8 +188,10 @@ export function assess(input: OpportunityInput) {
   let decision: Decision = "需要优化";
   if (hardRejected) decision = "暂不建议";
   else if (calibratedUncertain) decision = "需要优化";
+  else if (calibratedInterest.tier === "low") decision = "需要优化";
   else if (!packageKnown || !marginKnown) decision = "需要优化";
   else if (companyFit < selectionPolicy.decision.minimumCompanyFit) decision = "需要优化";
+  else if (calibratedInterest.tier === "priority" && qualified && score >= selectionPolicy.decision.conditionalScore) decision = "有条件跟进";
   else if (companyFit >= selectionPolicy.decision.priorityCompanyFit && hiddenOpportunity >= selectionPolicy.decision.priorityHiddenOpportunity && score >= selectionPolicy.decision.priorityScore) decision = "优先跟进";
   else if (hiddenOpportunity >= selectionPolicy.decision.conditionalHiddenOpportunity && score >= selectionPolicy.decision.conditionalScore) decision = "有条件跟进";
   else decision = "需要优化";
@@ -202,6 +205,7 @@ export function assess(input: OpportunityInput) {
   const reasons = [
     ...hardRejectReasons,
     calibratedUncertain ? "用户校准标记：此产品仍需确认，暂不进入推荐榜" : "",
+    ...calibratedInterest.reasons,
     ...fitConcerns,
     dataWarnings.length ? `数据待补：${dataWarnings.join("、")}，补齐前不进入推荐榜` : "",
     ...(!hardRejected ? hiddenSignals : []),
@@ -242,6 +246,8 @@ export function assess(input: OpportunityInput) {
     isGlass,
     exception: hiddenSignals.length >= 2,
     estimatedMargin: effectiveMargin,
+    interestTier: calibratedInterest.tier,
+    interestAdjustment: calibratedInterest.adjustment,
     marginConfidence: hasQuotedMargin ? "高" : packageKnown ? "中" : "低",
   };
 }

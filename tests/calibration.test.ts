@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { buildCalibrationPairs, isCalibrationFeedbackComplete, normalizeCalibrationState, selectCalibrationSamples, summarizeCalibration } from "../app/calibration.ts";
-import { activeCalibrationAsins, activeCalibrationRound, calibratedHardRejectReason, roundOneCalibrationAsins, roundOneGoldenSamples } from "../app/company-calibration.ts";
+import { activeCalibrationAsins, activeCalibrationRound, calibratedHardRejectReason, roundOneCalibrationAsins, roundOneGoldenSamples, roundThreeCalibrationAsins, roundTwoCalibrationAsins, roundTwoGoldenSamples } from "../app/company-calibration.ts";
 
 const candidates = Array.from({ length: 20 }, (_, index) => ({
   asin: `ASIN${index}`,
@@ -56,11 +56,21 @@ test("only the confirmed ceiling-storage category becomes a calibrated hard rule
   assert.equal(calibratedHardRejectReason({ title: "Modern TV Stand with Storage", category: "Television Stands" }), "");
 });
 
-test("opens a second calibration round without repeating first-round products", () => {
-  assert.equal(activeCalibrationRound, 2);
+test("opens a third calibration round without repeating earlier products", () => {
+  assert.equal(activeCalibrationRound, 3);
   assert.equal(activeCalibrationAsins.length, 14);
   assert.equal(new Set(activeCalibrationAsins).size, 14);
-  assert.equal(activeCalibrationAsins.some((asin) => roundOneCalibrationAsins.includes(asin)), false);
+  const earlier = new Set([...roundOneCalibrationAsins, ...roundTwoCalibrationAsins]);
+  assert.equal(activeCalibrationAsins.some((asin) => earlier.has(asin)), false);
+  assert.deepEqual(activeCalibrationAsins, roundThreeCalibrationAsins);
+});
+
+test("stores second-round interest separately from feasibility", () => {
+  assert.equal(roundTwoGoldenSamples.length, 14);
+  assert.equal(roundTwoGoldenSamples.every((sample) => sample.verdict === "develop"), true);
+  assert.equal(roundTwoGoldenSamples.filter((sample) => sample.interest === "priority").length, 2);
+  assert.equal(roundTwoGoldenSamples.filter((sample) => sample.interest === "normal").length, 9);
+  assert.equal(roundTwoGoldenSamples.filter((sample) => sample.interest === "low").length, 3);
 });
 
 test("summarizes real interest separately from theoretical eligibility", () => {
