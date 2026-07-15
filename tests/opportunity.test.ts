@@ -211,9 +211,13 @@ test("uses second-round interest for ranking without turning low interest into D
 test("applies the first preference challenge as product-level research interest", () => {
   const chosen = assess({ ...base, asin: "B0DRRTR25P", title: "Fluted Walnut Buffet Cabinet Sideboard with Storage", category: "Buffets & Sideboards" });
   const similar = assess({ ...base, asin: "UNSEENBUFFET", title: "Fluted Walnut Buffet Cabinet Sideboard with Storage", category: "Buffets & Sideboards" });
+  const secondary = assess({ ...base, asin: "B0H4Q13TCT", title: "Reception Desk with Drawer Storage and LED", category: "Reception Room Tables" });
   const passed = assess({ ...base, asin: "B0F2SZCWSP", title: "Modern L-Shaped Reception Desk with Storage", category: "Reception Room Tables" });
   assert.equal(chosen.interestTier, "priority");
   assert.ok(chosen.interestAdjustment > similar.interestAdjustment);
+  assert.equal(secondary.interestTier, "normal");
+  assert.ok(secondary.interestAdjustment > 0);
+  assert.ok(secondary.interestAdjustment < chosen.interestAdjustment);
   assert.equal(passed.interestTier, "low");
   assert.equal(passed.hardRejected, false);
   assert.equal(passed.decision, "需要优化");

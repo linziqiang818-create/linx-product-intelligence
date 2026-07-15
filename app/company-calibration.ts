@@ -94,7 +94,11 @@ export const activeCalibrationAsins: readonly string[] = roundThreeCalibrationAs
 export const preferenceResearchAsins = [
   "B0F6BP73WJ", "B0DQPXHV82", "B0FDGHM391", "B0FSZV4H21", "B0F6CNTRHW", "B0FCMBRH91",
   "B0DN13DKK5", "B0GYCYSDNN", "B0DL5Q9319", "B0GTKYY5YJ", "B0DWFGYWLN", "B0GZ7ZGLY8",
-  "B0DRRTR25P", "B0H4Q13TCT", "B0DZ5CHFZM", "B0FJ83YQ3H", "B0GDW6562N", "B0CDWGVNQT",
+  "B0DRRTR25P",
+] as const;
+
+export const preferenceSecondaryResearchAsins = [
+  "B0H4Q13TCT", "B0DZ5CHFZM", "B0FJ83YQ3H", "B0GDW6562N", "B0CDWGVNQT",
 ] as const;
 
 export const preferencePassAsins = [
@@ -119,13 +123,15 @@ const repeatedLowInterestTerms = /furniture[- ]style dog crate|dog crate furnitu
 
 export function calibratedInterestProfile(input: { asin: string; title: string; category: string }) {
   const preferenceResearch = preferenceResearchAsins.includes(input.asin as typeof preferenceResearchAsins[number]);
+  const preferenceSecondary = preferenceSecondaryResearchAsins.includes(input.asin as typeof preferenceSecondaryResearchAsins[number]);
   const preferencePass = preferencePassAsins.includes(input.asin as typeof preferencePassAsins[number]);
   const sample = roundTwoGoldenSamples.find((item) => item.asin === input.asin);
   const text = `${input.category} ${input.title}`;
   const reasons: string[] = [];
-  const tier: GoldenInterest | "unrated" = preferenceResearch ? "priority" : preferencePass ? "low" : sample?.interest ?? "unrated";
-  let adjustment = preferenceResearch ? 6 : preferencePass ? -6 : sample?.interest === "priority" ? 8 : sample?.interest === "low" ? -8 : 0;
+  const tier: GoldenInterest | "unrated" = preferenceResearch ? "priority" : preferenceSecondary ? "normal" : preferencePass ? "low" : sample?.interest ?? "unrated";
+  let adjustment = preferenceResearch ? 6 : preferenceSecondary ? 2 : preferencePass ? -6 : sample?.interest === "priority" ? 8 : sample?.interest === "low" ? -8 : 0;
   if (preferenceResearch) reasons.push("偏好挑战：愿意继续投入时间研究此产品");
+  else if (preferenceSecondary) reasons.push("偏好挑战：愿意研究，但具体对比时优先度低于现有候选");
   else if (preferencePass) reasons.push("偏好挑战：理论可行但当前没有研究兴趣");
   else if (sample?.interest === "priority") reasons.push("第二轮校准：想优先研究");
   else if (sample?.interest === "low") reasons.push("第二轮校准：理论可行但当前兴趣较低");
