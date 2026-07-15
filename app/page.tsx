@@ -5,6 +5,7 @@ import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { assess } from "./opportunity";
 import { attachSheetImageUrls, imageFromRow } from "./import-images";
 import realProducts from "./real-products.json";
+import rejectedProducts from "./rejected-products.json";
 import { DataStatus, Grade, dataStatusFor, dataWarningFor, gradeLabels, gradeOrder, gradeWithDataStatus } from "./recommendation-grade";
 import { isPotentialProduct, potentialReasons } from "./product-potential";
 import { classifyOpportunityTrack, OpportunityTrack, trackLabels } from "./opportunity-track";
@@ -50,14 +51,14 @@ function margin(v:unknown){const value=num(v);return value>0&&value<=1?value*100
 function sellerProduct(r:Record<string,unknown>):Product { const text=(v:unknown)=>String(v??""); const packageKg=num(r["包装重量（单位换算）"]); const title=text(r["商品标题"]); return {asin:text(r.ASIN),title,titleZh:chineseTitleFromRow(r),imageUrl:imageFromRow(r),importedAt:new Date().toISOString(),category:text(r["小类目"]||r["类目路径"]),price:num(r["价格($)"]),monthlySales:num(r["月销量"]),launchDays:num(r["上架天数"]),salesGrowth:num(r["销量环比增长率"]),packageGrossKg:packageKg,packageDimensionsCm:text(r["包装尺寸（单位换算）"]),rating:num(r["评分"]),reviews:num(r["评分数"]),bsr:num(r["小类BSR"]),dimensions:text(r["商品尺寸（单位换算）"]),weight:packageKg*2.205,material:text(r["详细参数"]),variants:text(r.SKU),sellingPoints:text(r["标签"]),painPoints:"",sourceUrl:text(r["商品详情页链接"]),note:text(r["品牌"]),complexity:3,differentiation:3,returnRisk:packageKg>49?"高":packageKg>22?"中":"低",estimatedMargin:margin(r["毛利率"]),priceUplift:3}; }
 
 export default function Home(){
- const [tab,setTab]=useState("机会筛选"),[products,setProducts]=useState<Product[]>(samples),[trash,setTrash]=useState<Product[]>([]),[editing,setEditing]=useState<Product|null>(null),[notice,setNotice]=useState("");
+ const [tab,setTab]=useState("机会筛选"),[products,setProducts]=useState<Product[]>(samples),[trash,setTrash]=useState<Product[]>(rejectedProducts as Product[]),[editing,setEditing]=useState<Product|null>(null),[notice,setNotice]=useState("");
  const [favorites,setFavorites]=useState<Set<string>>(new Set()),[selected,setSelected]=useState<Set<string>>(new Set()),[hydrated,setHydrated]=useState(false),[compareOpen,setCompareOpen]=useState(false),[importMode,setImportMode]=useState<"replace"|"merge">("replace"),[opportunityTrack,setOpportunityTrack]=useState<OpportunityTrack>("red-ocean-blue");
  const [filters,setFilters]=useState({search:"",category:"全部",grade:"全部",minSales:0,sort:"grade"});
  useEffect(()=>{const id=window.setTimeout(()=>{if(new URLSearchParams(window.location.search).get("tab")==="calibration")setTab("校准模式")},0);return()=>window.clearTimeout(id)},[]);
  // Compatibility for the former D-list navigation target.
  // eslint-disable-next-line react-hooks/set-state-in-effect
  useEffect(()=>{if(tab==="不推荐")setTab("垃圾箱")},[tab]);
- useEffect(()=>{const id=window.setTimeout(()=>{localStorage.removeItem("furniture-radar-v2");localStorage.removeItem("furniture-radar-v3");const raw=localStorage.getItem("furniture-radar-v5")||localStorage.getItem("furniture-radar-v4");if(raw)try{const d=JSON.parse(raw);const merged=new Map((d.products??[]).map((p:Product)=>[p.asin,p]));samples.forEach(p=>{if(!merged.has(p.asin))merged.set(p.asin,p)});setProducts([...merged.values()] as Product[]);setTrash(d.trash??[]);setFavorites(new Set(d.favorites??[]))}catch{}setHydrated(true)},0);return()=>window.clearTimeout(id)},[]);
+ useEffect(()=>{const id=window.setTimeout(()=>{localStorage.removeItem("furniture-radar-v2");localStorage.removeItem("furniture-radar-v3");const raw=localStorage.getItem("furniture-radar-v5")||localStorage.getItem("furniture-radar-v4");if(raw)try{const d=JSON.parse(raw);const merged=new Map((d.products??[]).map((p:Product)=>[p.asin,p]));samples.forEach(p=>{if(!merged.has(p.asin))merged.set(p.asin,p)});const rejected=new Map((d.trash??[]).map((p:Product)=>[p.asin,p]));(rejectedProducts as Product[]).forEach(p=>rejected.set(p.asin,p));setProducts([...merged.values()] as Product[]);setTrash([...rejected.values()] as Product[]);setFavorites(new Set(d.favorites??[]))}catch{}setHydrated(true)},0);return()=>window.clearTimeout(id)},[]);
  useEffect(()=>{if(hydrated)localStorage.setItem("furniture-radar-v5",JSON.stringify({products,trash,favorites:[...favorites]}))},[products,trash,favorites,hydrated]);
  const scoredProducts=useMemo<ScoredProduct[]>(()=>products.map(p=>({...p,score:compute(p)})),[products]);
  const calibrationProducts=useMemo<BatchCalibrationCandidate[]>(()=>scoredProducts.map(p=>({asin:p.asin,title:p.title,titleZh:fullTitleZh(p.asin,p.titleZh),category:p.category,grade:gradeOf(p),score:p.score.total,interestTier:p.score.company.interestTier,imageUrl:p.imageUrl,sourceUrl:productUrl(p),price:p.price,monthlySales:p.monthlySales??0,reasons:p.score.reasons})),[scoredProducts]);
