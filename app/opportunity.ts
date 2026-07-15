@@ -1,4 +1,5 @@
 import { dataIssuesFor, dataStatusFor } from "./recommendation-grade.ts";
+import { calibratedHardRejectReason } from "./company-calibration.ts";
 import {
   glassTerms,
   isStandardizedMetalCommodity,
@@ -82,6 +83,7 @@ export function assess(input: OpportunityInput) {
   const isUnsupported = unsupportedTerms.test(text);
   const hasPanelMaterial = panelMaterialTerms.test(text);
   const isCommodity = isStandardizedMetalCommodity(text, hasPanelMaterial);
+  const calibratedRejectReason = calibratedHardRejectReason(input);
   const hasCasegoodForm = casegoodTerms.test(text);
   const hasStructure = structuralTerms.test(text);
   const affinity = companyAffinity.filter(([pattern]) => pattern.test(text)).map(([, label]) => label);
@@ -111,6 +113,7 @@ export function assess(input: OpportunityInput) {
     isBabyCategory ? "婴儿类目不在当前开发范围" : "",
     isUnsupported ? "类目超出现有室内板式家具能力" : "",
     isCommodity ? "纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势" : "",
+    calibratedRejectReason,
     input.price > 0 && input.price < selectionPolicy.minimumPriceUsd ? `售价低于 ${selectionPolicy.minimumPriceUsd} 美元目标价格带` : "",
   ].filter(Boolean);
   const fitConcerns = [
@@ -124,7 +127,7 @@ export function assess(input: OpportunityInput) {
   if (hasStructure) companyFit += 14;
   companyFit += Math.min(24, affinity.length * 8);
   if (input.price >= 130) companyFit += 4;
-  if (isGlass || isPureSolidWood || isPureUpholstered || isPlasticGamingChair || isBabyCategory || isUnsupported || isCommodity) companyFit = 0;
+  if (isGlass || isPureSolidWood || isPureUpholstered || isPlasticGamingChair || isBabyCategory || isUnsupported || isCommodity || calibratedRejectReason) companyFit = 0;
   companyFit = clamp(companyFit);
 
   const featureCost = /led|electric|massage|fireplace|motor|lift|adjustable/i.test(text) ? 0.035 : 0;

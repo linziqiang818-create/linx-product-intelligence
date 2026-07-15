@@ -1,3 +1,5 @@
+import { roundOneCalibrationAsins } from "./company-calibration.ts";
+
 export type CalibrationVerdict = "develop" | "reject" | "uncertain";
 export type CalibrationScope = "category" | "product" | "uncertain";
 export type PairChoice = "left" | "right" | "neither";
@@ -58,6 +60,10 @@ export function selectCalibrationSamples(candidates: CalibrationCandidate[], lim
       count--;
     }
   };
+  const byAsin = new Map(candidates.map((candidate) => [candidate.asin, candidate]));
+  add(roundOneCalibrationAsins.map((asin) => byAsin.get(asin)).filter((item): item is CalibrationCandidate => Boolean(item)), limit);
+  if (selected.length >= limit) return selected.slice(0, limit);
+
   const ranked = [...candidates].sort((a, b) => b.score - a.score);
   add(ranked.filter((item) => item.grade === "A" || item.grade === "B"), 4);
   add(ranked.filter((item) => item.grade === "C"), 4);

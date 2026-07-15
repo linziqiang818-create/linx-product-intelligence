@@ -171,6 +171,17 @@ test("allows panel-heavy mixed materials and does not classify an ordinary TV st
   assert.notEqual(tvStand.decision, "暂不建议");
 });
 
+test("applies the confirmed ceiling storage rack rule even when the rack is motorized", () => {
+  const rack = assess({
+    ...base,
+    title: "Motorized Garage Ceiling Storage Rack with Remote Control",
+    category: "Ceiling Mounted Storage Racks Utility Racks",
+    material: "Powder coated steel",
+  });
+  assert.equal(rack.hardRejected, true);
+  assert.ok(rack.hardRejectReasons.some((reason) => reason.includes("公司校准确认")));
+});
+
 test("routes uncertain category or material to data pending instead of D", () => {
   const unknownMaterial = assess({ ...base, material: "" });
   const unknownCategory = assess({ ...base, category: "Other" });

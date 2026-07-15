@@ -108,8 +108,9 @@ export default function CalibrationPanel({ products }: { products: CalibrationDi
     <div className="panel calibration-workbench">
       <div className="calibration-step"><span>产品判断 {index + 1}/{products.length}</span><small>反馈当前保存在本浏览器</small></div>
       <ProductSummary product={current} />
+      <div className="calibration-definition">“理论可开发”只表示符合公司开发边界，可以进入后续核算；不代表喜欢、优先推荐或确定立项。</div>
       <div className="verdict-row">
-        <button className={currentFeedback?.verdict === "develop" ? "active develop" : ""} onClick={() => choose("develop")}>✓ 可以开发</button>
+        <button className={currentFeedback?.verdict === "develop" ? "active develop" : ""} onClick={() => choose("develop")}>✓ 理论可开发</button>
         <button className={currentFeedback?.verdict === "reject" ? "active reject" : ""} onClick={() => choose("reject")}>× 不适合</button>
         <button className={currentFeedback?.verdict === "uncertain" ? "active uncertain" : ""} onClick={() => choose("uncertain")}>? 不确定</button>
       </div>
@@ -131,7 +132,7 @@ export default function CalibrationPanel({ products }: { products: CalibrationDi
 
     {answered > 0 && <div className="panel calibration-summary">
       <div className="section-title"><div><span className="eyebrow">CALIBRATION SUMMARY</span><h2>本轮校准摘要</h2></div><div className="actions"><button onClick={() => download("LINX校准反馈.json", JSON.stringify(state, null, 2))}>导出校准反馈</button><button onClick={() => { if (confirm("确定清空本轮校准反馈吗？")) setState(emptyCalibrationState()); }}>重新开始</button></div></div>
-      <div className="summary-grid"><span><b>{summary.develop}</b>可以开发</span><span><b>{summary.reject}</b>不适合</span><span><b>{summary.uncertain}</b>不确定</span><span><b>{summary.hardRules.length}</b>候选硬规则</span></div>
+      <div className="summary-grid"><span><b>{summary.develop}</b>理论可开发</span><span><b>{summary.reject}</b>不适合</span><span><b>{summary.uncertain}</b>不确定</span><span><b>{summary.hardRules.length}</b>候选硬规则</span></div>
       {summary.topReasons.length > 0 && <p><b>主要原因：</b>{summary.topReasons.map(([reason, count]) => `${reason} ${count}次`).join(" · ")}</p>}
       {summary.hardRules.length > 0 && <p><b>候选硬规则：</b>{summary.hardRules.map((item) => `${products.find((product) => product.asin === item.asin)?.category ?? item.asin}（${item.reasons.join("、") || "待补原因"}）`).join("；")}</p>}
       <p className="calibration-note">完成首轮后导出反馈，下一步将把已确认判断转为黄金样本和稳定规则；不会仅凭一次点击自动泛化。</p>
