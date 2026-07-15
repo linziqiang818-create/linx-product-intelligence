@@ -5,10 +5,12 @@ import { preliminaryPriority } from "../app/acquisition-priority.ts";
 
 test("reserves twenty percent of every research batch for unexpected opportunities", () => {
   assert.equal(Object.values(acquisitionPolicy.mix).reduce((sum, count) => sum + count, 0), acquisitionPolicy.batchSize);
-  assert.equal(acquisitionPolicy.mix.exploration, 10);
+  assert.equal(acquisitionPolicy.mix.exploration, 20);
+  assert.equal(acquisitionPolicy.batchSize, 100);
+  assert.equal(acquisitionPolicy.discoveryBatchSize, 500);
 });
 
-test("documents the exact composition of the current fifty-product pool", () => {
+test("documents the exact composition of the current one-hundred-product pool", () => {
   assert.equal(currentResearchPoolSummary().reduce((sum, group) => sum + group.count, 0), 50);
 });
 

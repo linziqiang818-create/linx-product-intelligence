@@ -1,12 +1,12 @@
 export const acquisitionPolicy = {
-  batchSize: 50,
-  discoveryBatchSize: 250,
+  batchSize: 100,
+  discoveryBatchSize: 500,
   initialCandidatePoolTarget: 2000,
   weeklyCandidateExpansion: 500,
   mix: {
-    redOceanBlue: 20,
-    blueOceanRed: 20,
-    exploration: 10,
+    redOceanBlue: 40,
+    blueOceanRed: 40,
+    exploration: 20,
   },
   cadenceDays: {
     normal: 7,
