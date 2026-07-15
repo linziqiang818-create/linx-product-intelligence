@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import products from "../app/real-products.json" with { type: "json" };
-import { batchCoverage, buildChallengePairs, buildProductGroups, emptyBatchCalibrationState, normalizeBatchCalibrationState, selectChallengeCandidates } from "../app/batch-calibration.ts";
+import { batchCoverage, buildChallengePairs, buildProductGroups, emptyBatchCalibrationState, normalizeBatchCalibrationState, selectChallengeCandidates, selectUnpairedChallengers } from "../app/batch-calibration.ts";
 import type { BatchCalibrationCandidate } from "../app/batch-calibration.ts";
 
 const candidates: BatchCalibrationCandidate[] = products.map((product, index) => ({
@@ -70,4 +70,11 @@ test("builds deterministic head-to-head comparisons", () => {
   assert.equal(pairs[0].anchor.asin, candidates[10].asin);
   assert.equal(pairs[3].anchor.asin, candidates[10].asin);
   assert.equal(new Set(pairs.map((pair) => pair.id)).size, 4);
+});
+
+test("never asks the user to compare a challenger twice when anchors change", () => {
+  const state = emptyBatchCalibrationState();
+  state.challenges.old = { decision: "challenger", challengerAsin: candidates[0].asin, anchorAsin: candidates[10].asin, updatedAt: "now" };
+  const remaining = selectUnpairedChallengers(candidates.slice(0, 3), state);
+  assert.deepEqual(remaining.map((product) => product.asin), [candidates[1].asin, candidates[2].asin]);
 });

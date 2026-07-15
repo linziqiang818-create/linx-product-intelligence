@@ -111,3 +111,8 @@ export function buildChallengePairs(challengers: BatchCalibrationCandidate[], an
   if (!anchors.length) return [];
   return challengers.map((challenger, index) => ({ id: `${challenger.asin}__${anchors[index % anchors.length].asin}`, challenger, anchor: anchors[index % anchors.length] }));
 }
+
+export function selectUnpairedChallengers(challengers: BatchCalibrationCandidate[], state: BatchCalibrationState) {
+  const completed = new Set(Object.values(state.challenges).map((result) => result.challengerAsin));
+  return challengers.filter((product) => !completed.has(product.asin));
+}

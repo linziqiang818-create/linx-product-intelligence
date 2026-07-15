@@ -208,6 +208,26 @@ test("uses second-round interest for ranking without turning low interest into D
   assert.equal(unseenBed.hardRejected, false);
 });
 
+test("applies the first preference challenge as product-level research interest", () => {
+  const chosen = assess({ ...base, asin: "B0DRRTR25P", title: "Fluted Walnut Buffet Cabinet Sideboard with Storage", category: "Buffets & Sideboards" });
+  const similar = assess({ ...base, asin: "UNSEENBUFFET", title: "Fluted Walnut Buffet Cabinet Sideboard with Storage", category: "Buffets & Sideboards" });
+  const passed = assess({ ...base, asin: "B0F2SZCWSP", title: "Modern L-Shaped Reception Desk with Storage", category: "Reception Room Tables" });
+  assert.equal(chosen.interestTier, "priority");
+  assert.ok(chosen.interestAdjustment > similar.interestAdjustment);
+  assert.equal(passed.interestTier, "low");
+  assert.equal(passed.hardRejected, false);
+  assert.equal(passed.decision, "需要优化");
+});
+
+test("learns repeated soft preferences without turning product families into hard rules", () => {
+  const distinctive = assess({ ...base, asin: "NEW-FLUTED", title: "Fluted Rounded Corner Storage Cabinet", category: "Storage Cabinets" });
+  const plain = assess({ ...base, asin: "NEW-PLAIN", title: "Plain Storage Cabinet", category: "Storage Cabinets" });
+  const dogCrate = assess({ ...base, asin: "NEW-DOG", title: "Furniture Style Dog Crate with Storage", category: "Furniture-Style Dog Crates" });
+  assert.ok(distinctive.interestAdjustment > plain.interestAdjustment);
+  assert.ok(dogCrate.interestAdjustment < plain.interestAdjustment);
+  assert.equal(dogCrate.hardRejected, false);
+});
+
 test("routes uncertain category or material to data pending instead of D", () => {
   const unknownMaterial = assess({ ...base, material: "" });
   const unknownCategory = assess({ ...base, category: "Other" });

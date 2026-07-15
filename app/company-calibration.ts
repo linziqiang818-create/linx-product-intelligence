@@ -89,6 +89,20 @@ export const roundThreeCalibrationAsins = [
 export const activeCalibrationRound = 3;
 export const activeCalibrationAsins: readonly string[] = roundThreeCalibrationAsins;
 
+// Preference lab, first 30-product challenge batch, confirmed 2026-07-15.
+// These are product-level willingness signals, never hard reject rules.
+export const preferenceResearchAsins = [
+  "B0F6BP73WJ", "B0DQPXHV82", "B0FDGHM391", "B0FSZV4H21", "B0F6CNTRHW", "B0FCMBRH91",
+  "B0DN13DKK5", "B0GYCYSDNN", "B0DL5Q9319", "B0GTKYY5YJ", "B0DWFGYWLN", "B0GZ7ZGLY8",
+  "B0DRRTR25P", "B0H4Q13TCT", "B0DZ5CHFZM", "B0FJ83YQ3H", "B0GDW6562N", "B0CDWGVNQT",
+] as const;
+
+export const preferencePassAsins = [
+  "B0GH651S4V", "B0DZ6DK5MM", "B0H1MBRW2G", "B0DHVR9HSM", "B0FX4K9TQY", "B0C1ZBWY2K",
+  "B0DG5T64TF", "B0GXKNSYGT", "B0FN3T3KQ2", "B0GZMP2S5F", "B0GWR1M1CX", "B0BHWBZ94J",
+  "B0F93P2QMD", "B0F2SZCWSP",
+] as const;
+
 export function calibratedProductDisposition(asin: string) {
   return [...roundOneGoldenSamples, ...roundTwoGoldenSamples].find((sample) => sample.asin === asin);
 }
@@ -97,23 +111,45 @@ const specializedScenarioTerms = /coffee bar|mini fridge cabinet|reception desk|
 const integratedFunctionTerms = /fridge|wine|lockable|keyboard|drawer|storage|shelf|cabinet/i;
 const bedTerms = /\bbed\b|bed frame|loft bed/i;
 const sculpturalBedTerms = /half[- ]moon|curved|airframe|arched base|round cushioned/i;
+const distinctiveCasegoodTerms = /fluted|wave|ripple|arched|rounded corner/i;
+const casegoodSurfaceTerms = /cabinet|sideboard|dresser|bookcase|bookshelf|credenza/i;
+const specializedWorkTerms = /reception|front desk|manicure|nail desk|filing cabinet|file cabinet/i;
+const workStructureTerms = /lockable|drawer|storage|extendable|dust collector|keyboard tray|cable grommet/i;
+const repeatedLowInterestTerms = /furniture[- ]style dog crate|dog crate furniture|foldable shoe rack|electric standing desk|height adjustable standing desk/i;
 
 export function calibratedInterestProfile(input: { asin: string; title: string; category: string }) {
+  const preferenceResearch = preferenceResearchAsins.includes(input.asin as typeof preferenceResearchAsins[number]);
+  const preferencePass = preferencePassAsins.includes(input.asin as typeof preferencePassAsins[number]);
   const sample = roundTwoGoldenSamples.find((item) => item.asin === input.asin);
   const text = `${input.category} ${input.title}`;
   const reasons: string[] = [];
-  let adjustment = sample?.interest === "priority" ? 8 : sample?.interest === "low" ? -8 : 0;
-  if (sample?.interest === "priority") reasons.push("第二轮校准：想优先研究");
-  if (sample?.interest === "low") reasons.push("第二轮校准：理论可行但当前兴趣较低");
+  const tier: GoldenInterest | "unrated" = preferenceResearch ? "priority" : preferencePass ? "low" : sample?.interest ?? "unrated";
+  let adjustment = preferenceResearch ? 6 : preferencePass ? -6 : sample?.interest === "priority" ? 8 : sample?.interest === "low" ? -8 : 0;
+  if (preferenceResearch) reasons.push("偏好挑战：愿意继续投入时间研究此产品");
+  else if (preferencePass) reasons.push("偏好挑战：理论可行但当前没有研究兴趣");
+  else if (sample?.interest === "priority") reasons.push("第二轮校准：想优先研究");
+  else if (sample?.interest === "low") reasons.push("第二轮校准：理论可行但当前兴趣较低");
   if (specializedScenarioTerms.test(text) && integratedFunctionTerms.test(text)) {
     adjustment += 3;
     reasons.push("校准偏好：细分场景与一体化功能结合");
+  }
+  if (distinctiveCasegoodTerms.test(text) && casegoodSurfaceTerms.test(text)) {
+    adjustment += 3;
+    reasons.push("校准偏好：柜体具有明确的造型识别度");
+  }
+  if (specializedWorkTerms.test(text) && workStructureTerms.test(text)) {
+    adjustment += 3;
+    reasons.push("校准偏好：专业工作场景与实用结构结合");
+  }
+  if (repeatedLowInterestTerms.test(text)) {
+    adjustment -= 3;
+    reasons.push("校准偏好：该通用产品方向连续出现低兴趣反馈");
   }
   if (bedTerms.test(text) && !sculpturalBedTerms.test(text)) {
     adjustment -= 4;
     reasons.push("校准偏好：普通床类方向当前优先度较低");
   }
-  return { tier: sample?.interest ?? "unrated" as GoldenInterest | "unrated", adjustment, reasons };
+  return { tier, adjustment, reasons };
 }
 
 const ceilingStorageRackTerms = /ceiling[- ]mounted (?:storage )?racks?|overhead garage storage racks?|garage ceiling storage racks?|ceiling storage racks?/i;

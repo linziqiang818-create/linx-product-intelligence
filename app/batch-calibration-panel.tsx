@@ -9,6 +9,7 @@ import {
   emptyBatchCalibrationState,
   normalizeBatchCalibrationState,
   selectChallengeCandidates,
+  selectUnpairedChallengers,
 } from "./batch-calibration";
 import type { BatchCalibrationCandidate, BatchCalibrationState, BatchGroupDecision, ChallengeDecision, ResearchDecision } from "./batch-calibration";
 
@@ -19,6 +20,7 @@ const groupChoices: Array<[BatchGroupDecision, string]> = [
 const researchChoices: Array<[ResearchDecision, string]> = [
   ["research", "值得花 30 分钟研究"], ["hold", "先保留"], ["pass", "没有兴趣"],
 ];
+const challengeLabels: Record<ChallengeDecision, string> = { challenger: "选择新品挑战者", anchor: "选择现有候选", both: "两个都研究", neither: "两个都不研究" };
 const interestOrder = { priority: 0, normal: 1, unrated: 1, low: 2 } as const;
 const gradeOrder = { A: 0, B: 1, C: 2, D: 3 } as const;
 
@@ -60,12 +62,12 @@ export default function BatchCalibrationPanel({ products }: { products: BatchCal
   const challengeBatch = useMemo(() => challengeUniverse.slice(challengePage * 30, challengePage * 30 + 30), [challengeUniverse, challengePage]);
   const researchedChallengers = useMemo(() => challengeUniverse.filter((product) => state.research[product.asin]?.decision === "research"), [challengeUniverse, state.research]);
   const anchors = useMemo(() => {
-    const explicitlyInteresting = candidatePool.filter((product) => state.research[product.asin]?.decision === "research");
-    const source = explicitlyInteresting.length ? explicitlyInteresting : candidatePool.filter((product) => state.research[product.asin]?.decision !== "pass");
-    if (source.length <= 3) return source;
-    return [source[0], source[Math.floor(source.length / 2)], source[source.length - 1]];
-  }, [candidatePool, state.research]);
-  const challengePairs = useMemo(() => buildChallengePairs(researchedChallengers, anchors).filter((pair) => !state.challenges[pair.id]).slice(0, 6), [researchedChallengers, anchors, state.challenges]);
+    if (candidatePool.length <= 3) return candidatePool;
+    return [candidatePool[0], candidatePool[Math.floor(candidatePool.length / 2)], candidatePool[candidatePool.length - 1]];
+  }, [candidatePool]);
+  const challengePairs = useMemo(() => buildChallengePairs(selectUnpairedChallengers(researchedChallengers, state), anchors).slice(0, 6), [researchedChallengers, anchors, state]);
+  const productMap = useMemo(() => new Map(products.map((product) => [product.asin, product])), [products]);
+  const challengeHistory = useMemo(() => Object.entries(state.challenges).map(([id, result]) => ({ id, result, challenger: productMap.get(result.challengerAsin), anchor: productMap.get(result.anchorAsin) })).filter((item) => item.challenger && item.anchor), [state.challenges, productMap]);
   const candidateReviewed = candidatePool.filter((product) => state.research[product.asin]).length;
   const explorationReviewed = challengeUniverse.filter((product) => state.research[product.asin]).length;
   const comparisonCount = Object.keys(state.challenges).length;
@@ -117,6 +119,7 @@ export default function BatchCalibrationPanel({ products }: { products: BatchCal
         <div className="duel-question"><span>本周只研究一个</span><button onClick={() => setChallenge(pair.id, pair.challenger.asin, pair.anchor.asin, "challenger")}>选左边</button><button onClick={() => setChallenge(pair.id, pair.challenger.asin, pair.anchor.asin, "anchor")}>选右边</button><button onClick={() => setChallenge(pair.id, pair.challenger.asin, pair.anchor.asin, "both")}>两个都研究</button><button onClick={() => setChallenge(pair.id, pair.challenger.asin, pair.anchor.asin, "neither")}>两个都不研究</button></div>
         <div className="duel-product"><ProductImage product={pair.anchor} /><b>{pair.anchor.titleZh}</b><small>现有候选 · {pair.anchor.asin}</small></div>
       </article>)}</div> : <div className="empty"><b>{researchedChallengers.length ? "本轮对比已完成" : "先从新品挑战池挑出想研究的产品"}</b><span>LINX 会自动安排它与现有候选产品对比。</span></div>}
+      {challengeHistory.length > 0 && <div className="duel-history"><h3>已完成选择</h3>{challengeHistory.map(({ id, result, challenger, anchor }) => <div key={id}><span>{challenger!.titleZh}</span><b>{challengeLabels[result.decision]}</b><span>{anchor!.titleZh}</span></div>)}</div>}
     </section>
 
     <section className="panel group-review">
