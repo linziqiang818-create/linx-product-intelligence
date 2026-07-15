@@ -8,6 +8,12 @@ export const acquisitionPolicy = {
     blueOceanRed: 40,
     exploration: 20,
   },
+  diversity: {
+    minimumFamiliesPerFormalBatch: 10,
+    minimumFamiliesPerTrack: 5,
+    maximumProductsPerFamily: 8,
+    maximumProductsPerFamilyInTop20: 4,
+  },
   cadenceDays: {
     normal: 7,
     priority: 3,
@@ -20,6 +26,10 @@ export const redOceanBlueSeeds = [
   "pantry cabinet tambour curved scalloped",
   "bookcase cabinet rattan cane asymmetric",
   "storage cabinet wave ribbed geometric",
+  "coffee bar cabinet mini fridge fluted",
+  "tv stand media console curved tambour",
+  "dresser chest rounded fluted modern",
+  "shoe cabinet hall tree entryway distinctive",
 ];
 
 export const blueOceanRedSeeds = [
@@ -30,6 +40,9 @@ export const blueOceanRedSeeds = [
   "manicure nail tech desk salon station",
   "reception checkout counter desk",
   "craft sewing workstation cabinet",
+  "vinyl record player storage cabinet",
+  "printer stand filing workstation cabinet",
+  "pet feeding station furniture storage",
 ];
 
 export const publicObservationFields = [

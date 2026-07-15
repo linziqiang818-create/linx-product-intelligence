@@ -46,7 +46,7 @@ test("keeps legacy decision mapping compatible while exposing one A through D co
     gradeFromDecision("待核算"),
     gradeFromDecision("暂不建议"),
   ], ["A", "B", "C", "C", "D"]);
-  assert.deepEqual(gradeLabels, { A: "值得开发", B: "继续调研", C: "暂缓", D: "不推荐" });
+  assert.deepEqual(gradeLabels, { A: "重点考虑开发", B: "一般产品", C: "不感兴趣", D: "垃圾箱" });
 });
 
 test("detects impossible furniture package dimensions before ranking", () => {
@@ -68,4 +68,10 @@ test("returns a product to normal grading after packaging data is completed", ()
   assert.equal(dataStatusFor("110 x 58 x 19 cm", 32), "complete");
   assert.equal(gradeWithDataStatus("优先跟进", "complete"), "A");
   assert.equal(gradeWithDataStatus("暂不建议", "complete"), "D");
+});
+
+test("keeps data completeness separate from the business grade", () => {
+  assert.equal(gradeWithDataStatus("优先跟进", "needs_data"), "A");
+  assert.equal(gradeWithDataStatus("有条件跟进", "needs_data"), "B");
+  assert.equal(gradeWithDataStatus("需要优化", "complete"), "C");
 });

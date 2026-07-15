@@ -10,8 +10,15 @@ test("reserves twenty percent of every research batch for unexpected opportuniti
   assert.equal(acquisitionPolicy.discoveryBatchSize, 500);
 });
 
-test("documents the exact composition of the current one-hundred-product pool", () => {
+test("documents the exact composition of the current fifty-product pilot batch", () => {
   assert.equal(currentResearchPoolSummary().reduce((sum, group) => sum + group.count, 0), 50);
+});
+
+test("prevents one product family from taking over future formal batches", () => {
+  assert.equal(acquisitionPolicy.diversity.minimumFamiliesPerFormalBatch, 10);
+  assert.equal(acquisitionPolicy.diversity.minimumFamiliesPerTrack, 5);
+  assert.equal(acquisitionPolicy.diversity.maximumProductsPerFamily, 8);
+  assert.equal(acquisitionPolicy.diversity.maximumProductsPerFamilyInTop20, 4);
 });
 
 test("labels public sales evidence without pretending an estimate is exact", () => {

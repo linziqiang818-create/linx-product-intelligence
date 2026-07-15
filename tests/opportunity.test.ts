@@ -205,7 +205,7 @@ test("uses second-round interest for ranking without turning low interest into D
   const unseenBed = assess({ ...base, asin: "UNSEENBED1", title: "Metal Loft Bed with Desk and Drawers", category: "Beds" });
   assert.equal(priority.interestTier, "priority");
   assert.ok(priority.interestAdjustment > 0);
-  assert.equal(priority.decision, "有条件跟进");
+  assert.equal(priority.decision, "优先跟进");
   assert.equal(low.interestTier, "low");
   assert.ok(low.interestAdjustment < 0);
   assert.equal(low.hardRejected, false);

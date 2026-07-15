@@ -6,10 +6,10 @@ export type DataStatus = "complete" | "needs_data";
 
 export const gradeOrder: Record<Grade, number> = { A: 0, B: 1, C: 2, D: 3 };
 export const gradeLabels: Record<Grade, string> = {
-  A: "值得开发",
-  B: "继续调研",
-  C: "暂缓",
-  D: "不推荐",
+  A: "重点考虑开发",
+  B: "一般产品",
+  C: "不感兴趣",
+  D: "垃圾箱",
 };
 
 export function gradeFromDecision(decision: RecommendationDecision): Grade {
@@ -20,8 +20,8 @@ export function gradeFromDecision(decision: RecommendationDecision): Grade {
 }
 
 export function gradeWithDataStatus(decision: RecommendationDecision, dataStatus: DataStatus): Grade {
-  if (gradeFromDecision(decision) === "D") return "D";
-  return dataStatus === "needs_data" ? "C" : gradeFromDecision(decision);
+  void dataStatus;
+  return gradeFromDecision(decision);
 }
 
 function packageNumbers(packageDimensionsCm: string | undefined) {
@@ -60,5 +60,5 @@ export function dataIssuesFor(packageDimensionsCm: string | undefined, packageGr
 
 export function dataWarningFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined, context?: SelectionDataContext) {
   const issues = dataIssuesFor(packageDimensionsCm, packageGrossKg, context);
-  return issues.length ? `数据待补：${issues.join("、")}；补齐前仅参与初筛排序，不形成正式推荐等级` : "";
+  return issues.length ? `数据待补：${issues.join("、")}；数据状态与 A / B / C / D 业务判断分开显示` : "";
 }

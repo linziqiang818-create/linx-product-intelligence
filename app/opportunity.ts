@@ -186,16 +186,14 @@ export function assess(input: OpportunityInput) {
   const dataContext = { category: input.category, material: input.material, price: input.price };
   const dataStatus: AssessmentDataStatus = dataStatusFor(input.packageDimensionsCm, input.packageGrossKg, dataContext);
   const dataWarnings = dataIssuesFor(input.packageDimensionsCm, input.packageGrossKg, dataContext);
+  const marketEvidenceKnown = input.monthlySales > 0 || (input.launchDays > 0 && input.launchDays < 9999);
   let decision: Decision = "需要优化";
   if (hardRejected) decision = "暂不建议";
-  else if (calibratedUncertain) decision = "需要优化";
   else if (calibratedInterest.tier === "low") decision = "需要优化";
-  else if (!packageKnown || !marginKnown) decision = "需要优化";
   else if (companyFit < selectionPolicy.decision.minimumCompanyFit) decision = "需要优化";
-  else if (calibratedInterest.tier === "priority" && qualified && score >= selectionPolicy.decision.conditionalScore) decision = "有条件跟进";
-  else if (companyFit >= selectionPolicy.decision.priorityCompanyFit && hiddenOpportunity >= selectionPolicy.decision.priorityHiddenOpportunity && score >= selectionPolicy.decision.priorityScore) decision = "优先跟进";
-  else if (hiddenOpportunity >= selectionPolicy.decision.conditionalHiddenOpportunity && score >= selectionPolicy.decision.conditionalScore) decision = "有条件跟进";
-  else decision = "需要优化";
+  else if (marketEvidenceKnown && hiddenOpportunity < selectionPolicy.decision.conditionalHiddenOpportunity) decision = "需要优化";
+  else if (calibratedInterest.tier === "priority" && qualified && score >= selectionPolicy.decision.conditionalScore) decision = "优先跟进";
+  else if (!calibratedUncertain) decision = "有条件跟进";
 
   const fitReasons = [
     hasPanelMaterial ? "匹配板式家具材料体系" : "",
