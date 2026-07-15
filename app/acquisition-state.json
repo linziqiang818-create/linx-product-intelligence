@@ -1,9 +1,12 @@
 {
   "mode": "free-public-observation",
-  "targetNewProducts": 500,
-  "discovered": 0,
+  "initialCandidatePoolTarget": 2000,
+  "weeklyCandidateExpansion": 500,
+  "candidateDiscovered": 0,
+  "enrichmentTarget": 500,
+  "enriched": 0,
   "activeImported": 0,
   "movedToTrash": 0,
   "startedAt": "2026-07-15T15:30:00+08:00",
-  "status": "scheduled"
+  "status": "building-candidate-pool"
 }
