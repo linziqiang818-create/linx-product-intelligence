@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildCalibrationPairs, normalizeCalibrationState, selectCalibrationSamples, summarizeCalibration } from "../app/calibration.ts";
-import { calibratedHardRejectReason, roundOneGoldenSamples } from "../app/company-calibration.ts";
+import { buildCalibrationPairs, isCalibrationFeedbackComplete, normalizeCalibrationState, selectCalibrationSamples, summarizeCalibration } from "../app/calibration.ts";
+import { activeCalibrationAsins, activeCalibrationRound, calibratedHardRejectReason, roundOneCalibrationAsins, roundOneGoldenSamples } from "../app/company-calibration.ts";
 
 const candidates = Array.from({ length: 20 }, (_, index) => ({
   asin: `ASIN${index}`,
@@ -54,4 +54,32 @@ test("only the confirmed ceiling-storage category becomes a calibrated hard rule
   assert.ok(calibratedHardRejectReason({ title: "4x8 FT Overhead Garage Storage Rack", category: "Garage Storage" }));
   assert.equal(calibratedHardRejectReason({ title: "Motorized Height Adjustable Workshop Table", category: "Workbenches" }), "");
   assert.equal(calibratedHardRejectReason({ title: "Modern TV Stand with Storage", category: "Television Stands" }), "");
+});
+
+test("opens a second calibration round without repeating first-round products", () => {
+  assert.equal(activeCalibrationRound, 2);
+  assert.equal(activeCalibrationAsins.length, 14);
+  assert.equal(new Set(activeCalibrationAsins).size, 14);
+  assert.equal(activeCalibrationAsins.some((asin) => roundOneCalibrationAsins.includes(asin)), false);
+});
+
+test("summarizes real interest separately from theoretical eligibility", () => {
+  const summary = summarizeCalibration({
+    priority: { asin: "priority", verdict: "develop", interest: "priority", reasons: [], scope: "product", note: "", updatedAt: "now" },
+    normal: { asin: "normal", verdict: "develop", interest: "normal", reasons: [], scope: "product", note: "", updatedAt: "now" },
+    low: { asin: "low", verdict: "develop", interest: "low", reasons: [], scope: "product", note: "", updatedAt: "now" },
+  });
+  assert.equal(summary.develop, 3);
+  assert.equal(summary.priorityInterest, 1);
+  assert.equal(summary.normalInterest, 1);
+  assert.equal(summary.lowInterest, 1);
+});
+
+test("requires interest for theoretical eligibility and a scoped reason for rejection", () => {
+  const baseFeedback = { asin: "sample", reasons: [], scope: "product" as const, note: "", updatedAt: "now" };
+  assert.equal(isCalibrationFeedbackComplete({ ...baseFeedback, verdict: "develop" }), false);
+  assert.equal(isCalibrationFeedbackComplete({ ...baseFeedback, verdict: "develop", interest: "normal" }), true);
+  assert.equal(isCalibrationFeedbackComplete({ ...baseFeedback, verdict: "reject" }), false);
+  assert.equal(isCalibrationFeedbackComplete({ ...baseFeedback, verdict: "reject", reasons: ["造型不认可"] }), true);
+  assert.equal(isCalibrationFeedbackComplete({ ...baseFeedback, verdict: "uncertain", scope: "uncertain" }), true);
 });

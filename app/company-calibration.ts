@@ -30,6 +30,33 @@ export const roundOneGoldenSamples: GoldenSample[] = [
 
 export const roundOneCalibrationAsins = roundOneGoldenSamples.map((sample) => sample.asin);
 
+// Round 2 focuses on the current ranking boundary and deliberately excludes
+// round-one products. These samples separate theoretical eligibility from the
+// user's actual willingness to investigate a direction.
+export const roundTwoCalibrationAsins = [
+  "B0FR8R2QV7",
+  "B0FJ2H1DG6",
+  "B0DWFGYWLN",
+  "B0GWR1M1CX",
+  "B0DWMNGBKD",
+  "B0FKTML5HX",
+  "B0DF2CDWPF",
+  "B0F6BP73WJ",
+  "B0D78W597V",
+  "B0C68MNQ1K",
+  "B0F2SZCWSP",
+  "B0DQPXHV82",
+  "B0F2H5FNPJ",
+  "B0GR3V3WDP",
+] as const;
+
+export const activeCalibrationRound = 2;
+export const activeCalibrationAsins: readonly string[] = roundTwoCalibrationAsins;
+
+export function calibratedProductDisposition(asin: string) {
+  return roundOneGoldenSamples.find((sample) => sample.asin === asin);
+}
+
 const ceilingStorageRackTerms = /ceiling[- ]mounted (?:storage )?racks?|overhead garage storage racks?|garage ceiling storage racks?|ceiling storage racks?/i;
 
 export function calibratedHardRejectReason(input: { title: string; category: string }) {

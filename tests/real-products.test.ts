@@ -54,7 +54,7 @@ test("routes missing or suspicious packaging to data pending without assigning D
   assert.deepEqual(dataIssuesFor("", 32), ["缺少包装尺寸"]);
   assert.equal(dataStatusFor("9.91 x 5.08 x 3.05 cm", 47.2), "needs_data");
   assert.deepEqual(dataIssuesFor("9.91 x 5.08 x 3.05 cm", 47.2), ["包装尺寸疑似单位错误"]);
-  assert.equal(gradeWithDataStatus("暂不建议", "needs_data"), "C");
+  assert.equal(gradeWithDataStatus("暂不建议", "needs_data"), "D");
 });
 
 test("returns a product to normal grading after packaging data is completed", () => {

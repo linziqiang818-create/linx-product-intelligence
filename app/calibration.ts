@@ -1,7 +1,8 @@
-import { roundOneCalibrationAsins } from "./company-calibration.ts";
+import { activeCalibrationAsins } from "./company-calibration.ts";
 
 export type CalibrationVerdict = "develop" | "reject" | "uncertain";
 export type CalibrationScope = "category" | "product" | "uncertain";
+export type CalibrationInterest = "priority" | "normal" | "low";
 export type PairChoice = "left" | "right" | "neither";
 
 export type CalibrationCandidate = {
@@ -17,6 +18,7 @@ export type CalibrationFeedback = {
   verdict: CalibrationVerdict;
   reasons: string[];
   scope: CalibrationScope;
+  interest?: CalibrationInterest;
   note: string;
   updatedAt: string;
 };
@@ -47,6 +49,13 @@ export const calibrationReasons = [
   "其他",
 ] as const;
 
+export function isCalibrationFeedbackComplete(feedback: CalibrationFeedback | undefined) {
+  if (!feedback) return false;
+  if (feedback.verdict === "develop") return Boolean(feedback.interest);
+  if (feedback.verdict === "reject") return feedback.reasons.length > 0 && feedback.scope !== "uncertain";
+  return true;
+}
+
 const scenarioTerms = /trash|garbage|coffee bar|pet|dog crate|cat litter|reception|craft|sewing|extendable|lift.?top|隐藏|宠物|前台|咖啡|伸缩/i;
 
 export function selectCalibrationSamples(candidates: CalibrationCandidate[], limit = 14) {
@@ -61,7 +70,7 @@ export function selectCalibrationSamples(candidates: CalibrationCandidate[], lim
     }
   };
   const byAsin = new Map(candidates.map((candidate) => [candidate.asin, candidate]));
-  add(roundOneCalibrationAsins.map((asin) => byAsin.get(asin)).filter((item): item is CalibrationCandidate => Boolean(item)), limit);
+  add(activeCalibrationAsins.map((asin) => byAsin.get(asin)).filter((item): item is CalibrationCandidate => Boolean(item)), limit);
   if (selected.length >= limit) return selected.slice(0, limit);
 
   const ranked = [...candidates].sort((a, b) => b.score - a.score);
@@ -99,6 +108,9 @@ export function summarizeCalibration(feedback: Record<string, CalibrationFeedbac
     develop: values.filter((item) => item.verdict === "develop").length,
     reject: values.filter((item) => item.verdict === "reject").length,
     uncertain: values.filter((item) => item.verdict === "uncertain").length,
+    priorityInterest: values.filter((item) => item.verdict === "develop" && item.interest === "priority").length,
+    normalInterest: values.filter((item) => item.verdict === "develop" && item.interest === "normal").length,
+    lowInterest: values.filter((item) => item.verdict === "develop" && item.interest === "low").length,
     hardRules: values.filter((item) => item.verdict === "reject" && item.scope === "category"),
     softPreferences: values.filter((item) => item.verdict === "reject" && item.scope === "product"),
     questions: values.filter((item) => item.verdict === "uncertain" || item.scope === "uncertain"),

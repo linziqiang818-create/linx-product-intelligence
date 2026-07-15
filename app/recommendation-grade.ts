@@ -20,6 +20,7 @@ export function gradeFromDecision(decision: RecommendationDecision): Grade {
 }
 
 export function gradeWithDataStatus(decision: RecommendationDecision, dataStatus: DataStatus): Grade {
+  if (gradeFromDecision(decision) === "D") return "D";
   return dataStatus === "needs_data" ? "C" : gradeFromDecision(decision);
 }
 

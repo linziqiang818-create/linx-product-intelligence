@@ -182,6 +182,17 @@ test("applies the confirmed ceiling storage rack rule even when the rack is moto
   assert.ok(rack.hardRejectReasons.some((reason) => reason.includes("公司校准确认")));
 });
 
+test("applies product-level calibration without generalizing it to neighboring products", () => {
+  const rejectedProduct = assess({ ...base, asin: "B0G4HKTHJX", title: "Low Loft Bed with Desk and Storage", category: "Beds" });
+  const neighboringProduct = assess({ ...base, asin: "NEIGHBOR01", title: "Low Loft Bed with Desk and Storage", category: "Beds" });
+  const uncertainProduct = assess({ ...base, asin: "B0GH651S4V", title: "Upholstered Bed with Drawers", category: "Bed Frames" });
+  assert.equal(rejectedProduct.hardRejected, true);
+  assert.ok(rejectedProduct.hardRejectReasons.some((reason) => reason.includes("此具体产品")));
+  assert.equal(neighboringProduct.hardRejected, false);
+  assert.equal(uncertainProduct.hardRejected, false);
+  assert.equal(uncertainProduct.decision, "需要优化");
+});
+
 test("routes uncertain category or material to data pending instead of D", () => {
   const unknownMaterial = assess({ ...base, material: "" });
   const unknownCategory = assess({ ...base, category: "Other" });

@@ -1,5 +1,5 @@
 import { dataIssuesFor, dataStatusFor } from "./recommendation-grade.ts";
-import { calibratedHardRejectReason } from "./company-calibration.ts";
+import { calibratedHardRejectReason, calibratedProductDisposition } from "./company-calibration.ts";
 import {
   glassTerms,
   isStandardizedMetalCommodity,
@@ -84,6 +84,11 @@ export function assess(input: OpportunityInput) {
   const hasPanelMaterial = panelMaterialTerms.test(text);
   const isCommodity = isStandardizedMetalCommodity(text, hasPanelMaterial);
   const calibratedRejectReason = calibratedHardRejectReason(input);
+  const calibratedDisposition = calibratedProductDisposition(input.asin);
+  const calibratedProductRejectReason = calibratedDisposition?.verdict === "reject" && calibratedDisposition.scope === "product"
+    ? `用户校准确认：此具体产品不进入开发清单（${calibratedDisposition.reasons.join("、") || "单品排除"}）`
+    : "";
+  const calibratedUncertain = calibratedDisposition?.verdict === "uncertain";
   const hasCasegoodForm = casegoodTerms.test(text);
   const hasStructure = structuralTerms.test(text);
   const affinity = companyAffinity.filter(([pattern]) => pattern.test(text)).map(([, label]) => label);
@@ -114,6 +119,7 @@ export function assess(input: OpportunityInput) {
     isUnsupported ? "类目超出现有室内板式家具能力" : "",
     isCommodity ? "纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势" : "",
     calibratedRejectReason,
+    calibratedProductRejectReason,
     input.price > 0 && input.price < selectionPolicy.minimumPriceUsd ? `售价低于 ${selectionPolicy.minimumPriceUsd} 美元目标价格带` : "",
   ].filter(Boolean);
   const fitConcerns = [
@@ -127,7 +133,7 @@ export function assess(input: OpportunityInput) {
   if (hasStructure) companyFit += 14;
   companyFit += Math.min(24, affinity.length * 8);
   if (input.price >= 130) companyFit += 4;
-  if (isGlass || isPureSolidWood || isPureUpholstered || isPlasticGamingChair || isBabyCategory || isUnsupported || isCommodity || calibratedRejectReason) companyFit = 0;
+  if (isGlass || isPureSolidWood || isPureUpholstered || isPlasticGamingChair || isBabyCategory || isUnsupported || isCommodity || calibratedRejectReason || calibratedProductRejectReason) companyFit = 0;
   companyFit = clamp(companyFit);
 
   const featureCost = /led|electric|massage|fireplace|motor|lift|adjustable/i.test(text) ? 0.035 : 0;
@@ -180,6 +186,7 @@ export function assess(input: OpportunityInput) {
   const dataWarnings = dataIssuesFor(input.packageDimensionsCm, input.packageGrossKg, dataContext);
   let decision: Decision = "需要优化";
   if (hardRejected) decision = "暂不建议";
+  else if (calibratedUncertain) decision = "需要优化";
   else if (!packageKnown || !marginKnown) decision = "需要优化";
   else if (companyFit < selectionPolicy.decision.minimumCompanyFit) decision = "需要优化";
   else if (companyFit >= selectionPolicy.decision.priorityCompanyFit && hiddenOpportunity >= selectionPolicy.decision.priorityHiddenOpportunity && score >= selectionPolicy.decision.priorityScore) decision = "优先跟进";
@@ -194,6 +201,7 @@ export function assess(input: OpportunityInput) {
   ].filter(Boolean);
   const reasons = [
     ...hardRejectReasons,
+    calibratedUncertain ? "用户校准标记：此产品仍需确认，暂不进入推荐榜" : "",
     ...fitConcerns,
     dataWarnings.length ? `数据待补：${dataWarnings.join("、")}，补齐前不进入推荐榜` : "",
     ...(!hardRejected ? hiddenSignals : []),
