@@ -17,6 +17,6 @@ test("server renders the furniture selection workbench", async () => {
   assert.match(html, /机会筛选/);
   assert.match(html, /收藏夹/);
   assert.match(html, /选择当前结果/);
-  assert.match(html, /A \/ B 档机会/);
+  assert.match(html, /个进入初筛排名/);
   assert.match(html, /https:\/\/www\.amazon\.com\/dp\//);
 });

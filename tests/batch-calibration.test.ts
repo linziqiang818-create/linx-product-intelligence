@@ -22,7 +22,7 @@ const candidates: BatchCalibrationCandidate[] = products.map((product, index) =>
 test("groups every product exactly once and keeps representative samples small", () => {
   const groups = buildProductGroups(candidates);
   const groupedAsins = groups.flatMap((group) => group.products.map((product) => product.asin));
-  assert.ok(groups.length >= 12 && groups.length <= 19);
+  assert.ok(groups.length >= 8 && groups.length <= 19);
   assert.equal(groupedAsins.length, candidates.length);
   assert.equal(new Set(groupedAsins).size, candidates.length);
   assert.ok(groups.every((group) => group.representatives.length >= 1 && group.representatives.length <= 3));

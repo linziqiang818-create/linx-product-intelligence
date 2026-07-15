@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { assess } from "../app/opportunity.ts";
 import {
   dataIssuesFor,
   dataStatusFor,
@@ -11,12 +10,12 @@ import {
   hasSuspiciousPackage,
 } from "../app/recommendation-grade.ts";
 
-type RealProduct = { asin: string; title: string; category: string; imageUrl: string; sourceUrl: string; estimatedMargin: number; importedAt: string; monthlySales: number; launchDays: number; salesGrowth: number; rating: number; reviews: number; packageGrossKg: number; packageDimensionsCm: string; material: string; priceUplift: number; price: number };
+type RealProduct = { asin: string; title: string; category: string; imageUrl: string; sourceUrl: string; estimatedMargin?: number; importedAt: string; monthlySales?: number; launchDays?: number; salesGrowth?: number; rating: number; reviews: number; packageGrossKg?: number; packageDimensionsCm?: string; material: string; priceUplift: number; price: number; note: string };
 const products = JSON.parse(readFileSync(new URL("../app/real-products.json", import.meta.url), "utf8")) as RealProduct[];
 
-test("ships the two merged real-product exports without duplicates", () => {
-  assert.equal(products.length, 128);
-  assert.equal(new Set(products.map((product) => product.asin)).size, 128);
+test("ships the curated Amazon US research batch without duplicates", () => {
+  assert.equal(products.length, 50);
+  assert.equal(new Set(products.map((product) => product.asin)).size, 50);
   assert.ok(products.every((product) => /^[A-Z0-9]{10}$/.test(product.asin)));
 });
 
@@ -28,7 +27,15 @@ test("every imported product has a real Amazon image and listing link", () => {
 });
 
 test("normalizes exported margin fractions to percentages", () => {
-  assert.ok(products.every((product) => product.estimatedMargin === 0 || product.estimatedMargin > 1));
+  assert.ok(products.every((product) => product.estimatedMargin === undefined || product.estimatedMargin === 0 || product.estimatedMargin > 1));
+});
+
+test("does not invent Amazon fields that were unavailable on the public search pages", () => {
+  assert.ok(products.every((product) => product.monthlySales === undefined));
+  assert.ok(products.every((product) => product.launchDays === undefined));
+  assert.ok(products.every((product) => product.packageGrossKg === undefined));
+  assert.ok(products.every((product) => product.packageDimensionsCm === undefined));
+  assert.ok(products.every((product) => product.note.includes("未使用推测值")));
 });
 
 test("keeps legacy decision mapping compatible while exposing one A through D conclusion", () => {
@@ -61,29 +68,4 @@ test("returns a product to normal grading after packaging data is completed", ()
   assert.equal(dataStatusFor("110 x 58 x 19 cm", 32), "complete");
   assert.equal(gradeWithDataStatus("优先跟进", "complete"), "A");
   assert.equal(gradeWithDataStatus("暂不建议", "complete"), "D");
-});
-
-test("recognizes the real football equipment rack as a standardized metal product", () => {
-  const product = products.find((item) => item.asin === "B0GGTCD9G2");
-  assert.ok(product);
-  const result = assess({
-    asin: product.asin,
-    title: product.title,
-    category: product.category,
-    price: product.price,
-    monthlySales: product.monthlySales,
-    launchDays: product.launchDays,
-    salesGrowth: product.salesGrowth,
-    rating: product.rating,
-    reviews: product.reviews,
-    packageGrossKg: product.packageGrossKg,
-    packageDimensionsCm: product.packageDimensionsCm,
-    material: product.material,
-    estimatedMargin: product.estimatedMargin,
-    priceUplift: product.priceUplift,
-    sourceUrl: product.sourceUrl,
-  });
-  assert.equal(result.hardRejected, true);
-  assert.equal(result.decision, "暂不建议");
-  assert.ok(result.hardRejectReasons.some((reason) => reason.includes("纯金属标准化器材架")));
 });

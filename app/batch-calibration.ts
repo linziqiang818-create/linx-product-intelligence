@@ -48,7 +48,7 @@ const definitions: Array<{ id: string; name: string; description: string; patter
   { id: "tables", name: "餐桌、会议桌与伸缩桌", description: "餐桌、会议桌、伸缩和折叠桌类", pattern: /dining table|conference table|meeting table|extendable table|expandable table/i },
   { id: "occasional", name: "茶几、边几与床头柜", description: "客厅茶几、边几、玄关桌和床头柜", pattern: /coffee table|end table|nightstand|sofa table|console table/i },
   { id: "beds", name: "床架、高架床与软包床", description: "床架、儿童高架床、升降床和软包床", pattern: /\bbed\b|bed frame|loft bed|bunk bed|adjustable bed/i },
-  { id: "pet", name: "宠物家具与动物笼柜", description: "宠物笼柜、猫柜、狗屋和小动物家具", pattern: /dog crate|dog house|kennel|cat litter|cat house|hamster|guinea pig|small animal|pet furniture|reptile|terrarium/i },
+  { id: "pet", name: "宠物家具与动物笼柜", description: "宠物笼柜、猫柜、狗屋和小动物家具", pattern: /dog crate|dog house|kennel|cat litter|litter box|cat house|cat enclosure|cat cabinet|pet crate|hamster|guinea pig|small animal|pet furniture|reptile|terrarium/i },
   { id: "craft-salon", name: "手作、缝纫与美甲工作站", description: "缝纫柜、手作收纳、美甲桌和专业工作台", pattern: /sewing|craft|cricut|scrapbook|manicure|nail desk|nail table|salon station/i },
   { id: "office", name: "办公桌、文件柜与电脑工作站", description: "升降桌、电脑桌、打印机柜和文件柜", pattern: /computer workstation|standing desk|office desk|file cabinet|filing cabinet|printer stand|machine cart|computer cart/i },
   { id: "entryway", name: "玄关、鞋柜与衣帽收纳", description: "鞋柜、鞋架、换鞋凳、衣帽架和门厅树", pattern: /shoe|hall tree|entryway|coat rack|locker/i },

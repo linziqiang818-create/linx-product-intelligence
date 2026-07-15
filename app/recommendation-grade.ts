@@ -60,5 +60,5 @@ export function dataIssuesFor(packageDimensionsCm: string | undefined, packageGr
 
 export function dataWarningFor(packageDimensionsCm: string | undefined, packageGrossKg: number | undefined, context?: SelectionDataContext) {
   const issues = dataIssuesFor(packageDimensionsCm, packageGrossKg, context);
-  return issues.length ? `数据待补：${issues.join("、")}；补齐前不参与推荐或不推荐分类` : "";
+  return issues.length ? `数据待补：${issues.join("、")}；补齐前仅参与初筛排序，不形成正式推荐等级` : "";
 }

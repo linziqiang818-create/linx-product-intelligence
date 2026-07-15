@@ -87,6 +87,12 @@ test("keeps confirmed glass and upholstered supply-chain mismatches in D", () =>
   }
 });
 
+test("does not treat an explicit no-mirror listing as a glass product", () => {
+  const result = assess({ ...base, title: "Wooden Barber Station with Drawers (No Mirror)", material: "MDF and particleboard" });
+  assert.equal(result.hardRejected, false);
+  assert.ok(!result.hardRejectReasons.some((reason) => reason.includes("玻璃")));
+});
+
 test("does not mistake a crowded mature listing for a hidden opportunity", () => {
   const result = assess({
     ...base,

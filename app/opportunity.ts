@@ -75,7 +75,8 @@ function clamp(value: number) {
 export function assess(input: OpportunityInput) {
   const text = `${input.category} ${input.title} ${input.material}`;
   const normalizedGrowth = Math.abs(input.salesGrowth) > 2 ? input.salesGrowth / 100 : input.salesGrowth;
-  const isGlass = glassTerms.test(text);
+  const glassEvidenceText = text.replace(/\b(?:no|without)\s+(?:a\s+)?mirrors?\b/gi, "");
+  const isGlass = glassTerms.test(glassEvidenceText);
   const isPureUpholstered = sofaTerms.test(text) && upholsteryMaterialTerms.test(text) && !panelMaterialTerms.test(text);
   const isPlasticGamingChair = gamingChairTerms.test(text) && plasticTerms.test(text) && !panelMaterialTerms.test(text);
   const isPureSolidWood = solidWoodTerms.test(text) && !panelMaterialTerms.test(text);
