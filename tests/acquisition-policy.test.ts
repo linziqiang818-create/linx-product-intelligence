@@ -7,7 +7,11 @@ test("reserves twenty percent of every research batch for unexpected opportuniti
   assert.equal(Object.values(acquisitionPolicy.mix).reduce((sum, count) => sum + count, 0), acquisitionPolicy.batchSize);
   assert.equal(acquisitionPolicy.mix.exploration, 20);
   assert.equal(acquisitionPolicy.batchSize, 100);
-  assert.equal(acquisitionPolicy.discoveryBatchSize, 500);
+  assert.equal(acquisitionPolicy.discoveryBatchSize, 700);
+  assert.equal(acquisitionPolicy.sprint.runsPerDay, 3);
+  assert.equal(acquisitionPolicy.sprint.dailyDiscoveryLimit, 2100);
+  assert.equal(acquisitionPolicy.sprint.dailyFormalImportLimit, 300);
+  assert.equal(acquisitionPolicy.sprint.formalImportTarget, 4200);
 });
 
 test("documents the exact composition of the current fifty-product pilot batch", () => {

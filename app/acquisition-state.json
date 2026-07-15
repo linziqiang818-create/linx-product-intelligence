@@ -1,12 +1,18 @@
 {
   "mode": "free-public-observation",
-  "initialCandidatePoolTarget": 2000,
-  "weeklyCandidateExpansion": 500,
+  "initialCandidatePoolTarget": 20000,
+  "weeklyCandidateExpansion": 3500,
   "candidateDiscovered": 0,
-  "enrichmentTarget": 500,
+  "enrichmentTarget": 4200,
   "enriched": 0,
   "activeImported": 0,
   "movedToTrash": 0,
+  "dailyProgress": {
+    "date": "",
+    "runsCompleted": 0,
+    "candidateDiscovered": 0,
+    "activeImported": 0
+  },
   "startedAt": "2026-07-15T15:30:00+08:00",
-  "status": "building-candidate-pool"
+  "status": "fourteen-day-acquisition-sprint"
 }

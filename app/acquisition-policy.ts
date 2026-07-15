@@ -1,8 +1,21 @@
 export const acquisitionPolicy = {
   batchSize: 100,
-  discoveryBatchSize: 500,
-  initialCandidatePoolTarget: 2000,
-  weeklyCandidateExpansion: 500,
+  discoveryBatchSize: 700,
+  initialCandidatePoolTarget: 20000,
+  weeklyCandidateExpansion: 3500,
+  sprint: {
+    durationDays: 14,
+    runsPerDay: 3,
+    hoursLocal: [9, 14, 19],
+    dailyDiscoveryLimit: 2100,
+    dailyFormalImportLimit: 300,
+    formalImportTarget: 4200,
+  },
+  steady: {
+    runsPerDay: 1,
+    dailyDiscoveryLimit: 700,
+    dailyFormalImportLimit: 100,
+  },
   mix: {
     redOceanBlue: 40,
     blueOceanRed: 40,
