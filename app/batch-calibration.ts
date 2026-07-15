@@ -1,5 +1,7 @@
 export type BatchGroupDecision = "priority" | "normal" | "low" | "reject" | "split";
 export type TopAuditDecision = "correct" | "high" | "low" | "exclude";
+export type ResearchDecision = "research" | "hold" | "pass";
+export type ChallengeDecision = "challenger" | "anchor" | "both" | "neither";
 
 export type BatchCalibrationCandidate = {
   asin: string;
@@ -25,12 +27,14 @@ export type ProductGroup = {
 };
 
 export type BatchCalibrationState = {
-  version: 1;
+  version: 2;
   groups: Record<string, { decision: BatchGroupDecision; updatedAt: string }>;
-  audit: Record<string, { decision: TopAuditDecision; updatedAt: string }>;
+  research: Record<string, { decision: ResearchDecision; source: "candidate" | "challenge"; updatedAt: string }>;
+  challenges: Record<string, { decision: ChallengeDecision; challengerAsin: string; anchorAsin: string; updatedAt: string }>;
+  legacyAudit: Record<string, { decision: TopAuditDecision; updatedAt: string }>;
 };
 
-export const emptyBatchCalibrationState = (): BatchCalibrationState => ({ version: 1, groups: {}, audit: {} });
+export const emptyBatchCalibrationState = (): BatchCalibrationState => ({ version: 2, groups: {}, research: {}, challenges: {}, legacyAudit: {} });
 
 const definitions: Array<{ id: string; name: string; description: string; pattern: RegExp }> = [
   { id: "ceiling-racks", name: "吊顶与车库顶置储物架", description: "吊顶、升降和顶置车库储物系统", pattern: /ceiling mounted|ceiling storage|overhead garage|garage ceiling/i },
@@ -71,14 +75,39 @@ export function buildProductGroups(candidates: BatchCalibrationCandidate[]): Pro
 
 export function normalizeBatchCalibrationState(value: unknown): BatchCalibrationState {
   if (!value || typeof value !== "object") return emptyBatchCalibrationState();
-  const raw = value as Partial<BatchCalibrationState>;
-  if (raw.version !== 1 || !raw.groups || !raw.audit) return emptyBatchCalibrationState();
-  return { version: 1, groups: raw.groups, audit: raw.audit };
+  const raw = value as Partial<BatchCalibrationState> & { version?: number; audit?: BatchCalibrationState["legacyAudit"] };
+  if (raw.version === 1 && raw.groups && raw.audit) {
+    const research = Object.fromEntries(Object.entries(raw.audit).flatMap(([asin, feedback]) => feedback.decision === "exclude" ? [[asin, { decision: "pass" as const, source: "candidate" as const, updatedAt: feedback.updatedAt }]] : []));
+    return { version: 2, groups: raw.groups, research, challenges: {}, legacyAudit: raw.audit };
+  }
+  if (raw.version !== 2 || !raw.groups || !raw.research || !raw.challenges) return emptyBatchCalibrationState();
+  return { version: 2, groups: raw.groups, research: raw.research, challenges: raw.challenges, legacyAudit: raw.legacyAudit ?? {} };
 }
 
 export function batchCoverage(groups: ProductGroup[], state: BatchCalibrationState) {
-  const coveredProducts = groups.reduce((total, group) => state.groups[group.id] && state.groups[group.id].decision !== "split" ? total + group.products.length : total, 0);
+  const decidedGroups = groups.filter((group) => state.groups[group.id]).length;
+  const coveredProducts = groups.reduce((total, group) => state.groups[group.id] ? total + group.products.length : total, 0);
   const splitProducts = groups.reduce((total, group) => state.groups[group.id]?.decision === "split" ? total + group.products.length : total, 0);
   const totalProducts = groups.reduce((total, group) => total + group.products.length, 0);
-  return { coveredProducts, splitProducts, totalProducts, percent: totalProducts ? Math.round(coveredProducts / totalProducts * 100) : 0 };
+  return { decidedGroups, coveredProducts, splitProducts, totalProducts, percent: totalProducts ? Math.round(coveredProducts / totalProducts * 100) : 0 };
+}
+
+const decisionOrder: Record<BatchGroupDecision, number> = { split: 0, priority: 1, normal: 2, low: 3, reject: 4 };
+
+export function selectChallengeCandidates(groups: ProductGroup[], state: BatchCalibrationState, excludedAsins: Set<string>) {
+  const eligibleGroups = groups
+    .filter((group) => state.groups[group.id]?.decision !== "reject")
+    .map((group) => ({ ...group, groupDecision: state.groups[group.id]?.decision ?? "normal" }))
+    .sort((a, b) => decisionOrder[a.groupDecision] - decisionOrder[b.groupDecision] || b.products.length - a.products.length);
+  const queues = eligibleGroups.map((group) => group.products.filter((product) => product.grade !== "D" && !excludedAsins.has(product.asin)));
+  const result: BatchCalibrationCandidate[] = [];
+  for (let index = 0; queues.some((queue) => index < queue.length); index++) {
+    for (const queue of queues) if (queue[index]) result.push(queue[index]);
+  }
+  return result;
+}
+
+export function buildChallengePairs(challengers: BatchCalibrationCandidate[], anchors: BatchCalibrationCandidate[]) {
+  if (!anchors.length) return [];
+  return challengers.map((challenger, index) => ({ id: `${challenger.asin}__${anchors[index % anchors.length].asin}`, challenger, anchor: anchors[index % anchors.length] }));
 }
