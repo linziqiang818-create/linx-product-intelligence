@@ -36,7 +36,7 @@ const sofaTerms = /sofa|couch|recliner|accent chair|沙发|躺椅|软包椅/i;
 const gamingChairTerms = /gaming chair|电竞椅/i;
 const babyTerms = /baby|nursery|crib|bassinet|婴儿|童床/i;
 const unsupportedTerms = /outdoor|patio|bathroom vanity|sink|faucet|toilet|lighting|chandelier|aquarium|户外|浴室柜|水槽|灯具/i;
-const casegoodTerms = /cabinet|sideboard|dresser|nightstand|console table|coffee table|end table|desk|workstation|bookshelf|bookcase|pantry|storage|vanity desk|shoe cabinet|entryway|reception desk|podium|coffee station|craft table|sewing table|pet furniture|dog crate|cat cabinet|橱柜|边柜|斗柜|床头柜|桌|书架|鞋柜|收纳/i;
+const casegoodTerms = /cabinet|sideboard|dresser|nightstand|console table|coffee table|end table|desk|workstation|bookshelf|bookcase|pantry|storage|vanity desk|shoe cabinet|entryway|reception desk|podium|coffee station|craft table|sewing table|pet furniture|dog crate|cat cabinet|cat enclosure|litter box|橱柜|边柜|斗柜|床头柜|桌|书架|鞋柜|收纳|猫砂柜/i;
 const structuralTerms = /drawer|door|shelf|hinge|slide|lift.?top|fold|extend|adjustable|charging|usb|outlet|caster|抽屉|柜门|层板|铰链|滑轨|升降|折叠|伸缩|可调|充电/i;
 const nicheUseTerms = /reception|manicure|nail|craft|sewing|coffee station|printer stand|record player|vinyl|dog crate|cat litter|entryway|small space|apartment|corner|farmhouse pantry/i;
 
