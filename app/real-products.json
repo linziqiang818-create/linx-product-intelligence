@@ -1148,5 +1148,43 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00"
+  },
+  {
+    "asin": "B0FXRGJ4S9",
+    "title": "IFGET Modern Buffet Cabinet with Storage, 92.63 Inch Wide Fluted Arched Sideboard Cabinet with Adjustable Shelves, Wooden Modular Coffee Bar for Dining Room, Kitchen, Living Room, Entryway, Natural",
+    "titleZh": "IFGET 现代储物餐边柜，92.63 英寸宽拱形竖纹边柜，带可调节搁板，木质模块化咖啡吧柜，适用于餐厅、厨房、客厅和玄关，自然色",
+    "imageUrl": "https://m.media-amazon.com/images/I/71pV4dHzTcL._AC_SY300_SX300_QL70_ML2_.jpg",
+    "category": "Furniture / Sideboards and Buffets",
+    "price": 389.99,
+    "rating": 4.5,
+    "reviews": 391,
+    "bsr": 24513,
+    "boughtPastMonth": 500,
+    "dimensions": "15.75 x 92.63 x 34 inches",
+    "weight": 47,
+    "material": "Engineered Wood",
+    "variants": "Natural; Brown; Dark Grey; White; 1-4 piece configurations visible",
+    "sellingPoints": "拱形竖纹门板、模块化三柜组合、可调节搁板、离地底座便于扫地机器人清洁",
+    "painPoints": "公开评论摘要显示稳固性评价不一，并有柜腿耐用性和柜门对齐方面的反馈",
+    "sourceUrl": "https://www.amazon.com/dp/B0FXRGJ4S9",
+    "note": "Amazon 美国站公开商品页已核验 ASIN、完整标题、主图链接、价格、评分、评论数、BSR、近月购买提示、商品尺寸、可见重量和材质。Date First Available、包装尺寸与包装毛重未公开，保持待补；未使用推测值，也未把近月购买提示伪装成精确月销量。",
+    "complexity": 3,
+    "differentiation": 4,
+    "returnRisk": "中",
+    "priceUplift": 0,
+    "track": "red-ocean-blue",
+    "grade": "B",
+    "dataStatus": "needs_data",
+    "dataPendingReasons": ["Date First Available unavailable", "package dimensions unavailable", "package weight unavailable"],
+    "potential": false,
+    "potentialReasons": [],
+    "salesEvidence": {
+      "type": "amazon-bought-past-month",
+      "lowerBound": 500,
+      "source": "Amazon public product page",
+      "confidence": "high"
+    },
+    "observedAt": "2026-07-16T19:06:58+08:00",
+    "importedAt": "2026-07-16T19:06:58+08:00"
   }
 ]

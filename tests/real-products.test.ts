@@ -14,8 +14,8 @@ type RealProduct = { asin: string; title: string; category: string; imageUrl: st
 const products = JSON.parse(readFileSync(new URL("../app/real-products.json", import.meta.url), "utf8")) as RealProduct[];
 
 test("ships the curated Amazon US research batch without duplicates", () => {
-  assert.equal(products.length, 50);
-  assert.equal(new Set(products.map((product) => product.asin)).size, 50);
+  assert.ok(products.length >= 50);
+  assert.equal(new Set(products.map((product) => product.asin)).size, products.length);
   assert.ok(products.every((product) => /^[A-Z0-9]{10}$/.test(product.asin)));
 });
 

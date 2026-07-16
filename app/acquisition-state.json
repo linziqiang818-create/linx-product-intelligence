@@ -2,17 +2,29 @@
   "mode": "free-public-observation",
   "initialCandidatePoolTarget": 20000,
   "weeklyCandidateExpansion": 3500,
-  "candidateDiscovered": 0,
+  "candidateDiscovered": 40,
   "enrichmentTarget": 4200,
-  "enriched": 0,
-  "activeImported": 0,
+  "enriched": 1,
+  "activeImported": 1,
   "movedToTrash": 0,
   "dailyProgress": {
-    "date": "",
-    "runsCompleted": 0,
-    "candidateDiscovered": 0,
-    "activeImported": 0
+    "date": "2026-07-16",
+    "runsCompleted": 3,
+    "candidateDiscovered": 40,
+    "activeImported": 1
   },
   "startedAt": "2026-07-15T15:30:00+08:00",
-  "status": "fourteen-day-acquisition-sprint"
+  "status": "fourteen-day-acquisition-sprint",
+  "lastRun": {
+    "ranAt": "2026-07-16T19:06:58+08:00",
+    "sprintDay": 2,
+    "scheduledHour": 19,
+    "candidateDiscovered": 0,
+    "enriched": 1,
+    "activeImported": 1,
+    "movedToTrash": 0,
+    "dataPending": 1,
+    "result": "stopped-on-public-access-limit",
+    "accessRestriction": "The public Amazon product page was readable and one queued candidate completed basic authenticity verification. Fetching its main-image resource then returned a cache-miss access failure, so the batch stopped immediately; no further discovery or product-page requests were attempted."
+  }
 }
