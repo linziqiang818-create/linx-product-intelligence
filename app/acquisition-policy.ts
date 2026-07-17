@@ -27,6 +27,14 @@ export const acquisitionPolicy = {
     maximumProductsPerFamily: 8,
     maximumProductsPerFamilyInTop20: 4,
   },
+  accessHandling: {
+    discoveryBeforeEnrichment: true,
+    skipSingleUnavailableListing: true,
+    cacheMissCountsAsSingleListingFailure: true,
+    consecutiveDetailFailuresBeforeBatchStop: 3,
+    immediateStopHttpStatuses: [403, 429],
+    immediateStopSignals: ["captcha", "robot check", "account sign-in required"],
+  },
   cadenceDays: {
     normal: 7,
     priority: 3,

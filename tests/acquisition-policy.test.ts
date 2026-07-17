@@ -25,6 +25,15 @@ test("prevents one product family from taking over future formal batches", () =>
   assert.equal(acquisitionPolicy.diversity.maximumProductsPerFamilyInTop20, 4);
 });
 
+test("does not let one unavailable Amazon listing cancel the whole batch", () => {
+  assert.equal(acquisitionPolicy.accessHandling.discoveryBeforeEnrichment, true);
+  assert.equal(acquisitionPolicy.accessHandling.skipSingleUnavailableListing, true);
+  assert.equal(acquisitionPolicy.accessHandling.cacheMissCountsAsSingleListingFailure, true);
+  assert.equal(acquisitionPolicy.accessHandling.consecutiveDetailFailuresBeforeBatchStop, 3);
+  assert.deepEqual(acquisitionPolicy.accessHandling.immediateStopHttpStatuses, [403, 429]);
+  assert.deepEqual(acquisitionPolicy.accessHandling.immediateStopSignals, ["captcha", "robot check", "account sign-in required"]);
+});
+
 test("keeps acquisition quotas out of formal storage and classification", () => {
   assert.equal(acquisitionPolicyBoundaries.appliesTo, "acquisition-priority-and-diversity");
   assert.equal(acquisitionPolicyBoundaries.formalStorageLimit, null);
