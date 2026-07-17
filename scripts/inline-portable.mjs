@@ -15,6 +15,9 @@ const moduleScript = html.match(/<script[^>]+type=["']module["'][^>]+src=["']([^
 if (!stylesheet || !moduleScript) {
   throw new Error("Portable build assets were not found in dist-pages/index.html.");
 }
+if (!html.includes("</body>")) {
+  throw new Error("Portable build body closing tag was not found.");
+}
 
 const localAsset = (assetPath) => join(buildRoot, assetPath.replace(/^\.\//, "").replace(/^\//, ""));
 const css = await readFile(localAsset(stylesheet[1]), "utf8");
@@ -24,7 +27,8 @@ const javascript = (await readFile(localAsset(moduleScript[1]), "utf8"))
 
 html = html
   .replace(stylesheet[0], () => `<style>${css}</style>`)
-  .replace(moduleScript[0], () => `<script>${javascript}</script>`);
+  .replace(moduleScript[0], "")
+  .replace("</body>", () => `<script>${javascript}</script></body>`);
 
 await mkdir(outputRoot, { recursive: true });
 await writeFile(outputFile, html, "utf8");
