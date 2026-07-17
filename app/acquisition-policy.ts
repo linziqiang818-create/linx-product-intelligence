@@ -34,6 +34,14 @@ export const acquisitionPolicy = {
   minimumPriceUsd: 100,
 } as const;
 
+// Batch sizes, family quotas and Top 20 diversity only control what gets
+// enriched first. They never cap the formal pool or any business placement.
+export const acquisitionPolicyBoundaries = {
+  appliesTo: "acquisition-priority-and-diversity",
+  formalStorageLimit: null,
+  classificationLimit: null,
+} as const;
+
 export const redOceanBlueSeeds = [
   "sideboard buffet cabinet arched fluted",
   "pantry cabinet tambour curved scalloped",

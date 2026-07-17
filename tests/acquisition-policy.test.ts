@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { acquisitionPolicy, currentResearchPoolSummary, salesEvidenceLabel } from "../app/acquisition-policy.ts";
+import { acquisitionPolicy, acquisitionPolicyBoundaries, currentResearchPoolSummary, salesEvidenceLabel } from "../app/acquisition-policy.ts";
 import { preliminaryPriority } from "../app/acquisition-priority.ts";
 
 test("reserves twenty percent of every research batch for unexpected opportunities", () => {
@@ -23,6 +23,12 @@ test("prevents one product family from taking over future formal batches", () =>
   assert.equal(acquisitionPolicy.diversity.minimumFamiliesPerTrack, 5);
   assert.equal(acquisitionPolicy.diversity.maximumProductsPerFamily, 8);
   assert.equal(acquisitionPolicy.diversity.maximumProductsPerFamilyInTop20, 4);
+});
+
+test("keeps acquisition quotas out of formal storage and classification", () => {
+  assert.equal(acquisitionPolicyBoundaries.appliesTo, "acquisition-priority-and-diversity");
+  assert.equal(acquisitionPolicyBoundaries.formalStorageLimit, null);
+  assert.equal(acquisitionPolicyBoundaries.classificationLimit, null);
 });
 
 test("labels public sales evidence without pretending an estimate is exact", () => {

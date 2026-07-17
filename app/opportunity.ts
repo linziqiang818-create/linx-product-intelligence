@@ -86,8 +86,12 @@ export function assess(input: OpportunityInput) {
   const isCommodity = isStandardizedMetalCommodity(text, hasPanelMaterial);
   const calibratedRejectReason = calibratedHardRejectReason(input);
   const calibratedDisposition = calibratedProductDisposition(input.asin);
-  const calibratedProductRejectReason = calibratedDisposition?.verdict === "reject" && calibratedDisposition.scope === "product"
-    ? `用户校准确认：此具体产品不进入开发清单（${calibratedDisposition.reasons.join("、") || "单品排除"}）`
+  const calibratedCategoryRejectReason = calibratedDisposition?.verdict === "reject" && calibratedDisposition.scope === "category"
+    ? `用户校准确认：此产品所属方向触发硬性禁做（${calibratedDisposition.reasons.join("、") || "品类排除"}）`
+    : "";
+  const calibratedProductLowInterest = calibratedDisposition?.verdict === "reject" && calibratedDisposition.scope === "product";
+  const calibratedProductLowInterestReason = calibratedProductLowInterest
+    ? `用户校准确认：对此具体产品不感兴趣（${calibratedDisposition.reasons.join("、") || "单品低兴趣"}）`
     : "";
   const calibratedUncertain = calibratedDisposition?.verdict === "uncertain";
   const calibratedInterest = calibratedInterestProfile(input);
@@ -121,7 +125,7 @@ export function assess(input: OpportunityInput) {
     isUnsupported ? "类目超出现有室内板式家具能力" : "",
     isCommodity ? "纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势" : "",
     calibratedRejectReason,
-    calibratedProductRejectReason,
+    calibratedCategoryRejectReason,
     input.price > 0 && input.price < selectionPolicy.minimumPriceUsd ? `售价低于 ${selectionPolicy.minimumPriceUsd} 美元目标价格带` : "",
   ].filter(Boolean);
   const fitConcerns = [
@@ -135,7 +139,7 @@ export function assess(input: OpportunityInput) {
   if (hasStructure) companyFit += 14;
   companyFit += Math.min(24, affinity.length * 8);
   if (input.price >= 130) companyFit += 4;
-  if (isGlass || isPureSolidWood || isPureUpholstered || isPlasticGamingChair || isBabyCategory || isUnsupported || isCommodity || calibratedRejectReason || calibratedProductRejectReason) companyFit = 0;
+  if (isGlass || isPureSolidWood || isPureUpholstered || isPlasticGamingChair || isBabyCategory || isUnsupported || isCommodity || calibratedRejectReason || calibratedCategoryRejectReason) companyFit = 0;
   companyFit = clamp(companyFit);
 
   const featureCost = /led|electric|massage|fireplace|motor|lift|adjustable/i.test(text) ? 0.035 : 0;
@@ -189,10 +193,10 @@ export function assess(input: OpportunityInput) {
   const marketEvidenceKnown = input.monthlySales > 0 || (input.launchDays > 0 && input.launchDays < 9999);
   let decision: Decision = "需要优化";
   if (hardRejected) decision = "暂不建议";
-  else if (calibratedInterest.tier === "low") decision = "需要优化";
+  else if (calibratedProductLowInterest || calibratedInterest.tier === "low") decision = "需要优化";
   else if (companyFit < selectionPolicy.decision.minimumCompanyFit) decision = "需要优化";
   else if (marketEvidenceKnown && hiddenOpportunity < selectionPolicy.decision.conditionalHiddenOpportunity) decision = "需要优化";
-  else if (calibratedInterest.tier === "priority" && qualified && score >= selectionPolicy.decision.conditionalScore) decision = "优先跟进";
+  else if (calibratedInterest.tier === "priority" && qualified && dataStatus === "complete" && marketEvidenceKnown && score >= selectionPolicy.decision.conditionalScore) decision = "优先跟进";
   else if (!calibratedUncertain) decision = "有条件跟进";
 
   const fitReasons = [
@@ -203,6 +207,7 @@ export function assess(input: OpportunityInput) {
   ].filter(Boolean);
   const reasons = [
     ...hardRejectReasons,
+    calibratedProductLowInterestReason,
     calibratedUncertain ? "用户校准标记：此产品仍需确认，暂不进入推荐榜" : "",
     ...calibratedInterest.reasons,
     ...fitConcerns,

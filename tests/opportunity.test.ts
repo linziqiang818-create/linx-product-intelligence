@@ -192,8 +192,9 @@ test("applies product-level calibration without generalizing it to neighboring p
   const rejectedProduct = assess({ ...base, asin: "B0G4HKTHJX", title: "Low Loft Bed with Desk and Storage", category: "Beds" });
   const neighboringProduct = assess({ ...base, asin: "NEIGHBOR01", title: "Low Loft Bed with Desk and Storage", category: "Beds" });
   const uncertainProduct = assess({ ...base, asin: "B0GH651S4V", title: "Upholstered Bed with Drawers", category: "Bed Frames" });
-  assert.equal(rejectedProduct.hardRejected, true);
-  assert.ok(rejectedProduct.hardRejectReasons.some((reason) => reason.includes("此具体产品")));
+  assert.equal(rejectedProduct.hardRejected, false);
+  assert.equal(rejectedProduct.decision, "需要优化");
+  assert.ok(rejectedProduct.reasons.some((reason) => reason.includes("对此具体产品不感兴趣")));
   assert.equal(neighboringProduct.hardRejected, false);
   assert.equal(uncertainProduct.hardRejected, false);
   assert.equal(uncertainProduct.decision, "需要优化");
