@@ -8,9 +8,10 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "build:pages": "vite build --config vite.pages.config.ts",
     "start": "vinext start",
     "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/opportunity.test.ts tests/opportunity-track.test.ts tests/opportunity-diversity.test.ts tests/demo-products.test.ts tests/import-images.test.ts tests/real-products.test.ts tests/product-potential.test.ts tests/title-translation.test.ts tests/calibration.test.ts tests/batch-calibration.test.ts tests/acquisition-policy.test.ts",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern dist-pages --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
