@@ -8,23 +8,23 @@
   "activeImported": 1,
   "movedToTrash": 0,
   "dailyProgress": {
-    "date": "2026-07-16",
-    "runsCompleted": 3,
-    "candidateDiscovered": 40,
-    "activeImported": 1
+    "date": "2026-07-17",
+    "runsCompleted": 2,
+    "candidateDiscovered": 0,
+    "activeImported": 0
   },
   "startedAt": "2026-07-15T15:30:00+08:00",
   "status": "fourteen-day-acquisition-sprint",
   "lastRun": {
-    "ranAt": "2026-07-16T19:06:58+08:00",
-    "sprintDay": 2,
-    "scheduledHour": 19,
+    "ranAt": "2026-07-17T14:01:58+08:00",
+    "sprintDay": 3,
+    "scheduledHour": 14,
     "candidateDiscovered": 0,
-    "enriched": 1,
-    "activeImported": 1,
+    "enriched": 0,
+    "activeImported": 0,
     "movedToTrash": 0,
     "dataPending": 1,
     "result": "stopped-on-public-access-limit",
-    "accessRestriction": "The public Amazon product page was readable and one queued candidate completed basic authenticity verification. Fetching its main-image resource then returned a cache-miss access failure, so the batch stopped immediately; no further discovery or product-page requests were attempted."
+    "accessRestriction": "Public search results confirmed lightweight identity signals for queued sewing-furniture candidate B08NSSC1D2, but its public Amazon US product page returned a cache-miss access failure on the first detail request. The batch stopped immediately; no further candidates, product pages, or image resources were requested, and the candidate remains data pending."
   }
 }
