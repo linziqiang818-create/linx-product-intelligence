@@ -437,5 +437,87 @@
     "discoveredAt": "2026-07-16T14:03:00+08:00",
     "track": "exploration",
     "preliminaryPriority": { "score": 47, "disposition": "queued", "reasons": ["属于公司可开发的柜体或工作台形态", "具备可优化的结构或功能", "探索样本保留少量优先权"] }
+  },
+  {
+    "asin": "B0G344V159",
+    "title": "Fluted Shoe Cabinet Storage with 2 Flip Drawers & 1 Drawers, Wood Narrow Hidden Shoe Cabinet with Shelf for Entryway, Freestanding Slim Shoe Rack Organizer for Hallway Living Room(White)",
+    "amazonUrl": "https://www.amazon.com/dp/B0G344V159",
+    "discoveryKeyword": "fluted shoe cabinet hidden storage",
+    "discoverySource": "https://pricehistory.app/p/fluted-shoe-cabinet-storage-2-flip-drawers-CTtUJFSj",
+    "category": "Shoe Cabinets",
+    "price": 152.99,
+    "discoveredAt": "2026-07-18T19:01:50+08:00",
+    "track": "red-ocean-blue",
+    "preliminaryPriority": { "score": 76, "disposition": "priority", "reasons": ["company-fit cabinet or workstation", "distinctive design signal", "optimizable structure or function", "target price band"] }
+  },
+  {
+    "asin": "B0BHVXHBRJ",
+    "title": "OmySalon Manicure Table Nail Desk for Nail Tech, Nail Table Beauty Salon Station w/Electric Dust Collector Acetone Resistant w/Lockable Wheel, Arm Rest",
+    "amazonUrl": "https://www.amazon.com/dp/B0BHVXHBRJ",
+    "discoveryKeyword": "manicure nail tech desk salon station",
+    "discoverySource": "https://patents.justia.com/patent/D1071618",
+    "category": "Manicure Tables",
+    "discoveredAt": "2026-07-18T19:01:50+08:00",
+    "track": "blue-ocean-red",
+    "preliminaryPriority": { "score": 74, "disposition": "priority", "reasons": ["company-fit cabinet or workstation", "clear niche-use signal", "optimizable structure or function"] }
+  },
+  {
+    "asin": "B0D77FZXG2",
+    "title": "SICOTAS Shoe Cabinet, 24 Pair Shoe Storage Organizer Cabinet, 41 Inch Tall Rattan Shoe Cabinet with Doors and Storage",
+    "amazonUrl": "https://www.amazon.com/dp/B0D77FZXG2",
+    "discoveryKeyword": "rattan shoe cabinet entryway storage",
+    "discoverySource": "https://uspto.report/TM/99172138/APP20250506170449/8.pdf",
+    "category": "Shoe Cabinets",
+    "price": 79.99,
+    "discoveredAt": "2026-07-18T19:01:50+08:00",
+    "track": "red-ocean-blue",
+    "preliminaryPriority": { "score": 76, "disposition": "priority", "reasons": ["company-fit cabinet or workstation", "distinctive design signal", "optimizable structure or function", "target price band"] }
+  },
+  {
+    "asin": "B0F66322VL",
+    "title": "Evermagin 67 inch Fluted Oak Buffet Cabinet Sideboard with Storage, Large Credenza with 6 Doors, Wood Mid Century Modern Sideboard for Kitchen and Living Room (67 inch*31.5 inch*15.7 inch)",
+    "amazonUrl": "https://www.amazon.com/dp/B0F66322VL",
+    "discoveryKeyword": "fluted sideboard multi-door storage",
+    "discoverySource": "https://pricehistory.app/p/evermagin-67-inch-fluted-oak-buffet-cabinet-hCwyYC2h",
+    "category": "Buffets and Sideboards",
+    "price": 279.99,
+    "discoveredAt": "2026-07-20T19:00:28+08:00",
+    "track": "red-ocean-blue",
+    "preliminaryPriority": { "score": 76, "disposition": "priority", "reasons": ["company-fit cabinet or workstation", "distinctive design signal", "optimizable structure or function", "target price band"] }
+  },
+  {
+    "asin": "B0FV83BWCK",
+    "title": "Nathan James Joey Mid Century Modern Storage Cabinet, Arched Accent Cabinet with Rounded Bottom Edges and Integrated Door Pull Cutouts, Light Brown",
+    "amazonUrl": "https://www.amazon.com/dp/B0FV83BWCK",
+    "discoveryKeyword": "arched rounded accent storage cabinet",
+    "discoverySource": "https://pricehistory.app/p/nathan-james-joey-mid-century-modern-storage-ux9cThQ2",
+    "category": "Storage Cabinets",
+    "price": 349.99,
+    "discoveredAt": "2026-07-20T19:00:28+08:00",
+    "track": "red-ocean-blue",
+    "preliminaryPriority": { "score": 76, "disposition": "priority", "reasons": ["company-fit cabinet or workstation", "distinctive design signal", "optimizable structure or function", "target price band"] }
+  },
+  {
+    "asin": "B0D28GBK64",
+    "title": "Record Player Stand, Vinyl Record Cabinet with Power Outlet Holds Up to 200 Albums, Turntable Stand Table, Fluted Sliding Door, Living Room(Walnut)",
+    "amazonUrl": "https://www.amazon.com/dp/B0D28GBK64",
+    "discoveryKeyword": "vinyl record cabinet power outlet fluted door",
+    "discoverySource": "https://pricehistory.app/p/record-player-stand-vinyl-record-cabinet-power-WDKv0wce",
+    "category": "Vinyl and Audio Furniture",
+    "price": 73.98,
+    "discoveredAt": "2026-07-20T19:00:28+08:00",
+    "track": "blue-ocean-red",
+    "preliminaryPriority": { "score": 68, "disposition": "priority", "reasons": ["company-fit cabinet or workstation", "distinctive design signal", "optimizable structure or function"] }
+  },
+  {
+    "asin": "B0D9HDLR1H",
+    "title": "ALINE FURNITURE Dog Feeding Station with Storage Cabinet and 2 Elevated Dog Bowls, Hidden Pet Feeder Station Wood, Dog & Cat Storage Organizer, Black",
+    "amazonUrl": "https://www.amazon.com/dp/B0D9HDLR1H",
+    "discoveryKeyword": "pet feeding station storage cabinet",
+    "discoverySource": "https://pricehistory.app/p/aline-furniture-dog-feeding-station-storage-cabinet-UyYL8CSj",
+    "category": "Pet Feeding Furniture",
+    "discoveredAt": "2026-07-20T19:00:28+08:00",
+    "track": "blue-ocean-red",
+    "preliminaryPriority": { "score": 42, "disposition": "queued", "reasons": ["company-fit cabinet or workstation", "optimizable structure or function"] }
   }
 ]
