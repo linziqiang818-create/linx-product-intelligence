@@ -45,8 +45,17 @@ test("admits verified non-D products without requiring every commercial field", 
   assert.equal(acquisitionPolicy.minimumFormalAdmission.requiresCompleteEnglishTitle, true);
   assert.equal(acquisitionPolicy.minimumFormalAdmission.requiresCanonicalAmazonUsLink, true);
   assert.equal(acquisitionPolicy.minimumFormalAdmission.requiresTraceablePublicEvidence, true);
+  assert.equal(acquisitionPolicy.minimumFormalAdmission.requiresVerifiedPublicMainImage, true);
   assert.equal(acquisitionPolicy.minimumFormalAdmission.excludesGradeD, true);
   assert.equal(acquisitionPolicy.minimumFormalAdmission.missingCommercialFieldsRemainDataPending, true);
+});
+
+test("requires a fixed acquisition funnel report after every batch", () => {
+  assert.equal(acquisitionPolicy.batchReporting.requiredAfterEveryAcquisitionAction, true);
+  assert.deepEqual(acquisitionPolicy.batchReporting.fields, [
+    "discovered", "enteredFormalPool", "screenedOut", "screenedOutReasons", "duplicates",
+    "dataPending", "formalPoolBefore", "formalPoolAfter", "candidatePoolAfter", "accessRestriction",
+  ]);
 });
 
 test("labels public sales evidence without pretending an estimate is exact", () => {

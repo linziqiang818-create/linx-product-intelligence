@@ -1211,7 +1211,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1224,7 +1223,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0DGKJH39D/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCSRyfvn8Eh5i1vgKkahjIJmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0DGKJH39D-smart-fendee-shoe-storage-cabinet-fluted-shoe-cabinet-for-entryway-grey-hidden",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0DGKJH39D"
+    }
   },
   {
     "asin": "B0CPLZGGMB",
@@ -1246,7 +1252,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1259,7 +1264,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0CPLZGGMB/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCEgyHmmXPunj7rccaoW_rJmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0CPLZGGMB-oakham-home-buffet-sideboard-storage-cabinet-with-drawer-and-doors-fluted",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0CPLZGGMB"
+    }
   },
   {
     "asin": "B0DQP7JT9H",
@@ -1281,7 +1293,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1294,7 +1305,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0DQP7JT9H/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwDbjQ4auFxZ5O3T3rdmRUJsmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0DQP7JT9H-sicotas-buffet-cabinet-with-storage-accent-sideboard-with-4-doors-663-wide-fluted",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0DQP7JT9H"
+    }
   },
   {
     "asin": "B0BHVZXM45",
@@ -1316,7 +1334,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1329,7 +1346,14 @@
     "complexity": 3,
     "differentiation": 3,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0BHVZXM45/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwA_JDxtbxegy98hbuMt-hUZmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0BHVZXM45-sideboardsideboard-kitchen-buffet-cabinetcupboard-console-tablefor-living-room",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0BHVZXM45"
+    }
   },
   {
     "asin": "B09QYMP119",
@@ -1351,7 +1375,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1364,7 +1387,14 @@
     "complexity": 3,
     "differentiation": 3,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B09QYMP119/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwASc87vJlhqIp6KRbMT5ZKgmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B09QYMP119-cozy-castle-wood-pantry-cabinet-75-freestanding-kitchen-storage-cabinet-with",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B09QYMP119"
+    }
   },
   {
     "asin": "B0DNST9GFG",
@@ -1386,7 +1416,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1399,7 +1428,14 @@
     "complexity": 3,
     "differentiation": 3,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0DNST9GFG/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCHjLOrT7UwnfO_UOfuLYoamQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0DNST9GFG-smart-fendee-shoe-cabinet-with-2-flip-louvered-drawers-farmhouse-shoe-storage",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0DNST9GFG"
+    }
   },
   {
     "asin": "B0BPT9B68Y",
@@ -1421,7 +1457,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1434,7 +1469,14 @@
     "complexity": 3,
     "differentiation": 3,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0BPT9B68Y/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCAO1z6yfwcWBfS1z8dkk2xmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0BPT9B68Y-90-kitchen-pantry-storage-cabinet-modern-tall-storage-cabinet4-doors-5-adjustable",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0BPT9B68Y"
+    }
   },
   {
     "asin": "B0C6JRL2T8",
@@ -1456,7 +1498,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1469,7 +1510,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0C6JRL2T8/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwDNMZTlytEiwF5Cy-TtC4RtmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0C6JRL2T8-gyfimoie-shoe-storage-cabinet-with-2-flip-drawers-freestanding-tipping-bucket",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0C6JRL2T8"
+    }
   },
   {
     "asin": "B0DFGDWN9B",
@@ -1491,7 +1539,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1504,42 +1551,14 @@
     "complexity": 3,
     "differentiation": 3,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B08SQKMCWX",
-    "title": "100CM Sideboard Storage Cabinet Cupboard Display Shelf with Drawers and Doors, Black",
-    "category": "Sideboards and Buffets",
-    "sourceUrl": "https://www.amazon.com/dp/B08SQKMCWX",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T09:08:00+08:00",
-    "discoveryKeyword": "fluted sideboard cabinet",
-    "discoverySource": "https://www.algopix.com/products/B08SQKMCWX-100cm-sideboard-storage-cabinet-cupboard-display-shelf-with-drawers-and-doors",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://www.algopix.com/products/B08SQKMCWX-100cm-sideboard-storage-cabinet-cupboard-display-shelf-with-drawers-and-doors",
-      "observedAt": "2026-07-16T09:08:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "price",
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 3,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0DFGDWN9B/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCnHXYqdlH2EinInXbFWciPmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0DFGDWN9B-homeiju-mini-bars-for-home-wooden-coffee-bar-cabinet-modern-liquor-cabinet-for",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0DFGDWN9B"
+    }
   },
   {
     "asin": "B0BY7W5TTS",
@@ -1561,7 +1580,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1574,42 +1592,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B0DPKTVQDF",
-    "title": "TOLEAD 59 Inch TV Console, Mid Century Modern Media Console for 55, 60 and 65 Inch TV, Low Profile TV Stand with Fluted Sliding Doors, Boho Light Wood Credenza, Walnut",
-    "category": "TV Stands and Media Consoles",
-    "sourceUrl": "https://www.amazon.com/dp/B0DPKTVQDF",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T09:08:00+08:00",
-    "discoveryKeyword": "fluted TV stand",
-    "discoverySource": "https://us.amazon.com/TOLEAD-Console-Century-Profile-Credenza/dp/B0DPKTVQDF",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://us.amazon.com/TOLEAD-Console-Century-Profile-Credenza/dp/B0DPKTVQDF",
-      "observedAt": "2026-07-16T09:08:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "price",
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 4,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0BY7W5TTS/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwDbzTrhkPd8PjgqXnnHmyBpmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0BY7W5TTS-toocust-5tier-gold-bookcase-295-lx706-h-bookshelf-for-bedroomgold-book-display",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0BY7W5TTS"
+    }
   },
   {
     "asin": "B0DST49CF5",
@@ -1631,7 +1621,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1644,7 +1633,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0DST49CF5/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCaNPdlgKThi0JqCS6z_NdMmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0DST49CF5-silkydry-reception-desk-small-retail-checkout-counter-with-lockable-drawer-and",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0DST49CF5"
+    }
   },
   {
     "asin": "B0DSKM2SBR",
@@ -1666,7 +1662,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1679,112 +1674,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B08WCGBFXX",
-    "title": "HOMFY Foldable Craft Cutting Table with Storage, Adjustable Home Hobby Table for Adults, White",
-    "category": "Craft Tables",
-    "price": 169.99,
-    "sourceUrl": "https://www.amazon.com/dp/B08WCGBFXX",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T09:10:00+08:00",
-    "discoveryKeyword": "sewing cabinet foldable craft table",
-    "discoverySource": "https://amzchart.com/products/15276",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://amzchart.com/products/15276",
-      "observedAt": "2026-07-16T09:10:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "B",
-    "track": "blue-ocean-red",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 3,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B08NSSC1D2",
-    "title": "Lipo Foldable Sewing Craft Table Cart, Art Desk with Storage Shelves and Lockable Casters, Space-Saving Sewing Cabinet for Home Office, Brown",
-    "category": "Sewing Cabinets",
-    "price": 129.99,
-    "sourceUrl": "https://www.amazon.com/dp/B08NSSC1D2",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T09:10:00+08:00",
-    "discoveryKeyword": "sewing cabinet foldable craft table",
-    "discoverySource": "https://amzchart.com/products/15276",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://amzchart.com/products/15276",
-      "observedAt": "2026-07-16T09:10:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "B",
-    "track": "blue-ocean-red",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 4,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B08K3J5S7W",
-    "title": "Wooden Folding Sewing Cabinet, Multifunction Large Sewing Craft Table with Storage Shelves and Lockable Casters, Space-Saving Wood Sewing Furniture for Small Spaces, Farmhouse Style",
-    "category": "Sewing Cabinets",
-    "price": 335.98,
-    "sourceUrl": "https://www.amazon.com/dp/B08K3J5S7W",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T09:10:00+08:00",
-    "discoveryKeyword": "sewing cabinet foldable craft table",
-    "discoverySource": "https://amzchart.com/products/15276",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://amzchart.com/products/15276",
-      "observedAt": "2026-07-16T09:10:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "B",
-    "track": "blue-ocean-red",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 4,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0DSKM2SBR/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwD0H0fJi74pj3ZCWEXH8zk2mQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0DSKM2SBR-ifanny-reception-desk-48-retail-counter-wlockable-drawer-storage-shelf-lshaped",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0DSKM2SBR"
+    }
   },
   {
     "asin": "B0BGP3FLTX",
@@ -1806,7 +1703,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1819,7 +1715,14 @@
     "complexity": 3,
     "differentiation": 3,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0BGP3FLTX/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwATe7YrEn79sg8SabkAOHX5mQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0BGP3FLTX-huxitocan-3-tier-record-player-stand-holds-up-to-300-albums-with-4-adjustable",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0BGP3FLTX"
+    }
   },
   {
     "asin": "B0G1BS1P6F",
@@ -1841,7 +1744,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1854,7 +1756,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0G1BS1P6F/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwAutZfGR5QlRhtYSBXMXpRUmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0G1BS1P6F-lemberi-2-tiers-shelf-washer-dryer-countertop-54-w-x-275-d-laundry-organization",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0G1BS1P6F"
+    }
   },
   {
     "asin": "B0FMKK3ZK1",
@@ -1876,7 +1785,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1889,7 +1797,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0FMKK3ZK1/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwBKrAUoc8LIn6f8ARqXt3gTmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0FMKK3ZK1-2tier-washer-dryer-countertop-with-275-protective-rails-54-w-x-275-d-laundry",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0FMKK3ZK1"
+    }
   },
   {
     "asin": "B0FPQKFHKX",
@@ -1911,7 +1826,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1924,7 +1838,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0FPQKFHKX/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCOEjxPiGPnmXeH8JzSJdn3mQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0FPQKFHKX-vabches-litter-box-enclosure-modern-fluted-cat-hidden-litter-box-furniture-with",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0FPQKFHKX"
+    }
   },
   {
     "asin": "B0CWR7SWK9",
@@ -1946,7 +1867,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -1959,42 +1879,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B0796CNQTG",
-    "title": "Accent Classic Freedom UHF Podium Lectern, Bronze Granite",
-    "category": "Commercial Podiums and Lecterns",
-    "sourceUrl": "https://www.amazon.com/dp/B0796CNQTG",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T09:12:00+08:00",
-    "discoveryKeyword": "unexpected commercial presentation furniture",
-    "discoverySource": "https://www.algopix.com/products/B0796CNQTG-accent-classic-freedom-uhf-podium-lectern-bronze-granite",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://www.algopix.com/products/B0796CNQTG-accent-classic-freedom-uhf-podium-lectern-bronze-granite",
-      "observedAt": "2026-07-16T09:12:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "price",
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 3,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0CWR7SWK9/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCZvcNHelnlZdUYHvcQnzTmmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0CWR7SWK9-paddie-lshaped-manicure-table-nail-station-with-shelves-nail-tech-table-nail",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B0CWR7SWK9"
+    }
   },
   {
     "asin": "B01IINGTFA",
@@ -2016,7 +1908,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -2029,217 +1920,14 @@
     "complexity": 3,
     "differentiation": 3,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B07875WBT6",
-    "title": "FixtureDisplays Wood Podium with Acrylic Front Panel, 48 Inch Tall, Dark Grey Melamine MDF with Built-In Storage Shelf",
-    "category": "Commercial Podiums and Lecterns",
-    "sourceUrl": "https://www.amazon.com/dp/B07875WBT6",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T09:12:00+08:00",
-    "discoveryKeyword": "unexpected hospitality presentation furniture",
-    "discoverySource": "https://www.algopix.com/products/B07875WBT6-fixturedisplays-wood-podium-with-acrylic-front-panel-48-tall-easy-assembly",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://www.algopix.com/products/B07875WBT6-fixturedisplays-wood-podium-with-acrylic-front-panel-48-tall-easy-assembly",
-      "observedAt": "2026-07-16T09:12:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "price",
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 3,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B0CBRBVL61",
-    "title": "BORNOON Shoe Cabinet with 3 Flip Drawers, Hidden Wood Shoe Cabinet, Freestanding Shoe Storage Cabinet for Entryway Hallway, White, 47.2 Inch High by 31.5 Inch Wide by 9.45 Inch Deep",
-    "category": "Entryway Shoe Cabinets",
-    "price": 119.99,
-    "sourceUrl": "https://www.amazon.com/dp/B0CBRBVL61",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T14:03:00+08:00",
-    "discoveryKeyword": "tall shoe cabinet with doors",
-    "discoverySource": "https://www.asinsight.com/report/US/tall-shoe-cabinet-with-doors",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://www.asinsight.com/report/US/tall-shoe-cabinet-with-doors",
-      "observedAt": "2026-07-16T14:03:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 3,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B01M0QM2O7",
-    "title": "Sauder Select Storage Cabinet and Pantry Cabinet, White Finish",
-    "category": "Kitchen Pantry Cabinets",
-    "price": 161.48,
-    "sourceUrl": "https://www.amazon.com/dp/B01M0QM2O7",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T14:03:00+08:00",
-    "discoveryKeyword": "tall pantry storage cabinet",
-    "discoverySource": "https://www.asinsight.com/report/US/tall-shoe-cabinet-with-doors",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://www.asinsight.com/report/US/tall-shoe-cabinet-with-doors",
-      "observedAt": "2026-07-16T14:03:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 3,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B08FT4VQG8",
-    "title": "Paddie Nail Table, Manicure Table Nail Desk Station Professional Portable with Wheels for Technician Beauty Salon Art Spa Office, Single Side, Black",
-    "category": "Manicure and Salon Workstations",
-    "sourceUrl": "https://www.amazon.com/dp/B08FT4VQG8",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T14:03:00+08:00",
-    "discoveryKeyword": "professional manicure workstation with storage",
-    "discoverySource": "https://www.algopix.com/products/B08FT4VQG8-paddie-nail-table-manicure-table-nail-desk-station-professional-portable-with",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://www.algopix.com/products/B08FT4VQG8-paddie-nail-table-manicure-table-nail-desk-station-professional-portable-with",
-      "observedAt": "2026-07-16T14:03:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "C",
-    "track": "blue-ocean-red",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "price",
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 4,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B0CWQP9RJJ",
-    "title": "AMHANCIBLE Record Player Stand with Charging Station, Large Turntable Stand with Storage Cabinet, 3 Tier End Table Holds up to 100 Albums, Record Stand for Vinyl, Living Room, Brown, HETCD012BR-1",
-    "category": "Record Player Stands",
-    "sourceUrl": "https://www.amazon.com/dp/B0CWQP9RJJ",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T14:03:00+08:00",
-    "discoveryKeyword": "record player stand charging storage cabinet",
-    "discoverySource": "https://riverprice.com/ca/product/B0CWQP9RJJ/amhancible-record-player-stand-charging",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://riverprice.com/ca/product/B0CWQP9RJJ/amhancible-record-player-stand-charging",
-      "observedAt": "2026-07-16T14:03:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "price",
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 3,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
-  },
-  {
-    "asin": "B09SWKX1DL",
-    "title": "Lyromix 36 Inch Large Dog Grooming Table, Adjustable Cat Drying Desktop with Arms, Nooses, Mesh Tray, Foldable Pet Station at Home, Maximum Capacity up to 330 Pounds, 36 Inch, Black",
-    "category": "Pet Grooming Workstations",
-    "price": 115.99,
-    "sourceUrl": "https://www.amazon.com/dp/B09SWKX1DL",
-    "importedAt": "2026-07-21T11:31:50+08:00",
-    "observedAt": "2026-07-16T14:03:00+08:00",
-    "discoveryKeyword": "pet grooming workstation with storage",
-    "discoverySource": "https://www.asinsight.com/report/US/pet-grooming-table",
-    "admissionEvidence": {
-      "kind": "public-discovery-record",
-      "sourceUrl": "https://www.asinsight.com/report/US/pet-grooming-table",
-      "observedAt": "2026-07-16T14:03:00+08:00",
-      "confidence": "medium"
-    },
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "imageUrl",
-      "rating",
-      "reviews",
-      "bsr",
-      "boughtPastMonth",
-      "dimensions",
-      "weight",
-      "material",
-      "dateFirstAvailable"
-    ],
-    "complexity": 3,
-    "differentiation": 3,
-    "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B01IINGTFA/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwAWfsky_5lgx_5mKPNEYqGRmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B01IINGTFA-pyle-foldable-desktop-lectern-podium-standportable-folding-tabletop-desk-teacher",
+      "observedAt": "2026-07-21T06:11:42.965Z",
+      "asin": "B01IINGTFA"
+    }
   },
   {
     "asin": "B0G344V159",
@@ -2261,7 +1949,6 @@
     "track": "red-ocean-blue",
     "dataStatus": "needs_data",
     "dataPendingReasons": [
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -2274,7 +1961,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0G344V159/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwDjUwgLVrlBxLIpnuGINKOOmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0G344V159",
+      "observedAt": "2026-07-21T06:14:35.848Z",
+      "asin": "B0G344V159"
+    }
   },
   {
     "asin": "B0BHVXHBRJ",
@@ -2296,7 +1990,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -2309,7 +2002,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0BHVXHBRJ/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwBQrMgmvIYjX1MMqXq7uT8NmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0BHVXHBRJ",
+      "observedAt": "2026-07-21T06:14:35.849Z",
+      "asin": "B0BHVXHBRJ"
+    }
   },
   {
     "asin": "B0F66322VL",
@@ -2331,7 +2031,6 @@
     "track": "red-ocean-blue",
     "dataStatus": "needs_data",
     "dataPendingReasons": [
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -2344,7 +2043,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0F66322VL/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwB9zdjzM3DfoZbT5lyvTjXKmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0F66322VL",
+      "observedAt": "2026-07-21T06:14:35.849Z",
+      "asin": "B0F66322VL"
+    }
   },
   {
     "asin": "B0FV83BWCK",
@@ -2366,7 +2072,6 @@
     "track": "red-ocean-blue",
     "dataStatus": "needs_data",
     "dataPendingReasons": [
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -2379,7 +2084,14 @@
     "complexity": 3,
     "differentiation": 4,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0FV83BWCK/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwAexzqawaI7G6QtmVk8-q6NmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0FV83BWCK",
+      "observedAt": "2026-07-21T06:14:35.849Z",
+      "asin": "B0FV83BWCK"
+    }
   },
   {
     "asin": "B0D9HDLR1H",
@@ -2401,7 +2113,6 @@
     "dataStatus": "needs_data",
     "dataPendingReasons": [
       "price",
-      "imageUrl",
       "rating",
       "reviews",
       "bsr",
@@ -2414,6 +2125,136 @@
     "complexity": 3,
     "differentiation": 3,
     "returnRisk": "中",
-    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0D9HDLR1H/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwAHzXSGymit0sshHQ8aHItnmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0D9HDLR1H",
+      "observedAt": "2026-07-21T06:14:35.849Z",
+      "asin": "B0D9HDLR1H"
+    }
+  },
+  {
+    "asin": "B0CBRBVL61",
+    "title": "BORNOON Shoe Cabinet with 3 Flip Drawers, Hidden Wood Shoe Cabinet, Freestanding Shoe Storage Cabinet for Entryway Hallway, White, 47.2 Inch High by 31.5 Inch Wide by 9.45 Inch Deep",
+    "category": "Entryway Shoe Cabinets",
+    "price": 119.99,
+    "sourceUrl": "https://www.amazon.com/dp/B0CBRBVL61",
+    "importedAt": "2026-07-21T11:31:50+08:00",
+    "observedAt": "2026-07-16T14:03:00+08:00",
+    "discoveryKeyword": "tall shoe cabinet with doors",
+    "discoverySource": "https://www.asinsight.com/report/US/tall-shoe-cabinet-with-doors",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.asinsight.com/report/US/tall-shoe-cabinet-with-doors",
+      "observedAt": "2026-07-16T14:03:00+08:00",
+      "confidence": "medium"
+    },
+    "grade": "C",
+    "track": "unmatched",
+    "dataStatus": "needs_data",
+    "dataPendingReasons": [
+      "rating",
+      "reviews",
+      "bsr",
+      "boughtPastMonth",
+      "dimensions",
+      "weight",
+      "material",
+      "dateFirstAvailable"
+    ],
+    "complexity": 3,
+    "differentiation": 3,
+    "returnRisk": "中",
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0CBRBVL61/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwAxt3J_Lgv3J5pyCb2CRMnKmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0CBRBVL61",
+      "observedAt": "2026-07-21T06:15:59.353Z",
+      "asin": "B0CBRBVL61"
+    }
+  },
+  {
+    "asin": "B01M0QM2O7",
+    "title": "Sauder Select Storage Cabinet and Pantry Cabinet, White Finish",
+    "category": "Kitchen Pantry Cabinets",
+    "price": 161.48,
+    "sourceUrl": "https://www.amazon.com/dp/B01M0QM2O7",
+    "importedAt": "2026-07-21T11:31:50+08:00",
+    "observedAt": "2026-07-16T14:03:00+08:00",
+    "discoveryKeyword": "tall pantry storage cabinet",
+    "discoverySource": "https://www.asinsight.com/report/US/tall-shoe-cabinet-with-doors",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.asinsight.com/report/US/tall-shoe-cabinet-with-doors",
+      "observedAt": "2026-07-16T14:03:00+08:00",
+      "confidence": "medium"
+    },
+    "grade": "C",
+    "track": "unmatched",
+    "dataStatus": "needs_data",
+    "dataPendingReasons": [
+      "rating",
+      "reviews",
+      "bsr",
+      "boughtPastMonth",
+      "dimensions",
+      "weight",
+      "material",
+      "dateFirstAvailable"
+    ],
+    "complexity": 3,
+    "differentiation": 3,
+    "returnRisk": "中",
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B01M0QM2O7/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwBGQSv6p6M1augU9AydpeBOmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B01M0QM2O7",
+      "observedAt": "2026-07-21T06:15:59.353Z",
+      "asin": "B01M0QM2O7"
+    }
+  },
+  {
+    "asin": "B0CWQP9RJJ",
+    "title": "AMHANCIBLE Record Player Stand with Charging Station, Large Turntable Stand with Storage Cabinet, 3 Tier End Table Holds up to 100 Albums, Record Stand for Vinyl, Living Room, Brown, HETCD012BR-1",
+    "category": "Record Player Stands",
+    "sourceUrl": "https://www.amazon.com/dp/B0CWQP9RJJ",
+    "importedAt": "2026-07-21T11:31:50+08:00",
+    "observedAt": "2026-07-16T14:03:00+08:00",
+    "discoveryKeyword": "record player stand charging storage cabinet",
+    "discoverySource": "https://riverprice.com/ca/product/B0CWQP9RJJ/amhancible-record-player-stand-charging",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://riverprice.com/ca/product/B0CWQP9RJJ/amhancible-record-player-stand-charging",
+      "observedAt": "2026-07-16T14:03:00+08:00",
+      "confidence": "medium"
+    },
+    "grade": "C",
+    "track": "unmatched",
+    "dataStatus": "needs_data",
+    "dataPendingReasons": [
+      "price",
+      "rating",
+      "reviews",
+      "bsr",
+      "boughtPastMonth",
+      "dimensions",
+      "weight",
+      "material",
+      "dateFirstAvailable"
+    ],
+    "complexity": 3,
+    "differentiation": 3,
+    "returnRisk": "中",
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
+    "imageUrl": "https://www.algopix.com/image/B0CWQP9RJJ/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwDwtoo7eIudehYHw63mta87mQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0CWQP9RJJ",
+      "observedAt": "2026-07-21T06:15:59.353Z",
+      "asin": "B0CWQP9RJJ"
+    }
   }
 ]

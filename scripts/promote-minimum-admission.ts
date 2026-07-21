@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { minimumFormalAdmission } from "../app/formal-admission.ts";
 import { classifyFormalProduct } from "../app/product-placement.ts";
 
-type Candidate = { asin:string; title:string; amazonUrl:string; discoveryKeyword?:string; discoverySource?:string; category?:string; price?:number; discoveredAt?:string; track?:string; preliminaryPriority?:{ score?:number; disposition?:string; reasons?:string[] } };
+type Candidate = { asin:string; title:string; amazonUrl:string; discoveryKeyword?:string; discoverySource?:string; category?:string; price?:number; imageUrl?:string; imageEvidence?:unknown; discoveredAt?:string; track?:string; preliminaryPriority?:{ score?:number; disposition?:string; reasons?:string[] } };
 type JsonRecord = Record<string, unknown> & { asin:string };
 
 const root = resolve(import.meta.dirname, "..");
@@ -27,7 +27,7 @@ for(const candidate of candidates){
     rejectedAsins.add(candidate.asin);continue;
   }
   if(!admission.eligible){remaining.push(candidate);continue;}
-  promoted.push({asin:candidate.asin,title:candidate.title,category:candidate.category??"",...(candidate.price===undefined?{}:{price:candidate.price}),sourceUrl:admission.canonicalAmazonUrl,importedAt:ranAt,observedAt:candidate.discoveredAt,discoveryKeyword:candidate.discoveryKeyword,discoverySource:candidate.discoverySource,admissionEvidence:evidence,grade:placement.grade,track:placement.opportunityTrack??"unmatched",dataStatus:"needs_data",dataPendingReasons:[...(candidate.price===undefined?["price"]:[]),"imageUrl","rating","reviews","bsr","boughtPastMonth","dimensions","weight","material","dateFirstAvailable"],complexity:3,differentiation:(candidate.preliminaryPriority?.score??0)>=58?4:3,returnRisk:"中",note:"按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"});
+  promoted.push({asin:candidate.asin,title:candidate.title,category:candidate.category??"",...(candidate.price===undefined?{}:{price:candidate.price}),imageUrl:candidate.imageUrl,imageEvidence:candidate.imageEvidence,sourceUrl:admission.canonicalAmazonUrl,importedAt:ranAt,observedAt:candidate.discoveredAt,discoveryKeyword:candidate.discoveryKeyword,discoverySource:candidate.discoverySource,admissionEvidence:evidence,grade:placement.grade,track:placement.opportunityTrack??"unmatched",dataStatus:"needs_data",dataPendingReasons:[...(candidate.price===undefined?["price"]:[]),"rating","reviews","bsr","boughtPastMonth","dimensions","weight","material","dateFirstAvailable"],complexity:3,differentiation:(candidate.preliminaryPriority?.score??0)>=58?4:3,returnRisk:"中",note:"按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、真实公开主图、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"});
   formalAsins.add(candidate.asin);
 }
 

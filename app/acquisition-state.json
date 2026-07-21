@@ -5,7 +5,7 @@
   "candidateDiscovered": 48,
   "enrichmentTarget": 4200,
   "enriched": 48,
-  "activeImported": 36,
+  "activeImported": 27,
   "movedToTrash": 12,
   "dailyProgress": {
     "date": "2026-07-20",
@@ -43,5 +43,44 @@
     "rejectedBefore": 1,
     "rejectedAfter": 12,
     "note": "User-approved minimum formal admission backfill; does not consume a scheduled batch quota."
+  },
+  "lastImageCorrection": {
+    "ranAt": "2026-07-21T14:15:59+08:00",
+    "reviewed": 35,
+    "mainImagesAdded": 26,
+    "reEnteredFormalPool": 26,
+    "returnedToCandidatePool": 9,
+    "formalBefore": 86,
+    "formalAfter": 77,
+    "candidateAfter": 9,
+    "reason": "Formal products require an ASIN-linked verified public main image."
+  },
+  "lastAcquisitionFunnelReport": {
+    "reportedAt": "2026-07-21T14:15:59+08:00",
+    "action": "main-image-correction",
+    "discovered": 0,
+    "reviewed": 35,
+    "enteredFormalPool": 26,
+    "screenedOut": 9,
+    "screenedOutReasons": {
+      "missing verified ASIN-linked public MAIN image": [
+        "B08SQKMCWX",
+        "B0DPKTVQDF",
+        "B08WCGBFXX",
+        "B08NSSC1D2",
+        "B08K3J5S7W",
+        "B0796CNQTG",
+        "B07875WBT6",
+        "B08FT4VQG8",
+        "B09SWKX1DL"
+      ]
+    },
+    "duplicates": 0,
+    "dataPending": 26,
+    "formalPoolBeforeCorrection": 86,
+    "formalPoolAfter": 77,
+    "candidatePoolAfter": 9,
+    "rejectedPoolAfter": 12,
+    "accessRestriction": "Five original pricehistory.app or patent source requests returned HTTP 403; ASIN-direct public catalog fallback supplied verified MAIN images for those records. No CAPTCHA, Robot Check, HTTP 429, or forced sign-in occurred."
   }
 }

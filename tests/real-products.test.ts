@@ -22,7 +22,7 @@ test("ships the curated Amazon US research batch without duplicates", () => {
 
 test("every imported product passes the minimum formal admission gate", () => {
   assert.ok(products.every((product) => minimumFormalAdmission(product).eligible));
-  assert.ok(products.every((product) => !product.imageUrl || product.imageUrl.startsWith("https://m.media-amazon.com/")));
+  assert.ok(products.every((product) => Boolean(product.imageUrl)));
   assert.ok(products.every((product) => !Number.isNaN(Date.parse(product.importedAt))));
 });
 

@@ -6,6 +6,11 @@ export type MinimumAdmissionRecord = {
   discoverySource?: string;
   category?: string;
   imageUrl?: string;
+  imageEvidence?: {
+    kind?: string;
+    sourceUrl?: string;
+    asin?: string;
+  };
   admissionEvidence?: {
     sourceUrl?: string;
     observedAt?: string;
@@ -52,6 +57,13 @@ export function minimumFormalAdmission(
   if (!asinPattern.test(asin)) issues.push("invalid ASIN");
   if (record.title.trim().length <= 10 || !/[A-Za-z]/.test(record.title)) issues.push("incomplete English title");
   if (listingUrl !== expectedUrl) issues.push("missing canonical Amazon US link");
+  const hasVerifiedMainImage =
+    (record.imageUrl?.startsWith("https://m.media-amazon.com/") ?? false) ||
+    (isPublicHttpUrl(record.imageUrl) &&
+      record.imageEvidence?.kind === "public-catalog-main-image" &&
+      record.imageEvidence.asin === asin &&
+      isPublicHttpUrl(record.imageEvidence.sourceUrl));
+  if (!hasVerifiedMainImage) issues.push("missing verified public main image");
 
   const hasPublicEvidence =
     (record.imageUrl?.startsWith("https://m.media-amazon.com/") ?? false) ||
