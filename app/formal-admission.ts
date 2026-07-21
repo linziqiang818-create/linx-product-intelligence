@@ -63,7 +63,7 @@ export function minimumFormalAdmission(
       record.imageEvidence?.kind === "public-catalog-main-image" &&
       record.imageEvidence.asin === asin &&
       isPublicHttpUrl(record.imageEvidence.sourceUrl));
-  if (!hasVerifiedMainImage) issues.push("missing verified public main image");
+  if (!hasVerifiedMainImage) issues.push("verified public main image not captured");
 
   const hasPublicEvidence =
     (record.imageUrl?.startsWith("https://m.media-amazon.com/") ?? false) ||
