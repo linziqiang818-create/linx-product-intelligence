@@ -9,6 +9,7 @@ type JsonRecord = Record<string, unknown> & { asin:string };
 const root = resolve(import.meta.dirname, "..");
 const paths = { candidates:resolve(root,"app/candidate-pool.json"), products:resolve(root,"app/real-products.json"), rejected:resolve(root,"app/rejected-products.json"), state:resolve(root,"app/acquisition-state.json") };
 const ranAt = process.argv[2] ?? new Date().toISOString();
+const scheduledBatch = process.argv.includes("--batch");
 const readJson = <T>(path:string) => JSON.parse(readFileSync(path,"utf8")) as T;
 const writeJson = (path:string,value:unknown) => writeFileSync(path,`${JSON.stringify(value,null,2)}\n`,"utf8");
 
@@ -39,6 +40,6 @@ const sprintDay=Math.max(1,Math.floor((Date.UTC(runYear,runMonth-1,runDay)-Date.
 state.enriched=Number(state.enriched??0)+promoted.length+newlyRejected.length;
 state.activeImported=Number(state.activeImported??0)+promoted.length;
 state.movedToTrash=Number(state.movedToTrash??0)+newlyRejected.length;
-state.lastAdmissionBackfill={ranAt,sprintDay,candidateReviewed:candidates.length,activeImported:promoted.length,movedToTrash:newlyRejected.length,duplicates,candidateRemaining:remaining.length,formalBefore,formalAfter:nextProducts.length,rejectedBefore,rejectedAfter:nextRejected.length,note:"User-approved minimum formal admission backfill; does not consume a scheduled batch quota."};
+if(!scheduledBatch)state.lastAdmissionBackfill={ranAt,sprintDay,candidateReviewed:candidates.length,activeImported:promoted.length,movedToTrash:newlyRejected.length,duplicates,candidateRemaining:remaining.length,formalBefore,formalAfter:nextProducts.length,rejectedBefore,rejectedAfter:nextRejected.length,note:"User-approved minimum formal admission backfill; does not consume a scheduled batch quota."};
 writeJson(paths.products,nextProducts);writeJson(paths.rejected,nextRejected);writeJson(paths.candidates,remaining);writeJson(paths.state,state);
 process.stdout.write(`${JSON.stringify({candidateReviewed:candidates.length,promoted:promoted.length,newlyRejected:newlyRejected.length,duplicates,candidateRemaining:remaining.length,formalBefore,formalAfter:nextProducts.length,rejectedBefore,rejectedAfter:nextRejected.length},null,2)}\n`);

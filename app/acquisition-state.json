@@ -2,37 +2,22 @@
   "mode": "free-public-observation",
   "initialCandidatePoolTarget": 20000,
   "weeklyCandidateExpansion": 3500,
-  "candidateDiscovered": 48,
+  "candidateDiscovered": 53,
   "enrichmentTarget": 4200,
-  "enriched": 48,
-  "activeImported": 27,
+  "enriched": 50,
+  "activeImported": 29,
   "movedToTrash": 12,
   "dailyProgress": {
-    "date": "2026-07-20",
+    "date": "2026-07-21",
     "runsCompleted": 1,
     "candidateDiscovered": 5,
-    "activeImported": 0
+    "activeImported": 2
   },
   "startedAt": "2026-07-15T15:30:00+08:00",
   "status": "fourteen-day-acquisition-sprint",
-  "lastRun": {
-    "ranAt": "2026-07-20T19:00:28+08:00",
-    "sprintDay": 7,
-    "scheduledHour": 19,
-    "candidateDiscovered": 5,
-    "enriched": 1,
-    "activeImported": 0,
-    "movedToTrash": 1,
-    "dataPending": 5,
-    "detailAttempts": 6,
-    "singleListingFailures": 5,
-    "consecutiveDetailFailures": 3,
-    "result": "stopped-after-consecutive-public-detail-failures",
-    "accessRestriction": "Completed public lightweight discovery and cross-pool ASIN deduplication for five diversified candidates. Amazon detail requests for B0F66322VL and B0D28GBK64 returned Cache miss. B0DSW9NXM6 then opened successfully and completed authenticity verification, resetting the consecutive-failure count; its confirmed standardized metal-frame construction triggered grade D and it moved from the candidate pool to rejected products. The next three different ASINs B0FV83BWCK, B0D9HDLR1H and B0FPQKFHKX returned Cache miss, so enrichment stopped after three consecutive failures. No CAPTCHA, HTTP 403/429, forced sign-in or explicit anti-bot signal appeared."
-  },
   "lastAdmissionBackfill": {
     "ranAt": "2026-07-21T11:31:50+08:00",
-    "sprintDay": 6,
+    "sprintDay": 7,
     "candidateReviewed": 46,
     "activeImported": 35,
     "movedToTrash": 11,
@@ -56,32 +41,26 @@
     "reason": "Formal products require an ASIN-linked verified public main image; pending records are capture failures, not products without images."
   },
   "lastAcquisitionFunnelReport": {
-    "reportedAt": "2026-07-21T14:15:59+08:00",
-    "action": "main-image-correction",
-    "discovered": 0,
-    "reviewed": 35,
-    "enteredFormalPool": 26,
-    "screenedOut": 9,
+    "reportedAt": "2026-07-21T14:38:00+08:00",
+    "action": "scheduled-acquisition-batch-14:00",
+    "discovered": 5,
+    "reviewed": 14,
+    "enteredFormalPool": 2,
+    "screenedOut": 3,
     "screenedOutReasons": {
-      "main image exists on the Amazon listing but was not captured and verified in this batch": [
-        "B08SQKMCWX",
-        "B0DPKTVQDF",
-        "B08WCGBFXX",
-        "B08NSSC1D2",
-        "B08K3J5S7W",
-        "B0796CNQTG",
-        "B07875WBT6",
-        "B08FT4VQG8",
-        "B09SWKX1DL"
+      "main image not captured and verified in this batch; retained as candidate": [
+        "B0B2LZFN1X",
+        "B0C27S4CYH",
+        "B08D66Q848"
       ]
     },
     "duplicates": 0,
-    "dataPending": 26,
-    "formalPoolBeforeCorrection": 86,
-    "formalPoolAfter": 77,
-    "candidatePoolAfter": 9,
+    "dataPending": 5,
+    "formalPoolBefore": 77,
+    "formalPoolAfter": 79,
+    "candidatePoolAfter": 12,
     "rejectedPoolAfter": 12,
-    "accessRestriction": "Five original pricehistory.app or patent source requests returned HTTP 403; ASIN-direct public catalog fallback supplied verified MAIN images for those records. A follow-up Amazon public-search retry attempted three different remaining ASINs; all three returned pages without the target ASIN, so the retry stopped after three consecutive failures. No CAPTCHA, Robot Check, HTTP 429, or forced sign-in occurred."
+    "accessRestriction": "No CAPTCHA, Robot Check, HTTP 403/429, forced sign-in, or explicit anti-bot signal occurred. Public ASIN-linked MAIN-image verification succeeded for 2 of 14 cumulative candidates; 12 remain pending."
   },
   "lastImageRetry": {
     "ranAt": "2026-07-21T14:27:00+08:00",
@@ -102,5 +81,24 @@
       "B08FT4VQG8",
       "B09SWKX1DL"
     ]
+  },
+  "lastRun": {
+    "ranAt": "2026-07-21T14:38:00+08:00",
+    "sprintDay": 7,
+    "scheduledHour": 14,
+    "candidateDiscovered": 5,
+    "discoveryCompleted": true,
+    "enriched": 2,
+    "activeImported": 2,
+    "movedToTrash": 0,
+    "dataPending": 5,
+    "detailAttempts": 0,
+    "publicMainImageAttempts": 14,
+    "publicMainImageFailures": 12,
+    "singleListingFailures": 0,
+    "consecutiveDetailFailures": 0,
+    "duplicates": 0,
+    "result": "completed-with-two-formal-imports",
+    "accessRestriction": "No Amazon detail-page access restriction occurred. Public catalog MAIN-image verification added two products; remaining candidates stay pending without fabricated image links."
   }
 }

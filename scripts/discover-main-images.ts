@@ -55,10 +55,15 @@ if(applyChanges){
   const unresolvedAsins=new Set(targets.filter(item=>!verifiedByAsin.has(item.asin)).map(item=>item.asin));
   const originalCandidates=JSON.parse(execFileSync("git",["show","6452ffd:app/candidate-pool.json"],{encoding:"utf8"})) as Array<Record<string,unknown>&{asin:string}>;
   const formerProducts=JSON.parse(execFileSync("git",["show","929a807:app/real-products.json"],{encoding:"utf8"})) as Array<Record<string,unknown>&{asin:string}>;
+  const formerProductAsins=new Set(formerProducts.map(product=>product.asin));
   const currentCandidates=JSON.parse(readFileSync(candidatePath,"utf8")) as Array<Record<string,unknown>&{asin:string}>;
   const candidateMap=new Map(currentCandidates.map(item=>[item.asin,item]));
   for(const original of originalCandidates)if(unresolvedAsins.has(original.asin))candidateMap.set(original.asin,original);
-  for(const asin of verifiedByAsin.keys())candidateMap.delete(asin);
+  for(const [asin,found] of verifiedByAsin){
+    if(formerProductAsins.has(asin)){candidateMap.delete(asin);continue;}
+    const candidate=candidateMap.get(asin);
+    if(candidate)candidateMap.set(asin,{...candidate,imageUrl:found.imageUrl,imageEvidence:{kind:"public-catalog-main-image",sourceUrl:found.sourceUrl,observedAt:new Date().toISOString(),asin}});
+  }
 
   const correctedExisting=products
     .filter(product=>!unresolvedAsins.has(product.asin))
@@ -79,7 +84,7 @@ if(applyChanges){
   const state=JSON.parse(readFileSync(statePath,"utf8")) as Record<string,unknown>;
   const unresolvedFormal=products.filter(product=>unresolvedAsins.has(product.asin)).length;
   state.activeImported=Math.max(0,Number(state.activeImported??0)-unresolvedFormal+restored.length);
-  state.lastImageCorrection={ranAt:new Date().toISOString(),reviewed:targets.length,mainImagesAdded:verified.length,reEnteredFormalPool:restored.length,returnedToCandidatePool:unresolvedFormal,formalBefore:products.length,formalAfter:nextProducts.length,candidateAfter:candidateMap.size,reason:"Formal products require an ASIN-linked verified public main image."};
+  if(unresolvedFormal>0||restored.length>0)state.lastImageCorrection={ranAt:new Date().toISOString(),reviewed:targets.length,mainImagesAdded:verified.length,reEnteredFormalPool:restored.length,returnedToCandidatePool:unresolvedFormal,formalBefore:products.length,formalAfter:nextProducts.length,candidateAfter:candidateMap.size,reason:"Formal products require an ASIN-linked verified public main image; pending records are capture failures, not products without images."};
   writeFileSync(new URL("../app/real-products.json",import.meta.url),`${JSON.stringify(nextProducts,null,2)}\n`);
   writeFileSync(new URL("../app/candidate-pool.json",import.meta.url),`${JSON.stringify([...candidateMap.values()],null,2)}\n`);
   writeFileSync(statePath,`${JSON.stringify(state,null,2)}\n`);

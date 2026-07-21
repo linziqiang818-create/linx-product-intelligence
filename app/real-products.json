@@ -2256,5 +2256,87 @@
       "observedAt": "2026-07-21T06:15:59.353Z",
       "asin": "B0CWQP9RJJ"
     }
+  },
+  {
+    "asin": "B0CKRG83WQ",
+    "title": "Fienveorn Litter Box Enclosure, Modern Cat Litter Box Enclosure Furniture with Scratch Pad, Cat Washroom House End Table, Natural",
+    "category": "Cat Litter Box Furniture",
+    "imageUrl": "https://www.algopix.com/image/B0CKRG83WQ/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwDw-366rA_ouLq16zjoDtrfmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0CKRG83WQ-fienveorn-litter-box-enclosuremodern-cat-litter-box-enclosure-furniture-hidden",
+      "observedAt": "2026-07-21T06:38:25.764Z",
+      "asin": "B0CKRG83WQ"
+    },
+    "sourceUrl": "https://www.amazon.com/dp/B0CKRG83WQ",
+    "importedAt": "2026-07-21T14:38:00+08:00",
+    "observedAt": "2026-07-21T14:34:00+08:00",
+    "discoveryKeyword": "modern fluted hidden litter box furniture",
+    "discoverySource": "https://www.algopix.com/products/B0CKRG83WQ-fienveorn-litter-box-enclosuremodern-cat-litter-box-enclosure-furniture-hidden",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.algopix.com/products/B0CKRG83WQ-fienveorn-litter-box-enclosuremodern-cat-litter-box-enclosure-furniture-hidden",
+      "observedAt": "2026-07-21T14:34:00+08:00",
+      "confidence": "medium"
+    },
+    "grade": "C",
+    "track": "blue-ocean-red",
+    "dataStatus": "needs_data",
+    "dataPendingReasons": [
+      "price",
+      "rating",
+      "reviews",
+      "bsr",
+      "boughtPastMonth",
+      "dimensions",
+      "weight",
+      "material",
+      "dateFirstAvailable"
+    ],
+    "complexity": 3,
+    "differentiation": 4,
+    "returnRisk": "中",
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、真实公开主图、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
+  },
+  {
+    "asin": "B0C694YLH1",
+    "title": "Portable Manicure Table Foldable Nail Desk with Lockable Rolling Wheels, Dust Collector, Lamp, Wrist Rest and Carry Bag, White",
+    "category": "Manicure and Salon Workstations",
+    "imageUrl": "https://www.algopix.com/image/B0C694YLH1/Qr4cBfAoT5dTgKyA8v39R7wXwipvPqhm2hIHNOJyTwCjhH31M8v5fWdaOKp5JunXmQXVpcngGpkF6wvvBb3mYQ.jpeg",
+    "imageEvidence": {
+      "kind": "public-catalog-main-image",
+      "sourceUrl": "https://www.algopix.com/products/B0C694YLH1-portable-manicure-table-foldable-nail-desk-with-lockable-rolling-wheelsupgrade",
+      "observedAt": "2026-07-21T06:38:25.768Z",
+      "asin": "B0C694YLH1"
+    },
+    "sourceUrl": "https://www.amazon.com/dp/B0C694YLH1",
+    "importedAt": "2026-07-21T14:38:00+08:00",
+    "observedAt": "2026-07-21T14:34:00+08:00",
+    "discoveryKeyword": "portable manicure workstation dust collector",
+    "discoverySource": "https://www.algopix.com/products/B0C694YLH1-portable-manicure-table-foldable-nail-desk-with-lockable-rolling-wheelsupgrade",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.algopix.com/products/B0C694YLH1-portable-manicure-table-foldable-nail-desk-with-lockable-rolling-wheelsupgrade",
+      "observedAt": "2026-07-21T14:34:00+08:00",
+      "confidence": "medium"
+    },
+    "grade": "C",
+    "track": "blue-ocean-red",
+    "dataStatus": "needs_data",
+    "dataPendingReasons": [
+      "price",
+      "rating",
+      "reviews",
+      "bsr",
+      "boughtPastMonth",
+      "dimensions",
+      "weight",
+      "material",
+      "dateFirstAvailable"
+    ],
+    "complexity": 3,
+    "differentiation": 4,
+    "returnRisk": "中",
+    "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、真实公开主图、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。"
   }
 ]

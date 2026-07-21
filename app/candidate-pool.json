@@ -171,5 +171,60 @@
         "进入目标价格带"
       ]
     }
+  },
+  {
+    "asin": "B0B2LZFN1X",
+    "title": "Floating TV Console, Wall-Mounted Cube Storage Organizer Media Console TV Cabinet Chipboard Floating TV Stand Entertainment Shelf with Storage, High Gloss Black",
+    "amazonUrl": "https://www.amazon.com/dp/B0B2LZFN1X",
+    "discoveryKeyword": "floating wall mounted TV console cabinet",
+    "discoverySource": "https://algopix.com/products/B0B2LZFN1X-floating-tv-console-wallmounted-cube-storage-organizer-media-console-tv-cabinet",
+    "category": "TV Stands and Media Consoles",
+    "discoveredAt": "2026-07-21T14:34:00+08:00",
+    "track": "red-ocean-blue",
+    "preliminaryPriority": {
+      "score": 42,
+      "disposition": "queued",
+      "reasons": [
+        "属于公司可开发的柜体或工作台形态",
+        "具备可优化的结构或功能"
+      ]
+    }
+  },
+  {
+    "asin": "B0C27S4CYH",
+    "title": "Homsee Floating LED TV Stand for TVs up to 75 Inch, Wall Mounted Wood Media Console with Glossy Surface and 3 Drawers, Black",
+    "amazonUrl": "https://www.amazon.com/dp/B0C27S4CYH",
+    "discoveryKeyword": "floating LED media console cabinet",
+    "discoverySource": "https://www.algopix.com/products/B0C27S4CYH-homsee-floating-led-tv-stand-for-tvs-up-to-75-wall-mounted-wood-media-console",
+    "category": "TV Stands and Media Consoles",
+    "discoveredAt": "2026-07-21T14:34:00+08:00",
+    "track": "red-ocean-blue",
+    "preliminaryPriority": {
+      "score": 42,
+      "disposition": "queued",
+      "reasons": [
+        "属于公司可开发的柜体或工作台形态",
+        "具备可优化的结构或功能"
+      ]
+    }
+  },
+  {
+    "asin": "B08D66Q848",
+    "title": "Cabinet Safe Electronic Password Safe Home Small Wardrobe Bedside Table Hidden Drawer Safe Office All Steel Anti-Theft Safe",
+    "amazonUrl": "https://www.amazon.com/dp/B08D66Q848",
+    "discoveryKeyword": "unexpected secure storage furniture exploration",
+    "discoverySource": "https://algopix.com/products/B08D66Q848-cabinet-safe-electronic-password-safe-home-small-wardrobe-bedside-table-hidden",
+    "category": "Office Security Storage",
+    "discoveredAt": "2026-07-21T14:34:00+08:00",
+    "track": "exploration",
+    "preliminaryPriority": {
+      "score": 47,
+      "disposition": "queued",
+      "reasons": [
+        "属于公司可开发的柜体或工作台形态",
+        "具备可优化的结构或功能",
+        "探索样本保留少量优先权"
+      ]
+    }
   }
 ]
