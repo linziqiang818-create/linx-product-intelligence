@@ -46,6 +46,22 @@ test("uses one classifier for historical, daily, import, real and enriched produ
   snapshots.slice(1).forEach((snapshot) => assert.deepEqual(snapshot, snapshots[0]));
 });
 
+test("uses a sourced monthly-sales interval without storing a fabricated exact value", () => {
+  const placement = classifyFormalProduct({
+    asin: "B0INTERVAL",
+    title: "Fluted Storage Cabinet with Adjustable Shelves and Doors",
+    category: "Furniture / Storage Cabinets",
+    price: 189.99,
+    reviews: 42,
+    rating: 4.3,
+    launchDays: 120,
+    material: "Engineered Wood",
+    sourceUrl: "https://www.amazon.com/dp/B0INTERVAL",
+    monthlySalesEstimate: { min: 100, max: 199, confidence: "third-party-estimate", source: "SellerSprite 30-day export" },
+  }, "import");
+  assert.ok(placement.assessment.demand > 0);
+});
+
 test("classifies every product without Top N or family capacity limits", () => {
   const products = Array.from({ length: 1205 }, (_, index) => ({ ...base, asin: `UNLIMIT${String(index).padStart(4, "0")}` }));
   const placements = classifyFormalProductPool(products, "historical");

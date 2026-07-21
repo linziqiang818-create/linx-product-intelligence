@@ -14,6 +14,12 @@ export type FormalProductRecord = {
   category?: string;
   price?: number;
   monthlySales?: number;
+  monthlySalesEstimate?: {
+    min: number;
+    max: number;
+    confidence?: string;
+    source?: string;
+  };
   launchDays?: number;
   salesGrowth?: number;
   rating?: number;
@@ -28,6 +34,13 @@ export type FormalProductRecord = {
   sourceUrl?: string;
   manualFavorite?: boolean;
 };
+
+function monthlySalesFor(product: FormalProductRecord) {
+  if (Number(product.monthlySales ?? 0) > 0) return Number(product.monthlySales);
+  const estimate = product.monthlySalesEstimate;
+  if (!estimate || !Number.isFinite(estimate.min) || !Number.isFinite(estimate.max) || estimate.min < 0 || estimate.max < estimate.min) return 0;
+  return (estimate.min + estimate.max) / 2;
+}
 
 export type ProductPlacement = {
   asin: string;
@@ -56,7 +69,7 @@ function opportunityInputFor(product: FormalProductRecord): OpportunityInput {
     title: product.title,
     category: product.category ?? "",
     price: Number(product.price ?? 0),
-    monthlySales: Number(product.monthlySales ?? 0),
+    monthlySales: monthlySalesFor(product),
     launchDays: Number(product.launchDays ?? 9999),
     salesGrowth: Number(product.salesGrowth ?? 0),
     rating: Number(product.rating ?? 0),

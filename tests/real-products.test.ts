@@ -11,7 +11,7 @@ import {
 } from "../app/recommendation-grade.ts";
 import { minimumFormalAdmission } from "../app/formal-admission.ts";
 
-type RealProduct = { asin: string; title: string; category: string; imageUrl?: string; sourceUrl: string; discoverySource?: string; admissionEvidence?: { sourceUrl?: string }; estimatedMargin?: number; importedAt: string; monthlySales?: number; launchDays?: number; salesGrowth?: number; rating?: number; reviews?: number; packageGrossKg?: number; packageDimensionsCm?: string; material?: string; priceUplift?: number; price?: number; note: string };
+type RealProduct = { asin: string; title: string; category: string; imageUrl?: string; sourceUrl: string; discoverySource?: string; admissionEvidence?: { sourceUrl?: string }; estimatedMargin?: number; importedAt: string; monthlySales?: number; monthlySalesEstimate?: { min?: number; max?: number; confidence?: string; source?: string }; launchDays?: number; salesGrowth?: number; rating?: number; reviews?: number; packageGrossKg?: number; packageDimensionsCm?: string; material?: string; priceUplift?: number; price?: number; note: string; sourceDataProvider?: string };
 const products = JSON.parse(readFileSync(new URL("../app/real-products.json", import.meta.url), "utf8")) as RealProduct[];
 
 test("ships the curated Amazon US research batch without duplicates", () => {
@@ -32,10 +32,16 @@ test("normalizes exported margin fractions to percentages", () => {
 
 test("does not invent Amazon fields that were unavailable on the public search pages", () => {
   assert.ok(products.every((product) => product.monthlySales === undefined));
-  assert.ok(products.every((product) => product.launchDays === undefined));
-  assert.ok(products.every((product) => product.packageGrossKg === undefined));
-  assert.ok(products.every((product) => product.packageDimensionsCm === undefined));
-  assert.ok(products.every((product) => product.note.includes("未使用推测值") || product.note.includes("未填 0 或推测值")));
+  assert.ok(products.every((product) => product.sourceDataProvider === "SellerSprite"
+    || (product.launchDays === undefined && product.packageGrossKg === undefined && product.packageDimensionsCm === undefined)));
+  assert.ok(products.every((product) => product.monthlySalesEstimate === undefined || (
+    Number.isFinite(product.monthlySalesEstimate.min)
+    && Number.isFinite(product.monthlySalesEstimate.max)
+    && Number(product.monthlySalesEstimate.min) >= 0
+    && Number(product.monthlySalesEstimate.max) >= Number(product.monthlySalesEstimate.min)
+    && Boolean(product.monthlySalesEstimate.confidence)
+    && Boolean(product.monthlySalesEstimate.source)
+  )));
 });
 
 test("keeps legacy decision mapping compatible while exposing one A through D conclusion", () => {
