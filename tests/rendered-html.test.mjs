@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 
 async function render() {
@@ -18,5 +19,7 @@ test("server renders the furniture selection workbench", async () => {
   assert.match(html, /收藏夹/);
   assert.match(html, /选择当前结果/);
   assert.match(html, /个进入初筛排名/);
-  assert.match(html, /https:\/\/www\.amazon\.com\/dp\//);
+  const products = JSON.parse(readFileSync(new URL("../public/real-products.json", import.meta.url), "utf8"));
+  assert.ok(products.length > 2_000);
+  assert.ok(products.every((product) => /^https:\/\/www\.amazon\.com\/dp\/[A-Z0-9]{10}$/.test(product.sourceUrl)));
 });

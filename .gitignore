@@ -42,3 +42,5 @@ next-env.d.ts
 /outputs/
 /work/
 /.run/
+/public/real-products.json
+/public/rejected-products.json

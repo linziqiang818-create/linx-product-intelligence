@@ -6,11 +6,14 @@ test("portable HTML starts LINX after its root exists and has visible diagnostic
   const html = readFileSync(new URL("../.run/LINX.html", import.meta.url), "utf8");
   const rootPosition = html.indexOf('<div id="root"></div>');
   const diagnosticsPosition = html.indexOf('<script id="linx-startup-diagnostics">');
+  const dataPosition = html.indexOf('<script id="linx-builtin-data">');
   const appPosition = html.indexOf('<script id="linx-app-bundle">');
   const diagnostics = html.match(/<script id="linx-startup-diagnostics">([\s\S]*?)<\/script>/)?.[1] ?? "";
   const app = html.match(/<script id="linx-app-bundle">([\s\S]*)<\/script><\/body>/)?.[1] ?? "";
 
   assert.ok(rootPosition >= 0);
+  assert.ok(dataPosition > rootPosition);
+  assert.ok(diagnosticsPosition > dataPosition);
   assert.ok(diagnosticsPosition > rootPosition);
   assert.ok(appPosition > diagnosticsPosition);
   assert.equal((html.match(/<script[^>]+src=/g) ?? []).length, 0);
@@ -18,6 +21,7 @@ test("portable HTML starts LINX after its root exists and has visible diagnostic
   assert.equal(app.includes("import.meta"), false);
   assert.ok(diagnostics.includes("unhandledrejection"));
   assert.ok(app.length > 100_000);
+  assert.match(html, /window\.__LINX_DATA__=\{products:/);
   assert.doesNotThrow(() => new Function(diagnostics));
   assert.doesNotThrow(() => new Function(app));
 });
