@@ -40,6 +40,15 @@ test("keeps acquisition quotas out of formal storage and classification", () => 
   assert.equal(acquisitionPolicyBoundaries.classificationLimit, null);
 });
 
+test("admits verified non-D products without requiring every commercial field", () => {
+  assert.equal(acquisitionPolicy.minimumFormalAdmission.requiresRealAsin, true);
+  assert.equal(acquisitionPolicy.minimumFormalAdmission.requiresCompleteEnglishTitle, true);
+  assert.equal(acquisitionPolicy.minimumFormalAdmission.requiresCanonicalAmazonUsLink, true);
+  assert.equal(acquisitionPolicy.minimumFormalAdmission.requiresTraceablePublicEvidence, true);
+  assert.equal(acquisitionPolicy.minimumFormalAdmission.excludesGradeD, true);
+  assert.equal(acquisitionPolicy.minimumFormalAdmission.missingCommercialFieldsRemainDataPending, true);
+});
+
 test("labels public sales evidence without pretending an estimate is exact", () => {
   assert.deepEqual(salesEvidenceLabel({ monthlySales: 83 }), { value: "83", source: "数据源月销量" });
   assert.deepEqual(salesEvidenceLabel({ estimatedLow: 50, estimatedHigh: 100 }), { value: "50–100", source: "LINX估算区间" });

@@ -35,6 +35,14 @@ export const acquisitionPolicy = {
     immediateStopHttpStatuses: [403, 429],
     immediateStopSignals: ["captcha", "robot check", "account sign-in required"],
   },
+  minimumFormalAdmission: {
+    requiresRealAsin: true,
+    requiresCompleteEnglishTitle: true,
+    requiresCanonicalAmazonUsLink: true,
+    requiresTraceablePublicEvidence: true,
+    excludesGradeD: true,
+    missingCommercialFieldsRemainDataPending: true,
+  },
   cadenceDays: {
     normal: 7,
     priority: 3,

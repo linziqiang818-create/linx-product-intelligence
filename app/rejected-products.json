@@ -19,5 +19,209 @@
     "rejectionReason": "Confirmed standardized metal-frame equipment rack, triggering the unsupported standardized metal product hard rule.",
     "observedAt": "2026-07-20T19:07:00+08:00",
     "movedToTrashAt": "2026-07-20T19:07:00+08:00"
+  },
+  {
+    "asin": "B08KXSBJQJ",
+    "title": "Sewing Table Craft Cart, Sewing Machine Extension Table, Foldable Art Desk with Storage, Adjustable Shelf, Hidden Bins and Lockable Casters, Brown",
+    "category": "Sewing Cabinets",
+    "price": 99.99,
+    "sourceUrl": "https://www.amazon.com/dp/B08KXSBJQJ",
+    "discoveryKeyword": "sewing cabinet foldable craft table",
+    "discoverySource": "https://amzchart.com/products/15276",
+    "observedAt": "2026-07-16T09:10:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "售价低于 100 美元目标价格带；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://amzchart.com/products/15276",
+      "observedAt": "2026-07-16T09:10:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B08Z3R5DGX",
+    "title": "HOMFY Sewing Machine Table with Lockable Wheels, Movable Craft Table with Storage Shelves, Folding Sewing Cabinet for Adults, Brown",
+    "category": "Sewing Cabinets",
+    "price": 99.99,
+    "sourceUrl": "https://www.amazon.com/dp/B08Z3R5DGX",
+    "discoveryKeyword": "sewing cabinet foldable craft table",
+    "discoverySource": "https://amzchart.com/products/15276",
+    "observedAt": "2026-07-16T09:10:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "售价低于 100 美元目标价格带；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://amzchart.com/products/15276",
+      "observedAt": "2026-07-16T09:10:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0C6THJH5X",
+    "title": "Gurexl Human Sensor LED Vanity with Flip-up Mirror, Lockable Makeup Vanity Set with 2 AC Outlets, USB and Type-C Ports, Jewelry Box, Cushioned Stool and 2 Drawers",
+    "category": "Transformable Vanity Furniture",
+    "sourceUrl": "https://www.amazon.com/dp/B0C6THJH5X",
+    "discoveryKeyword": "unexpected compact transformable furniture",
+    "discoverySource": "https://www.algopix.com/products/B0C6THJH5X-gurexl-human-sensor-led-vanity-with-plipup-mirror-lockable-makeup-vanity-set-with",
+    "observedAt": "2026-07-16T09:12:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "玻璃或镜面产品不在当前开发范围；暂未识别到公司擅长的家具形态；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认、售价待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.algopix.com/products/B0C6THJH5X-gurexl-human-sensor-led-vanity-with-plipup-mirror-lockable-makeup-vanity-set-with",
+      "observedAt": "2026-07-16T09:12:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0BHVNLJXG",
+    "title": "USIKEY Corner Vanity Set with Three-Fold Mirror and Charging Station, Makeup Vanity Table with 10 LED Lights, 4 Drawers and 2 Shelves, White",
+    "category": "Corner Vanity Furniture",
+    "sourceUrl": "https://www.amazon.com/dp/B0BHVNLJXG",
+    "discoveryKeyword": "unexpected corner-use furniture",
+    "discoverySource": "https://www.algopix.com/products/B0BHVNLJXG-usikey-corner-vanity-set-with-threefold-mirror-and-charging-station-makeup-vanity",
+    "observedAt": "2026-07-16T09:12:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "玻璃或镜面产品不在当前开发范围；暂未识别到公司擅长的家具形态；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认、售价待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.algopix.com/products/B0BHVNLJXG-usikey-corner-vanity-set-with-threefold-mirror-and-charging-station-makeup-vanity",
+      "observedAt": "2026-07-16T09:12:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0C7FXVDK3",
+    "title": "SMOOL 47 Inch Vanity with Lighted Mirror, Makeup Vanity Desk with Power Outlet, 3 Color Lighting Options, 6 Drawers and Cabinet, White",
+    "category": "Integrated Vanity Furniture",
+    "sourceUrl": "https://www.amazon.com/dp/B0C7FXVDK3",
+    "discoveryKeyword": "unexpected integrated charging furniture",
+    "discoverySource": "https://www.algopix.com/products/B0C7FXVDK3-smool-47-l-vanity-with-lighted-mirror-makeup-vanity-desk-with-power-outlet-and-3",
+    "observedAt": "2026-07-16T09:12:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "玻璃或镜面产品不在当前开发范围；类目超出现有室内板式家具能力；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认、售价待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.algopix.com/products/B0C7FXVDK3-smool-47-l-vanity-with-lighted-mirror-makeup-vanity-desk-with-power-outlet-and-3",
+      "observedAt": "2026-07-16T09:12:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0DF2G92HC",
+    "title": "Shintenchi Bookshelf, Arched Bookshelf 5 Tier Bookcase, Tall Shelf for CDs and Books, Home Office Shelf Storage Organizer, Modern Book Shelf for Bedroom and Living Room, Rustic Brown",
+    "category": "Bookcases and Display Shelves",
+    "price": 53.14,
+    "sourceUrl": "https://www.amazon.com/dp/B0DF2G92HC",
+    "discoveryKeyword": "arched bookcase display shelf",
+    "discoverySource": "https://www.asinsight.com/report/US/bookshelf-arched",
+    "observedAt": "2026-07-16T14:03:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "售价低于 100 美元目标价格带；校准偏好：柜体具有明确的造型识别度；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.asinsight.com/report/US/bookshelf-arched",
+      "observedAt": "2026-07-16T14:03:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0D9JF83XV",
+    "title": "GDLF 125-150 Gallon Fish Tank Stand, Heavy Duty Metal Aquarium Stand with Power Outlet and Cabinet for Fish Tank Filters and Accessories, 72.8 Inch Long by 18.9 Inch Wide, 2200 Pounds Capacity, Stand Only",
+    "category": "Reptile and Aquarium Furniture",
+    "sourceUrl": "https://www.amazon.com/dp/B0D9JF83XV",
+    "discoveryKeyword": "reptile and aquarium enclosure furniture cabinet",
+    "discoverySource": "https://algopix.com/products/B0D9JF83XV-gdlf-125150-gallon-fish-tank-stand-heavy-duty-metal-aquarium-stand-with-power",
+    "observedAt": "2026-07-16T14:03:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "类目超出现有室内板式家具能力；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认、售价待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://algopix.com/products/B0D9JF83XV-gdlf-125150-gallon-fish-tank-stand-heavy-duty-metal-aquarium-stand-with-power",
+      "observedAt": "2026-07-16T14:03:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0GCYDV9V8",
+    "title": "55-75 Gallon Aquarium Stand with Power Outlet, Heavy Duty Fish Tank Stand with 4 Cabinets, Storage Cabinet for Turtle Tank and Reptile Terrarium, 880 Pounds, 47 Inch, White",
+    "category": "Powered Habitat Support Furniture",
+    "price": 149.98,
+    "sourceUrl": "https://www.amazon.com/dp/B0GCYDV9V8",
+    "discoveryKeyword": "unexpected powered habitat support furniture",
+    "discoverySource": "https://pricehistory.app/p/55-75-gallon-aquarium-stand-power-outlet-bVQitDSj",
+    "observedAt": "2026-07-16T14:03:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "类目超出现有室内板式家具能力；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://pricehistory.app/p/55-75-gallon-aquarium-stand-power-outlet-bVQitDSj",
+      "observedAt": "2026-07-16T14:03:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0DD664BYP",
+    "title": "Multifunctional Sensory Table with 2 Chairs and Paper Roll, Wooden Sand and Water Activity Table with Double-Sided Board and Foldable Storage Bins for Kids' Indoor and Outdoor Play",
+    "category": "Convertible Activity Furniture",
+    "sourceUrl": "https://www.amazon.com/dp/B0DD664BYP",
+    "discoveryKeyword": "unexpected convertible activity furniture",
+    "discoverySource": "https://www.testmarket.io/proview/tables/multifunctional-sensory-table-with-2-chairs-paper-roll-wooden-sand-and-water-activity-table-with-double-sided-board-foldable-storage-bins-for-kids-indoor-and-outdoor-play/12524",
+    "observedAt": "2026-07-16T14:03:00+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "类目超出现有室内板式家具能力；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认、售价待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://www.testmarket.io/proview/tables/multifunctional-sensory-table-with-2-chairs-paper-roll-wooden-sand-and-water-activity-table-with-double-sided-board-foldable-storage-bins-for-kids-indoor-and-outdoor-play/12524",
+      "observedAt": "2026-07-16T14:03:00+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0D77FZXG2",
+    "title": "SICOTAS Shoe Cabinet, 24 Pair Shoe Storage Organizer Cabinet, 41 Inch Tall Rattan Shoe Cabinet with Doors and Storage",
+    "category": "Shoe Cabinets",
+    "price": 79.99,
+    "sourceUrl": "https://www.amazon.com/dp/B0D77FZXG2",
+    "discoveryKeyword": "rattan shoe cabinet entryway storage",
+    "discoverySource": "https://uspto.report/TM/99172138/APP20250506170449/8.pdf",
+    "observedAt": "2026-07-18T19:01:50+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "售价低于 100 美元目标价格带；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://uspto.report/TM/99172138/APP20250506170449/8.pdf",
+      "observedAt": "2026-07-18T19:01:50+08:00",
+      "confidence": "medium"
+    }
+  },
+  {
+    "asin": "B0D28GBK64",
+    "title": "Record Player Stand, Vinyl Record Cabinet with Power Outlet Holds Up to 200 Albums, Turntable Stand Table, Fluted Sliding Door, Living Room(Walnut)",
+    "category": "Vinyl and Audio Furniture",
+    "price": 73.98,
+    "sourceUrl": "https://www.amazon.com/dp/B0D28GBK64",
+    "discoveryKeyword": "vinyl record cabinet power outlet fluted door",
+    "discoverySource": "https://pricehistory.app/p/record-player-stand-vinyl-record-cabinet-power-WDKv0wce",
+    "observedAt": "2026-07-20T19:00:28+08:00",
+    "movedToTrashAt": "2026-07-21T11:31:50+08:00",
+    "grade": "D",
+    "rejectionReason": "售价低于 100 美元目标价格带；校准偏好：柜体具有明确的造型识别度；板式家具材质信息不足或不明确；数据待补：缺少包装重量、缺少包装尺寸、材质待确认，补齐前不进入推荐榜",
+    "admissionEvidence": {
+      "kind": "public-discovery-record",
+      "sourceUrl": "https://pricehistory.app/p/record-player-stand-vinyl-record-cabinet-power-WDKv0wce",
+      "observedAt": "2026-07-20T19:00:28+08:00",
+      "confidence": "medium"
+    }
   }
 ]

@@ -4,9 +4,9 @@
   "weeklyCandidateExpansion": 3500,
   "candidateDiscovered": 48,
   "enrichmentTarget": 4200,
-  "enriched": 2,
-  "activeImported": 1,
-  "movedToTrash": 1,
+  "enriched": 48,
+  "activeImported": 36,
+  "movedToTrash": 12,
   "dailyProgress": {
     "date": "2026-07-20",
     "runsCompleted": 1,
@@ -17,7 +17,7 @@
   "status": "fourteen-day-acquisition-sprint",
   "lastRun": {
     "ranAt": "2026-07-20T19:00:28+08:00",
-    "sprintDay": 6,
+    "sprintDay": 7,
     "scheduledHour": 19,
     "candidateDiscovered": 5,
     "enriched": 1,
@@ -29,5 +29,19 @@
     "consecutiveDetailFailures": 3,
     "result": "stopped-after-consecutive-public-detail-failures",
     "accessRestriction": "Completed public lightweight discovery and cross-pool ASIN deduplication for five diversified candidates. Amazon detail requests for B0F66322VL and B0D28GBK64 returned Cache miss. B0DSW9NXM6 then opened successfully and completed authenticity verification, resetting the consecutive-failure count; its confirmed standardized metal-frame construction triggered grade D and it moved from the candidate pool to rejected products. The next three different ASINs B0FV83BWCK, B0D9HDLR1H and B0FPQKFHKX returned Cache miss, so enrichment stopped after three consecutive failures. No CAPTCHA, HTTP 403/429, forced sign-in or explicit anti-bot signal appeared."
+  },
+  "lastAdmissionBackfill": {
+    "ranAt": "2026-07-21T11:31:50+08:00",
+    "sprintDay": 6,
+    "candidateReviewed": 46,
+    "activeImported": 35,
+    "movedToTrash": 11,
+    "duplicates": 0,
+    "candidateRemaining": 0,
+    "formalBefore": 51,
+    "formalAfter": 86,
+    "rejectedBefore": 1,
+    "rejectedAfter": 12,
+    "note": "User-approved minimum formal admission backfill; does not consume a scheduled batch quota."
   }
 }

@@ -9,8 +9,9 @@ import {
   gradeWithDataStatus,
   hasSuspiciousPackage,
 } from "../app/recommendation-grade.ts";
+import { minimumFormalAdmission } from "../app/formal-admission.ts";
 
-type RealProduct = { asin: string; title: string; category: string; imageUrl: string; sourceUrl: string; estimatedMargin?: number; importedAt: string; monthlySales?: number; launchDays?: number; salesGrowth?: number; rating: number; reviews: number; packageGrossKg?: number; packageDimensionsCm?: string; material: string; priceUplift: number; price: number; note: string };
+type RealProduct = { asin: string; title: string; category: string; imageUrl?: string; sourceUrl: string; discoverySource?: string; admissionEvidence?: { sourceUrl?: string }; estimatedMargin?: number; importedAt: string; monthlySales?: number; launchDays?: number; salesGrowth?: number; rating?: number; reviews?: number; packageGrossKg?: number; packageDimensionsCm?: string; material?: string; priceUplift?: number; price?: number; note: string };
 const products = JSON.parse(readFileSync(new URL("../app/real-products.json", import.meta.url), "utf8")) as RealProduct[];
 
 test("ships the curated Amazon US research batch without duplicates", () => {
@@ -19,10 +20,9 @@ test("ships the curated Amazon US research batch without duplicates", () => {
   assert.ok(products.every((product) => /^[A-Z0-9]{10}$/.test(product.asin)));
 });
 
-test("every imported product has a real Amazon image and listing link", () => {
-  assert.ok(products.every((product) => product.imageUrl.startsWith("https://m.media-amazon.com/")));
-  assert.ok(products.every((product) => product.sourceUrl === `https://www.amazon.com/dp/${product.asin}`));
-  assert.ok(products.every((product) => product.title.length > 10));
+test("every imported product passes the minimum formal admission gate", () => {
+  assert.ok(products.every((product) => minimumFormalAdmission(product).eligible));
+  assert.ok(products.every((product) => !product.imageUrl || product.imageUrl.startsWith("https://m.media-amazon.com/")));
   assert.ok(products.every((product) => !Number.isNaN(Date.parse(product.importedAt))));
 });
 
@@ -35,7 +35,7 @@ test("does not invent Amazon fields that were unavailable on the public search p
   assert.ok(products.every((product) => product.launchDays === undefined));
   assert.ok(products.every((product) => product.packageGrossKg === undefined));
   assert.ok(products.every((product) => product.packageDimensionsCm === undefined));
-  assert.ok(products.every((product) => product.note.includes("未使用推测值")));
+  assert.ok(products.every((product) => product.note.includes("未使用推测值") || product.note.includes("未填 0 或推测值")));
 });
 
 test("keeps legacy decision mapping compatible while exposing one A through D conclusion", () => {
