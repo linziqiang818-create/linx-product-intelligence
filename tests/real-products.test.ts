@@ -11,8 +11,9 @@ import {
 } from "../app/recommendation-grade.ts";
 import { minimumFormalAdmission } from "../app/formal-admission.ts";
 
-type RealProduct = { asin: string; title: string; category: string; imageUrl?: string; sourceUrl: string; discoverySource?: string; admissionEvidence?: { sourceUrl?: string }; estimatedMargin?: number; importedAt: string; monthlySales?: number; monthlySalesEstimate?: { min?: number; max?: number; confidence?: string; source?: string }; launchDays?: number; salesGrowth?: number; rating?: number; reviews?: number; packageGrossKg?: number; packageDimensionsCm?: string; material?: string; priceUplift?: number; price?: number; note: string; sourceDataProvider?: string };
+type RealProduct = { asin: string; title: string; titleZh?: string; category: string; imageUrl?: string; sourceUrl: string; discoverySource?: string; admissionEvidence?: { sourceUrl?: string }; estimatedMargin?: number; importedAt: string; monthlySales?: number; monthlySalesEstimate?: { min?: number; max?: number; confidence?: string; source?: string }; launchDays?: number; salesGrowth?: number; rating?: number; reviews?: number; packageGrossKg?: number; packageDimensionsCm?: string; material?: string; priceUplift?: number; price?: number; note: string; sourceDataProvider?: string };
 const products = JSON.parse(readFileSync(new URL("../app/real-products.json", import.meta.url), "utf8")) as RealProduct[];
+const rejectedProducts = JSON.parse(readFileSync(new URL("../app/rejected-products.json", import.meta.url), "utf8")) as RealProduct[];
 
 test("ships the curated Amazon US research batch without duplicates", () => {
   assert.ok(products.length >= 50);
@@ -23,7 +24,15 @@ test("ships the curated Amazon US research batch without duplicates", () => {
 test("every imported product passes the minimum formal admission gate", () => {
   assert.ok(products.every((product) => minimumFormalAdmission(product).eligible));
   assert.ok(products.every((product) => Boolean(product.imageUrl)));
+  assert.ok(products.every((product) => /[\u3400-\u9fff]/.test(String(product.titleZh ?? ""))));
+  assert.ok(products.every((product) => !/待自动翻译|待补充中文标题/.test(String(product.titleZh ?? ""))));
   assert.ok(products.every((product) => !Number.isNaN(Date.parse(product.importedAt))));
+});
+
+test("keeps rejected products reviewable with Chinese titles and explicit legacy image exceptions", () => {
+  assert.ok(rejectedProducts.every((product) => /[\u3400-\u9fff]/.test(String(product.titleZh ?? ""))));
+  const missingImageAsins = rejectedProducts.filter((product) => !product.imageUrl).map((product) => product.asin).sort();
+  assert.deepEqual(missingImageAsins, ["B08KXSBJQJ", "B08Z3R5DGX", "B0BHVNLJXG", "B0C7FXVDK3"]);
 });
 
 test("normalizes exported margin fractions to percentages", () => {

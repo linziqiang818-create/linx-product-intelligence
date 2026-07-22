@@ -15,11 +15,19 @@ test("server renders the furniture selection workbench", async () => {
   const html = await response.text();
   assert.match(html, /<title>LINX｜AI Product Intelligence<\/title>/i);
   assert.match(html, /LIN/);
-  assert.match(html, /机会筛选/);
-  assert.match(html, /收藏夹/);
-  assert.match(html, /选择当前结果/);
-  assert.match(html, /个进入初筛排名/);
+  assert.match(html, /开发机会/);
+  assert.match(html, /我的收藏/);
+  assert.match(html, /选择全部筛选结果/);
+  assert.match(html, /当前开发机会/);
+  const paginationSource = readFileSync(new URL("../app/pagination.tsx", import.meta.url), "utf8");
+  assert.match(paginationSource, /PRODUCT_PAGE_SIZE\s*=\s*150/);
   const products = JSON.parse(readFileSync(new URL("../public/real-products.json", import.meta.url), "utf8"));
   assert.ok(products.length > 2_000);
   assert.ok(products.every((product) => /^https:\/\/www\.amazon\.com\/dp\/[A-Z0-9]{10}$/.test(product.sourceUrl)));
+});
+
+test("product imports are cumulative ASIN updates and cannot replace history", () => {
+  const source = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(source, /按 ASIN 累计追加\/更新/);
+  assert.doesNotMatch(source, /importMode|导入后替换当前批次/);
 });

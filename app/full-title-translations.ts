@@ -1,3 +1,5 @@
+import { furnitureTitleZh } from "./title-translation.ts";
+
 const translations: Record<string, string> = {
   B0FN3HXZC1: "71英寸高中世纪风拱形展示柜书架，圆弧造型，配波纹柜门与开放式层架，适用于餐厅，黑色",
   B0FSYG9L47: "LEVNARY 70英寸高拱形书柜，五层书架，配波纹雕花抽屉，落地式展示收纳柜，适用于客厅、卧室和家庭办公室，原木色",
@@ -51,8 +53,10 @@ const translations: Record<string, string> = {
   B0GGZQQBJZ: "Feandrea 双仓猫砂盆隐藏柜，适合两只猫，配储物柜，农舍风室内猫屋及猫厕所家具，蜂蜜棕与乡村白配色，型号UPCL032WJ03",
 };
 
-export function fullTitleZh(asin: string, saved?: string) {
-  return translations[asin] || String(saved ?? "").trim() || "中文完整标题待自动翻译";
+export function fullTitleZh(asin: string, saved?: string, title?: string, category?: string) {
+  const stored = String(saved ?? "").trim();
+  if (stored && !/待自动翻译|待补充中文标题/.test(stored)) return stored;
+  return translations[asin] || furnitureTitleZh(String(title ?? ""), String(category ?? ""));
 }
 
 export { translations as fullTitleTranslations };
