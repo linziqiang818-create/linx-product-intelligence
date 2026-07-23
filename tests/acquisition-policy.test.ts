@@ -69,7 +69,10 @@ test("prioritizes likely company-fit products before enriching the whole pool", 
   const niche = preliminaryPriority({ title: "Fluted Hidden Cat Litter Box Cabinet with Sliding Door", price: 189, discoveryLane: "blue-ocean-red" });
   const ordinary = preliminaryPriority({ title: "Simple Small Side Table", price: 45, discoveryLane: "exploration" });
   const rejected = preliminaryPriority({ title: "Solid Oak Mirrored Glass Cabinet", price: 399 });
+  const solidWoodClue = preliminaryPriority({ title: "TV Stand with Solid Wood Legs and Adjustable Shelves", price: 189 });
   assert.equal(niche.disposition, "priority");
   assert.ok(niche.score > ordinary.score);
   assert.equal(rejected.disposition, "trash");
+  assert.notEqual(solidWoodClue.disposition, "trash");
+  assert.ok(solidWoodClue.reasons.some((reason) => reason.includes("不能仅凭标题淘汰")));
 });

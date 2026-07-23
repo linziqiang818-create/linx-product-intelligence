@@ -7,7 +7,7 @@ import {
   panelMaterialTerms,
   plasticTerms,
   selectionPolicy,
-  solidWoodTerms,
+  classifySolidWoodEvidence,
   upholsteryMaterialTerms,
 } from "./selection-policy.ts";
 
@@ -35,7 +35,7 @@ export type AssessmentDataStatus = "complete" | "needs_data";
 const sofaTerms = /sofa|couch|recliner|accent chair|沙发|躺椅|软包椅/i;
 const gamingChairTerms = /gaming chair|电竞椅/i;
 const babyTerms = /baby|nursery|crib|bassinet|婴儿|童床/i;
-const unsupportedTerms = /outdoor|patio|bathroom vanity|sink|faucet|toilet|lighting|chandelier|aquarium|户外|浴室柜|水槽|灯具/i;
+const unsupportedTerms = /outdoor|patio|bathroom vanity|sink|faucet|toilet|lighting fixture|chandelier|pendant light|floor lamp|table lamp|ceiling light|aquarium|户外|浴室柜|水槽|灯具/i;
 const casegoodTerms = /cabinet|sideboard|dresser|nightstand|console table|coffee table|end table|desk|workstation|bookshelf|bookcase|pantry|storage|vanity desk|shoe cabinet|entryway|reception desk|podium|coffee station|craft table|sewing table|pet furniture|dog crate|cat cabinet|cat enclosure|litter box|橱柜|边柜|斗柜|床头柜|桌|书架|鞋柜|收纳|猫砂柜/i;
 const structuralTerms = /drawer|door|shelf|hinge|slide|lift.?top|fold|extend|adjustable|charging|usb|outlet|caster|抽屉|柜门|层板|铰链|滑轨|升降|折叠|伸缩|可调|充电/i;
 const nicheUseTerms = /reception|manicure|nail|craft|sewing|coffee station|printer stand|record player|vinyl|dog crate|cat litter|entryway|small space|apartment|corner|farmhouse pantry/i;
@@ -79,7 +79,9 @@ export function assess(input: OpportunityInput) {
   const isGlass = glassTerms.test(glassEvidenceText);
   const isPureUpholstered = sofaTerms.test(text) && upholsteryMaterialTerms.test(text) && !panelMaterialTerms.test(text);
   const isPlasticGamingChair = gamingChairTerms.test(text) && plasticTerms.test(text) && !panelMaterialTerms.test(text);
-  const isPureSolidWood = solidWoodTerms.test(text) && !panelMaterialTerms.test(text);
+  const solidWoodEvidence = classifySolidWoodEvidence(input.title, input.material);
+  const isPureSolidWood = solidWoodEvidence.hardReject;
+  const solidWoodNeedsVerification = solidWoodEvidence.needsMaterialReview;
   const isBabyCategory = babyTerms.test(text);
   const isUnsupported = unsupportedTerms.test(text);
   const hasPanelMaterial = panelMaterialTerms.test(text);
@@ -131,6 +133,7 @@ export function assess(input: OpportunityInput) {
   const fitConcerns = [
     !hasCasegoodForm ? "暂未识别到公司擅长的家具形态" : "",
     !hasPanelMaterial ? "板式家具材质信息不足或不明确" : "",
+    solidWoodNeedsVerification ? solidWoodEvidence.reason : "",
   ].filter(Boolean);
 
   let companyFit = 0;
@@ -187,7 +190,7 @@ export function assess(input: OpportunityInput) {
   const baseScore = companyFit * selectionPolicy.score.companyFit + hiddenOpportunity * selectionPolicy.score.hiddenOpportunity + demand * selectionPolicy.score.demand;
   const score = hardRejected ? 0 : clamp(baseScore * (1 - marginWeight) + marginScore * marginWeight + calibratedInterest.adjustment);
 
-  const dataContext = { category: input.category, material: input.material, price: input.price };
+  const dataContext = { category: input.category, material: solidWoodNeedsVerification ? "" : input.material, price: input.price };
   const dataStatus: AssessmentDataStatus = dataStatusFor(input.packageDimensionsCm, input.packageGrossKg, dataContext);
   const dataWarnings = dataIssuesFor(input.packageDimensionsCm, input.packageGrossKg, dataContext);
   const marketEvidenceKnown = input.monthlySales > 0 || (input.launchDays > 0 && input.launchDays < 9999);
@@ -225,6 +228,7 @@ export function assess(input: OpportunityInput) {
     decision,
     dataStatus,
     dataWarnings,
+    solidWoodEvidence,
     hardRejected,
     hardRejectReasons,
     fitConcerns,

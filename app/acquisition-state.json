@@ -235,5 +235,42 @@
       "parentVariantMerged": 0,
       "minimumAdmissionPending": 0
     }
+  },
+  "lastSolidWoodReaudit": {
+    "reviewedAt": "2026-07-23T03:11:39.654Z",
+    "reviewed": 214,
+    "evidenceStatuses": {
+      "local-component": 41,
+      "ambiguous": 158,
+      "confirmed-whole-product": 8,
+      "conflicting": 3,
+      "none": 4
+    },
+    "restoredFormal": 193,
+    "restoredNeedsData": 182,
+    "keptRejected": 21,
+    "keptReasons": {
+      "纯实木产品不在当前板式家具开发范围": 8,
+      "婴儿类目不在当前开发范围": 1,
+      "玻璃或镜面产品不在当前开发范围": 7,
+      "类目超出现有室内板式家具能力": 1,
+      "纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势": 5
+    },
+    "duplicates": 0,
+    "duplicateAsins": [],
+    "admissionPending": 0,
+    "admissionPendingDetails": [],
+    "formalPoolBefore": 2358,
+    "formalPoolAfter": 2551,
+    "rejectedPoolBefore": 1374,
+    "rejectedPoolAfter": 1181,
+    "formalGradesAfter": {
+      "A": 16,
+      "B": 739,
+      "C": 1796,
+      "D": 0
+    },
+    "publicAccess": "Stopped after three consecutive Cache miss results on different Amazon ASIN detail pages; no captcha or HTTP 403/429 was observed.",
+    "note": "Only explicit whole-product material evidence remains a solid-wood D. Title claims, generic wood species, local solid-wood components and material conflicts are not D by themselves."
   }
 }

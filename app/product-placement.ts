@@ -3,7 +3,7 @@ import { classifyOpportunityTrack, trackLabels, type OpportunityTrack } from "./
 import { isPotentialProduct } from "./product-potential.ts";
 import { gradeFromDecision, type Grade } from "./recommendation-grade.ts";
 
-export const productPlacementClassifierVersion = "2026-07-17-v1";
+export const productPlacementClassifierVersion = "2026-07-23-v2";
 
 export type ProductOrigin = "real-products" | "historical" | "daily" | "import" | "candidate-enrichment";
 export type ProductDestination = "garbage" | OpportunityTrack;

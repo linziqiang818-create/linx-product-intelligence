@@ -177,6 +177,73 @@ test("allows panel-heavy mixed materials and does not classify an ordinary TV st
   assert.notEqual(tvStand.decision, "暂不建议");
 });
 
+test("requires whole-product material evidence before solid wood becomes D", () => {
+  const cases = [
+    {
+      title: "TV Stand with Solid Wood Legs",
+      material: "Wood",
+      status: "local-component",
+    },
+    {
+      title: "Solid Wood Platform Bed",
+      material: "Pine Wood",
+      status: "ambiguous",
+    },
+    {
+      title: "Solid Wood TV Stand",
+      material: "Engineered Wood",
+      status: "conflicting",
+    },
+    {
+      title: "Solid Wood Storage Cabinet",
+      material: "",
+      status: "ambiguous",
+    },
+  ];
+
+  for (const item of cases) {
+    const result = assess({ ...base, ...item });
+    assert.equal(result.hardRejected, false, item.title);
+    assert.equal(result.solidWoodEvidence.status, item.status, item.title);
+    assert.equal(result.dataStatus, "needs_data", item.title);
+    assert.ok(result.dataWarnings.includes("材质待确认"), item.title);
+  }
+});
+
+test("keeps explicit whole-product solid wood evidence in D", () => {
+  const result = assess({
+    ...base,
+    title: "Solid Oak Console Table",
+    category: "Console Tables",
+    material: "100% solid oak hardwood",
+  });
+  assert.equal(result.solidWoodEvidence.status, "confirmed-whole-product");
+  assert.equal(result.hardRejected, true);
+  assert.ok(result.hardRejectReasons.some((reason) => reason.includes("纯实木")));
+});
+
+test("does not treat a solid wood look as material evidence", () => {
+  const result = assess({
+    ...base,
+    title: "Solid Wood Look TV Stand with Sliding Doors",
+    category: "Television Stands",
+    material: "Engineered Wood",
+  });
+  assert.equal(result.solidWoodEvidence.status, "none");
+  assert.equal(result.hardRejected, false);
+});
+
+test("does not reject furniture merely because its category mentions lighting", () => {
+  const result = assess({
+    ...base,
+    title: "Reception Desk with LED Lighting and Storage Cabinet",
+    category: "Office Furniture & Lighting",
+    material: "Wood",
+  });
+  assert.equal(result.hardRejected, false);
+  assert.ok(!result.hardRejectReasons.some((reason) => reason.includes("类目超出")));
+});
+
 test("applies the confirmed ceiling storage rack rule even when the rack is motorized", () => {
   const rack = assess({
     ...base,
