@@ -26,8 +26,10 @@ function GarbageImage({ product }: { product: GarbageProduct }) {
   </span>;
 }
 
-export default function GarbageBin({ products, onGrade, onRecycle }: {
+export default function GarbageBin({ products, favorites, onFavorite, onGrade, onRecycle }: {
   products: GarbageProduct[];
+  favorites: Set<string>;
+  onFavorite: (asin: string) => void;
   onGrade: (product: GarbageProduct, grade: Grade) => void;
   onRecycle: (product: GarbageProduct) => void;
 }) {
@@ -37,8 +39,7 @@ export default function GarbageBin({ products, onGrade, onRecycle }: {
     if (!normalized) return products;
     return products.filter((product) => `${product.asin} ${product.title} ${fullTitleZh(product.asin, product.titleZh, product.title, product.category)} ${product.category}`.toLowerCase().includes(normalized));
   }, [products, query]);
-  const resetKey = filtered.map((product) => product.asin).join("|");
-  const pager = usePagination(filtered, resetKey);
+  const pager = usePagination(filtered, query.trim().toLowerCase());
   const anchor = useRef<HTMLElement>(null);
   const goPage = (page: number) => {
     pager.setPage(page);
@@ -49,9 +50,9 @@ export default function GarbageBin({ products, onGrade, onRecycle }: {
   return <section className="panel rejected-panel" ref={anchor}>
     <div className="section-title">
       <div>
-        <span className="eyebrow">HARD REJECTION REVIEW</span>
+        <span className="eyebrow">D-LIST REVIEW</span>
         <h2>淘汰复核库</h2>
-        <p>只收纳确认触发硬性禁做条件的产品。保留主图、双语标题、原链接和淘汰依据，便于逐条复核是否误筛。</p>
+        <p>这里是系统筛选后认为不适合当前开发方向的产品，不代表永远不能做。保留完整证据供你持续纠正误判；你确认绝不开发的产品再放入回收站。</p>
       </div>
       <div className="actions"><span className="tag">D 类 · {products.length} 款淘汰</span></div>
     </div>
@@ -64,14 +65,14 @@ export default function GarbageBin({ products, onGrade, onRecycle }: {
       <table>
         <thead><tr><th>主图 / ASIN / 商品</th><th>类目</th><th>价格</th><th>淘汰依据</th><th>操作</th></tr></thead>
         <tbody>{pager.pageItems.map(product => <tr key={product.asin}>
-          <td><div className="table-product"><GarbageImage product={product} /><div><b>{product.asin}</b><span><a href={product.sourceUrl} target="_blank" rel="noreferrer">{product.title}</a><small className="title-zh">{fullTitleZh(product.asin, product.titleZh, product.title, product.category)}</small></span></div></div></td>
-          <td>{product.category}</td>
+          <td><div className="table-product"><GarbageImage product={product} /><button className={`heart ${favorites.has(product.asin) ? "active" : ""}`} onClick={() => onFavorite(product.asin)} aria-label={favorites.has(product.asin) ? "取消收藏" : "收藏产品"}>♥</button><div><b>{product.asin}</b><span><a href={product.sourceUrl} target="_blank" rel="noreferrer">{product.title}</a><small className="title-zh">{fullTitleZh(product.asin, product.titleZh, product.title, product.category)}</small></span></div></div></td>
+          <td><span className="category-ellipsis" title={product.category}>{product.category}</span></td>
           <td>{product.price > 0 ? `$${product.price}` : "待补"}</td>
-          <td><div className="rejection-reason"><span className="risk risk-高">硬性条件</span><small>{product.hardRejectReasons?.slice(0, 3).join("；") || "已触发硬性禁做规则"}</small></div></td>
+          <td><div className="rejection-reason"><span className="risk risk-高">筛选依据</span><small>{product.hardRejectReasons?.slice(0, 3).join("；") || "系统判断暂不适合当前开发方向，等待人工复核"}</small></div></td>
           <td><ProductDecisionActions grade="D" onGrade={(grade) => onGrade(product, grade)} onRecycle={() => onRecycle(product)} compact /></td>
         </tr>)}</tbody>
       </table>
-      {!filtered.length && <div className="empty table-empty"><b>{products.length ? "没有匹配记录" : "淘汰库为空"}</b><span>{products.length ? "请更换 ASIN、标题或类目关键词。" : "只有确认不符合公司硬性条件的产品才会进入这里。"}</span></div>}
+      {!filtered.length && <div className="empty table-empty"><b>{products.length ? "没有匹配记录" : "淘汰库为空"}</b><span>{products.length ? "请更换 ASIN、标题或类目关键词。" : "系统判断不适合当前开发方向的产品会进入这里，等待你的复核。"}</span></div>}
     </div>
     {controls()}
   </section>;

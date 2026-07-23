@@ -17,6 +17,6 @@ export default function ProductDecisionActions({ grade, onGrade, onRecycle, comp
       title={value === "A" ? "重点考虑开发" : value === "B" ? "一般产品" : value === "C" ? "不感兴趣" : "移入淘汰库"}
       onClick={(event) => { event.stopPropagation(); onGrade(value); }}
     >{value}</button>)}
-    {showRecycle && <button type="button" className="decision-recycle" title="没有参考意义，放入30天回收站" onClick={(event) => { event.stopPropagation(); onRecycle(); }}>回收</button>}
+    {showRecycle && <button type="button" className="decision-recycle" title="我确认绝不可能开发，放入30天回收站" onClick={(event) => { event.stopPropagation(); onRecycle(); }}>回收</button>}
   </div>;
 }

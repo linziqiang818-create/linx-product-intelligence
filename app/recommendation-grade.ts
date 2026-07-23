@@ -6,10 +6,10 @@ export type DataStatus = "complete" | "needs_data";
 
 export const gradeOrder: Record<Grade, number> = { A: 0, B: 1, C: 2, D: 3 };
 export const gradeLabels: Record<Grade, string> = {
-  A: "重点考虑开发",
-  B: "一般产品",
-  C: "不感兴趣",
-  D: "垃圾箱",
+  A: "高价值设计机会",
+  B: "良好开发候选",
+  C: "低概率开发",
+  D: "不适合当前方向",
 };
 
 export function gradeFromDecision(decision: RecommendationDecision): Grade {

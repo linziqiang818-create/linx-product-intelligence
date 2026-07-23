@@ -54,3 +54,17 @@ test("keeps durable preference actions and removes the redundant candidate-list 
   assert.match(actions, /\["A", "B", "C", "D"\]/);
   assert.match(actions, /decision-recycle/);
 });
+
+test("product decisions keep the current page and every product area exposes favorites", () => {
+  const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const garbage = readFileSync(new URL("../app/garbage-bin.tsx", import.meta.url), "utf8");
+  const recycle = readFileSync(new URL("../app/recycle-bin.tsx", import.meta.url), "utf8");
+  assert.match(page, /usePagination\(rows,paginationKey\)/);
+  assert.match(page, /usePagination\(data,"product-library"\)/);
+  assert.doesNotMatch(page, /resetKey=rows\.map/);
+  assert.match(garbage, /usePagination\(filtered, query\.trim\(\)\.toLowerCase\(\)\)/);
+  assert.match(recycle, /usePagination\(filtered, query\.trim\(\)\.toLowerCase\(\)\)/);
+  assert.match(garbage, /className=\{`heart/);
+  assert.match(recycle, /className=\{`heart/);
+  assert.match(garbage, /category-ellipsis/);
+});

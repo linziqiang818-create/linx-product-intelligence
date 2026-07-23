@@ -61,7 +61,7 @@ test("keeps legacy decision mapping compatible while exposing one A through D co
     gradeFromDecision("待核算"),
     gradeFromDecision("暂不建议"),
   ], ["A", "B", "C", "C", "D"]);
-  assert.deepEqual(gradeLabels, { A: "重点考虑开发", B: "一般产品", C: "不感兴趣", D: "垃圾箱" });
+  assert.deepEqual(gradeLabels, { A: "高价值设计机会", B: "良好开发候选", C: "低概率开发", D: "不适合当前方向" });
 });
 
 test("detects impossible furniture package dimensions before ranking", () => {
