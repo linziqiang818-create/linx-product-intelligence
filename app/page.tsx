@@ -14,7 +14,7 @@ import PaginationControls, { usePagination } from "./pagination";
 import GarbageBin from "./garbage-bin";
 import BatchCalibrationPanel from "./batch-calibration-panel";
 import { BatchCalibrationCandidate, normalizeBatchCalibrationState, type BatchCalibrationState } from "./batch-calibration";
-import { emptyLearningState, learningEvidenceCount, normalizeLearningState, recycleProduct, restoreRecycledProduct, type LearningState } from "./learning-state";
+import { emptyLearningState, learningEvidenceCount, migrateLegacyCalibration, normalizeLearningState, recycleProduct, restoreRecycledProduct, type LearningState } from "./learning-state";
 import ProductDecisionActions from "./product-decision-actions";
 import RecycleBin from "./recycle-bin";
 import { buildLearnedGradeMap } from "./preference-learning";
@@ -82,6 +82,7 @@ export default function Home(){
   setProducts([...productMap.values()].map(withChineseTitle));setTrash([...trashMap.values()].map(withChineseTitle));
   let localProfile:LearningState;
   try{localProfile=normalizeLearningState(JSON.parse(localStorage.getItem("linx-learning-profile-v1")||"null"))}catch{localProfile=emptyLearningState()}
+  if(!localProfile.legacyCalibration)try{localProfile=migrateLegacyCalibration(localProfile,JSON.parse(localStorage.getItem("linx-calibration-v1")||"null"))}catch{}
   if(!localProfile.batchCalibration)try{localProfile={...localProfile,batchCalibration:JSON.parse(localStorage.getItem("linx-batch-calibration-v1")||"null")}}catch{}
   if(!localProfile.favorites.length&&legacyFavorites.length)localProfile={...localProfile,favorites:legacyFavorites};
   let profile=localProfile;

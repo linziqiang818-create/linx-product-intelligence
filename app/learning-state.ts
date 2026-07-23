@@ -23,11 +23,12 @@ export type LearningState = {
   purgedAsins: string[];
   favorites: string[];
   batchCalibration: Record<string, unknown> | null;
+  legacyCalibration: Record<string, unknown> | null;
   updatedAt: string;
 };
 
 export function emptyLearningState(now = new Date().toISOString()): LearningState {
-  return { version: 1, gradeOverrides: {}, recycleBin: {}, purgedAsins: [], favorites: [], batchCalibration: null, updatedAt: now };
+  return { version: 1, gradeOverrides: {}, recycleBin: {}, purgedAsins: [], favorites: [], batchCalibration: null, legacyCalibration: null, updatedAt: now };
 }
 
 const isGrade = (value: unknown): value is Grade => value === "A" || value === "B" || value === "C" || value === "D";
@@ -53,6 +54,7 @@ export function normalizeLearningState(value: unknown, now = Date.now()): Learni
     purgedAsins: [...new Set((raw.purgedAsins ?? []).filter((asin): asin is string => typeof asin === "string" && asin.length > 0))],
     favorites: [...new Set((raw.favorites ?? []).filter((asin): asin is string => typeof asin === "string" && asin.length > 0))],
     batchCalibration: raw.batchCalibration && typeof raw.batchCalibration === "object" ? raw.batchCalibration : null,
+    legacyCalibration: raw.legacyCalibration && typeof raw.legacyCalibration === "object" ? raw.legacyCalibration : null,
     updatedAt: validDate(raw.updatedAt) ? raw.updatedAt! : new Date(now).toISOString(),
   }, now);
 }
@@ -90,5 +92,22 @@ export function learningEvidenceCount(state: LearningState) {
   const calibration = state.batchCalibration && typeof state.batchCalibration === "object"
     ? Object.values(state.batchCalibration).reduce((total, value) => total + (value && typeof value === "object" ? Object.keys(value).length : 0), 0)
     : 0;
-  return Object.keys(state.gradeOverrides).length + Object.keys(state.recycleBin).length + state.purgedAsins.length + state.favorites.length + calibration;
+  const legacy = state.legacyCalibration && typeof state.legacyCalibration === "object" ? Object.keys(state.legacyCalibration).length : 0;
+  return Object.keys(state.gradeOverrides).length + Object.keys(state.recycleBin).length + state.purgedAsins.length + state.favorites.length + calibration + legacy;
+}
+
+export function migrateLegacyCalibration(state: LearningState, value: unknown, now = new Date().toISOString()): LearningState {
+  if (!value || typeof value !== "object") return state;
+  const legacy = value as { version?: unknown; feedback?: unknown };
+  if (legacy.version !== 1 || !legacy.feedback || typeof legacy.feedback !== "object") return state;
+  const gradeOverrides = { ...state.gradeOverrides };
+  for (const [asin, raw] of Object.entries(legacy.feedback as Record<string, unknown>)) {
+    if (gradeOverrides[asin] || !raw || typeof raw !== "object") continue;
+    const feedback = raw as { verdict?: unknown; interest?: unknown; updatedAt?: unknown };
+    const grade: Grade | undefined = feedback.verdict === "develop"
+      ? feedback.interest === "priority" ? "A" : feedback.interest === "normal" ? "B" : feedback.interest === "low" ? "C" : undefined
+      : feedback.verdict === "reject" ? "C" : undefined;
+    if (grade) gradeOverrides[asin] = { grade, updatedAt: validDate(feedback.updatedAt) ? feedback.updatedAt as string : now };
+  }
+  return { ...state, gradeOverrides, legacyCalibration: value as Record<string, unknown>, updatedAt: now };
 }
