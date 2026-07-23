@@ -1,28 +1,49 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { emptyLearningState } from "../app/learning-state.ts";
-import { buildLearnedGradeMap } from "../app/preference-learning.ts";
+import { appendLearningEvent, emptyLearningState, setPreferenceRuleStatus } from "../app/learning-state.ts";
+import { buildLearnedGradeMap, buildPreferenceRules } from "../app/preference-learning.ts";
 
-const products = [
-  { asin: "A1", title: "Fluted Coffee Bar Cabinet", category: "Bar Cabinets" },
-  { asin: "A2", title: "Arched Coffee Bar Cabinet", category: "Bar Cabinets" },
-  { asin: "A3", title: "Rattan Coffee Bar Cabinet", category: "Bar Cabinets" },
-  { asin: "NEW", title: "Modern Coffee Bar Cabinet", category: "Bar Cabinets" },
-];
+const products = Array.from({ length: 6 }, (_, index) => ({
+  asin: `NEW${index}`,
+  title: `Fluted Storage Cabinet ${index}`,
+  category: "Storage Cabinets",
+}));
 
-test("learns a repeated family preference after three explicit examples", () => {
-  const state = emptyLearningState();
-  state.gradeOverrides = Object.fromEntries(["A1", "A2", "A3"].map((asin) => [asin, { grade: "A" as const, updatedAt: "2026-07-23T00:00:00.000Z" }]));
-  const learned = buildLearnedGradeMap(products, state).get("NEW");
-  assert.deepEqual(learned, { grade: "A", family: "咖啡吧与酒柜", evidenceCount: 3 });
+function learnedState(count = 5) {
+  let state = emptyLearningState("2026-07-01T00:00:00.000Z");
+  for (let index = 0; index < count; index++) {
+    const createdAt = `2026-07-${String(index < 3 ? 1 : 2).padStart(2, "0")}T0${index}:00:00.000Z`;
+    state = {
+      ...state,
+      gradeOverrides: { ...state.gradeOverrides, [`NEW${index}`]: { grade: "A", updatedAt: createdAt } },
+    };
+    state = appendLearningEvent(state, { id: `grade-${index}`, kind: "grade", value: "A", asin: `NEW${index}`, createdAt, sessionId: index < 3 ? "session-one" : "session-two" });
+  }
+  return state;
+}
+
+test("requires five ASINs, two sessions and 75 percent agreement", () => {
+  const sparse = learnedState(4);
+  assert.equal(buildLearnedGradeMap(products, sparse).size, 0);
+
+  const state = learnedState(5);
+  const rules = buildPreferenceRules(products, state);
+  assert.equal(rules[0].status, "active");
+  assert.equal(rules[0].evidenceCount, 5);
+  assert.equal(rules[0].sessionCount, 2);
+  assert.equal(buildLearnedGradeMap(products, state).get("NEW5")?.grade, "A");
 });
 
-test("does not generalize sparse feedback or D disposal decisions", () => {
-  const sparse = emptyLearningState();
-  sparse.gradeOverrides = Object.fromEntries(["A1", "A2"].map((asin) => [asin, { grade: "C" as const, updatedAt: "2026-07-23T00:00:00.000Z" }]));
-  assert.equal(buildLearnedGradeMap(products, sparse).get("NEW"), undefined);
+test("paused rules stop affecting ranking and D never propagates", () => {
+  let state = learnedState(5);
+  const family = buildPreferenceRules(products, state)[0].family;
+  state = setPreferenceRuleStatus(state, family, "paused");
+  assert.equal(buildLearnedGradeMap(products, state).size, 0);
 
-  const disposed = emptyLearningState();
-  disposed.gradeOverrides = Object.fromEntries(["A1", "A2", "A3"].map((asin) => [asin, { grade: "D" as const, updatedAt: "2026-07-23T00:00:00.000Z" }]));
-  assert.equal(buildLearnedGradeMap(products, disposed).get("NEW"), undefined);
+  state = {
+    ...state,
+    preferenceRuleSettings: {},
+    gradeOverrides: Object.fromEntries(products.slice(0, 5).map((product, index) => [product.asin, { grade: "D" as const, updatedAt: `2026-07-0${index + 1}T00:00:00.000Z` }])),
+  };
+  assert.equal(buildPreferenceRules(products, state).length, 0);
 });

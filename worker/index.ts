@@ -1,7 +1,7 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
-import { emptyLearningState, normalizeLearningState } from "../app/learning-state";
+import { emptyLearningState, mergeLearningStates, normalizeLearningState } from "../app/learning-state";
 
 interface Env {
   ASSETS: Fetcher;
@@ -73,7 +73,10 @@ async function handleLearningState(request: Request, db: D1Database) {
     let parsed: { state?: unknown };
     try { parsed = JSON.parse(bodyText) as { state?: unknown }; }
     catch { return Response.json({ error: "invalid JSON" }, { status: 400 }); }
-    const state = normalizeLearningState(parsed.state);
+    const existing = await db.prepare("SELECT payload FROM linx_learning_state WHERE id = ?1").bind("company").first<{ payload: string }>();
+    let existingState: unknown = emptyLearningState();
+    if (existing) try { existingState = JSON.parse(existing.payload); } catch { existingState = emptyLearningState(); }
+    const state = mergeLearningStates(existingState, parsed.state);
     const updatedAt = new Date().toISOString();
     state.updatedAt = updatedAt;
     await db.prepare(`INSERT INTO linx_learning_state (id, payload, revision, updated_at)

@@ -47,7 +47,7 @@ function ResearchCard({ product, decision, onDecision, onGrade, onRecycle, compa
   </article>;
 }
 
-export default function BatchCalibrationPanel({ products, value, onChange, onSave, onGrade, onRecycle }: { products: BatchCalibrationCandidate[]; value?: BatchCalibrationState; onChange?: (state: BatchCalibrationState) => void; onSave?: () => void; onGrade: (product: BatchCalibrationCandidate, grade: Grade) => void; onRecycle: (product: BatchCalibrationCandidate) => void }) {
+export default function BatchCalibrationPanel({ products, value, onChange, onSave, onGrade, onRecycle, onLearningEvent }: { products: BatchCalibrationCandidate[]; value?: BatchCalibrationState; onChange?: (state: BatchCalibrationState) => void; onSave?: () => void; onGrade: (product: BatchCalibrationCandidate, grade: Grade) => void; onRecycle: (product: BatchCalibrationCandidate) => void; onLearningEvent?: (event: { kind: "research" | "group" | "challenge"; value: string; asin?: string; relatedAsin?: string; groupId?: string; previousValue?: string }) => void }) {
   const groups = useMemo(() => buildProductGroups(products), [products]);
   const candidatePool = useMemo(() => [...products]
     .filter((product) => product.grade !== "D")
@@ -91,13 +91,20 @@ export default function BatchCalibrationPanel({ products, value, onChange, onSav
   }, [value]);
   useEffect(() => { if (ready && !value) localStorage.setItem(storageKey, JSON.stringify(state)); }, [ready, state, value]);
 
-  const setResearch = (asin: string, decision: ResearchDecision, source: "candidate" | "challenge") => setState((old) => ({ ...old, research: { ...old.research, [asin]: { decision, source, updatedAt: new Date().toISOString() } } }));
+  const setResearch = (asin: string, decision: ResearchDecision, source: "candidate" | "challenge") => {
+    onLearningEvent?.({ kind: "research", value: decision, asin, previousValue: state.research[asin]?.decision });
+    setState((old) => ({ ...old, research: { ...old.research, [asin]: { decision, source, updatedAt: new Date().toISOString() } } }));
+  };
   const setGroupDecision = (ids: string[], decision: BatchGroupDecision) => {
     const updatedAt = new Date().toISOString();
     setState((old) => ({ ...old, groups: { ...old.groups, ...Object.fromEntries(ids.map((id) => [id, { decision, updatedAt }])) } }));
+    ids.forEach((id) => onLearningEvent?.({ kind: "group", value: decision, groupId: id, previousValue: state.groups[id]?.decision }));
     setSelectedGroups(new Set());
   };
-  const setChallenge = (id: string, challengerAsin: string, anchorAsin: string, decision: ChallengeDecision) => setState((old) => ({ ...old, challenges: { ...old.challenges, [id]: { decision, challengerAsin, anchorAsin, updatedAt: new Date().toISOString() } } }));
+  const setChallenge = (id: string, challengerAsin: string, anchorAsin: string, decision: ChallengeDecision) => {
+    onLearningEvent?.({ kind: "challenge", value: decision, asin: challengerAsin, relatedAsin: anchorAsin, groupId: id, previousValue: state.challenges[id]?.decision });
+    setState((old) => ({ ...old, challenges: { ...old.challenges, [id]: { decision, challengerAsin, anchorAsin, updatedAt: new Date().toISOString() } } }));
+  };
   const toggleGroup = (id: string) => setSelectedGroups((old) => { const next = new Set(old); if (next.has(id)) next.delete(id); else next.add(id); return next; });
   const holdRemainingCandidates = () => { const updatedAt = new Date().toISOString(); setState((old) => ({ ...old, research: { ...old.research, ...Object.fromEntries(candidatePool.filter((product) => !old.research[product.asin]).map((product) => [product.asin, { decision: "hold" as const, source: "candidate" as const, updatedAt }])) } })); };
   const holdChallengeBatch = () => { const updatedAt = new Date().toISOString(); setState((old) => ({ ...old, research: { ...old.research, ...Object.fromEntries(challengeBatch.filter((product) => !old.research[product.asin]).map((product) => [product.asin, { decision: "hold" as const, source: "challenge" as const, updatedAt }])) } })); };
@@ -105,7 +112,7 @@ export default function BatchCalibrationPanel({ products, value, onChange, onSav
   return <section className="batch-calibration preference-lab">
     <div className="panel batch-head">
       <div><span className="eyebrow">LINX PREFERENCE LAB</span><h2>偏好校准与新品挑战</h2><p>不再判断抽象名次。先回答“是否值得花 30 分钟研究”，再用具体产品之间的选择逐渐建立你的真实排序标准。</p></div>
-      <div className="calibration-status"><b>{coverage.decidedGroups}/{groups.length}</b><span>产品组已判断</span><i>{candidateReviewed}/20 快速判断已完成</i><button className="primary" onClick={onSave}>保存本次反思</button></div>
+      <div className="calibration-status"><b>{coverage.decidedGroups}/{groups.length}</b><span>产品组已判断</span><i>{candidateReviewed}/20 快速判断已完成</i><button className="primary" onClick={onSave}>结束本次校准并生成复盘</button></div>
     </div>
 
     <div className="batch-kpis">

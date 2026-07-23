@@ -3,7 +3,7 @@ import { classifyOpportunityTrack, trackLabels, type OpportunityTrack } from "./
 import { isPotentialProduct } from "./product-potential.ts";
 import { gradeFromDecision, type Grade } from "./recommendation-grade.ts";
 
-export const productPlacementClassifierVersion = "2026-07-23-v2";
+export const productPlacementClassifierVersion = "2026-07-23-v3";
 
 export type ProductOrigin = "real-products" | "historical" | "daily" | "import" | "candidate-enrichment";
 export type ProductDestination = "garbage" | OpportunityTrack;
@@ -90,7 +90,11 @@ export function classifyFormalProduct(product: FormalProductRecord, origin: Prod
   const input = opportunityInputFor(product);
   const assessment = assess(input);
   const automaticGrade = gradeFromDecision(assessment.decision);
-  const grade = product.manualGrade ?? (automaticGrade === "D" ? "D" : product.learnedGrade ?? automaticGrade);
+  const grade = product.manualGrade ?? automaticGrade;
+  const learnedAdjustment = !product.manualGrade && automaticGrade !== "D"
+    ? product.learnedGrade === "A" ? 8 : product.learnedGrade === "C" ? -8 : 0
+    : 0;
+  const score = Math.max(0, Math.min(100, assessment.score + learnedAdjustment));
   const opportunity = grade === "D"
     ? null
     : classifyOpportunityTrack(
@@ -110,10 +114,10 @@ export function classifyFormalProduct(product: FormalProductRecord, origin: Prod
     needsData: assessment.dataStatus === "needs_data",
     favorite: product.manualFavorite === true,
     favoriteSource: "manual",
-    score: assessment.score,
+    score,
     reasons: [
       ...(product.manualGrade ? [`用户手动调整为 ${product.manualGrade} 类`] : []),
-      ...(!product.manualGrade && product.learnedGrade ? [`根据 ${product.learnedGradeEvidence?.count ?? 3} 条“${product.learnedGradeEvidence?.family ?? "同类产品"}”人工反馈学习为 ${product.learnedGrade} 类`] : []),
+      ...(!product.manualGrade && product.learnedGrade ? [`根据 ${product.learnedGradeEvidence?.count ?? 5} 条“${product.learnedGradeEvidence?.family ?? "同类产品"}”人工反馈，仅${learnedAdjustment > 0 ? "提升" : learnedAdjustment < 0 ? "降低" : "保持"}排序，不自动改变 ABCD`] : []),
       ...assessment.reasons,
       ...(opportunity?.reasons ?? []),
     ],
