@@ -37,13 +37,14 @@ export default function GarbageBin({ products, onGrade, onRecycle }: {
     if (!normalized) return products;
     return products.filter((product) => `${product.asin} ${product.title} ${fullTitleZh(product.asin, product.titleZh, product.title, product.category)} ${product.category}`.toLowerCase().includes(normalized));
   }, [products, query]);
-  const pager = usePagination(filtered);
+  const resetKey = filtered.map((product) => product.asin).join("|");
+  const pager = usePagination(filtered, resetKey);
   const anchor = useRef<HTMLElement>(null);
   const goPage = (page: number) => {
     pager.setPage(page);
     window.requestAnimationFrame(() => anchor.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
-  const controls = () => <PaginationControls page={pager.page} totalPages={pager.totalPages} start={pager.start} end={pager.end} total={filtered.length} onPageChange={goPage} />;
+  const controls = () => <PaginationControls page={pager.page} totalPages={pager.totalPages} start={pager.start} end={pager.end} total={filtered.length} pageSize={pager.pageSize} onPageChange={goPage} onPageSizeChange={pager.setPageSize} />;
 
   return <section className="panel rejected-panel" ref={anchor}>
     <div className="section-title">

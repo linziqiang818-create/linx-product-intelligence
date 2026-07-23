@@ -19,11 +19,24 @@ test("server renders the furniture selection workbench", async () => {
   assert.match(html, /我的收藏/);
   assert.match(html, /选择全部筛选结果/);
   assert.match(html, /当前开发机会/);
-  const paginationSource = readFileSync(new URL("../app/pagination.tsx", import.meta.url), "utf8");
-  assert.match(paginationSource, /PRODUCT_PAGE_SIZE\s*=\s*150/);
+  const paginationSource = readFileSync(new URL("../app/pagination-core.ts", import.meta.url), "utf8");
+  assert.match(paginationSource, /PRODUCT_PAGE_SIZE\s*=\s*60/);
+  assert.match(paginationSource, /MAX_PRODUCT_PAGE_SIZE\s*=\s*150/);
+  assert.match(paginationSource, /PRODUCT_PAGE_SIZE_OPTIONS\s*=\s*\[30,\s*60,\s*90,\s*150\]/);
   const products = JSON.parse(readFileSync(new URL("../public/real-products.json", import.meta.url), "utf8"));
   assert.ok(products.length > 2_000);
   assert.ok(products.every((product) => /^https:\/\/www\.amazon\.com\/dp\/[A-Z0-9]{10}$/.test(product.sourceUrl)));
+});
+
+test("every product-bearing navigation uses the shared capped paginator", () => {
+  const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const garbage = readFileSync(new URL("../app/garbage-bin.tsx", import.meta.url), "utf8");
+  const recycle = readFileSync(new URL("../app/recycle-bin.tsx", import.meta.url), "utf8");
+  assert.equal((page.match(/<Cards rows=/g) ?? []).length, 5);
+  assert.match(page, /function Cards[\s\S]*?pager\.pageItems\.map/);
+  assert.match(page, /function Table[\s\S]*?pager\.pageItems\.map/);
+  assert.match(garbage, /pager\.pageItems\.map/);
+  assert.match(recycle, /pager\.pageItems\.map/);
 });
 
 test("product imports are cumulative ASIN updates and cannot replace history", () => {

@@ -16,10 +16,11 @@ export default function RecycleBin({ entries, restore }: { entries: RecycledProd
     const product = entry.product as unknown as DisplayProduct;
     return !query.trim() || `${entry.asin} ${product.title} ${product.titleZh} ${product.category}`.toLowerCase().includes(query.trim().toLowerCase());
   }), [entries, query]);
-  const pager = usePagination(filtered);
+  const resetKey = filtered.map((entry) => entry.asin).join("|");
+  const pager = usePagination(filtered, resetKey);
   const anchor = useRef<HTMLElement>(null);
   const goPage = (page: number) => { pager.setPage(page); window.requestAnimationFrame(() => anchor.current?.scrollIntoView({ behavior: "smooth", block: "start" })); };
-  const controls = () => <PaginationControls page={pager.page} totalPages={pager.totalPages} start={pager.start} end={pager.end} total={filtered.length} onPageChange={goPage} />;
+  const controls = () => <PaginationControls page={pager.page} totalPages={pager.totalPages} start={pager.start} end={pager.end} total={filtered.length} pageSize={pager.pageSize} onPageChange={goPage} onPageSizeChange={pager.setPageSize} />;
   return <section className="panel recycle-panel" ref={anchor}>
     <div className="section-title"><div><span className="eyebrow">30-DAY RECYCLE BIN</span><h2>回收站</h2><p>只放没有继续参考意义的产品。30天内可以恢复并重新定级；到期后产品详情自动清除，仅保留防止重新导入的 ASIN 标记。</p></div><span className="tag">{entries.length} 款等待清理</span></div>
     <div className="table-search-bar"><label>回收站检索<input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索 ASIN、英文/中文标题或类目" /></label><span>{filtered.length} 款匹配</span></div>

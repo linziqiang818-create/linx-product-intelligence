@@ -1,23 +1,38 @@
 "use client";
 
 import { useState } from "react";
+import {
+  MAX_PRODUCT_PAGE_SIZE,
+  PRODUCT_PAGE_SIZE,
+  PRODUCT_PAGE_SIZE_OPTIONS,
+  paginateItems,
+} from "./pagination-core";
 
-export const PRODUCT_PAGE_SIZE = 150;
+export {
+  MAX_PRODUCT_PAGE_SIZE,
+  PRODUCT_PAGE_SIZE,
+  PRODUCT_PAGE_SIZE_OPTIONS,
+  paginateItems,
+} from "./pagination-core";
 
-export function usePagination<T>(items: T[], pageSize = PRODUCT_PAGE_SIZE) {
-  const [requestedPage, setRequestedPage] = useState(1);
-  const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
-  const page = Math.min(requestedPage, totalPages);
-  const start = items.length ? (page - 1) * pageSize : 0;
-  const end = Math.min(start + pageSize, items.length);
+export function usePagination<T>(items: T[], resetKey: unknown = items) {
+  const [state, setState] = useState({ page: 1, pageSize: PRODUCT_PAGE_SIZE, resetKey });
+  const activeState = Object.is(state.resetKey, resetKey)
+    ? state
+    : { ...state, page: 1, resetKey };
+  const result = paginateItems(items, activeState.page, activeState.pageSize);
 
   return {
-    page,
-    totalPages,
-    start,
-    end,
-    pageItems: items.slice(start, end),
-    setPage: (next: number) => setRequestedPage(Math.max(1, Math.min(totalPages, next))),
+    ...result,
+    setPage: (next: number) => setState({
+      ...activeState,
+      page: Math.max(1, Math.min(result.totalPages, next)),
+    }),
+    setPageSize: (next: number) => setState({
+      page: 1,
+      pageSize: Math.min(MAX_PRODUCT_PAGE_SIZE, Math.max(1, next)),
+      resetKey,
+    }),
   };
 }
 
@@ -27,14 +42,18 @@ export default function PaginationControls({
   start,
   end,
   total,
+  pageSize,
   onPageChange,
+  onPageSizeChange,
 }: {
   page: number;
   totalPages: number;
   start: number;
   end: number;
   total: number;
+  pageSize: number;
   onPageChange: (page: number) => void;
+  onPageSizeChange: (pageSize: number) => void;
 }) {
   if (!total) return null;
   return <div className="pagination" aria-label="产品分页">
@@ -51,6 +70,11 @@ export default function PaginationControls({
       <button onClick={() => onPageChange(page + 1)} disabled={page === totalPages} aria-label="下一页">下一页</button>
       <button onClick={() => onPageChange(totalPages)} disabled={page === totalPages} aria-label="最后一页">末页</button>
     </div>
-    <small>每页最多 {PRODUCT_PAGE_SIZE} 款</small>
+    <label className="page-size">每页
+      <select value={pageSize} onChange={(event) => onPageSizeChange(Number(event.target.value))}>
+        {PRODUCT_PAGE_SIZE_OPTIONS.map(value => <option key={value} value={value}>{value}</option>)}
+      </select>
+      款
+    </label>
   </div>;
 }
