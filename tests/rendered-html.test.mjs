@@ -31,3 +31,13 @@ test("product imports are cumulative ASIN updates and cannot replace history", (
   assert.match(source, /按 ASIN 累计追加\/更新/);
   assert.doesNotMatch(source, /importMode|导入后替换当前批次/);
 });
+
+test("keeps durable preference actions and removes the redundant candidate-list entry", () => {
+  const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const actions = readFileSync(new URL("../app/product-decision-actions.tsx", import.meta.url), "utf8");
+  assert.match(page, /30天回收站/);
+  assert.match(page, /云端学习档案/);
+  assert.doesNotMatch(page, /\["候选清单"/);
+  assert.match(actions, /\["A", "B", "C", "D"\]/);
+  assert.match(actions, /decision-recycle/);
+});

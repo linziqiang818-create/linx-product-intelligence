@@ -120,6 +120,31 @@ test("maps A, B, C and D to the agreed business meanings", () => {
   assert.equal(hardReject.grade, "D");
 });
 
+test("manual feedback overrides the model grade without losing a traceable placement", () => {
+  for (const grade of ["A", "B", "C", "D"] as const) {
+    const placement = classifyFormalProduct({ ...base, asin: `MANUAL-${grade}`, manualGrade: grade }, "historical");
+    assert.equal(placement.grade, grade);
+    assert.ok(placement.reasons[0].includes(`手动调整为 ${grade}`));
+    assert.equal(placement.destination === "garbage", grade === "D");
+    assert.equal(auditProductPlacements([placement]).valid, true);
+  }
+});
+
+test("strong company-fit opportunities can enter A without a pre-seeded ASIN", () => {
+  const placement = classifyFormalProduct({
+    ...base,
+    asin: "NEW-PRIORITY",
+    title: "Fluted Arched Reception Desk with Lockable Storage and Charging Station",
+    category: "Commercial Reception Furniture",
+    monthlySales: 650,
+    salesGrowth: 0.55,
+    reviews: 28,
+    launchDays: 80,
+    price: 399,
+  }, "daily");
+  assert.equal(placement.grade, "A");
+});
+
 test("gives every real product exactly one traceable primary placement", () => {
   const products = JSON.parse(readFileSync(new URL("../app/real-products.json", import.meta.url), "utf8")) as FormalProductRecord[];
   const placements = classifyFormalProductPool(products, "real-products");

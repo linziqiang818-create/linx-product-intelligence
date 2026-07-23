@@ -196,7 +196,10 @@ export function assess(input: OpportunityInput) {
   else if (calibratedProductLowInterest || calibratedInterest.tier === "low") decision = "需要优化";
   else if (companyFit < selectionPolicy.decision.minimumCompanyFit) decision = "需要优化";
   else if (marketEvidenceKnown && hiddenOpportunity < selectionPolicy.decision.conditionalHiddenOpportunity) decision = "需要优化";
-  else if (calibratedInterest.tier === "priority" && qualified && dataStatus === "complete" && marketEvidenceKnown && score >= selectionPolicy.decision.conditionalScore) decision = "优先跟进";
+  else if (qualified && marketEvidenceKnown && (
+    (calibratedInterest.tier === "priority" && score >= selectionPolicy.decision.conditionalScore) ||
+    (companyFit >= 90 && hiddenOpportunity >= 65 && demand >= 80 && score >= 84)
+  )) decision = "优先跟进";
   else if (!calibratedUncertain) decision = "有条件跟进";
 
   const fitReasons = [

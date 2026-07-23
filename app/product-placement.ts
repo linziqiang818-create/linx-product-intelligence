@@ -33,6 +33,9 @@ export type FormalProductRecord = {
   priceUplift?: number;
   sourceUrl?: string;
   manualFavorite?: boolean;
+  manualGrade?: Grade;
+  learnedGrade?: Exclude<Grade, "D">;
+  learnedGradeEvidence?: { family: string; count: number };
 };
 
 function monthlySalesFor(product: FormalProductRecord) {
@@ -86,7 +89,8 @@ function opportunityInputFor(product: FormalProductRecord): OpportunityInput {
 export function classifyFormalProduct(product: FormalProductRecord, origin: ProductOrigin): ProductPlacement {
   const input = opportunityInputFor(product);
   const assessment = assess(input);
-  const grade = gradeFromDecision(assessment.decision);
+  const automaticGrade = gradeFromDecision(assessment.decision);
+  const grade = product.manualGrade ?? (automaticGrade === "D" ? "D" : product.learnedGrade ?? automaticGrade);
   const opportunity = grade === "D"
     ? null
     : classifyOpportunityTrack(
@@ -107,7 +111,12 @@ export function classifyFormalProduct(product: FormalProductRecord, origin: Prod
     favorite: product.manualFavorite === true,
     favoriteSource: "manual",
     score: assessment.score,
-    reasons: [...assessment.reasons, ...(opportunity?.reasons ?? [])],
+    reasons: [
+      ...(product.manualGrade ? [`用户手动调整为 ${product.manualGrade} 类`] : []),
+      ...(!product.manualGrade && product.learnedGrade ? [`根据 ${product.learnedGradeEvidence?.count ?? 3} 条“${product.learnedGradeEvidence?.family ?? "同类产品"}”人工反馈学习为 ${product.learnedGrade} 类`] : []),
+      ...assessment.reasons,
+      ...(opportunity?.reasons ?? []),
+    ],
     trace: {
       asin: input.asin,
       origin,
