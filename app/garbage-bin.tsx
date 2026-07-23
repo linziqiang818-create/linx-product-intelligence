@@ -26,10 +26,16 @@ function GarbageImage({ product }: { product: GarbageProduct }) {
   </span>;
 }
 
-export default function GarbageBin({ products, favorites, onFavorite, onGrade, onRecycle }: {
+export default function GarbageBin({ products, selected, favorites, toggleSelected, selectVisible, onFavorite, onFavoriteSelected, onGradeSelected, onRecycleSelected, onGrade, onRecycle }: {
   products: GarbageProduct[];
+  selected: Set<string>;
   favorites: Set<string>;
+  toggleSelected: (asin: string) => void;
+  selectVisible: (products: Array<{ asin: string }>, checked: boolean) => void;
   onFavorite: (asin: string) => void;
+  onFavoriteSelected: () => void;
+  onGradeSelected: (grade: Grade) => void;
+  onRecycleSelected: () => void;
   onGrade: (product: GarbageProduct, grade: Grade) => void;
   onRecycle: (product: GarbageProduct) => void;
 }) {
@@ -46,6 +52,8 @@ export default function GarbageBin({ products, favorites, onFavorite, onGrade, o
     window.requestAnimationFrame(() => anchor.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
   const controls = () => <PaginationControls page={pager.page} totalPages={pager.totalPages} start={pager.start} end={pager.end} total={filtered.length} pageSize={pager.pageSize} onPageChange={goPage} onPageSizeChange={pager.setPageSize} />;
+  const visibleSelected = filtered.filter((product) => selected.has(product.asin)).length;
+  const allSelected = filtered.length > 0 && visibleSelected === filtered.length;
 
   return <section className="panel rejected-panel" ref={anchor}>
     <div className="section-title">
@@ -60,11 +68,17 @@ export default function GarbageBin({ products, favorites, onFavorite, onGrade, o
       <label>复核检索<input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索 ASIN、英文/中文标题或类目" /></label>
       <span>{filtered.length} 款匹配</span>
     </div>
+    <div className="bulk-bar">
+      <label><input type="checkbox" checked={allSelected} onChange={(event) => selectVisible(filtered, event.target.checked)} /><span>{allSelected ? "取消全选" : "选择全部筛选结果"}</span></label>
+      <span className="result-count">{filtered.length} 个结果</span>
+      {selected.size > 0 && <div className="bulk-actions"><b>已选 {selected.size}</b><button onClick={onFavoriteSelected}>♥ 批量收藏</button><span className="bulk-grade-label">批量定级</span>{(["A", "B", "C", "D"] as Grade[]).map((grade) => <button className={`bulk-grade bulk-grade-${grade}`} key={grade} onClick={() => onGradeSelected(grade)}>{grade}</button>)}<button className="danger-action" onClick={onRecycleSelected}>批量回收</button></div>}
+    </div>
     {controls()}
     <div className="table-wrap">
       <table>
-        <thead><tr><th>主图 / ASIN / 商品</th><th>类目</th><th>价格</th><th>淘汰依据</th><th>操作</th></tr></thead>
-        <tbody>{pager.pageItems.map(product => <tr key={product.asin}>
+        <thead><tr><th className="check-col"></th><th>主图 / ASIN / 商品</th><th>类目</th><th>价格</th><th>淘汰依据</th><th>操作</th></tr></thead>
+        <tbody>{pager.pageItems.map(product => <tr key={product.asin} className={selected.has(product.asin) ? "selected-row" : ""}>
+          <td><input type="checkbox" checked={selected.has(product.asin)} onChange={() => toggleSelected(product.asin)} /></td>
           <td><div className="table-product"><GarbageImage product={product} /><button className={`heart ${favorites.has(product.asin) ? "active" : ""}`} onClick={() => onFavorite(product.asin)} aria-label={favorites.has(product.asin) ? "取消收藏" : "收藏产品"}>♥</button><div><b>{product.asin}</b><span><a href={product.sourceUrl} target="_blank" rel="noreferrer">{product.title}</a><small className="title-zh">{fullTitleZh(product.asin, product.titleZh, product.title, product.category)}</small></span></div></div></td>
           <td><span className="category-ellipsis" title={product.category}>{product.category}</span></td>
           <td>{product.price > 0 ? `$${product.price}` : "待补"}</td>

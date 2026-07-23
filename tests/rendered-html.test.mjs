@@ -68,3 +68,17 @@ test("product decisions keep the current page and every product area exposes fav
   assert.match(recycle, /className=\{`heart/);
   assert.match(garbage, /category-ellipsis/);
 });
+
+test("multi-select supports bulk A B C D and recycle across review pages", () => {
+  const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const garbage = readFileSync(new URL("../app/garbage-bin.tsx", import.meta.url), "utf8");
+  assert.match(page, /const gradeSelected=\(grade:Grade\)/);
+  assert.match(page, /const recycleSelected=\(\)=>/);
+  assert.match(page, /\(\["A","B","C","D"\] as Grade\[\]\)\.map/);
+  assert.match(page, /批量回收/);
+  assert.match(page, /kind:"grade"/);
+  assert.match(page, /kind:"recycle"/);
+  assert.match(garbage, /onGradeSelected/);
+  assert.match(garbage, /onRecycleSelected/);
+  assert.match(garbage, /toggleSelected/);
+});
