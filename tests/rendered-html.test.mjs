@@ -20,9 +20,9 @@ test("server renders the furniture selection workbench", async () => {
   assert.match(html, /选择全部筛选结果/);
   assert.match(html, /当前开发机会/);
   const paginationSource = readFileSync(new URL("../app/pagination-core.ts", import.meta.url), "utf8");
-  assert.match(paginationSource, /PRODUCT_PAGE_SIZE\s*=\s*60/);
+  assert.match(paginationSource, /PRODUCT_PAGE_SIZE\s*=\s*90/);
   assert.match(paginationSource, /MAX_PRODUCT_PAGE_SIZE\s*=\s*150/);
-  assert.match(paginationSource, /PRODUCT_PAGE_SIZE_OPTIONS\s*=\s*\[30,\s*60,\s*90,\s*150\]/);
+  assert.match(paginationSource, /PRODUCT_PAGE_SIZE_OPTIONS\s*=\s*\[60,\s*90,\s*150\]/);
   const products = JSON.parse(readFileSync(new URL("../public/real-products.json", import.meta.url), "utf8"));
   assert.ok(products.length > 2_000);
   assert.ok(products.every((product) => /^https:\/\/www\.amazon\.com\/dp\/[A-Z0-9]{10}$/.test(product.sourceUrl)));

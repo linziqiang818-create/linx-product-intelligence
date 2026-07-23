@@ -1,6 +1,6 @@
-export const PRODUCT_PAGE_SIZE = 60;
+export const PRODUCT_PAGE_SIZE = 90;
 export const MAX_PRODUCT_PAGE_SIZE = 150;
-export const PRODUCT_PAGE_SIZE_OPTIONS = [30, 60, 90, 150] as const;
+export const PRODUCT_PAGE_SIZE_OPTIONS = [60, 90, 150] as const;
 
 export function paginateItems<T>(items: T[], requestedPage: number, requestedPageSize: number) {
   const pageSize = Math.min(MAX_PRODUCT_PAGE_SIZE, Math.max(1, Math.floor(requestedPageSize)));

@@ -9,11 +9,11 @@ import {
 
 const products = Array.from({ length: 2_551 }, (_, index) => index + 1);
 
-test("defaults to a shorter sixty-product page and never exceeds 150 products", () => {
-  assert.equal(PRODUCT_PAGE_SIZE, 60);
+test("defaults to ninety products and never exceeds 150 products", () => {
+  assert.equal(PRODUCT_PAGE_SIZE, 90);
   assert.equal(MAX_PRODUCT_PAGE_SIZE, 150);
-  assert.deepEqual(PRODUCT_PAGE_SIZE_OPTIONS, [30, 60, 90, 150]);
-  assert.equal(paginateItems(products, 1, PRODUCT_PAGE_SIZE).pageItems.length, 60);
+  assert.deepEqual(PRODUCT_PAGE_SIZE_OPTIONS, [60, 90, 150]);
+  assert.equal(paginateItems(products, 1, PRODUCT_PAGE_SIZE).pageItems.length, 90);
   assert.equal(paginateItems(products, 1, 999).pageItems.length, 150);
 });
 
