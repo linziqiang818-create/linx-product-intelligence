@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { daysUntilPurge, emptyLearningState, normalizeLearningState, recycleProduct, restoreRecycledProduct } from "../app/learning-state.ts";
+import { daysUntilPurge, emptyLearningState, learningEvidenceCount, normalizeLearningState, recycleProduct, restoreRecycledProduct } from "../app/learning-state.ts";
 
 test("recycle bin keeps a product for thirty days and then purges its data", () => {
   const now = new Date("2026-07-23T00:00:00.000Z");
@@ -16,4 +16,11 @@ test("restoring a recycled product keeps the chosen manual grade", () => {
   const restored = restoreRecycledProduct(recycled, "RECYCLE002", "A");
   assert.equal(restored.recycleBin.RECYCLE002, undefined);
   assert.equal(restored.gradeOverrides.RECYCLE002.grade, "A");
+});
+
+test("distinguishes an empty cloud profile from a local profile with prior feedback", () => {
+  const empty = emptyLearningState();
+  const learned = { ...empty, favorites: ["B0EXAMPLE"] };
+  assert.equal(learningEvidenceCount(empty), 0);
+  assert.equal(learningEvidenceCount(learned), 1);
 });

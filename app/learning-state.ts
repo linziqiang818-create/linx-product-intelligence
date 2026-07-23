@@ -85,3 +85,10 @@ export function restoreRecycledProduct(state: LearningState, asin: string, grade
 export function daysUntilPurge(purgeAt: string, now = Date.now()) {
   return Math.max(0, Math.ceil((Date.parse(purgeAt) - now) / (24 * 60 * 60 * 1000)));
 }
+
+export function learningEvidenceCount(state: LearningState) {
+  const calibration = state.batchCalibration && typeof state.batchCalibration === "object"
+    ? Object.values(state.batchCalibration).reduce((total, value) => total + (value && typeof value === "object" ? Object.keys(value).length : 0), 0)
+    : 0;
+  return Object.keys(state.gradeOverrides).length + Object.keys(state.recycleBin).length + state.purgedAsins.length + state.favorites.length + calibration;
+}

@@ -14,7 +14,7 @@ import PaginationControls, { usePagination } from "./pagination";
 import GarbageBin from "./garbage-bin";
 import BatchCalibrationPanel from "./batch-calibration-panel";
 import { BatchCalibrationCandidate, normalizeBatchCalibrationState, type BatchCalibrationState } from "./batch-calibration";
-import { emptyLearningState, normalizeLearningState, recycleProduct, restoreRecycledProduct, type LearningState } from "./learning-state";
+import { emptyLearningState, learningEvidenceCount, normalizeLearningState, recycleProduct, restoreRecycledProduct, type LearningState } from "./learning-state";
 import ProductDecisionActions from "./product-decision-actions";
 import RecycleBin from "./recycle-bin";
 import { buildLearnedGradeMap } from "./preference-learning";
@@ -85,7 +85,7 @@ export default function Home(){
   if(!localProfile.batchCalibration)try{localProfile={...localProfile,batchCalibration:JSON.parse(localStorage.getItem("linx-batch-calibration-v1")||"null")}}catch{}
   if(!localProfile.favorites.length&&legacyFavorites.length)localProfile={...localProfile,favorites:legacyFavorites};
   let profile=localProfile;
-  try{const response=await fetch("/api/learning-state",{cache:"no-store"});if(response.ok){const payload=await response.json() as {state:unknown;revision?:number};const cloud=normalizeLearningState(payload.state);if(Number(payload.revision)>0&&Date.parse(cloud.updatedAt)>=Date.parse(localProfile.updatedAt))profile=cloud;setSaveStatus("云端学习档案已连接")}else setSaveStatus("已保存到本机")}catch{setSaveStatus("已保存到本机")}
+  try{const response=await fetch("/api/learning-state",{cache:"no-store"});if(response.ok){const payload=await response.json() as {state:unknown;revision?:number};const cloud=normalizeLearningState(payload.state);const cloudCanReplaceLocal=learningEvidenceCount(cloud)>0||learningEvidenceCount(localProfile)===0;if(Number(payload.revision)>0&&cloudCanReplaceLocal&&Date.parse(cloud.updatedAt)>=Date.parse(localProfile.updatedAt))profile=cloud;setSaveStatus("云端学习档案已连接")}else setSaveStatus("已保存到本机")}catch{setSaveStatus("已保存到本机")}
   if(cancelled)return;setLearning(profile);setFavorites(new Set(profile.favorites));setLearningReady(true);
  }catch{if(!cancelled)setNotice("内置产品数据加载失败，请刷新页面重试。")}finally{if(!cancelled)setHydrated(true)}})()},0);return()=>{cancelled=true;window.clearTimeout(id)}},[]);
  useEffect(()=>{if(!hydrated)return;const productMap=new Map(products.map(p=>[p.asin,p])),trashMap=new Map(trash.map(p=>[p.asin,p]));const productOverrides=products.filter(p=>JSON.stringify(baselineProducts.current.get(p.asin))!==JSON.stringify(p));const trashOverrides=trash.filter(p=>JSON.stringify(baselineTrash.current.get(p.asin))!==JSON.stringify(p));const deletedProducts=[...baselineProducts.current.keys()].filter(asin=>!productMap.has(asin));const deletedTrash=[...baselineTrash.current.keys()].filter(asin=>!trashMap.has(asin));try{localStorage.setItem("furniture-radar-v6",JSON.stringify({productOverrides,trashOverrides,deletedProducts,deletedTrash,favorites:[...favorites]}));localStorage.removeItem("furniture-radar-v5");localStorage.removeItem("furniture-radar-v4")}catch{window.setTimeout(()=>setNotice("本机存储空间不足，请下载 JSON 备份保存本次修改。"),0)}},[products,trash,favorites,hydrated]);
