@@ -4,6 +4,7 @@ import XLSX from "xlsx";
 import { minimumFormalAdmission } from "../app/formal-admission.ts";
 import { opportunityFamily } from "../app/opportunity-diversity.ts";
 import { classifyFormalProduct } from "../app/product-placement.ts";
+import { collapseProductVariants, variantFamilyKey } from "../app/product-variants.ts";
 
 type JsonRecord = Record<string, unknown>;
 type SourceRow = { workbook: string; rowNumber: number; lane: string; values: JsonRecord };
@@ -124,6 +125,8 @@ const rejectedBeforeRows = readJson(rejectedPath);
 const formal = new Map(formalBeforeRows.map((row) => [text(row.asin).toUpperCase(), row]));
 const candidates = new Map(candidateBeforeRows.map((row) => [text(row.asin).toUpperCase(), row]));
 const rejected = new Map(rejectedBeforeRows.map((row) => [text(row.asin).toUpperCase(), row]));
+const existingFamilyKeys = new Set([...formal.values(), ...candidates.values(), ...rejected.values()]
+  .map((row) => variantFamilyKey(row as Parameters<typeof variantFamilyKey>[0])));
 const allSourceRows = argumentsWithoutFlags.flatMap(sourceRows).map(normalizedSource);
 const invalidRows = allSourceRows.filter((row) => !/^[A-Z0-9]{10}$/.test(row.asin) || row.title.length <= 10);
 const unique = new Map<string, ReturnType<typeof normalizedSource>>();
@@ -136,13 +139,15 @@ for (const row of allSourceRows) {
 }
 const parentGroups = new Map<string, ReturnType<typeof normalizedSource>[]>();
 for (const row of unique.values()) parentGroups.set(row.parentAsin, [...(parentGroups.get(row.parentAsin) ?? []), row]);
-const representatives: ReturnType<typeof normalizedSource>[] = [];
+const parentRepresentatives: ReturnType<typeof normalizedSource>[] = [];
 let parentVariantsExcluded = 0;
 for (const rows of parentGroups.values()) {
   rows.sort((a, b) => Number(formal.has(b.asin) || candidates.has(b.asin) || rejected.has(b.asin)) - Number(formal.has(a.asin) || candidates.has(a.asin) || rejected.has(a.asin)) || Number(b.rawMonthlySales ?? 0) - Number(a.rawMonthlySales ?? 0));
-  representatives.push(rows[0]);
+  parentRepresentatives.push(rows[0]);
   parentVariantsExcluded += rows.length - 1;
 }
+const representatives = collapseProductVariants(parentRepresentatives);
+parentVariantsExcluded += parentRepresentatives.length - representatives.length;
 
 const report = {
   ranAt,
@@ -190,10 +195,15 @@ function withoutInternalFields(row: ReturnType<typeof normalizedSource>) {
 for (const raw of representatives) {
   const product = withoutInternalFields(raw);
   const asin = product.asin;
+  const familyKey = variantFamilyKey(product);
   const existedFormal = formal.get(asin);
   const existedCandidate = candidates.get(asin);
   const existedRejected = rejected.get(asin);
   if (existedFormal || existedCandidate || existedRejected) report.crossPoolDuplicates++;
+  if (!existedFormal && !existedCandidate && !existedRejected && existingFamilyKeys.has(familyKey)) {
+    report.crossPoolDuplicates++;
+    continue;
+  }
   const placement = classifyFormalProduct(product, "import");
   report.grades[placement.grade]++;
 
@@ -251,6 +261,7 @@ for (const raw of representatives) {
     formal.set(asin, incoming);
     report.formalAdded++;
   }
+  existingFamilyKeys.add(familyKey);
   candidates.delete(asin);
   report.tracks[placement.opportunityTrack ?? "unmatched"]++;
   const family = opportunityFamily(product);

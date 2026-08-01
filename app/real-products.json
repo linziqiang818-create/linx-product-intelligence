@@ -21,7 +21,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "71英寸高中世纪风拱形展示柜书架，圆弧造型，配波纹柜门与开放式层架，适用于餐厅，黑色"
+    "titleZh": "71英寸高中世纪风拱形展示柜书架，圆弧造型，配波纹柜门与开放式层架，适用于餐厅，黑色",
+    "parentAsin": "B0FN3HXZC1"
   },
   {
     "asin": "B0FSYG9L47",
@@ -45,7 +46,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "LEVNARY 70英寸高拱形书柜，五层书架，配波纹雕花抽屉，落地式展示收纳柜，适用于客厅、卧室和家庭办公室，原木色"
+    "titleZh": "LEVNARY 70英寸高拱形书柜，五层书架，配波纹雕花抽屉，落地式展示收纳柜，适用于客厅、卧室和家庭办公室，原木色",
+    "parentAsin": "B0FSYG9L47"
   },
   {
     "asin": "B0FJY28VVT",
@@ -69,7 +71,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "DurayLoly 79.9英寸高拱形柜，六层拱形书柜，配波纹柜门和可调木层板，适用于办公室、客厅和厨房，胡桃木色"
+    "titleZh": "DurayLoly 79.9英寸高拱形柜，六层拱形书柜，配波纹柜门和可调木层板，适用于办公室、客厅和厨房，胡桃木色",
+    "parentAsin": "B0FJY28VVT"
   },
   {
     "asin": "B0DHR9CL47",
@@ -93,7 +96,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Yusong 71英寸高五层拱形书柜，黑色拱形展示柜，配波纹柜门与层架，现代农舍风厨房餐边储物柜，适用于客厅和卧室"
+    "titleZh": "Yusong 71英寸高五层拱形书柜，黑色拱形展示柜，配波纹柜门与层架，现代农舍风厨房餐边储物柜，适用于客厅和卧室",
+    "parentAsin": "B0DHR9CL47"
   },
   {
     "asin": "B0H369G7B3",
@@ -153,7 +157,20 @@
     "dataPendingReasons": [],
     "family": "书架与展示柜",
     "updatedAt": "2026-07-21T15:30:00+08:00",
-    "titleZh": "Wovenbyrd 70英寸高七层拱形书柜，配抽屉、储物空间和波纹柜门，中世纪现代模块化书架，适用于办公室、客厅、卧室和图书室，橡木色"
+    "titleZh": "Wovenbyrd 70英寸高七层拱形书柜，配抽屉、储物空间和波纹柜门，中世纪现代模块化书架，适用于办公室、客厅、卧室和图书室，橡木色",
+    "variantAsins": [
+      "B0H369G7B3",
+      "B0GS1D6Q1P",
+      "B0GS1FR8MC",
+      "B0GS1GFP2Y"
+    ],
+    "variantCount": 4,
+    "relatedParentAsins": [
+      "B0H369G7B3",
+      "B0GS1D6Q1P",
+      "B0GS1FR8MC",
+      "B0GS1GFP2Y"
+    ]
   },
   {
     "asin": "B0H25Y7BBD",
@@ -177,7 +194,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "ModernMate 76英寸高五层拱形书柜，配波纹柜门和可调层板，大容量开放式展示储物柜，适用于客厅和办公室，天然橡木色"
+    "titleZh": "ModernMate 76英寸高五层拱形书柜，配波纹柜门和可调层板，大容量开放式展示储物柜，适用于客厅和办公室，天然橡木色",
+    "parentAsin": "B0H25Y7BBD"
   },
   {
     "asin": "B0F4XJZHC6",
@@ -201,7 +219,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Best Choice Products 72英寸高拱形餐边储物柜，配竖纹柜门、五层书架和可调层板，兼具衣柜、餐具柜与书柜功能，适用于餐厅和客厅，胡桃木色"
+    "titleZh": "Best Choice Products 72英寸高拱形餐边储物柜，配竖纹柜门、五层书架和可调层板，兼具衣柜、餐具柜与书柜功能，适用于餐厅和客厅，胡桃木色",
+    "parentAsin": "B0F4XJZHC6"
   },
   {
     "asin": "B0FVFHZH2Y",
@@ -225,7 +244,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Tribesigns 76.8英寸高五层拱形书柜，配文件柜抽屉，现代落地式木质大容量开放展示收纳架，适用于家庭办公室和客厅"
+    "titleZh": "Tribesigns 76.8英寸高五层拱形书柜，配文件柜抽屉，现代落地式木质大容量开放展示收纳架，适用于家庭办公室和客厅",
+    "parentAsin": "B0FVFHZH2Y"
   },
   {
     "asin": "B0F6CNTRHW",
@@ -249,7 +269,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "81英寸高中世纪现代拱形储物柜，六层书架，配柜门、两个书籍增高架和可调层板，适用于客厅、厨房及家庭办公室，黑色"
+    "titleZh": "81英寸高中世纪现代拱形储物柜，六层书架，配柜门、两个书籍增高架和可调层板，适用于客厅、厨房及家庭办公室，黑色",
+    "parentAsin": "B0F6CNTRHW"
   },
   {
     "asin": "B0FZTPF6J7",
@@ -273,7 +294,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "ORRD 70英寸高现代拱形书柜，配储物柜、四层木质书架、扇贝形柜门和金色拉手，开放式展示层架，适用于客厅、卧室或书房，胡桃木色"
+    "titleZh": "ORRD 70英寸高现代拱形书柜，配储物柜、四层木质书架、扇贝形柜门和金色拉手，开放式展示层架，适用于客厅、卧室或书房，胡桃木色",
+    "parentAsin": "B0FZTPF6J7"
   },
   {
     "asin": "B0F78PQKVD",
@@ -297,7 +319,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Ieejdn 71.34英寸高现代拱形厨房餐边储物柜，波纹木质柜体，配柜门、可调层板和整理空间，适用于厨房、客厅、餐厅及浴室，原木色"
+    "titleZh": "Ieejdn 71.34英寸高现代拱形厨房餐边储物柜，波纹木质柜体，配柜门、可调层板和整理空间，适用于厨房、客厅、餐厅及浴室，原木色",
+    "parentAsin": "B0F78PQKVD"
   },
   {
     "asin": "B0FNWDHM55",
@@ -321,7 +344,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "BREEZEHEAT 71英寸高波纹拱形书柜，配滑动卷帘门、四层储物架和金属框架，弧形柜体，适用于客厅、家庭办公室和卧室，黑色"
+    "titleZh": "BREEZEHEAT 71英寸高波纹拱形书柜，配滑动卷帘门、四层储物架和金属框架，弧形柜体，适用于客厅、家庭办公室和卧室，黑色",
+    "parentAsin": "B0FNWDHM55"
   },
   {
     "asin": "B0DTT4FFNH",
@@ -345,7 +369,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Janmer Home 79英寸高中世纪现代拱形书柜，六层储物柜，配柜门和开放式展示层架，适用于办公室和客厅，原木色"
+    "titleZh": "Janmer Home 79英寸高中世纪现代拱形书柜，六层储物柜，配柜门和开放式展示层架，适用于办公室和客厅，原木色",
+    "parentAsin": "B0DTT4FFNH"
   },
   {
     "asin": "B0F2HD6JWB",
@@ -369,7 +394,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "FurSch 71英寸高木质五层拱形书柜，波纹书架配可调层板，适用于客厅和家庭办公室"
+    "titleZh": "FurSch 71英寸高木质五层拱形书柜，波纹书架配可调层板，适用于客厅和家庭办公室",
+    "parentAsin": "B0F2HD6JWB"
   },
   {
     "asin": "B0GLXZCTW4",
@@ -393,7 +419,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "47英寸现代前台接待台，带高柜台、三个抽屉、储物柜和走线孔，适用于收银区、理发店、美容院及家庭办公室"
+    "titleZh": "47英寸现代前台接待台，带高柜台、三个抽屉、储物柜和走线孔，适用于收银区、理发店、美容院及家庭办公室",
+    "parentAsin": "B0GLXZCTW4"
   },
   {
     "asin": "B0GDQCBKDW",
@@ -417,7 +444,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "L形现代前台接待台，配可上锁抽屉、可调文件柜和键盘托，适用于办公室、沙龙或大堂，左侧L形胡桃木与岩板灰配色，70.9×23.6×41.3英寸"
+    "titleZh": "L形现代前台接待台，配可上锁抽屉、可调文件柜和键盘托，适用于办公室、沙龙或大堂，左侧L形胡桃木与岩板灰配色，70.9×23.6×41.3英寸",
+    "parentAsin": "B0GDQCBKDW"
   },
   {
     "asin": "B0G1T7PTBH",
@@ -441,7 +469,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "24英寸小型前台接待台，配LED灯和可上锁抽屉，适用于沙龙、诊所和零售收银，天然橡木色，23.6×15.7×37.8英寸"
+    "titleZh": "24英寸小型前台接待台，配LED灯和可上锁抽屉，适用于沙龙、诊所和零售收银，天然橡木色，23.6×15.7×37.8英寸",
+    "parentAsin": "B0G1T7PTBH"
   },
   {
     "asin": "B0H2VQD2GN",
@@ -465,7 +494,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "免安装藤编现代商用前台接待台，配可上锁抽屉和走线孔，重型木质收银柜台，适用于办公室、商铺、美容、水疗、美甲及美发沙龙"
+    "titleZh": "免安装藤编现代商用前台接待台，配可上锁抽屉和走线孔，重型木质收银柜台，适用于办公室、商铺、美容、水疗、美甲及美发沙龙",
+    "parentAsin": "B0H2VQD2GN"
   },
   {
     "asin": "B0CVR8GQH3",
@@ -489,7 +519,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Tribesigns 47英寸现代前台接待台，带高柜台和走线孔，适用于零售收银、大堂、美容院及家庭办公室，黑色"
+    "titleZh": "Tribesigns 47英寸现代前台接待台，带高柜台和走线孔，适用于零售收银、大堂、美容院及家庭办公室，黑色",
+    "parentAsin": "B0CVR8GQH3"
   },
   {
     "asin": "B0DCK2J1NM",
@@ -513,7 +544,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "美甲桌及美甲师工作台，配吸尘器、四个集尘袋、手托、抽屉和储物柜，台面耐丙酮，适用于美容美甲沙龙，白色"
+    "titleZh": "美甲桌及美甲师工作台，配吸尘器、四个集尘袋、手托、抽屉和储物柜，台面耐丙酮，适用于美容美甲沙龙，白色",
+    "parentAsin": "B0DCK2J1NM"
   },
   {
     "asin": "B0GG9C2LWV",
@@ -537,7 +569,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "美发师理发工作台，配四个抽屉（其中一个可上锁）、一个柜体和吹风机支架，现代美容水疗沙龙理发桌，不含镜子"
+    "titleZh": "美发师理发工作台，配四个抽屉（其中一个可上锁）、一个柜体和吹风机支架，现代美容水疗沙龙理发桌，不含镜子",
+    "parentAsin": "B0GG9C2LWV"
   },
   {
     "asin": "B0FFT7D5TL",
@@ -561,7 +594,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "42.5英寸美甲桌，配吸尘器、储物柜、抽屉和开放式层架，多功能美容美甲沙龙工作台，白色"
+    "titleZh": "42.5英寸美甲桌，配吸尘器、储物柜、抽屉和开放式层架，多功能美容美甲沙龙工作台，白色",
+    "parentAsin": "B0FFT7D5TL"
   },
   {
     "asin": "B0GDW6562N",
@@ -585,7 +619,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "带可伸缩甲油柜的美甲桌，配LED灯、吸尘器、手托和可锁定脚轮，适用于美容院及家庭美甲师，白色"
+    "titleZh": "带可伸缩甲油柜的美甲桌，配LED灯、吸尘器、手托和可锁定脚轮，适用于美容院及家庭美甲师，白色",
+    "parentAsin": "B0GDW6562N"
   },
   {
     "asin": "B0FSK71BMC",
@@ -609,7 +644,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "MaverickFurni 43英寸木质美甲师工作桌，配五个抽屉、储物柜和收纳空间，白色"
+    "titleZh": "MaverickFurni 43英寸木质美甲师工作桌，配五个抽屉、储物柜和收纳空间，白色",
+    "parentAsin": "B0FSK71BMC"
   },
   {
     "asin": "B0FZSWVFN3",
@@ -633,7 +669,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "32英寸现代前台接待桌，配LED灯、可上锁抽屉和收银柜台，适用于大堂、沙龙、零售店、家庭办公室及接待室，白灰配色"
+    "titleZh": "32英寸现代前台接待桌，配LED灯、可上锁抽屉和收银柜台，适用于大堂、沙龙、零售店、家庭办公室及接待室，白灰配色",
+    "parentAsin": "B0FZSWVFN3"
   },
   {
     "asin": "B0DX1R3SKQ",
@@ -657,7 +694,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Kikihouse 美甲桌，配吸尘器、手托、抽屉和储物柜，台面耐丙酮，粉色菱钻皮革软垫美容美甲沙龙工作台"
+    "titleZh": "Kikihouse 美甲桌，配吸尘器、手托、抽屉和储物柜，台面耐丙酮，粉色菱钻皮革软垫美容美甲沙龙工作台",
+    "parentAsin": "B0DX1R3SKQ"
   },
   {
     "asin": "B0GVT2YPMP",
@@ -742,7 +780,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "双翻斗式垃圾桶柜，木质农舍风厨房垃圾桶隐藏柜，带负离子除味功能，可作防狗垃圾桶柜或洗衣篮收纳柜，适用于洗衣房，黑色"
+    "titleZh": "双翻斗式垃圾桶柜，木质农舍风厨房垃圾桶隐藏柜，带负离子除味功能，可作防狗垃圾桶柜或洗衣篮收纳柜，适用于洗衣房，黑色",
+    "parentAsin": "B0FLQBP35G"
   },
   {
     "asin": "B0FXXMFGN7",
@@ -766,7 +805,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "LOUVIXA 双翻斗式垃圾桶柜，带垃圾收纳的厨房岛台，木质抽拉式防狗垃圾桶柜，浅咖啡色，适配10加仑垃圾桶"
+    "titleZh": "LOUVIXA 双翻斗式垃圾桶柜，带垃圾收纳的厨房岛台，木质抽拉式防狗垃圾桶柜，浅咖啡色，适配10加仑垃圾桶",
+    "parentAsin": "B0FXXMFGN7"
   },
   {
     "asin": "B0D6B8L97D",
@@ -790,7 +830,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Befrases 翻斗式垃圾桶柜，适配一个13加仑垃圾桶，农舍风厨房岛台柜配可调层板，可隐藏洗衣篮并防狗翻找，适用于餐厅和客厅，白色"
+    "titleZh": "Befrases 翻斗式垃圾桶柜，适配一个13加仑垃圾桶，农舍风厨房岛台柜配可调层板，可隐藏洗衣篮并防狗翻找，适用于餐厅和客厅，白色",
+    "parentAsin": "B0D6B8L97D"
   },
   {
     "asin": "B0F42R4LM2",
@@ -814,7 +855,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "HOOBRO 带垃圾桶收纳的移动厨房岛台，配脚轮和电源插座，适配10加仑垃圾桶，乡村棕与黑色，型号BF80UZD01G1"
+    "titleZh": "HOOBRO 带垃圾桶收纳的移动厨房岛台，配脚轮和电源插座，适配10加仑垃圾桶，乡村棕与黑色，型号BF80UZD01G1",
+    "parentAsin": "B0F42R4LM2"
   },
   {
     "asin": "B0GPW1MZVM",
@@ -900,7 +942,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Giantex 移动厨房岛台推车，带隐藏式翻斗垃圾桶柜、折叠桌板、两个抽屉、毛巾架和脚轮，可作移动早餐吧台及厨房收纳车，灰色与原木色"
+    "titleZh": "Giantex 移动厨房岛台推车，带隐藏式翻斗垃圾桶柜、折叠桌板、两个抽屉、毛巾架和脚轮，可作移动早餐吧台及厨房收纳车，灰色与原木色",
+    "parentAsin": "B0FXR2KTV2"
   },
   {
     "asin": "B0FLQD6Y5P",
@@ -924,7 +967,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "HOSTACK 71英寸高双抽拉式厨房垃圾桶餐边柜，适配两个12.5加仑垃圾桶，47英寸宽食品储物柜，带隐藏垃圾收纳，适用于餐厅，白色"
+    "titleZh": "HOSTACK 71英寸高双抽拉式厨房垃圾桶餐边柜，适配两个12.5加仑垃圾桶，47英寸宽食品储物柜，带隐藏垃圾收纳，适用于餐厅，白色",
+    "parentAsin": "B0FLQD6Y5P"
   },
   {
     "asin": "B0DGG8874P",
@@ -948,7 +992,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "YITAHOME 农舍风厨房岛台，配电源插座、两个可容纳13加仑垃圾桶的翻斗仓和可调层板"
+    "titleZh": "YITAHOME 农舍风厨房岛台，配电源插座、两个可容纳13加仑垃圾桶的翻斗仓和可调层板",
+    "parentAsin": "B0DGG8874P"
   },
   {
     "asin": "B0GXB897ZD",
@@ -972,7 +1017,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "52英寸带收纳与折叠桌板的移动厨房岛台，配垃圾桶柜、抽屉、香料架、毛巾杆和脚轮，适用于小户型厨房"
+    "titleZh": "52英寸带收纳与折叠桌板的移动厨房岛台，配垃圾桶柜、抽屉、香料架、毛巾杆和脚轮，适用于小户型厨房",
+    "parentAsin": "B0GXB897ZD"
   },
   {
     "asin": "B0F6MJP8LQ",
@@ -996,7 +1042,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "FiveWillowise 木质储物柜，配百叶柜门和翻斗式10加仑防狗分类垃圾桶柜，可隐藏洗衣篮，适用于厨房岛台和餐厅，胡桃木色"
+    "titleZh": "FiveWillowise 木质储物柜，配百叶柜门和翻斗式10加仑防狗分类垃圾桶柜，可隐藏洗衣篮，适用于厨房岛台和餐厅，胡桃木色",
+    "parentAsin": "B0F6MJP8LQ"
   },
   {
     "asin": "B0DV5B9N51",
@@ -1142,7 +1189,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Amunrbrek 大号高款猫砂盆隐藏柜，现代木质加大号猫砂盆家具，带隐藏收纳，可兼作餐边柜，白色"
+    "titleZh": "Amunrbrek 大号高款猫砂盆隐藏柜，现代木质加大号猫砂盆家具，带隐藏收纳，可兼作餐边柜，白色",
+    "parentAsin": "B0CTH9YSVD"
   },
   {
     "asin": "B0GJD9YSRZ",
@@ -1166,7 +1214,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Hzuaneri 猫砂盆隐藏柜，配储物空间和猫抓垫，木质农舍风猫厕所家具，可兼作电视柜或边几，乡村棕，型号CB87501X"
+    "titleZh": "Hzuaneri 猫砂盆隐藏柜，配储物空间和猫抓垫，木质农舍风猫厕所家具，可兼作电视柜或边几，乡村棕，型号CB87501X",
+    "parentAsin": "B0GJD9YSRZ"
   },
   {
     "asin": "B08NJ8MG56",
@@ -1190,7 +1239,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "beeNbkks 室内木质猫砂盆隐藏柜，猫厕所小屋及宠物家具，可兼作床头柜或边几，也可作宠物笼柜"
+    "titleZh": "beeNbkks 室内木质猫砂盆隐藏柜，猫厕所小屋及宠物家具，可兼作床头柜或边几，也可作宠物笼柜",
+    "parentAsin": "B08NJ8MG56"
   },
   {
     "asin": "B0H45JN5JV",
@@ -1214,7 +1264,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "41.5英寸高大号木质猫砂盆隐藏柜，适配XXL或自动猫砂盆，配可调层板、防狗设计和充电站，可兼作餐边柜，胡桃木色"
+    "titleZh": "41.5英寸高大号木质猫砂盆隐藏柜，适配XXL或自动猫砂盆，配可调层板、防狗设计和充电站，可兼作餐边柜，胡桃木色",
+    "parentAsin": "B0H45JN5JV"
   },
   {
     "asin": "B0H4ZDVP6K",
@@ -1238,7 +1289,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "IRONCK 双仓猫砂盆隐藏柜，波浪纹柜门与圆角设计，大型室内猫屋，适用于客厅、洗手间和卧室，胡桃木色"
+    "titleZh": "IRONCK 双仓猫砂盆隐藏柜，波浪纹柜门与圆角设计，大型室内猫屋，适用于客厅、洗手间和卧室，胡桃木色",
+    "parentAsin": "B0H4ZDVP6K"
   },
   {
     "asin": "B0CZFTRN5L",
@@ -1262,7 +1314,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Dwanton 61.8英寸二合一猫砂盆隐藏柜，配三层储物架、两个可水洗抽屉和可换向入口，乡村棕色"
+    "titleZh": "Dwanton 61.8英寸二合一猫砂盆隐藏柜，配三层储物架、两个可水洗抽屉和可换向入口，乡村棕色",
+    "parentAsin": "B0CZFTRN5L"
   },
   {
     "asin": "B0GMX2DW99",
@@ -1286,7 +1339,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "IRONCK 60英寸双仓猫砂盆隐藏柜，配滑动卷帘门、内置电源插座、60英寸电视柜台面和4.3英寸加高底座，胡桃木色"
+    "titleZh": "IRONCK 60英寸双仓猫砂盆隐藏柜，配滑动卷帘门、内置电源插座、60英寸电视柜台面和4.3英寸加高底座，胡桃木色",
+    "parentAsin": "B0GMX2DW99"
   },
   {
     "asin": "B0F8H1ZTVR",
@@ -1310,7 +1364,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "大号猫砂盆隐藏收纳柜，配波浪纹柜门和猫抓垫，现代木质室内猫屋，适用于洗手间、客厅和卧室，乡村棕色"
+    "titleZh": "大号猫砂盆隐藏收纳柜，配波浪纹柜门和猫抓垫，现代木质室内猫屋，适用于洗手间、客厅和卧室，乡村棕色",
+    "parentAsin": "B0F8H1ZTVR"
   },
   {
     "asin": "B0GTLL9VWG",
@@ -1334,7 +1389,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Heybly 双仓猫砂盆隐藏柜与猫爬架组合家具，配层架和储物空间，适合两只猫使用，乡村色，型号HCLB002SR"
+    "titleZh": "Heybly 双仓猫砂盆隐藏柜与猫爬架组合家具，配层架和储物空间，适合两只猫使用，乡村色，型号HCLB002SR",
+    "parentAsin": "B0GTLL9VWG"
   },
   {
     "asin": "B0GGZQQBJZ",
@@ -1358,7 +1414,8 @@
     "returnRisk": "中",
     "priceUplift": 0,
     "importedAt": "2026-07-15T13:25:00+08:00",
-    "titleZh": "Feandrea 双仓猫砂盆隐藏柜，适合两只猫，配储物柜，农舍风室内猫屋及猫厕所家具，蜂蜜棕与乡村白配色，型号UPCL032WJ03"
+    "titleZh": "Feandrea 双仓猫砂盆隐藏柜，适合两只猫，配储物柜，农舍风室内猫屋及猫厕所家具，蜂蜜棕与乡村白配色，型号UPCL032WJ03",
+    "parentAsin": "B0GGZQQBJZ"
   },
   {
     "asin": "B0FXRGJ4S9",
@@ -1400,7 +1457,8 @@
       "confidence": "high"
     },
     "observedAt": "2026-07-16T19:06:58+08:00",
-    "importedAt": "2026-07-16T19:06:58+08:00"
+    "importedAt": "2026-07-16T19:06:58+08:00",
+    "parentAsin": "B0FXRGJ4S9"
   },
   {
     "asin": "B0DGKJH39D",
@@ -1442,7 +1500,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0DGKJH39D"
     },
-    "titleZh": "Smart 鞋柜，竖纹造型，适用于玄关，灰色"
+    "titleZh": "Smart 鞋柜，竖纹造型，适用于玄关，灰色",
+    "parentAsin": "B0DGKJH39D"
   },
   {
     "asin": "B0CPLZGGMB",
@@ -1484,7 +1543,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0CPLZGGMB"
     },
-    "titleZh": "OAKHAM 现代 餐边柜，带抽屉、可调层板、竖纹造型，适用于玄关"
+    "titleZh": "OAKHAM 现代 餐边柜，带抽屉、可调层板、竖纹造型，适用于玄关",
+    "parentAsin": "B0CPLZGGMB"
   },
   {
     "asin": "B0DQP7JT9H",
@@ -1526,7 +1586,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0DQP7JT9H"
     },
-    "titleZh": "SICOTAS 66.3英寸 现代 电视媒体柜，竖纹造型"
+    "titleZh": "SICOTAS 66.3英寸 现代 电视媒体柜，竖纹造型",
+    "parentAsin": "B0DQP7JT9H"
   },
   {
     "asin": "B0BHVZXM45",
@@ -1568,7 +1629,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0BHVZXM45"
     },
-    "titleZh": "Sideboard 餐边柜，适合家居与商业空间使用，适用于客厅、餐厅、厨房，白色"
+    "titleZh": "Sideboard 餐边柜，适合家居与商业空间使用，适用于客厅、餐厅、厨房，白色",
+    "parentAsin": "B0BHVZXM45"
   },
   {
     "asin": "B09QYMP119",
@@ -1610,7 +1672,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B09QYMP119"
     },
-    "titleZh": "Cozy 75英寸 厨房高柜，可调层板，适用于厨房、玄关、浴室，白色"
+    "titleZh": "Cozy 75英寸 厨房高柜，可调层板，适用于厨房、玄关、浴室，白色",
+    "parentAsin": "B09QYMP119"
   },
   {
     "asin": "B0DNST9GFG",
@@ -1652,7 +1715,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0DNST9GFG"
     },
-    "titleZh": "Smart 鞋柜，适合家居与商业空间使用，适用于玄关"
+    "titleZh": "Smart 鞋柜，适合家居与商业空间使用，适用于玄关",
+    "parentAsin": "B0DNST9GFG"
   },
   {
     "asin": "B0BPT9B68Y",
@@ -1694,7 +1758,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0BPT9B68Y"
     },
-    "titleZh": "90英寸 现代 厨房高柜，可调层板，适用于厨房"
+    "titleZh": "90英寸 现代 厨房高柜，可调层板，适用于厨房",
+    "parentAsin": "B0BPT9B68Y"
   },
   {
     "asin": "B0C6JRL2T8",
@@ -1736,7 +1801,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0C6JRL2T8"
     },
-    "titleZh": "Gyfimioe 农舍风 鞋柜，藤编元素，适用于玄关，棕色"
+    "titleZh": "Gyfimioe 农舍风 鞋柜，藤编元素，适用于玄关，棕色",
+    "parentAsin": "B0C6JRL2T8"
   },
   {
     "asin": "B0DFGDWN9B",
@@ -1778,7 +1844,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0DFGDWN9B"
     },
-    "titleZh": "Homeiju 农舍风 餐边柜，适合家居与商业空间使用，灰色"
+    "titleZh": "Homeiju 农舍风 餐边柜，适合家居与商业空间使用，灰色",
+    "parentAsin": "B0DFGDWN9B"
   },
   {
     "asin": "B0BY7W5TTS",
@@ -1820,7 +1887,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0BY7W5TTS"
     },
-    "titleZh": "TooCust 29.5英寸 书架，拱形设计，白色"
+    "titleZh": "TooCust 29.5英寸 书架，拱形设计，白色",
+    "parentAsin": "B0BY7W5TTS"
   },
   {
     "asin": "B0DST49CF5",
@@ -1862,7 +1930,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0DST49CF5"
     },
-    "titleZh": "SILKYDRY 前台接待台，开放式收纳、可上锁，适用于办公室、沙龙，黑色"
+    "titleZh": "SILKYDRY 前台接待台，开放式收纳、可上锁，适用于办公室、沙龙，黑色",
+    "parentAsin": "B0DST49CF5"
   },
   {
     "asin": "B0DSKM2SBR",
@@ -1904,7 +1973,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0DSKM2SBR"
     },
-    "titleZh": "IFANNY 48英寸 乡村风 前台接待台，可上锁，适用于办公室、沙龙，棕色"
+    "titleZh": "IFANNY 48英寸 乡村风 前台接待台，可上锁，适用于办公室、沙龙，棕色",
+    "parentAsin": "B0DSKM2SBR"
   },
   {
     "asin": "B0BGP3FLTX",
@@ -1946,7 +2016,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0BGP3FLTX"
     },
-    "titleZh": "Huxitocan 黑胶唱片柜，适合家居与商业空间使用"
+    "titleZh": "Huxitocan 黑胶唱片柜，适合家居与商业空间使用",
+    "parentAsin": "B0BGP3FLTX"
   },
   {
     "asin": "B0G1BS1P6F",
@@ -1988,7 +2059,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0G1BS1P6F"
     },
-    "titleZh": "LEMBERI 54英寸 置物架，可折叠"
+    "titleZh": "LEMBERI 54英寸 置物架，可折叠",
+    "parentAsin": "B0G1BS1P6F"
   },
   {
     "asin": "B0FMKK3ZK1",
@@ -2030,7 +2102,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0FMKK3ZK1"
     },
-    "titleZh": "2.75英寸 置物架，适合家居与商业空间使用，黑色"
+    "titleZh": "2.75英寸 置物架，适合家居与商业空间使用，黑色",
+    "parentAsin": "B0FMKK3ZK1"
   },
   {
     "asin": "B0FPQKFHKX",
@@ -2072,7 +2145,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0FPQKFHKX"
     },
-    "titleZh": "Vabches 现代 猫砂盆隐藏柜，竖纹造型、带猫抓板，适用于客厅，原木色"
+    "titleZh": "Vabches 现代 猫砂盆隐藏柜，竖纹造型、带猫抓板，适用于客厅，原木色",
+    "parentAsin": "B0FPQKFHKX"
   },
   {
     "asin": "B0CWR7SWK9",
@@ -2114,7 +2188,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B0CWR7SWK9"
     },
-    "titleZh": "Paddie 美甲工作台，适合家居与商业空间使用，黑色"
+    "titleZh": "Paddie 美甲工作台，适合家居与商业空间使用，黑色",
+    "parentAsin": "B0CWR7SWK9"
   },
   {
     "asin": "B01IINGTFA",
@@ -2156,7 +2231,8 @@
       "observedAt": "2026-07-21T06:11:42.965Z",
       "asin": "B01IINGTFA"
     },
-    "titleZh": "Pyle 桌类家具，可折叠"
+    "titleZh": "Pyle 桌类家具，可折叠",
+    "parentAsin": "B01IINGTFA"
   },
   {
     "asin": "B0G344V159",
@@ -2198,7 +2274,8 @@
       "observedAt": "2026-07-21T06:14:35.848Z",
       "asin": "B0G344V159"
     },
-    "titleZh": "Fluted 鞋柜，竖纹造型，适用于客厅、玄关，白色"
+    "titleZh": "Fluted 鞋柜，竖纹造型，适用于客厅、玄关，白色",
+    "parentAsin": "B0G344V159"
   },
   {
     "asin": "B0BHVXHBRJ",
@@ -2240,7 +2317,8 @@
       "observedAt": "2026-07-21T06:14:35.849Z",
       "asin": "B0BHVXHBRJ"
     },
-    "titleZh": "OmySalon 美甲工作台，可上锁、带脚轮，适用于沙龙"
+    "titleZh": "OmySalon 美甲工作台，可上锁、带脚轮，适用于沙龙",
+    "parentAsin": "B0BHVXHBRJ"
   },
   {
     "asin": "B0F66322VL",
@@ -2282,7 +2360,8 @@
       "observedAt": "2026-07-21T06:14:35.849Z",
       "asin": "B0F66322VL"
     },
-    "titleZh": "Evermagin 67英寸 中世纪现代风 餐边柜，竖纹造型，适用于客厅、厨房"
+    "titleZh": "Evermagin 67英寸 中世纪现代风 餐边柜，竖纹造型，适用于客厅、厨房",
+    "parentAsin": "B0F66322VL"
   },
   {
     "asin": "B0FV83BWCK",
@@ -2324,7 +2403,8 @@
       "observedAt": "2026-07-21T06:14:35.849Z",
       "asin": "B0FV83BWCK"
     },
-    "titleZh": "Nathan 中世纪现代风 储物柜，拱形设计，棕色"
+    "titleZh": "Nathan 中世纪现代风 储物柜，拱形设计，棕色",
+    "parentAsin": "B0FV83BWCK"
   },
   {
     "asin": "B0D9HDLR1H",
@@ -2366,7 +2446,8 @@
       "observedAt": "2026-07-21T06:14:35.849Z",
       "asin": "B0D9HDLR1H"
     },
-    "titleZh": "ALINE 储物柜，适合家居与商业空间使用，黑色"
+    "titleZh": "ALINE 储物柜，适合家居与商业空间使用，黑色",
+    "parentAsin": "B0D9HDLR1H"
   },
   {
     "asin": "B0CBRBVL61",
@@ -2468,7 +2549,8 @@
       "observedAt": "2026-07-21T06:15:59.353Z",
       "asin": "B01M0QM2O7"
     },
-    "titleZh": "Sauder 厨房高柜，适合家居与商业空间使用，白色"
+    "titleZh": "Sauder 厨房高柜，适合家居与商业空间使用，白色",
+    "parentAsin": "B01M0QM2O7"
   },
   {
     "asin": "B0CWQP9RJJ",
@@ -2510,7 +2592,8 @@
       "observedAt": "2026-07-21T06:15:59.353Z",
       "asin": "B0CWQP9RJJ"
     },
-    "titleZh": "AMHANCIBLE 黑胶唱片柜，带充电站，适用于客厅，棕色"
+    "titleZh": "AMHANCIBLE 黑胶唱片柜，带充电站，适用于客厅，棕色",
+    "parentAsin": "B0CWQP9RJJ"
   },
   {
     "asin": "B0CKRG83WQ",
@@ -2552,7 +2635,8 @@
     "differentiation": 4,
     "returnRisk": "中",
     "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、真实公开主图、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
-    "titleZh": "Fienveorn 现代 猫砂盆隐藏柜，带猫抓板，原木色"
+    "titleZh": "Fienveorn 现代 猫砂盆隐藏柜，带猫抓板，原木色",
+    "parentAsin": "B0CKRG83WQ"
   },
   {
     "asin": "B0C694YLH1",
@@ -2594,7 +2678,8 @@
     "differentiation": 4,
     "returnRisk": "中",
     "note": "按最低正式入库门槛由公开发现记录转入；已确认真实 ASIN、完整英文标题、Amazon 美国站标准链接、真实公开主图、初步类目与可追溯公开来源。未确认字段保持数据待补，未填 0 或推测值。",
-    "titleZh": "Portable 美甲工作台，可上锁、带脚轮、可折叠，白色"
+    "titleZh": "Portable 美甲工作台，可上锁、带脚轮、可折叠，白色",
+    "parentAsin": "B0C694YLH1"
   },
   {
     "asin": "B0GRGPYW63",
@@ -2810,46 +2895,46 @@
     "titleZh": "YANSNWO 52英寸 农舍风 斗柜，适合家居与商业空间使用，适用于客厅、卧室、玄关，白色"
   },
   {
-    "asin": "B0GMPW8YX9",
-    "title": "71\" Metal Garage Storage Cabinet with Wheels and Locking Doors and Tall Rolling Steel Tool Cabinet with 3 Adjustable Shelves for Garage,Home,Office,Shop (White, 71\" H x 35.43W x 15.74\" D)",
-    "imageUrl": "https://m.media-amazon.com/images/I/71+GinJ5iXL._AC_US600_.jpg",
+    "asin": "B0GMPWK9X4",
+    "title": "71\" Metal Garage Storage Cabinet with Wheels and Locking Doors and Tall Rolling Steel Tool Cabinet with 3 Adjustable Shelves for Garage,Home,Office,Shop (Black, 71\" H x 35.43W x 15.74\" D)",
+    "imageUrl": "https://m.media-amazon.com/images/I/719ybfn5E-L._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMPW8YX9",
-      "asin": "B0GMPW8YX9"
+      "sourceUrl": "https://www.amazon.com/dp/B0GMPWK9X4",
+      "asin": "B0GMPWK9X4"
     },
     "category": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Cabinets",
     "price": 199.99,
-    "rating": 3.7,
-    "reviews": 3,
-    "bsr": 1642944,
+    "rating": 3,
+    "reviews": 4,
+    "bsr": 1357583,
     "subcategoryBsr": 7,
-    "launchDays": 141,
-    "dateFirstAvailable": "2026-03-02",
+    "launchDays": 146,
+    "dateFirstAvailable": "2026-02-25",
     "salesGrowth": 0.7929,
     "monthlySalesEstimate": {
       "min": 500,
       "max": 999,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=6",
+      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=9",
       "confidence": "third-party-estimate"
     },
     "dimensions": "39.88 x 89.92 x 180.34 cm",
     "weight": 93.39,
     "material": "Metal",
     "brand": "AUEYTVR",
-    "parentAsin": "B0GMPW8YX9",
-    "sourceUrl": "https://www.amazon.com/dp/B0GMPW8YX9",
-    "amazonUrl": "https://www.amazon.com/dp/B0GMPW8YX9",
+    "parentAsin": "B0GMPWK9X4",
+    "sourceUrl": "https://www.amazon.com/dp/B0GMPWK9X4",
+    "amazonUrl": "https://www.amazon.com/dp/B0GMPWK9X4",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 6,
+    "sourceRow": 9,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMPW8YX9",
+      "sourceUrl": "https://www.amazon.com/dp/B0GMPWK9X4",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -2858,7 +2943,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Cabinets",
-    "titleZh": "71英寸 储物柜，可调层板、带脚轮，适用于办公室、商铺，白色"
+    "titleZh": "71英寸 储物柜，可调层板、带脚轮，适用于办公室、商铺，黑色",
+    "variantAsins": [
+      "B0GMPWK9X4",
+      "B0GMPW8YX9"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GMPW8YX9",
+      "B0GMPWK9X4"
+    ]
   },
   {
     "asin": "B0H1KY836F",
@@ -2967,57 +3061,6 @@
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
     "titleZh": "SHA 床架，适合家居与商业空间使用，米色"
-  },
-  {
-    "asin": "B0GMPWK9X4",
-    "title": "71\" Metal Garage Storage Cabinet with Wheels and Locking Doors and Tall Rolling Steel Tool Cabinet with 3 Adjustable Shelves for Garage,Home,Office,Shop (Black, 71\" H x 35.43W x 15.74\" D)",
-    "imageUrl": "https://m.media-amazon.com/images/I/719ybfn5E-L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMPWK9X4",
-      "asin": "B0GMPWK9X4"
-    },
-    "category": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Cabinets",
-    "price": 199.99,
-    "rating": 3,
-    "reviews": 4,
-    "bsr": 1357583,
-    "subcategoryBsr": 7,
-    "launchDays": 146,
-    "dateFirstAvailable": "2026-02-25",
-    "salesGrowth": 0.7929,
-    "monthlySalesEstimate": {
-      "min": 500,
-      "max": 999,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=9",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 89.92 x 180.34 cm",
-    "weight": 93.39,
-    "material": "Metal",
-    "brand": "AUEYTVR",
-    "parentAsin": "B0GMPWK9X4",
-    "sourceUrl": "https://www.amazon.com/dp/B0GMPWK9X4",
-    "amazonUrl": "https://www.amazon.com/dp/B0GMPWK9X4",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 9,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMPWK9X4",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Cabinets",
-    "titleZh": "71英寸 储物柜，可调层板、带脚轮，适用于办公室、商铺，黑色"
   },
   {
     "asin": "B0GY3DXWH8",
@@ -3393,60 +3436,16 @@
       "材质待确认"
     ],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Beds",
-    "titleZh": "HISOFT 床架，液压升降储物、软包设计、加固承重，适用于沙龙，米色"
-  },
-  {
-    "asin": "B0GWR3YJ98",
-    "title": "HISOFT Queen Size Lift Up Storage Bed Frame, Linen Upholstered Platform Bed with Wingback Headboard, Heavy Duty Hydraulic Gas Lift Underbed Space, Reinforced Full Metal Slats, Noise Free, Grey",
-    "imageUrl": "https://m.media-amazon.com/images/I/51mg4a588JL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GWR3YJ98",
-      "asin": "B0GWR3YJ98"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Beds",
-    "price": 229.99,
-    "rating": 3.5,
-    "reviews": 3,
-    "bsr": 562668,
-    "subcategoryBsr": 428,
-    "launchDays": 97,
-    "dateFirstAvailable": "2026-04-15",
-    "salesGrowth": 0.5328,
-    "monthlySalesEstimate": {
-      "min": 500,
-      "max": 999,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=17",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "211.07 x 156.46 x 102.36 cm",
-    "weight": 85.5,
-    "packageDimensionsCm": "200.91 x 36.07 x 22.61 cm",
-    "packageGrossKg": 42.45,
-    "material": "Metal",
-    "brand": "HISOFT",
-    "parentAsin": "B0GWR3YJ98",
-    "sourceUrl": "https://www.amazon.com/dp/B0GWR3YJ98",
-    "amazonUrl": "https://www.amazon.com/dp/B0GWR3YJ98",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 17,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GWR3YJ98",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Beds",
-    "titleZh": "HISOFT 床架，液压升降储物、软包设计、加固承重，适用于沙龙，灰色"
+    "titleZh": "HISOFT 床架，液压升降储物、软包设计、加固承重，适用于沙龙，米色",
+    "variantAsins": [
+      "B0GWR1M1CX",
+      "B0GWR3YJ98"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8PX8T18",
+      "B0GWR3YJ98"
+    ]
   },
   {
     "asin": "B0H1QV81QH",
@@ -3824,7 +3823,18 @@
       "材质待确认"
     ],
     "family": "电视与媒体柜",
-    "titleZh": "DHH 86.6英寸 中世纪现代风 电视媒体柜，可调层板、带电源插座、竖纹造型、滑动柜门，适用于客厅、卧室，胡桃木色"
+    "titleZh": "DHH 86.6英寸 中世纪现代风 电视媒体柜，可调层板、带电源插座、竖纹造型、滑动柜门，适用于客厅、卧室，胡桃木色",
+    "variantAsins": [
+      "B0GMGTKWJK",
+      "B0GMGH98M1",
+      "B0GMG1WWSD"
+    ],
+    "variantCount": 3,
+    "relatedParentAsins": [
+      "B0H74V94X3",
+      "B0GMGH98M1",
+      "B0GMG1WWSD"
+    ]
   },
   {
     "asin": "B0GVSHF3DV",
@@ -4781,7 +4791,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "斗柜",
-    "titleZh": "YANSNWO 47.4英寸 中世纪现代风 斗柜，适合家居与商业空间使用，适用于客厅、卧室、玄关，胡桃木色"
+    "titleZh": "YANSNWO 47.4英寸 中世纪现代风 斗柜，适合家居与商业空间使用，适用于客厅、卧室、玄关，胡桃木色",
+    "variantAsins": [
+      "B0H2VB26T4",
+      "B0H4KF2N9K"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8S925TC",
+      "B0H4KF2N9K"
+    ]
   },
   {
     "asin": "B0GVYTK1YP",
@@ -5480,219 +5499,22 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "Evermagin 中世纪现代风 床架，带LED灯、竖纹造型、无需弹簧床垫、加固承重"
-  },
-  {
-    "asin": "B0GLPSZHDR",
-    "title": "Evermagin Oak Queen Floating Bed Frame with led Lights, Fluted 12In High Platform Bed No Headboard, Heavy Duty Mid Century Modern Float Metal Bedframe, No Box Spring Needed (Oak, Queen-12in high)",
-    "imageUrl": "https://m.media-amazon.com/images/I/410jFfWQZrL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GLPSZHDR",
-      "asin": "B0GLPSZHDR"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 179.99,
-    "rating": 4.3,
-    "reviews": 51,
-    "bsr": 174329,
-    "subcategoryBsr": 904,
-    "launchDays": 145,
-    "dateFirstAvailable": "2026-02-26",
-    "salesGrowth": 0.815,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=68",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "204.47 x 156.01 x 24.99 cm",
-    "weight": 52.7,
-    "packageDimensionsCm": "113.03 x 38.10 x 18.03 cm",
-    "packageGrossKg": 26,
-    "material": "Engineered Wood",
-    "brand": "Evermagin",
-    "parentAsin": "B0GLPSZHDR",
-    "sourceUrl": "https://www.amazon.com/dp/B0GLPSZHDR",
-    "amazonUrl": "https://www.amazon.com/dp/B0GLPSZHDR",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 68,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GLPSZHDR",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "Evermagin 中世纪现代风 床架，带LED灯、竖纹造型、无需弹簧床垫、加固承重"
-  },
-  {
-    "asin": "B0GLPYLXB8",
-    "title": "Evermagin Oak King Floating Bed Frame with led Lights, Fluted 12in High Platform Bed No Headboard, Heavy Duty Mid Century Modern Float Metal Bedframe, No Box Spring Needed (Oak, King-12in high)",
-    "imageUrl": "https://m.media-amazon.com/images/I/41Ju7Io6wQL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GLPYLXB8",
-      "asin": "B0GLPYLXB8"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 189.99,
-    "rating": 4.3,
-    "reviews": 53,
-    "bsr": 174329,
-    "subcategoryBsr": 904,
-    "launchDays": 144,
-    "dateFirstAvailable": "2026-02-27",
-    "salesGrowth": 0.815,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=69",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "204.47 x 156.01 x 24.99 cm",
-    "weight": 52.7,
-    "packageDimensionsCm": "111.00 x 38.10 x 18.03 cm",
-    "packageGrossKg": 29.5,
-    "material": "Engineered Wood",
-    "brand": "Evermagin",
-    "parentAsin": "B0GLPYLXB8",
-    "sourceUrl": "https://www.amazon.com/dp/B0GLPYLXB8",
-    "amazonUrl": "https://www.amazon.com/dp/B0GLPYLXB8",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 69,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GLPYLXB8",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "Evermagin 中世纪现代风 床架，带LED灯、竖纹造型、无需弹簧床垫、加固承重"
-  },
-  {
-    "asin": "B0GLPQXNZB",
-    "title": "Evermagin Oak King Floating Bed Frame with led Lights, Fluted 14In High Platform Bed No Headboard, Heavy Duty Mid Century Modern Float Metal Bedframe, No Box Spring Needed (Oak, King-14in high)",
-    "imageUrl": "https://m.media-amazon.com/images/I/41Ju7Io6wQL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GLPQXNZB",
-      "asin": "B0GLPQXNZB"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 199.99,
-    "rating": 4.3,
-    "reviews": 51,
-    "bsr": 174329,
-    "subcategoryBsr": 904,
-    "launchDays": 144,
-    "dateFirstAvailable": "2026-02-27",
-    "salesGrowth": 0.815,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=70",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "204.47 x 156.01 x 24.99 cm",
-    "weight": 52.7,
-    "packageDimensionsCm": "113.03 x 38.10 x 18.03 cm",
-    "packageGrossKg": 29.5,
-    "material": "Engineered Wood",
-    "brand": "Evermagin",
-    "parentAsin": "B0GLPQXNZB",
-    "sourceUrl": "https://www.amazon.com/dp/B0GLPQXNZB",
-    "amazonUrl": "https://www.amazon.com/dp/B0GLPQXNZB",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 70,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GLPQXNZB",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "Evermagin 中世纪现代风 床架，带LED灯、竖纹造型、无需弹簧床垫、加固承重"
-  },
-  {
-    "asin": "B0GLQ15L1M",
-    "title": "Evermagin Oak Queen Floating Bed Frame with led Lights, Fluted 14In High Platform Bed No Headboard, Heavy Duty Mid Century Modern Float Metal Bedframe, No Box Spring Needed (Oak, Queen-14in high)",
-    "imageUrl": "https://m.media-amazon.com/images/I/410jFfWQZrL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GLQ15L1M",
-      "asin": "B0GLQ15L1M"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 169.99,
-    "rating": 4.3,
-    "reviews": 53,
-    "bsr": 174329,
-    "subcategoryBsr": 904,
-    "launchDays": 144,
-    "dateFirstAvailable": "2026-02-27",
-    "salesGrowth": 0.815,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=71",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "204.47 x 156.01 x 24.99 cm",
-    "weight": 52.7,
-    "packageDimensionsCm": "113.03 x 38.10 x 18.03 cm",
-    "packageGrossKg": 26,
-    "material": "Engineered Wood",
-    "brand": "Evermagin",
-    "parentAsin": "B0GLQ15L1M",
-    "sourceUrl": "https://www.amazon.com/dp/B0GLQ15L1M",
-    "amazonUrl": "https://www.amazon.com/dp/B0GLQ15L1M",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 71,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GLQ15L1M",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "Evermagin 中世纪现代风 床架，带LED灯、竖纹造型、无需弹簧床垫、加固承重"
+    "titleZh": "Evermagin 中世纪现代风 床架，带LED灯、竖纹造型、无需弹簧床垫、加固承重",
+    "variantAsins": [
+      "B0GLPSKBTW",
+      "B0GLPSZHDR",
+      "B0GLPYLXB8",
+      "B0GLPQXNZB",
+      "B0GLQ15L1M"
+    ],
+    "variantCount": 5,
+    "relatedParentAsins": [
+      "B0GLQ2XJTM",
+      "B0GLPSZHDR",
+      "B0GLPYLXB8",
+      "B0GLPQXNZB",
+      "B0GLQ15L1M"
+    ]
   },
   {
     "asin": "B0GWDNYCNF",
@@ -5906,59 +5728,6 @@
     "dataPendingReasons": [],
     "family": "橱柜与厨房高柜",
     "titleZh": "Decofy 70英寸 厨房高柜，可调层板，适用于餐厅、厨房、浴室，白色"
-  },
-  {
-    "asin": "B0H4KF2N9K",
-    "title": "YANSNWO Black 6 Drawer Dresser for Bedroom, 47.4\" Tall Dressers & Chest of Drawers with Unique Panel & Thickened Frame, Mid Century Modern Dresser with Handless Design for Living Room, Hallway",
-    "imageUrl": "https://m.media-amazon.com/images/I/819R2se0XxL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H4KF2N9K",
-      "asin": "B0H4KF2N9K"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Dressers",
-    "price": 242.99,
-    "rating": 1,
-    "reviews": 1,
-    "bsr": 1518075,
-    "subcategoryBsr": 1112,
-    "launchDays": 42,
-    "dateFirstAvailable": "2026-06-09",
-    "salesGrowth": 0,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=79",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.62 x 80.01 x 120.40 cm",
-    "weight": 85.6,
-    "packageDimensionsCm": "135.38 x 46.48 x 32.00 cm",
-    "packageGrossKg": 43.54,
-    "material": "Engineered Wood",
-    "brand": "YANSNWO",
-    "parentAsin": "B0H4KF2N9K",
-    "sourceUrl": "https://www.amazon.com/dp/B0H4KF2N9K",
-    "amazonUrl": "https://www.amazon.com/dp/B0H4KF2N9K",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 79,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H4KF2N9K",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "斗柜",
-    "titleZh": "YANSNWO 47.4英寸 中世纪现代风 斗柜，适合家居与商业空间使用，适用于客厅、卧室、玄关，黑色"
   },
   {
     "asin": "B0H1N3SNHV",
@@ -6333,7 +6102,16 @@
       "材质待确认"
     ],
     "family": "电视与媒体柜",
-    "titleZh": "Black 98英寸 农舍风 电视媒体柜，可调层板，适用于客厅，黑色"
+    "titleZh": "Black 98英寸 农舍风 电视媒体柜，可调层板，适用于客厅，黑色",
+    "variantAsins": [
+      "B0GRSM1S25",
+      "B0H24M6SNV"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8YH3XJL",
+      "B0H38KPGMX"
+    ]
   },
   {
     "asin": "B0GX1DYPJ1",
@@ -7187,7 +6965,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "AMERLIFE 现代 床架，竖纹造型"
+    "titleZh": "AMERLIFE 现代 床架，竖纹造型",
+    "variantAsins": [
+      "B0H1WFKL98",
+      "B0H1WHX7KK"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H1WFKL98",
+      "B0H1WHX7KK"
+    ]
   },
   {
     "asin": "B0GMFG32HC",
@@ -7456,7 +7243,16 @@
       "缺少包装重量"
     ],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "FLEXISPOT 床架，储物床头板，胡桃木色"
+    "titleZh": "FLEXISPOT 床架，储物床头板，胡桃木色",
+    "variantAsins": [
+      "B0H4W48DL5",
+      "B0H2J9T375"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H4W42KBM",
+      "B0H2J9T375"
+    ]
   },
   {
     "asin": "B0GS7RN32S",
@@ -7566,58 +7362,6 @@
     ],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
     "titleZh": "床架，软包设计、无需弹簧床垫，白色"
-  },
-  {
-    "asin": "B0H2J9T375",
-    "title": "FLEXISPOT Hako G4 Queen Bamboo Platform Bed Frame with Charging Storage Headboard, Japanese Joinery Bed Frame, Built-in Night Light, Minimalist Style, Quick Assembly, 1300 lbs Capacity, Natural",
-    "imageUrl": "https://m.media-amazon.com/images/I/719JWCDPD3L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H2J9T375",
-      "asin": "B0H2J9T375"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 389.99,
-    "rating": 3.4,
-    "reviews": 4,
-    "bsr": 426168,
-    "subcategoryBsr": 1832,
-    "launchDays": 57,
-    "dateFirstAvailable": "2026-05-25",
-    "salesGrowth": 4.8814,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=118",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "213.11 x 159.00 x 30.48 cm",
-    "material": "Bamboo Wood",
-    "brand": "FLEXISPOT",
-    "parentAsin": "B0H2J9T375",
-    "sourceUrl": "https://www.amazon.com/dp/B0H2J9T375",
-    "amazonUrl": "https://www.amazon.com/dp/B0H2J9T375",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 118,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H2J9T375",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "缺少包装重量"
-    ],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "FLEXISPOT 床架，储物床头板，原木色"
   },
   {
     "asin": "B0GXKSL18Y",
@@ -9150,60 +8894,6 @@
     ],
     "family": "办公收纳",
     "titleZh": "Halitaa 农舍风 储物柜，可调层板、谷仓门，适用于办公室，黑色"
-  },
-  {
-    "asin": "B0GMGH98M1",
-    "title": "DHH 71\" Fluted TV Stand with Power Outlet for TVs up to 80\", TV Console with Adjustable Shelves and Sliding Door,Mid Century Modern Entertainment Center for Living Room,Bedroom (Walnut, 71Inch)",
-    "imageUrl": "https://m.media-amazon.com/images/I/81N62btq2VL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMGH98M1",
-      "asin": "B0GMGH98M1"
-    },
-    "category": "Home & Kitchen:Furniture:Living Room Furniture:TV & Media Furniture:Television Stands & Entertainment Centers",
-    "price": 209.99,
-    "rating": 4.1,
-    "reviews": 15,
-    "bsr": 1482767,
-    "subcategoryBsr": 2279,
-    "launchDays": 160,
-    "dateFirstAvailable": "2026-02-11",
-    "salesGrowth": 0.3962,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=159",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "242.06 x 39.88 x 55.12 cm",
-    "weight": 71.6,
-    "packageDimensionsCm": "187.96 x 48.26 x 13.97 cm",
-    "packageGrossKg": 37.65,
-    "brand": "DHH",
-    "parentAsin": "B0GMGH98M1",
-    "sourceUrl": "https://www.amazon.com/dp/B0GMGH98M1",
-    "amazonUrl": "https://www.amazon.com/dp/B0GMGH98M1",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 159,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMGH98M1",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "材质待确认"
-    ],
-    "family": "电视与媒体柜",
-    "titleZh": "DHH 71英寸 中世纪现代风 电视媒体柜，可调层板、带电源插座、竖纹造型、滑动柜门，适用于客厅、卧室，胡桃木色"
   },
   {
     "asin": "B0GX13DPLY",
@@ -11061,60 +10751,6 @@
     "titleZh": "Bifins 62.2英寸 电视媒体柜，竖纹造型、拱形设计、带理线功能，适用于客厅、卧室，胡桃木色"
   },
   {
-    "asin": "B0GMG1WWSD",
-    "title": "DHH 71\" Fluted TV Stand with Power Outlet for TVs up to 80\", TV Console with Adjustable Shelves and Sliding Door,Mid Century Modern Entertainment Center for Living Room,Bedroom (Black, 71Inch)",
-    "imageUrl": "https://m.media-amazon.com/images/I/81gwya41fxL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMG1WWSD",
-      "asin": "B0GMG1WWSD"
-    },
-    "category": "Home & Kitchen:Furniture:Living Room Furniture:TV & Media Furniture:Television Stands & Entertainment Centers",
-    "price": 179.99,
-    "rating": 4.3,
-    "reviews": 56,
-    "bsr": 555221,
-    "subcategoryBsr": 1101,
-    "launchDays": 160,
-    "dateFirstAvailable": "2026-02-11",
-    "salesGrowth": 0.3774,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=203",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "242.06 x 39.88 x 55.12 cm",
-    "weight": 71.6,
-    "packageDimensionsCm": "187.96 x 48.26 x 13.97 cm",
-    "packageGrossKg": 37.65,
-    "brand": "DHH",
-    "parentAsin": "B0GMG1WWSD",
-    "sourceUrl": "https://www.amazon.com/dp/B0GMG1WWSD",
-    "amazonUrl": "https://www.amazon.com/dp/B0GMG1WWSD",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 203,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMG1WWSD",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "材质待确认"
-    ],
-    "family": "电视与媒体柜",
-    "titleZh": "DHH 71英寸 中世纪现代风 电视媒体柜，可调层板、带电源插座、竖纹造型、滑动柜门，适用于客厅、卧室，黑色"
-  },
-  {
     "asin": "B0GL5WW5BY",
     "title": "Twin House Bed for Kids with High Rails, Montessori Floor Bed Twin with Roof & Canopy, Wood House Beds Frame for Boys Girls, No Box Spring Needed, White",
     "imageUrl": "https://m.media-amazon.com/images/I/81RBQrcBL4L._AC_US600_.jpg",
@@ -12348,46 +11984,47 @@
     "titleZh": "71英寸 电视媒体柜，带理线功能，适用于客厅、卧室，黑色"
   },
   {
-    "asin": "B0GQDNHFF4",
-    "title": "HSH 47\" Oval Coffee Table with Storage, Black Coffee Table for Living Room | Modern Center Table with Press Type Door, Fluted Living Room Tables with 2 Flip-Top Hidden Lids, Wood Table",
-    "imageUrl": "https://m.media-amazon.com/images/I/81mX8rDQKQL._AC_US600_.jpg",
+    "asin": "B0GMWCQWQ8",
+    "title": "HSH 47\" Oval Coffee Table with Storage, Walnut Coffee Table for Living Room | Modern Center Table with Press Type Door, Fluted Living Room Tables with 2 Flip-Top Hidden Lids, Wood Table",
+    "imageUrl": "https://m.media-amazon.com/images/I/51wDdtxRLGL._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GQDNHFF4",
-      "asin": "B0GQDNHFF4"
+      "sourceUrl": "https://www.amazon.com/dp/B0GMWCQWQ8",
+      "asin": "B0GMWCQWQ8"
     },
     "category": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
     "price": 199.99,
-    "rating": 5,
-    "reviews": 2,
-    "bsr": 255283,
-    "subcategoryBsr": 796,
-    "launchDays": 143,
-    "dateFirstAvailable": "2026-02-28",
+    "rating": 4.6,
+    "reviews": 7,
+    "bsr": 255287,
+    "subcategoryBsr": 270,
+    "launchDays": 156,
+    "dateFirstAvailable": "2026-02-15",
     "salesGrowth": 1.6027,
     "monthlySalesEstimate": {
       "min": 200,
       "max": 499,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=233",
+      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=254",
       "confidence": "third-party-estimate"
     },
-    "dimensions": "50.04 x 119.89 x 39.12 cm",
+    "dimensions": "50.04 x 120.02 x 39.01 cm",
     "weight": 52,
     "material": "Engineered Wood",
+    "variants": "Color: Walnut",
     "brand": "HSH",
-    "parentAsin": "B0GQDNHFF4",
-    "sourceUrl": "https://www.amazon.com/dp/B0GQDNHFF4",
-    "amazonUrl": "https://www.amazon.com/dp/B0GQDNHFF4",
+    "parentAsin": "B0H943NY6C",
+    "sourceUrl": "https://www.amazon.com/dp/B0GMWCQWQ8",
+    "amazonUrl": "https://www.amazon.com/dp/B0GMWCQWQ8",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 233,
+    "sourceRow": 254,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GQDNHFF4",
+      "sourceUrl": "https://www.amazon.com/dp/B0GMWCQWQ8",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -12396,7 +12033,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
-    "titleZh": "HSH 47英寸 现代 茶几，竖纹造型，适用于客厅，黑色"
+    "titleZh": "HSH 47英寸 现代 茶几，竖纹造型，适用于客厅，胡桃木色",
+    "variantAsins": [
+      "B0GMWCQWQ8",
+      "B0GQDNHFF4"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GQDNHFF4",
+      "B0H943NY6C"
+    ]
   },
   {
     "asin": "B0GF7H5QQ6",
@@ -13358,58 +13004,6 @@
     "titleZh": "White 45英寸 办公桌，带抽屉，适用于卧室、办公室，白色"
   },
   {
-    "asin": "B0GMWCQWQ8",
-    "title": "HSH 47\" Oval Coffee Table with Storage, Walnut Coffee Table for Living Room | Modern Center Table with Press Type Door, Fluted Living Room Tables with 2 Flip-Top Hidden Lids, Wood Table",
-    "imageUrl": "https://m.media-amazon.com/images/I/51wDdtxRLGL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMWCQWQ8",
-      "asin": "B0GMWCQWQ8"
-    },
-    "category": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
-    "price": 199.99,
-    "rating": 4.6,
-    "reviews": 7,
-    "bsr": 255287,
-    "subcategoryBsr": 270,
-    "launchDays": 156,
-    "dateFirstAvailable": "2026-02-15",
-    "salesGrowth": 1.6027,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=254",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "50.04 x 120.02 x 39.01 cm",
-    "weight": 52,
-    "material": "Engineered Wood",
-    "variants": "Color: Walnut",
-    "brand": "HSH",
-    "parentAsin": "B0H943NY6C",
-    "sourceUrl": "https://www.amazon.com/dp/B0GMWCQWQ8",
-    "amazonUrl": "https://www.amazon.com/dp/B0GMWCQWQ8",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 254,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GMWCQWQ8",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
-    "titleZh": "HSH 47英寸 现代 茶几，竖纹造型，适用于客厅，胡桃木色"
-  },
-  {
     "asin": "B0GX1YJNDB",
     "title": "White Desk with Hutch, 47\" White and Gold Desk with 4 Drawers, Modern Girl Desk for Bedroom, Golden Handles",
     "imageUrl": "https://m.media-amazon.com/images/I/41+4yi0I+cL._AC_US600_.jpg",
@@ -14048,7 +13642,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "电视与媒体柜",
-    "titleZh": "Arched 55英寸 中世纪现代风 电视媒体柜，带抽屉、竖纹造型、拱形设计，适用于客厅、卧室、玄关，黑色"
+    "titleZh": "Arched 55英寸 中世纪现代风 电视媒体柜，带抽屉、竖纹造型、拱形设计，适用于客厅、卧室、玄关，黑色",
+    "variantAsins": [
+      "B0GSG226Y4",
+      "B0GSFLTDN5"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GSFN6G26",
+      "B0GSFLTDN5"
+    ]
   },
   {
     "asin": "B0H2LVZTXZ",
@@ -14842,7 +14445,16 @@
       "材质待确认"
     ],
     "family": "Home & Kitchen:Furniture:Dining Room Furniture:Table & Chair Sets",
-    "titleZh": "Extendable 餐桌，可伸缩、软包设计、适合小空间，适用于厨房、沙龙"
+    "titleZh": "Extendable 餐桌，可伸缩、软包设计、适合小空间，适用于厨房、沙龙",
+    "variantAsins": [
+      "B0GYP5MZN8",
+      "B0GYP9RN59"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8NSSTPD",
+      "B0GYP9RN59"
+    ]
   },
   {
     "asin": "B0GS95Z2KC",
@@ -16124,7 +15736,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "斗柜",
-    "titleZh": "54.7英寸 现代 斗柜，适合家居与商业空间使用，适用于客厅、卧室，原木色"
+    "titleZh": "54.7英寸 现代 斗柜，适合家居与商业空间使用，适用于客厅、卧室，原木色",
+    "variantAsins": [
+      "B0GZBCBYXV",
+      "B0GZB5JS4L"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H94SXMYK",
+      "B0GZB5JS4L"
+    ]
   },
   {
     "asin": "B0GYP4SSP6",
@@ -17566,7 +17187,18 @@
       "材质待确认"
     ],
     "family": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
-    "titleZh": "55.1英寸 中世纪现代风 茶几，带抽屉、竖纹造型、滑动柜门、适合小空间，适用于客厅、沙龙，黑色"
+    "titleZh": "55.1英寸 中世纪现代风 茶几，带抽屉、竖纹造型、滑动柜门、适合小空间，适用于客厅、沙龙，黑色",
+    "variantAsins": [
+      "B0H2VX15CP",
+      "B0H2LV155J",
+      "B0H2LYCSLB"
+    ],
+    "variantCount": 3,
+    "relatedParentAsins": [
+      "B0H75QF119",
+      "B0H2LV155J",
+      "B0H2LYCSLB"
+    ]
   },
   {
     "asin": "B0H5WCT91W",
@@ -19651,59 +19283,6 @@
     "titleZh": "32英寸 中世纪现代风 床头柜，带抽屉、竖纹造型，适用于卧室，胡桃木色"
   },
   {
-    "asin": "B0GZB5JS4L",
-    "title": "Modern 7 Drawers Dresser for Bedroom, 54.7\" Tall Large Dresser & Chests of Drawers w/Rounded Corner, Wood Handleless Organizer Dresser w/Natural Texture for Bedroom, Living Room-Brown",
-    "imageUrl": "https://m.media-amazon.com/images/I/818elVnQB9L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GZB5JS4L",
-      "asin": "B0GZB5JS4L"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Dressers",
-    "price": 279.99,
-    "rating": 2,
-    "reviews": 2,
-    "bsr": 325209,
-    "subcategoryBsr": 199,
-    "launchDays": 27,
-    "dateFirstAvailable": "2026-06-24",
-    "salesGrowth": 0,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=418",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "40.39 x 80.01 x 138.94 cm",
-    "weight": 122.75,
-    "packageDimensionsCm": "138.94 x 80.01 x 40.39 cm",
-    "packageGrossKg": 55.68,
-    "material": "Engineered Wood",
-    "brand": "ALLTUFO",
-    "parentAsin": "B0GZB5JS4L",
-    "sourceUrl": "https://www.amazon.com/dp/B0GZB5JS4L",
-    "amazonUrl": "https://www.amazon.com/dp/B0GZB5JS4L",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 418,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GZB5JS4L",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "red-ocean-blue",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "斗柜",
-    "titleZh": "54.7英寸 现代 斗柜，适合家居与商业空间使用，适用于客厅、卧室，原木色"
-  },
-  {
     "asin": "B0GRGCTGNZ",
     "title": "Evermagin 29'' Tall Fluted Nightstand Set of 2, Walnut Night Stand with 3 Drawers, Wooden Bedside Table, Mid Century Modern Side Table for Bedroom",
     "imageUrl": "https://m.media-amazon.com/images/I/51sqav9nIpL._AC_US600_.jpg",
@@ -20717,58 +20296,6 @@
     "titleZh": "55英寸 餐边柜，适合家居与商业空间使用，适用于客厅、厨房，胡桃木色"
   },
   {
-    "asin": "B0GYP9RN59",
-    "title": "Extendable Round Dining Table Set for 4-6, 5-Piece Oval Kitchen Table with Hidden Storage, Wooden Dining Table Set with Upholstered Chairs for Small Spaces, Apartment",
-    "imageUrl": "https://m.media-amazon.com/images/I/8127nT5dZoL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GYP9RN59",
-      "asin": "B0GYP9RN59"
-    },
-    "category": "Home & Kitchen:Furniture:Dining Room Furniture:Table & Chair Sets",
-    "price": 479.99,
-    "rating": 5,
-    "reviews": 3,
-    "bsr": 191778,
-    "subcategoryBsr": 66,
-    "launchDays": 69,
-    "dateFirstAvailable": "2026-05-13",
-    "salesGrowth": 0.4356,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=441",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "109.98 x 109.98 x 74.93 cm",
-    "weight": 88,
-    "brand": "RESTACORIN",
-    "parentAsin": "B0GYP9RN59",
-    "sourceUrl": "https://www.amazon.com/dp/B0GYP9RN59",
-    "amazonUrl": "https://www.amazon.com/dp/B0GYP9RN59",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 441,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GYP9RN59",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "材质待确认"
-    ],
-    "family": "Home & Kitchen:Furniture:Dining Room Furniture:Table & Chair Sets",
-    "titleZh": "Extendable 餐桌，可伸缩、软包设计、适合小空间，适用于厨房、沙龙"
-  },
-  {
     "asin": "B0H38L5T3S",
     "title": "AMERLIFE 70\" Farmhouse Fireplace TV Stand for TVs up to 80\", White/Barnwood",
     "imageUrl": "https://m.media-amazon.com/images/I/81MTG4lngQL._AC_US600_.jpg",
@@ -21032,7 +20559,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "斗柜",
-    "titleZh": "LYNSOM 50英寸 斗柜，竖纹造型，适用于卧室、玄关，胡桃木色"
+    "titleZh": "LYNSOM 50英寸 斗柜，竖纹造型，适用于卧室、玄关，胡桃木色",
+    "variantAsins": [
+      "B0GZVS5PLK",
+      "B0GZVQW97D"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H7GV6JP6",
+      "B0GZVQW97D"
+    ]
   },
   {
     "asin": "B0GF618LQC",
@@ -28878,59 +28414,6 @@
     "titleZh": "71英寸 现代 厨房高柜，可调层板、带LED灯，适用于餐厅、厨房，白色"
   },
   {
-    "asin": "B0GSFLTDN5",
-    "title": "Arched Fluted Dresser for Bedroom with 6 Drawers, 55\" Wide Large Wooden Storage Organizer Chest of Drawers, Mid Century Modern Wood Closet TV Stand for Bedroom,Living Room, Hallway, Walnut+Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/814UCp42SaL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GSFLTDN5",
-      "asin": "B0GSFLTDN5"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Dressers",
-    "price": 259.99,
-    "rating": 3.5,
-    "reviews": 12,
-    "bsr": 470109,
-    "subcategoryBsr": 738,
-    "launchDays": 118,
-    "dateFirstAvailable": "2026-03-25",
-    "salesGrowth": 0.1854,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=636",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "38.86 x 142.49 x 72.90 cm",
-    "weight": 101.41,
-    "packageDimensionsCm": "154.43 x 45.97 x 21.59 cm",
-    "packageGrossKg": 46,
-    "material": "Wood",
-    "brand": "Herihome",
-    "parentAsin": "B0GSFLTDN5",
-    "sourceUrl": "https://www.amazon.com/dp/B0GSFLTDN5",
-    "amazonUrl": "https://www.amazon.com/dp/B0GSFLTDN5",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 636,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GSFLTDN5",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "red-ocean-blue",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "电视与媒体柜",
-    "titleZh": "Arched 55英寸 中世纪现代风 电视媒体柜，带抽屉、竖纹造型、拱形设计，适用于客厅、卧室、玄关，黑色"
-  },
-  {
     "asin": "B0H5KRTXD8",
     "title": "Unikito 94.5\" Wide Kitchen Pantry Cabinet with 3 Power Outlets & LED Light, 71\" Tall Large Kitchen Hutch with Countertop, DIY Pegboard with 18 Hooks & 6 Drawers, Farmhouse Food Pantry, Rustic White",
     "imageUrl": "https://m.media-amazon.com/images/I/71DmNDRgJpL._AC_US600_.jpg",
@@ -30301,59 +29784,6 @@
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
     "titleZh": "E-Ser 床架，带充电站、带LED灯、软包设计、加固承重，黑色"
-  },
-  {
-    "asin": "B0H1WHX7KK",
-    "title": "AMERLIFE Wood Full Size Bed Frame with Headboard & Footboard, Modern Fluted Wooden Platform Bedframe, Easy Assembly, Brown",
-    "imageUrl": "https://m.media-amazon.com/images/I/819Vtheo7UL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H1WHX7KK",
-      "asin": "B0H1WHX7KK"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 229.99,
-    "rating": 4,
-    "reviews": 2,
-    "bsr": 1558678,
-    "subcategoryBsr": 5621,
-    "launchDays": 63,
-    "dateFirstAvailable": "2026-05-19",
-    "salesGrowth": -0.82,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=671",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "202.44 x 138.43 x 117.09 cm",
-    "weight": 85.1,
-    "packageDimensionsCm": "150.62 x 36.07 x 27.43 cm",
-    "packageGrossKg": 68.27,
-    "material": "Wood",
-    "brand": "AMERLIFE",
-    "parentAsin": "B0H1WHX7KK",
-    "sourceUrl": "https://www.amazon.com/dp/B0H1WHX7KK",
-    "amazonUrl": "https://www.amazon.com/dp/B0H1WHX7KK",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 671,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H1WHX7KK",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "AMERLIFE 现代 床架，竖纹造型，棕色"
   },
   {
     "asin": "B0H144695R",
@@ -33704,7 +33134,16 @@
       "缺少包装重量"
     ],
     "family": "玄关与鞋柜",
-    "titleZh": "TVU 农舍风 玄关储物凳，开放式收纳，适用于玄关"
+    "titleZh": "TVU 农舍风 玄关储物凳，开放式收纳，适用于玄关",
+    "variantAsins": [
+      "B0GZ385FHP",
+      "B0GZ3K5KJW"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GZ3BTHLN",
+      "B0GZ3K5KJW"
+    ]
   },
   {
     "asin": "B0GSZ8KQTF",
@@ -35516,48 +34955,49 @@
     "titleZh": "HMstone 厨房高柜，带电源插座、带LED灯、竖纹造型，适用于客厅、厨房、沙龙，原木色"
   },
   {
-    "asin": "B0GKFKF7XP",
-    "title": "Queen Bed Frame with 2 Storage Drawers, Velvet Upholstered Bed Frame Queen Size Upholstered Headboard with LED Light & Charging Station, Platform Bedframe with Metal Slats, No Box Spring Needed, White",
-    "imageUrl": "https://m.media-amazon.com/images/I/51xFiKValYL._AC_US600_.jpg",
+    "asin": "B0H1QPKZDW",
+    "title": "King Bed Frame with Storage Drawers, Velvet Upholstered Bed Frame King Size Upholstered Headboard with LED Light & Charging Station, Platform Bedframe with Metal Slats, No Box Spring Needed, White",
+    "imageUrl": "https://m.media-amazon.com/images/I/51ZVa3wJQAL._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GKFKF7XP",
-      "asin": "B0GKFKF7XP"
+      "sourceUrl": "https://www.amazon.com/dp/B0H1QPKZDW",
+      "asin": "B0H1QPKZDW"
     },
     "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 159.97,
-    "rating": 4,
-    "reviews": 19,
-    "bsr": 559555,
-    "subcategoryBsr": 2408,
-    "launchDays": 160,
-    "dateFirstAvailable": "2026-02-11",
-    "salesGrowth": 0.1277,
+    "price": 194.97,
+    "rating": 4.6,
+    "reviews": 3,
+    "bsr": 589830,
+    "subcategoryBsr": 2571,
+    "launchDays": 67,
+    "dateFirstAvailable": "2026-05-15",
+    "salesGrowth": 0.234,
     "monthlySalesEstimate": {
       "min": 50,
       "max": 99,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=803",
+      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=879",
       "confidence": "third-party-estimate"
     },
-    "dimensions": "218.44 x 154.94 x 118.11 cm",
-    "weight": 88.2,
-    "packageDimensionsCm": "159.00 x 39.88 x 22.10 cm",
-    "packageGrossKg": 40.01,
-    "material": "MDF, Metal",
+    "dimensions": "218.44 x 195.83 x 118.11 cm",
+    "weight": 107.4,
+    "packageDimensionsCm": "198.88 x 39.12 x 21.08 cm",
+    "packageGrossKg": 48.72,
+    "material": "Engineered Wood, Metal",
+    "variants": "Size: King (U.S. Standard)",
     "brand": "HUAHUU",
-    "parentAsin": "B0GKFKF7XP",
-    "sourceUrl": "https://www.amazon.com/dp/B0GKFKF7XP",
-    "amazonUrl": "https://www.amazon.com/dp/B0GKFKF7XP",
+    "parentAsin": "B0H7W4D9Z7",
+    "sourceUrl": "https://www.amazon.com/dp/B0H1QPKZDW",
+    "amazonUrl": "https://www.amazon.com/dp/B0H1QPKZDW",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 803,
+    "sourceRow": 879,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GKFKF7XP",
+      "sourceUrl": "https://www.amazon.com/dp/B0H1QPKZDW",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -35566,7 +35006,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "床架，带充电站、带LED灯、软包设计、无需弹簧床垫，白色"
+    "titleZh": "床架，带充电站、带LED灯、软包设计、无需弹簧床垫，白色",
+    "variantAsins": [
+      "B0H1QPKZDW",
+      "B0GKFKF7XP"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GKFKF7XP",
+      "B0H7W4D9Z7"
+    ]
   },
   {
     "asin": "B0H3354X3B",
@@ -36152,58 +35601,6 @@
     ],
     "family": "餐边柜与边柜",
     "titleZh": "SICOTAS 90英寸 现代 餐边柜，适合家居与商业空间使用，适用于客厅、厨房"
-  },
-  {
-    "asin": "B0GZ3K5KJW",
-    "title": "TVU Storage Hall Tree with Bench & 3 Drawers, 22-in-1 Coat Rack With 9 Coat Hooks, Farmhouse Entryway Bench With 9 Open Shelves for Hallway, Entryway (Hall Tree)",
-    "imageUrl": "https://m.media-amazon.com/images/I/41Y6vDnyeFL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GZ3K5KJW",
-      "asin": "B0GZ3K5KJW"
-    },
-    "category": "Home & Kitchen:Furniture:Entryway Furniture:Hall Trees",
-    "price": 179.99,
-    "rating": 5,
-    "reviews": 2,
-    "bsr": 369906,
-    "subcategoryBsr": 55,
-    "launchDays": 77,
-    "dateFirstAvailable": "2026-05-05",
-    "salesGrowth": 1.186,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=817",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "35.05 x 100.08 x 173.23 cm",
-    "material": "Engineered Wood",
-    "brand": "TVU",
-    "parentAsin": "B0GZ3K5KJW",
-    "sourceUrl": "https://www.amazon.com/dp/B0GZ3K5KJW",
-    "amazonUrl": "https://www.amazon.com/dp/B0GZ3K5KJW",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 817,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GZ3K5KJW",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "缺少包装重量"
-    ],
-    "family": "玄关与鞋柜",
-    "titleZh": "TVU 农舍风 玄关储物凳，开放式收纳，适用于玄关"
   },
   {
     "asin": "B0GQSSJDT8",
@@ -37494,59 +36891,6 @@
     "titleZh": "HIPIHOM 43.3英寸 现代 餐桌，可伸缩，适用于餐厅、厨房，胡桃木色"
   },
   {
-    "asin": "B0H24M6SNV",
-    "title": "98 Inch Farmhouse TV Stand with 36\" Fireplace for Living Room,Media Entertainment Center with Adjustable Shelves and Large Storage Cabinets, TVs up to 100\" Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/71Iywpm6h-L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H24M6SNV",
-      "asin": "B0H24M6SNV"
-    },
-    "category": "Home & Kitchen:Furniture:Living Room Furniture:TV & Media Furniture:Television Stands & Entertainment Centers",
-    "price": 399.99,
-    "rating": 4,
-    "reviews": 5,
-    "bsr": 713573,
-    "subcategoryBsr": 1352,
-    "launchDays": 61,
-    "dateFirstAvailable": "2026-05-21",
-    "salesGrowth": -0.1495,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=861",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "38.10 x 248.92 x 81.28 cm",
-    "weight": 105,
-    "variants": "Color: Black | Size: 98 inch",
-    "brand": "Breezestival",
-    "parentAsin": "B0H38KPGMX",
-    "sourceUrl": "https://www.amazon.com/dp/B0H24M6SNV",
-    "amazonUrl": "https://www.amazon.com/dp/B0H24M6SNV",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 861,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H24M6SNV",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "材质待确认"
-    ],
-    "family": "电视与媒体柜",
-    "titleZh": "98英寸 农舍风 电视媒体柜，可调层板，适用于客厅，黑色"
-  },
-  {
     "asin": "B0GTLC7X6P",
     "title": "6-Tier Farmhouse Arched Bookcase with Doors, 70\" Tall Wood Bookshelf with Storage,Open Shelves for Living Room or Office, Black",
     "imageUrl": "https://m.media-amazon.com/images/I/41k1eAnZL1L._AC_US600_.jpg",
@@ -38187,60 +37531,6 @@
     "titleZh": "FATORRI 65英寸 现代 电视媒体柜，带抽屉、开放式收纳、带理线功能，黑色"
   },
   {
-    "asin": "B0H1QPKZDW",
-    "title": "King Bed Frame with Storage Drawers, Velvet Upholstered Bed Frame King Size Upholstered Headboard with LED Light & Charging Station, Platform Bedframe with Metal Slats, No Box Spring Needed, White",
-    "imageUrl": "https://m.media-amazon.com/images/I/51ZVa3wJQAL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H1QPKZDW",
-      "asin": "B0H1QPKZDW"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 194.97,
-    "rating": 4.6,
-    "reviews": 3,
-    "bsr": 589830,
-    "subcategoryBsr": 2571,
-    "launchDays": 67,
-    "dateFirstAvailable": "2026-05-15",
-    "salesGrowth": 0.234,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=879",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "218.44 x 195.83 x 118.11 cm",
-    "weight": 107.4,
-    "packageDimensionsCm": "198.88 x 39.12 x 21.08 cm",
-    "packageGrossKg": 48.72,
-    "material": "Engineered Wood, Metal",
-    "variants": "Size: King (U.S. Standard)",
-    "brand": "HUAHUU",
-    "parentAsin": "B0H7W4D9Z7",
-    "sourceUrl": "https://www.amazon.com/dp/B0H1QPKZDW",
-    "amazonUrl": "https://www.amazon.com/dp/B0H1QPKZDW",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 879,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H1QPKZDW",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "床架，带充电站、带LED灯、软包设计、无需弹簧床垫，白色"
-  },
-  {
     "asin": "B0GVXXD2YD",
     "title": "Full Size Corner Bed Frame with LED Lights, 8 Bookcase Headboard & 2 Storage Drawers, Metal Platform Daybed with Charging Station & USB Ports, Corner Daybed for Kids Teens Adults, Vintage Brown",
     "imageUrl": "https://m.media-amazon.com/images/I/51k1HEP7UiL._AC_US600_.jpg",
@@ -38347,162 +37637,6 @@
     "dataPendingReasons": [],
     "family": "餐边柜与边柜",
     "titleZh": "Lahomie 47英寸 农舍风 餐边柜，带抽屉、带充电站，适用于客厅、厨房、玄关，白色"
-  },
-  {
-    "asin": "B0GS1D6Q1P",
-    "title": "Book Shelf 70\" Tall Bookcase with Drawer, 7-Tier Arched Cabinet with Storage and Fluted Door, Mid-Century Modern Modular Arch Bookshelf for Office Living Room Bedroom Library (Walnut, 2)",
-    "imageUrl": "https://m.media-amazon.com/images/I/51L8F7Hti8L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GS1D6Q1P",
-      "asin": "B0GS1D6Q1P"
-    },
-    "category": "Home & Kitchen:Furniture:Home Office Furniture:Bookcases",
-    "price": 459.92,
-    "rating": 5,
-    "reviews": 3,
-    "bsr": 234110,
-    "subcategoryBsr": 578,
-    "launchDays": 130,
-    "dateFirstAvailable": "2026-03-13",
-    "salesGrowth": 0,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=882",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "59.94 x 29.97 x 179.83 cm",
-    "weight": 84,
-    "packageDimensionsCm": "130.56 x 49.53 x 28.96 cm",
-    "material": "Engineered Wood",
-    "brand": "Wovenbyrd",
-    "parentAsin": "B0GS1D6Q1P",
-    "sourceUrl": "https://www.amazon.com/dp/B0GS1D6Q1P",
-    "amazonUrl": "https://www.amazon.com/dp/B0GS1D6Q1P",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 882,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GS1D6Q1P",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "red-ocean-blue",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "书架与展示柜",
-    "titleZh": "Book 70英寸 中世纪现代风 书架，带抽屉、竖纹造型、拱形设计，适用于客厅、卧室、办公室，胡桃木色"
-  },
-  {
-    "asin": "B0GS1FR8MC",
-    "title": "Book Shelf 70\" Tall Bookcase with Drawer, 7-Tier Arched Cabinet with Storage and Fluted Door, Mid-Century Modern Modular Arch Bookshelf for Office Living Room Bedroom Library (Oak, 2)",
-    "imageUrl": "https://m.media-amazon.com/images/I/51SI1gNuSIL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GS1FR8MC",
-      "asin": "B0GS1FR8MC"
-    },
-    "category": "Home & Kitchen:Furniture:Home Office Furniture:Bookcases",
-    "price": 459.92,
-    "rating": 5,
-    "reviews": 3,
-    "bsr": 234110,
-    "subcategoryBsr": 578,
-    "launchDays": 130,
-    "dateFirstAvailable": "2026-03-13",
-    "salesGrowth": -0.6471,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=883",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "59.94 x 29.97 x 179.83 cm",
-    "weight": 84,
-    "packageDimensionsCm": "130.56 x 49.53 x 28.96 cm",
-    "material": "Engineered Wood",
-    "brand": "Wovenbyrd",
-    "parentAsin": "B0GS1FR8MC",
-    "sourceUrl": "https://www.amazon.com/dp/B0GS1FR8MC",
-    "amazonUrl": "https://www.amazon.com/dp/B0GS1FR8MC",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 883,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GS1FR8MC",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "red-ocean-blue",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "书架与展示柜",
-    "titleZh": "Book 70英寸 中世纪现代风 书架，带抽屉、竖纹造型、拱形设计，适用于客厅、卧室、办公室"
-  },
-  {
-    "asin": "B0GS1GFP2Y",
-    "title": "Book Shelf 70\" Tall Bookcase with Drawer, 7-Tier Arched Cabinet with Storage and Fluted Door, Mid-Century Modern Modular Arch Bookshelf for Office Living Room Bedroom Library (Oak, 3)",
-    "imageUrl": "https://m.media-amazon.com/images/I/51pZPd-VUPL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GS1GFP2Y",
-      "asin": "B0GS1GFP2Y"
-    },
-    "category": "Home & Kitchen:Furniture:Home Office Furniture:Bookcases",
-    "price": 659.96,
-    "rating": 5,
-    "reviews": 3,
-    "bsr": 234110,
-    "subcategoryBsr": 578,
-    "launchDays": 130,
-    "dateFirstAvailable": "2026-03-13",
-    "salesGrowth": -0.6471,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=885",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "59.94 x 29.97 x 179.83 cm",
-    "weight": 84,
-    "packageDimensionsCm": "130.56 x 49.53 x 28.96 cm",
-    "material": "Engineered Wood",
-    "brand": "Wovenbyrd",
-    "parentAsin": "B0GS1GFP2Y",
-    "sourceUrl": "https://www.amazon.com/dp/B0GS1GFP2Y",
-    "amazonUrl": "https://www.amazon.com/dp/B0GS1GFP2Y",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 885,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GS1GFP2Y",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "red-ocean-blue",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "书架与展示柜",
-    "titleZh": "Book 70英寸 中世纪现代风 书架，带抽屉、竖纹造型、拱形设计，适用于客厅、卧室、办公室"
   },
   {
     "asin": "B0H4PWGJHN",
@@ -39727,48 +38861,49 @@
     "titleZh": "85.6英寸 电视媒体柜，带电源插座、大容量，适用于客厅，原木色"
   },
   {
-    "asin": "B0H338QL4Q",
-    "title": "Mini Fridge Cabinet with Power Outlet,38.2\" W Coffee Bar Cabinet with Fridge Space,Buffet Sideboard with Wine Rack and Storage Shelves,Liquor Cabinet for Kitchen,Dining Room,Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/51s1YAC8ZkL._AC_US600_.jpg",
+    "asin": "B0H333KP6T",
+    "title": "Mini Fridge Cabinet with Power Outlet,39.4\" W Coffee Bar Cabinet with Fridge Space,Buffet Sideboard with Wine Rack and Storage Shelves,Liquor Cabinet for Kitchen,Dining Room,White",
+    "imageUrl": "https://m.media-amazon.com/images/I/51bw0w3M6ZL._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H338QL4Q",
-      "asin": "B0H338QL4Q"
+      "sourceUrl": "https://www.amazon.com/dp/B0H333KP6T",
+      "asin": "B0H333KP6T"
     },
     "category": "Home & Kitchen:Furniture:Game & Recreation Room Furniture:Home Bar Furniture:Bars & Wine Cabinets:Bar Cabinets",
-    "price": 174.99,
-    "rating": 5,
-    "reviews": 2,
-    "bsr": 496657,
-    "subcategoryBsr": 107,
-    "launchDays": 49,
-    "dateFirstAvailable": "2026-06-02",
-    "salesGrowth": -0.8222,
+    "price": 179.99,
+    "rating": 4.2,
+    "reviews": 4,
+    "bsr": 316826,
+    "subcategoryBsr": 52,
+    "launchDays": 32,
+    "dateFirstAvailable": "2026-06-19",
+    "salesGrowth": -0.2059,
     "monthlySalesEstimate": {
       "min": 50,
       "max": 99,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=918",
+      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1051",
       "confidence": "third-party-estimate"
     },
-    "dimensions": "51.05 x 97.03 x 100.08 cm",
-    "weight": 80,
-    "packageDimensionsCm": "121.92 x 58.42 x 20.32 cm",
-    "packageGrossKg": 36.29,
+    "dimensions": "51.05 x 100.08 x 100.08 cm",
+    "weight": 85,
+    "packageDimensionsCm": "111.76 x 60.96 x 20.32 cm",
+    "packageGrossKg": 38.56,
     "material": "Engineered Wood",
+    "variants": "Color: White",
     "brand": "Landassy Home",
-    "parentAsin": "B0H83BHCD3",
-    "sourceUrl": "https://www.amazon.com/dp/B0H338QL4Q",
-    "amazonUrl": "https://www.amazon.com/dp/B0H338QL4Q",
+    "parentAsin": "B0H834Z4XT",
+    "sourceUrl": "https://www.amazon.com/dp/B0H333KP6T",
+    "amazonUrl": "https://www.amazon.com/dp/B0H333KP6T",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 918,
+    "sourceRow": 1051,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H338QL4Q",
+      "sourceUrl": "https://www.amazon.com/dp/B0H333KP6T",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -39777,7 +38912,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "餐边柜与边柜",
-    "titleZh": "Mini 38.2英寸 餐边柜，带电源插座，适用于餐厅、厨房、沙龙，黑色"
+    "titleZh": "Mini 39.4英寸 餐边柜，带电源插座，适用于餐厅、厨房、沙龙，白色",
+    "variantAsins": [
+      "B0H333KP6T",
+      "B0H338QL4Q"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H83BHCD3",
+      "B0H834Z4XT"
+    ]
   },
   {
     "asin": "B0GDQH954H",
@@ -40418,84 +39562,42 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Desks",
-    "titleZh": "CubiCubi 48英寸 办公桌，带抽屉、高度可调，适用于办公室，黑色"
+    "titleZh": "CubiCubi 48英寸 办公桌，带抽屉、高度可调，适用于办公室，黑色",
+    "variantAsins": [
+      "B0GR3TYYY7",
+      "B0GR4T4Q4W",
+      "B0GR43P51M"
+    ],
+    "variantCount": 3,
+    "relatedParentAsins": [
+      "B0GR3TYYY7",
+      "B0GR4T4Q4W",
+      "B0GR43P51M"
+    ]
   },
   {
-    "asin": "B0GZVQW97D",
-    "title": "LYNSOM 8 Drawer Dresser for Bedroom, 50\" Wide Fluted Dresser with Curved Corners, Wood Dressers & Chests of Drawers with Dual-Panel Design for Bedroom, Entryway, Walnut",
-    "imageUrl": "https://m.media-amazon.com/images/I/91aoCWv1iSL._AC_US600_.jpg",
+    "asin": "B0H3CD9CV1",
+    "title": "72\" Tall Kitchen Pantry Cabinet with Charging Station 55\" Wide Kitchen Hutch Cabinet with LED Light and Countertop Large Kitchen Cabinet with Adjustable Shelves and Wine Rack Black",
+    "imageUrl": "https://m.media-amazon.com/images/I/51B7c2BgIkL._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GZVQW97D",
-      "asin": "B0GZVQW97D"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Dressers",
-    "price": 279.99,
-    "rating": 3.5,
-    "reviews": 2,
-    "bsr": 2007700,
-    "subcategoryBsr": 1734,
-    "launchDays": 41,
-    "dateFirstAvailable": "2026-06-10",
-    "salesGrowth": 0,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=933",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 125.98 x 102.11 cm",
-    "weight": 97,
-    "packageDimensionsCm": "140.46 x 50.04 x 28.19 cm",
-    "packageGrossKg": 45.36,
-    "material": "Engineered Wood",
-    "brand": "LYNSOM",
-    "parentAsin": "B0GZVQW97D",
-    "sourceUrl": "https://www.amazon.com/dp/B0GZVQW97D",
-    "amazonUrl": "https://www.amazon.com/dp/B0GZVQW97D",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 933,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GZVQW97D",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "red-ocean-blue",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "斗柜",
-    "titleZh": "LYNSOM 50英寸 斗柜，竖纹造型，适用于卧室、玄关，胡桃木色"
-  },
-  {
-    "asin": "B0H2PZTVJJ",
-    "title": "White 72\" Tall Kitchen Pantry Cabinet with Charging Station 55\" Wide Kitchen Hutch Cabinet with LED Light and Countertop Large Kitchen Cabinet with Adjustable Shelves and Wine Rack",
-    "imageUrl": "https://m.media-amazon.com/images/I/41oDh3CoJnL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H2PZTVJJ",
-      "asin": "B0H2PZTVJJ"
+      "sourceUrl": "https://www.amazon.com/dp/B0H3CD9CV1",
+      "asin": "B0H3CD9CV1"
     },
     "category": "Home & Kitchen:Furniture:Dining Room Furniture:Pantries",
-    "price": 329.99,
-    "rating": 1,
-    "reviews": 1,
-    "bsr": 500546,
-    "subcategoryBsr": 218,
-    "launchDays": 33,
-    "dateFirstAvailable": "2026-06-18",
-    "salesGrowth": 0,
+    "price": 299.99,
+    "rating": 2,
+    "reviews": 7,
+    "bsr": 1123251,
+    "subcategoryBsr": 335,
+    "launchDays": 49,
+    "dateFirstAvailable": "2026-06-02",
+    "salesGrowth": 6.5833,
     "monthlySalesEstimate": {
       "min": 50,
       "max": 99,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=934",
+      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1340",
       "confidence": "third-party-estimate"
     },
     "dimensions": "40.64 x 139.70 x 182.88 cm",
@@ -40503,18 +39605,18 @@
     "packageGrossKg": 48.99,
     "material": "Engineered Wood",
     "brand": "AXCIGOC",
-    "parentAsin": "B0H2PZTVJJ",
-    "sourceUrl": "https://www.amazon.com/dp/B0H2PZTVJJ",
-    "amazonUrl": "https://www.amazon.com/dp/B0H2PZTVJJ",
+    "parentAsin": "B0H3CD9CV1",
+    "sourceUrl": "https://www.amazon.com/dp/B0H3CD9CV1",
+    "amazonUrl": "https://www.amazon.com/dp/B0H3CD9CV1",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 934,
+    "sourceRow": 1340,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H2PZTVJJ",
+      "sourceUrl": "https://www.amazon.com/dp/B0H3CD9CV1",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -40523,60 +39625,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "橱柜与厨房高柜",
-    "titleZh": "White 72英寸 厨房高柜，可调层板、带充电站、带LED灯，适用于厨房，白色"
-  },
-  {
-    "asin": "B0H2LV155J",
-    "title": "55.1\" Oval Coffee Tables with Storage,Fluted Mid Century Modern Center Table with Drawer,Accent Coffee Table with Sliding Door for Living Room Small Space (Walnut)",
-    "imageUrl": "https://m.media-amazon.com/images/I/91V4HL2X0HL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H2LV155J",
-      "asin": "B0H2LV155J"
-    },
-    "category": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
-    "price": 199.99,
-    "rating": 3.9,
-    "reviews": 7,
-    "bsr": 838624,
-    "subcategoryBsr": 1287,
-    "launchDays": 57,
-    "dateFirstAvailable": "2026-05-25",
-    "salesGrowth": 45.3333,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=935",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "59.94 x 139.95 x 41.91 cm",
-    "weight": 65,
-    "packageDimensionsCm": "152.40 x 71.12 x 15.24 cm",
-    "packageGrossKg": 33.57,
-    "material": "Engineered Wood",
-    "brand": "DHH",
-    "parentAsin": "B0H2LV155J",
-    "sourceUrl": "https://www.amazon.com/dp/B0H2LV155J",
-    "amazonUrl": "https://www.amazon.com/dp/B0H2LV155J",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 935,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H2LV155J",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
-    "titleZh": "55.1英寸 中世纪现代风 茶几，带抽屉、竖纹造型、滑动柜门、适合小空间，适用于客厅、沙龙，胡桃木色"
+    "titleZh": "72英寸 厨房高柜，可调层板、带充电站、带LED灯，适用于厨房，黑色",
+    "variantAsins": [
+      "B0H3CD9CV1",
+      "B0H2PZTVJJ"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H2PZTVJJ",
+      "B0H3CD9CV1"
+    ]
   },
   {
     "asin": "B0GQB7H1J5",
@@ -42010,7 +41068,16 @@
       "材质待确认"
     ],
     "family": "Home & Kitchen:Furniture:Dining Room Furniture:Table & Chair Sets",
-    "titleZh": "Miereirl 农舍风 餐桌，软包设计，适用于餐厅，胡桃木色"
+    "titleZh": "Miereirl 农舍风 餐桌，软包设计，适用于餐厅，胡桃木色",
+    "variantAsins": [
+      "B0GZNMRJ3R",
+      "B0GZNJ5WRK"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8RNRQRR",
+      "B0H69QQ5QQ"
+    ]
   },
   {
     "asin": "B0GVDWNTQ5",
@@ -42063,59 +41130,6 @@
     "dataPendingReasons": [],
     "family": "书架与展示柜",
     "titleZh": "71英寸 中世纪现代风 书架，滑动柜门，适用于客厅、办公室，胡桃木色"
-  },
-  {
-    "asin": "B0H2LYCSLB",
-    "title": "47.2\" Oval Coffee Tables with Storage,Fluted Mid Century Modern Center Table with Drawer,Accent Coffee Table with Sliding Door for Living Room Small Space (Walnut)",
-    "imageUrl": "https://m.media-amazon.com/images/I/91gnQ10pw-L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H2LYCSLB",
-      "asin": "B0H2LYCSLB"
-    },
-    "category": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
-    "price": 169.99,
-    "rating": 1,
-    "reviews": 1,
-    "bsr": 789337,
-    "subcategoryBsr": 1587,
-    "launchDays": 57,
-    "dateFirstAvailable": "2026-05-25",
-    "salesGrowth": 43,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=969",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "59.94 x 119.89 x 41.91 cm",
-    "weight": 65,
-    "packageDimensionsCm": "132.08 x 71.12 x 15.24 cm",
-    "packageGrossKg": 31.75,
-    "material": "Engineered Wood",
-    "brand": "DHH",
-    "parentAsin": "B0H2LYCSLB",
-    "sourceUrl": "https://www.amazon.com/dp/B0H2LYCSLB",
-    "amazonUrl": "https://www.amazon.com/dp/B0H2LYCSLB",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 969,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H2LYCSLB",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
-    "titleZh": "47.2英寸 中世纪现代风 茶几，带抽屉、竖纹造型、滑动柜门、适合小空间，适用于客厅、沙龙，胡桃木色"
   },
   {
     "asin": "B0GWR68HYD",
@@ -44562,59 +43576,6 @@
     "titleZh": "71英寸 餐桌，适合家居与商业空间使用，适用于客厅、餐厅、厨房，棕色"
   },
   {
-    "asin": "B0GR4T4Q4W",
-    "title": "CubiCubi L Shaped Standing Desk with Drawers 63 x 48 Inch Adjustable Height, Electric Corner Desk with Storage, Sit Stand Home Office Desk with Splice Board, Rustic Brown",
-    "imageUrl": "https://m.media-amazon.com/images/I/71IT+c4OPeL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GR4T4Q4W",
-      "asin": "B0GR4T4Q4W"
-    },
-    "category": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Desks",
-    "price": 269.99,
-    "rating": 4.5,
-    "reviews": 184,
-    "bsr": 6781597,
-    "subcategoryBsr": 14639,
-    "launchDays": 116,
-    "dateFirstAvailable": "2026-03-27",
-    "salesGrowth": -0.1754,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1034",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "121.92 x 160.02 x 68.58 cm",
-    "weight": 108,
-    "packageDimensionsCm": "104.14 x 76.20 x 38.10 cm",
-    "packageGrossKg": 48.99,
-    "material": "Engineered Wood",
-    "brand": "CubiCubi",
-    "parentAsin": "B0GR4T4Q4W",
-    "sourceUrl": "https://www.amazon.com/dp/B0GR4T4Q4W",
-    "amazonUrl": "https://www.amazon.com/dp/B0GR4T4Q4W",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1034,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GR4T4Q4W",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Desks",
-    "titleZh": "CubiCubi 48英寸 乡村风 办公桌，带抽屉、高度可调，适用于办公室，棕色"
-  },
-  {
     "asin": "B0GVMQL21Y",
     "title": "King Size Wooden Bed Frame with Storage Headboard, Platform Bed Frame with Charging Station and LED Lights, Sturdy Slats, No Box Spring Required, Silent Operation, Easy to Assemble, Brown",
     "imageUrl": "https://m.media-amazon.com/images/I/511CTIgbOZL._AC_US600_.jpg",
@@ -45253,113 +44214,6 @@
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Living Room Furniture:Tables:Coffee Tables",
     "titleZh": "Seang 39英寸 茶几，竖纹造型、滑动柜门，适用于客厅、办公室，原木色"
-  },
-  {
-    "asin": "B0H333KP6T",
-    "title": "Mini Fridge Cabinet with Power Outlet,39.4\" W Coffee Bar Cabinet with Fridge Space,Buffet Sideboard with Wine Rack and Storage Shelves,Liquor Cabinet for Kitchen,Dining Room,White",
-    "imageUrl": "https://m.media-amazon.com/images/I/51bw0w3M6ZL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H333KP6T",
-      "asin": "B0H333KP6T"
-    },
-    "category": "Home & Kitchen:Furniture:Game & Recreation Room Furniture:Home Bar Furniture:Bars & Wine Cabinets:Bar Cabinets",
-    "price": 179.99,
-    "rating": 4.2,
-    "reviews": 4,
-    "bsr": 316826,
-    "subcategoryBsr": 52,
-    "launchDays": 32,
-    "dateFirstAvailable": "2026-06-19",
-    "salesGrowth": -0.2059,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1051",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "51.05 x 100.08 x 100.08 cm",
-    "weight": 85,
-    "packageDimensionsCm": "111.76 x 60.96 x 20.32 cm",
-    "packageGrossKg": 38.56,
-    "material": "Engineered Wood",
-    "variants": "Color: White",
-    "brand": "Landassy Home",
-    "parentAsin": "B0H834Z4XT",
-    "sourceUrl": "https://www.amazon.com/dp/B0H333KP6T",
-    "amazonUrl": "https://www.amazon.com/dp/B0H333KP6T",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1051,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H333KP6T",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "餐边柜与边柜",
-    "titleZh": "Mini 39.4英寸 餐边柜，带电源插座，适用于餐厅、厨房、沙龙，白色"
-  },
-  {
-    "asin": "B0GR43P51M",
-    "title": "CubiCubi L Shaped Standing Desk with Drawers 63 x 48 Inch Adjustable Height, Electric Corner Desk with Storage, Sit Stand Home Office Desk with Splice Board, White",
-    "imageUrl": "https://m.media-amazon.com/images/I/71b7Uxc4S9L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GR43P51M",
-      "asin": "B0GR43P51M"
-    },
-    "category": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Desks",
-    "price": 269.99,
-    "rating": 4.5,
-    "reviews": 184,
-    "bsr": 6414076,
-    "subcategoryBsr": 13952,
-    "launchDays": 114,
-    "dateFirstAvailable": "2026-03-29",
-    "salesGrowth": -0.1404,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1052",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "121.92 x 160.02 x 68.58 cm",
-    "weight": 108,
-    "packageDimensionsCm": "104.14 x 76.20 x 38.10 cm",
-    "packageGrossKg": 48.99,
-    "material": "Engineered Wood",
-    "brand": "CubiCubi",
-    "parentAsin": "B0GR43P51M",
-    "sourceUrl": "https://www.amazon.com/dp/B0GR43P51M",
-    "amazonUrl": "https://www.amazon.com/dp/B0GR43P51M",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1052,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GR43P51M",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Desks",
-    "titleZh": "CubiCubi 48英寸 办公桌，带抽屉、高度可调，适用于办公室，白色"
   },
   {
     "asin": "B0GK7XRD3Q",
@@ -49713,61 +48567,6 @@
     "titleZh": "IRONCK 22英寸 现代 床头柜，带充电站、竖纹造型，适用于卧室，原木色"
   },
   {
-    "asin": "B0GZNJ5WRK",
-    "title": "Miereirl 7-Piece Modern Farmhouse Dining Table Set with 6 Chairs, Sturdy Stable Dining Room Furniture with Soft Padded Upholstered Dining Chairs (Walnut Table + 6 Brown Chairs)",
-    "imageUrl": "https://m.media-amazon.com/images/I/81SfoS2DGQL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GZNJ5WRK",
-      "asin": "B0GZNJ5WRK"
-    },
-    "category": "Home & Kitchen:Furniture:Dining Room Furniture:Table & Chair Sets",
-    "price": 599.99,
-    "rating": 3.2,
-    "reviews": 5,
-    "bsr": 338431,
-    "subcategoryBsr": 250,
-    "launchDays": 56,
-    "dateFirstAvailable": "2026-05-26",
-    "salesGrowth": 2.2286,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1166",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "199.90 x 100.08 x 73.66 cm",
-    "weight": 100,
-    "packageDimensionsCm": "115.82 x 67.82 x 28.45 cm",
-    "packageGrossKg": 45.36,
-    "variants": "Color: Walnuttable + 6 Brown Chairs | Size: 7-Piece | Set name: Mid Century Chairs",
-    "brand": "Miereirl",
-    "parentAsin": "B0H69QQ5QQ",
-    "sourceUrl": "https://www.amazon.com/dp/B0GZNJ5WRK",
-    "amazonUrl": "https://www.amazon.com/dp/B0GZNJ5WRK",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1166,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GZNJ5WRK",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "材质待确认"
-    ],
-    "family": "Home & Kitchen:Furniture:Dining Room Furniture:Table & Chair Sets",
-    "titleZh": "Miereirl 农舍风 餐桌，软包设计，适用于餐厅，胡桃木色"
-  },
-  {
     "asin": "B0GQM1PB6Q",
     "title": "White 6 Drawer Dresser for Bedroom, 47 Inch Wide Diagonal Grain Grooved Wooden, Brown Panel, Modern TV Stand Storage Cabinet, Suitable for Foyer and Aisle",
     "imageUrl": "https://m.media-amazon.com/images/I/71mBUvlnazL._AC_US600_.jpg",
@@ -50714,28 +49513,28 @@
     "titleZh": "Fluted 63英寸 现代 电视媒体柜，带电源插座、竖纹造型，适用于客厅、卧室、玄关"
   },
   {
-    "asin": "B0H3962ZSF",
-    "title": "55\" Buffet Cabinet with Storage Drawer, Sideboard Buffet Cabinet with Built-in Lights & 4 Doors, Mid Century Modern Wood Coffee Bar Cabinets with Skeleton Lines for Kitchen, Living Room, Walnut",
-    "imageUrl": "https://m.media-amazon.com/images/I/810Ekh1xzuL._AC_US600_.jpg",
+    "asin": "B0H3959KHG",
+    "title": "55\" Buffet Cabinet with Storage Drawer, Sideboard Buffet Cabinet with Built-in Lights & 4 Doors, Mid Century Modern Wood Coffee Bar Cabinets with Skeleton Lines for Kitchen, Living Room, Black",
+    "imageUrl": "https://m.media-amazon.com/images/I/81feVpVlYYL._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H3962ZSF",
-      "asin": "B0H3962ZSF"
+      "sourceUrl": "https://www.amazon.com/dp/B0H3959KHG",
+      "asin": "B0H3959KHG"
     },
     "category": "Home & Kitchen:Furniture:Dining Room Furniture:Buffets & Sideboards",
-    "price": 189.99,
-    "rating": 1,
-    "reviews": 1,
-    "bsr": 415161,
-    "subcategoryBsr": 281,
-    "launchDays": 53,
-    "dateFirstAvailable": "2026-05-29",
+    "price": 179.99,
+    "rating": 2.5,
+    "reviews": 2,
+    "bsr": 820290,
+    "subcategoryBsr": 528,
+    "launchDays": 47,
+    "dateFirstAvailable": "2026-06-04",
     "salesGrowth": 0,
     "monthlySalesEstimate": {
       "min": 50,
       "max": 99,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1195",
+      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1202",
       "confidence": "third-party-estimate"
     },
     "dimensions": "39.88 x 139.95 x 83.06 cm",
@@ -50743,20 +49542,20 @@
     "packageDimensionsCm": "159.00 x 47.50 x 24.89 cm",
     "packageGrossKg": 46,
     "material": "Engineered Wood",
-    "variants": "Color: Walnut",
+    "variants": "Color: Black",
     "brand": "ONBRILL",
-    "parentAsin": "B0H395S5WF",
-    "sourceUrl": "https://www.amazon.com/dp/B0H3962ZSF",
-    "amazonUrl": "https://www.amazon.com/dp/B0H3962ZSF",
+    "parentAsin": "B0H8NSSWPV",
+    "sourceUrl": "https://www.amazon.com/dp/B0H3959KHG",
+    "amazonUrl": "https://www.amazon.com/dp/B0H3959KHG",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1195,
+    "sourceRow": 1202,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H3962ZSF",
+      "sourceUrl": "https://www.amazon.com/dp/B0H3959KHG",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -50765,7 +49564,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "餐边柜与边柜",
-    "titleZh": "55英寸 中世纪现代风 餐边柜，适合家居与商业空间使用，适用于客厅、厨房，胡桃木色"
+    "titleZh": "55英寸 中世纪现代风 餐边柜，适合家居与商业空间使用，适用于客厅、厨房，黑色",
+    "variantAsins": [
+      "B0H3959KHG",
+      "B0H3962ZSF"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H395S5WF",
+      "B0H8NSSWPV"
+    ]
   },
   {
     "asin": "B0GWCQHN7R",
@@ -51027,60 +49835,6 @@
     "dataPendingReasons": [],
     "family": "餐边柜与边柜",
     "titleZh": "47英寸 中世纪现代风 餐边柜，竖纹造型，适用于厨房、玄关，胡桃木色"
-  },
-  {
-    "asin": "B0H3959KHG",
-    "title": "55\" Buffet Cabinet with Storage Drawer, Sideboard Buffet Cabinet with Built-in Lights & 4 Doors, Mid Century Modern Wood Coffee Bar Cabinets with Skeleton Lines for Kitchen, Living Room, Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/81feVpVlYYL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H3959KHG",
-      "asin": "B0H3959KHG"
-    },
-    "category": "Home & Kitchen:Furniture:Dining Room Furniture:Buffets & Sideboards",
-    "price": 179.99,
-    "rating": 2.5,
-    "reviews": 2,
-    "bsr": 820290,
-    "subcategoryBsr": 528,
-    "launchDays": 47,
-    "dateFirstAvailable": "2026-06-04",
-    "salesGrowth": 0,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1202",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 139.95 x 83.06 cm",
-    "weight": 90.39,
-    "packageDimensionsCm": "159.00 x 47.50 x 24.89 cm",
-    "packageGrossKg": 46,
-    "material": "Engineered Wood",
-    "variants": "Color: Black",
-    "brand": "ONBRILL",
-    "parentAsin": "B0H8NSSWPV",
-    "sourceUrl": "https://www.amazon.com/dp/B0H3959KHG",
-    "amazonUrl": "https://www.amazon.com/dp/B0H3959KHG",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1202,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H3959KHG",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "餐边柜与边柜",
-    "titleZh": "55英寸 中世纪现代风 餐边柜，适合家居与商业空间使用，适用于客厅、厨房，黑色"
   },
   {
     "asin": "B0H7QPK2YS",
@@ -52880,7 +51634,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "农舍风 床架，带抽屉、带充电站、储物床头板、无需弹簧床垫"
+    "titleZh": "农舍风 床架，带抽屉、带充电站、储物床头板、无需弹簧床垫",
+    "variantAsins": [
+      "B0H32L9RKM",
+      "B0H32GF4HZ"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8JXPQ51",
+      "B0H32M9WCZ"
+    ]
   },
   {
     "asin": "B0GMWK1LSJ",
@@ -55854,46 +54617,47 @@
     "titleZh": "ARTPOWER 现代 咖啡酒柜，竖纹造型，适用于客厅、沙龙，黑色"
   },
   {
-    "asin": "B0GWQCBPJN",
+    "asin": "B0GWQJH6P6",
     "title": "CECER Full Size Wall Murphy Bed with LED Lights，Full Murphy Cabinet Beds with Gas-Lift（Effortless Operation），Space-Saving Wall Beds Cabinet Bed for Guest Room/Bedroom-Brown（Without Mattress）",
-    "imageUrl": "https://m.media-amazon.com/images/I/81tekJzmk2L._AC_US600_.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/71rRcP5bK6L._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GWQCBPJN",
-      "asin": "B0GWQCBPJN"
+      "sourceUrl": "https://www.amazon.com/dp/B0GWQJH6P6",
+      "asin": "B0GWQJH6P6"
     },
     "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
     "price": 625.98,
-    "rating": 1,
+    "rating": 5,
     "reviews": 1,
-    "bsr": 1788445,
-    "subcategoryBsr": 5480,
-    "launchDays": 98,
-    "dateFirstAvailable": "2026-04-14",
-    "salesGrowth": -0.12,
+    "bsr": 1401287,
+    "subcategoryBsr": 2564,
+    "launchDays": 67,
+    "dateFirstAvailable": "2026-05-15",
+    "salesGrowth": -0.0267,
     "monthlySalesEstimate": {
       "min": 50,
       "max": 99,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1319",
+      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1360",
       "confidence": "third-party-estimate"
     },
-    "dimensions": "228.09 x 146.05 x 223.52 cm",
-    "packageGrossKg": 22.23,
+    "dimensions": "199.14 x 149.10 x 216.92 cm",
+    "packageGrossKg": 9.07,
     "material": "Wood",
+    "variants": "Size: Full | Color: Gloss White",
     "brand": "CECER",
-    "parentAsin": "B0GWQCBPJN",
-    "sourceUrl": "https://www.amazon.com/dp/B0GWQCBPJN",
-    "amazonUrl": "https://www.amazon.com/dp/B0GWQCBPJN",
+    "parentAsin": "B0H2TG6NZK",
+    "sourceUrl": "https://www.amazon.com/dp/B0GWQJH6P6",
+    "amazonUrl": "https://www.amazon.com/dp/B0GWQJH6P6",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1319,
+    "sourceRow": 1360,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GWQCBPJN",
+      "sourceUrl": "https://www.amazon.com/dp/B0GWQJH6P6",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -55902,7 +54666,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "CECER 柜类家具，带LED灯，适用于卧室、沙龙，棕色"
+    "titleZh": "CECER 柜类家具，带LED灯，适用于卧室、沙龙，棕色",
+    "variantAsins": [
+      "B0GWQJH6P6",
+      "B0GWQCBPJN"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GWQCBPJN",
+      "B0H2TG6NZK"
+    ]
   },
   {
     "asin": "B0FZ8K3QMB",
@@ -56702,58 +55475,6 @@
     "titleZh": "Miereirl 餐桌椅组合，可伸缩、软包设计，适用于餐厅、厨房、沙龙"
   },
   {
-    "asin": "B0H3CD9CV1",
-    "title": "72\" Tall Kitchen Pantry Cabinet with Charging Station 55\" Wide Kitchen Hutch Cabinet with LED Light and Countertop Large Kitchen Cabinet with Adjustable Shelves and Wine Rack Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/51B7c2BgIkL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H3CD9CV1",
-      "asin": "B0H3CD9CV1"
-    },
-    "category": "Home & Kitchen:Furniture:Dining Room Furniture:Pantries",
-    "price": 299.99,
-    "rating": 2,
-    "reviews": 7,
-    "bsr": 1123251,
-    "subcategoryBsr": 335,
-    "launchDays": 49,
-    "dateFirstAvailable": "2026-06-02",
-    "salesGrowth": 6.5833,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1340",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "40.64 x 139.70 x 182.88 cm",
-    "weight": 108,
-    "packageGrossKg": 48.99,
-    "material": "Engineered Wood",
-    "brand": "AXCIGOC",
-    "parentAsin": "B0H3CD9CV1",
-    "sourceUrl": "https://www.amazon.com/dp/B0H3CD9CV1",
-    "amazonUrl": "https://www.amazon.com/dp/B0H3CD9CV1",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1340,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H3CD9CV1",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "橱柜与厨房高柜",
-    "titleZh": "72英寸 厨房高柜，可调层板、带充电站、带LED灯，适用于厨房，黑色"
-  },
-  {
     "asin": "B0GRH8HBHX",
     "title": "Farmhouse Full Size Bed Frame with Flip-Down Bookcase Storage Headboard and 4 Drawers, Rustic Wood Platform Bed Frame Full Size with Charging Station and LED Lights, No Box Spring Needed, Grey",
     "imageUrl": "https://m.media-amazon.com/images/I/51+RMfXjxXL._AC_US600_.jpg",
@@ -57498,58 +56219,6 @@
     ],
     "family": "电视与媒体柜",
     "titleZh": "AMERLIFE 70英寸 农舍风 电视媒体柜，开放式收纳，适用于客厅，白色"
-  },
-  {
-    "asin": "B0GWQJH6P6",
-    "title": "CECER Full Size Wall Murphy Bed with LED Lights，Full Murphy Cabinet Beds with Gas-Lift（Effortless Operation），Space-Saving Wall Beds Cabinet Bed for Guest Room/Bedroom-Brown（Without Mattress）",
-    "imageUrl": "https://m.media-amazon.com/images/I/71rRcP5bK6L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GWQJH6P6",
-      "asin": "B0GWQJH6P6"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 625.98,
-    "rating": 5,
-    "reviews": 1,
-    "bsr": 1401287,
-    "subcategoryBsr": 2564,
-    "launchDays": 67,
-    "dateFirstAvailable": "2026-05-15",
-    "salesGrowth": -0.0267,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1360",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "199.14 x 149.10 x 216.92 cm",
-    "packageGrossKg": 9.07,
-    "material": "Wood",
-    "variants": "Size: Full | Color: Gloss White",
-    "brand": "CECER",
-    "parentAsin": "B0H2TG6NZK",
-    "sourceUrl": "https://www.amazon.com/dp/B0GWQJH6P6",
-    "amazonUrl": "https://www.amazon.com/dp/B0GWQJH6P6",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1360,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GWQJH6P6",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "CECER 柜类家具，带LED灯，适用于卧室、沙龙，棕色"
   },
   {
     "asin": "B0GTLJF2W6",
@@ -58402,58 +57071,6 @@
     "titleZh": "63英寸 现代 玄关桌，带抽屉、竖纹造型，适用于玄关、沙龙，棕色"
   },
   {
-    "asin": "B0H1H4FWCZ",
-    "title": "Kingant 55 x 30 Inch Electric Standing Desk with 4 Drawers, Adjustable Height Computer Desk for Home Office, Large Workstation Sit Stand Up Desk with Built-in USB A/C Ports, Light Rustic Brown",
-    "imageUrl": "https://m.media-amazon.com/images/I/415BEMRAP3L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H1H4FWCZ",
-      "asin": "B0H1H4FWCZ"
-    },
-    "category": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Desks",
-    "price": 279.99,
-    "rating": 5,
-    "reviews": 1,
-    "bsr": 565139,
-    "subcategoryBsr": 1426,
-    "launchDays": 69,
-    "dateFirstAvailable": "2026-05-13",
-    "salesGrowth": 0.4667,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1383",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "76.20 x 160.02 x 68.58 cm",
-    "weight": 90,
-    "packageGrossKg": 36.74,
-    "material": "Engineered Wood",
-    "brand": "Kingant",
-    "parentAsin": "B0H1H4FWCZ",
-    "sourceUrl": "https://www.amazon.com/dp/B0H1H4FWCZ",
-    "amazonUrl": "https://www.amazon.com/dp/B0H1H4FWCZ",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1383,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H1H4FWCZ",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Desks",
-    "titleZh": "Kingant 30英寸 乡村风 办公桌，带抽屉、高度可调，适用于办公室，棕色"
-  },
-  {
     "asin": "B0H1HHX34G",
     "title": "Kingant 63 x 30 Inch Electric Standing Desk with 4 Drawers, Adjustable Height Computer Desk for Home Office, Large Workstation Sit Stand Up Desk with Built-in USB A/C Ports, Light Rustic Brown",
     "imageUrl": "https://m.media-amazon.com/images/I/41UsxJcYkaL._AC_US600_.jpg",
@@ -58502,7 +57119,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Home & Kitchen:Furniture:Home Office Furniture:Home Office Desks",
-    "titleZh": "Kingant 30英寸 乡村风 办公桌，带抽屉、高度可调，适用于办公室，棕色"
+    "titleZh": "Kingant 30英寸 乡村风 办公桌，带抽屉、高度可调，适用于办公室，棕色",
+    "variantAsins": [
+      "B0H1HHX34G",
+      "B0H1H4FWCZ"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H1H4FWCZ",
+      "B0H1HHX34G"
+    ]
   },
   {
     "asin": "B0H3N9F319",
@@ -59296,59 +57922,6 @@
     "titleZh": "Floating 100英寸 现代 电视媒体柜，带电源插座、带LED灯，适用于客厅，白色"
   },
   {
-    "asin": "B0H32GF4HZ",
-    "title": "King Size Wooden Bed Frame with 12 Drawers, Farmhouse Platform Bed Frame with Storage Headboard & Charging Station, No Box Spring Needed, Sturdy Metal Slat Support, Noise-Free, White",
-    "imageUrl": "https://m.media-amazon.com/images/I/91DGAuylRfL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H32GF4HZ",
-      "asin": "B0H32GF4HZ"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 399.99,
-    "rating": 2.8,
-    "reviews": 2,
-    "bsr": 1379836,
-    "subcategoryBsr": 2110,
-    "launchDays": 46,
-    "dateFirstAvailable": "2026-06-05",
-    "salesGrowth": 0,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1405",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "219.46 x 194.06 x 119.13 cm",
-    "weight": 143,
-    "packageGrossKg": 62.6,
-    "material": "Engineered Wood, Metal",
-    "variants": "Color: White | Size: King",
-    "brand": "madeslves",
-    "parentAsin": "B0H32M9WCZ",
-    "sourceUrl": "https://www.amazon.com/dp/B0H32GF4HZ",
-    "amazonUrl": "https://www.amazon.com/dp/B0H32GF4HZ",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1405,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H32GF4HZ",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "titleZh": "农舍风 床架，带抽屉、带充电站、储物床头板、无需弹簧床垫，白色"
-  },
-  {
     "asin": "B0GTMJ2L1K",
     "title": "Halitaa Farmhouse 59\" L-Shaped Executive Desk with Drawers, Wood Home Office Corner Desk with File Drawer, Storage Cabinet, Rustic Computer Writing Desk for Home Office. White",
     "imageUrl": "https://m.media-amazon.com/images/I/815cTsLKufL._AC_US600_.jpg",
@@ -59772,7 +58345,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "餐边柜与边柜",
-    "titleZh": "78英寸 现代 餐边柜，可伸缩，适用于客厅、厨房、玄关"
+    "titleZh": "78英寸 现代 餐边柜，可伸缩，适用于客厅、厨房、玄关",
+    "variantAsins": [
+      "B0H4C552T8",
+      "B0H4BXRWMJ"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H4C552T8",
+      "B0H4BXRWMJ"
+    ]
   },
   {
     "asin": "B0H41K94BL",
@@ -67187,57 +65769,6 @@
     ],
     "family": "厨房岛与隐藏垃圾柜",
     "titleZh": "Miereirl 63英寸 工业风 厨房岛台，适合家居与商业空间使用，适用于餐厅、厨房"
-  },
-  {
-    "asin": "B0H4BXRWMJ",
-    "title": "156\" Sideboard Buffet Cabinet, 16-Drawer Modular Credenza for Living Room, Kitchen & Entryway, Modern Media Storage Console Expandable Organization System with Flush Toe-Kick Design (4 Pcs, Black)",
-    "imageUrl": "https://m.media-amazon.com/images/I/41+T1wdMx+L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H4BXRWMJ",
-      "asin": "B0H4BXRWMJ"
-    },
-    "category": "Home & Kitchen:Furniture:Dining Room Furniture:Buffets & Sideboards",
-    "price": 599.99,
-    "rating": 4.1,
-    "reviews": 6,
-    "bsr": 323540,
-    "subcategoryBsr": 208,
-    "launchDays": 38,
-    "dateFirstAvailable": "2026-06-13",
-    "salesGrowth": 0.0694,
-    "monthlySalesEstimate": {
-      "min": 1,
-      "max": 49,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1616",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "99.39 x 39.45 x 81.20 cm",
-    "weight": 59.3,
-    "material": "Engineered Wood",
-    "brand": "Foxemart",
-    "parentAsin": "B0H4BXRWMJ",
-    "sourceUrl": "https://www.amazon.com/dp/B0H4BXRWMJ",
-    "amazonUrl": "https://www.amazon.com/dp/B0H4BXRWMJ",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1616,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H4BXRWMJ",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "餐边柜与边柜",
-    "titleZh": "156英寸 现代 餐边柜，可伸缩，适用于客厅、厨房、玄关，黑色"
   },
   {
     "asin": "B0H4C77WD8",
@@ -81414,48 +79945,49 @@
     "titleZh": "14英寸 置物架，适合家居与商业空间使用，适用于厨房"
   },
   {
-    "asin": "B0FSSBQ1YD",
+    "asin": "B0F8NN9BWR",
     "title": "2000 Pieces Jigsaw Puzzle Table with Drawers & Legs, 41.34\"x29.53\" Metal Adult Puzzle Table (Stability Tested & Ergonomic), Adjustable Height & Tilt Angle, Wooden Puzzle Board with Wheels & Cover",
-    "imageUrl": "https://m.media-amazon.com/images/I/71QD7OjHAHL._AC_US600_.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/71AeAIBvVKL._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0FSSBQ1YD",
-      "asin": "B0FSSBQ1YD"
+      "sourceUrl": "https://www.amazon.com/dp/B0F8NN9BWR",
+      "asin": "B0F8NN9BWR"
     },
     "category": "Toys & Games:Puzzles:Puzzle Accessories",
     "price": 178,
-    "rating": 4.6,
-    "reviews": 12,
-    "bsr": 19253,
-    "subcategoryBsr": 65,
-    "launchDays": 257,
-    "dateFirstAvailable": "2025-11-06",
+    "rating": 4.5,
+    "reviews": 90,
+    "bsr": 18707,
+    "subcategoryBsr": 64,
+    "launchDays": 417,
+    "dateFirstAvailable": "2025-05-30",
     "salesGrowth": 0.0072,
     "monthlySalesEstimate": {
       "min": 200,
       "max": 499,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=259",
+      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=264",
       "confidence": "third-party-estimate"
     },
     "dimensions": "74.93 x 104.90 x 93.98 cm",
     "weight": 38,
-    "packageDimensionsCm": "111.76 x 79.50 x 12.70 cm",
-    "packageGrossKg": 19.84,
+    "packageDimensionsCm": "109.98 x 80.01 x 11.43 cm",
+    "packageGrossKg": 18.73,
     "material": "Iron",
+    "variants": "Color: Black（2000 Pcs With Drawer）",
     "brand": "HEBESPACE",
-    "parentAsin": "B0FSSBQ1YD",
-    "sourceUrl": "https://www.amazon.com/dp/B0FSSBQ1YD",
-    "amazonUrl": "https://www.amazon.com/dp/B0FSSBQ1YD",
+    "parentAsin": "B0GHYGMGDC",
+    "sourceUrl": "https://www.amazon.com/dp/B0F8NN9BWR",
+    "amazonUrl": "https://www.amazon.com/dp/B0F8NN9BWR",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 259,
+    "sourceRow": 264,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0FSSBQ1YD",
+      "sourceUrl": "https://www.amazon.com/dp/B0F8NN9BWR",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -81466,7 +79998,16 @@
       "类目待确认"
     ],
     "family": "Toys & Games:Puzzles:Puzzle Accessories",
-    "titleZh": "41.34英寸 拼图桌，带抽屉、带脚轮、高度可调"
+    "titleZh": "41.34英寸 拼图桌，带抽屉、带脚轮、高度可调",
+    "variantAsins": [
+      "B0F8NN9BWR",
+      "B0FSSBQ1YD"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0FSSBQ1YD",
+      "B0GHYGMGDC"
+    ]
   },
   {
     "asin": "B0D83Q97ST",
@@ -81632,62 +80173,6 @@
     ],
     "family": "Toys & Games:Puzzles:Puzzle Accessories",
     "titleZh": "35.43英寸 拼图桌，带抽屉、带脚轮、高度可调"
-  },
-  {
-    "asin": "B0F8NN9BWR",
-    "title": "2000 Pieces Jigsaw Puzzle Table with Drawers & Legs, 41.34\"x29.53\" Metal Adult Puzzle Table (Stability Tested & Ergonomic), Adjustable Height & Tilt Angle, Wooden Puzzle Board with Wheels & Cover",
-    "imageUrl": "https://m.media-amazon.com/images/I/71AeAIBvVKL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0F8NN9BWR",
-      "asin": "B0F8NN9BWR"
-    },
-    "category": "Toys & Games:Puzzles:Puzzle Accessories",
-    "price": 178,
-    "rating": 4.5,
-    "reviews": 90,
-    "bsr": 18707,
-    "subcategoryBsr": 64,
-    "launchDays": 417,
-    "dateFirstAvailable": "2025-05-30",
-    "salesGrowth": 0.0072,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=264",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "74.93 x 104.90 x 93.98 cm",
-    "weight": 38,
-    "packageDimensionsCm": "109.98 x 80.01 x 11.43 cm",
-    "packageGrossKg": 18.73,
-    "material": "Iron",
-    "variants": "Color: Black（2000 Pcs With Drawer）",
-    "brand": "HEBESPACE",
-    "parentAsin": "B0GHYGMGDC",
-    "sourceUrl": "https://www.amazon.com/dp/B0F8NN9BWR",
-    "amazonUrl": "https://www.amazon.com/dp/B0F8NN9BWR",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 264,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0F8NN9BWR",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "类目待确认"
-    ],
-    "family": "Toys & Games:Puzzles:Puzzle Accessories",
-    "titleZh": "41.34英寸 拼图桌，带抽屉、带脚轮、高度可调"
   },
   {
     "asin": "B0BPVTG25Y",
@@ -82171,7 +80656,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "玄关与鞋柜",
-    "titleZh": "Flat-Shelf 鞋柜，可调层板，适用于客厅、玄关"
+    "titleZh": "Flat-Shelf 鞋柜，可调层板，适用于客厅、玄关",
+    "variantAsins": [
+      "B0GSWK1W2F",
+      "B0G2K5DYV4"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8F6NHVR",
+      "B0H2WBPN9L"
+    ]
   },
   {
     "asin": "B0DJVTS5T3",
@@ -83523,7 +82017,16 @@
       "材质待确认"
     ],
     "family": "Home & Kitchen:Storage & Organization:Clothing & Closet Storage:Shoe Organizers:Free Standing Shoe Racks",
-    "titleZh": "Rotating 鞋架，适合家居与商业空间使用，适用于卧室，白色"
+    "titleZh": "Rotating 鞋架，适合家居与商业空间使用，适用于卧室，白色",
+    "variantAsins": [
+      "B0F83VRN4B",
+      "B0FR443V58"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H7RSTZTT",
+      "B0FR443V58"
+    ]
   },
   {
     "asin": "B0G4WC8VK7",
@@ -83955,60 +82458,6 @@
     "dataPendingReasons": [],
     "family": "Pet Supplies:Small Animals:Houses & Habitats:Cages",
     "titleZh": "HABUTWAY 小宠物笼，带脚轮，适用于沙龙"
-  },
-  {
-    "asin": "B0G2K5DYV4",
-    "title": "Flat-Shelf Shoe Cabinet with Doors，6-Tier Shoes Storage Cabinet with Adjustable Shelves，Wooden Shoe Rack Shoes Storage Organizer Cabinets for Entryway, Hallway, Living Room",
-    "imageUrl": "https://m.media-amazon.com/images/I/71lyCLWS1BL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0G2K5DYV4",
-      "asin": "B0G2K5DYV4"
-    },
-    "category": "Home & Kitchen:Storage & Organization:Clothing & Closet Storage:Shoe Organizers:Shoe Cabinets",
-    "price": 159.99,
-    "rating": 4.6,
-    "reviews": 34,
-    "bsr": 103186,
-    "subcategoryBsr": 76,
-    "launchDays": 243,
-    "dateFirstAvailable": "2025-11-20",
-    "salesGrowth": 3.3333,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=335",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "37.08 x 77.98 x 112.01 cm",
-    "weight": 60.85,
-    "packageDimensionsCm": "104.14 x 43.18 x 25.40 cm",
-    "packageGrossKg": 27.6,
-    "material": "Wood",
-    "variants": "Color: White-2door",
-    "brand": "Honsiva",
-    "parentAsin": "B0H2WBPN9L",
-    "sourceUrl": "https://www.amazon.com/dp/B0G2K5DYV4",
-    "amazonUrl": "https://www.amazon.com/dp/B0G2K5DYV4",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 335,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0G2K5DYV4",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "玄关与鞋柜",
-    "titleZh": "Flat-Shelf 鞋柜，可调层板，适用于客厅、玄关"
   },
   {
     "asin": "B0DDNQHC3V",
@@ -87313,61 +85762,6 @@
     "titleZh": "Homieasy 鞋柜，可调层板，适用于卧室、玄关，白色"
   },
   {
-    "asin": "B0FR443V58",
-    "title": "Rotating Shoe Rack 7 Tier Spinning Shoes Organizer Tower for 28-32 Pairs Lazy Susan 360 Revolving Shoe Storage Cabinet Rotate Shoe Handbag Rack Round Carousel for Closet, Bedroom (Black)",
-    "imageUrl": "https://m.media-amazon.com/images/I/61jHPwpJeDL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0FR443V58",
-      "asin": "B0FR443V58"
-    },
-    "category": "Home & Kitchen:Storage & Organization:Clothing & Closet Storage:Shoe Organizers:Free Standing Shoe Racks",
-    "price": 139.99,
-    "rating": 1,
-    "reviews": 2,
-    "bsr": 757683,
-    "subcategoryBsr": 910,
-    "launchDays": 124,
-    "dateFirstAvailable": "2026-03-19",
-    "salesGrowth": 0.0898,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=430",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "58.93 x 58.93 x 160.53 cm",
-    "weight": 43,
-    "packageDimensionsCm": "64.01 x 64.01 x 22.35 cm",
-    "packageGrossKg": 19.96,
-    "material": "Polyvinyl Chloride",
-    "brand": "BrFoYu",
-    "parentAsin": "B0FR443V58",
-    "sourceUrl": "https://www.amazon.com/dp/B0FR443V58",
-    "amazonUrl": "https://www.amazon.com/dp/B0FR443V58",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 430,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0FR443V58",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "材质待确认"
-    ],
-    "family": "Home & Kitchen:Storage & Organization:Clothing & Closet Storage:Shoe Organizers:Free Standing Shoe Racks",
-    "titleZh": "Rotating 鞋架，适合家居与商业空间使用，适用于卧室，黑色"
-  },
-  {
     "asin": "B0DW3PPWGD",
     "title": "IRONCK 51\" Large Corner Dog Crate Furniture with 2-Tier Storage Shelves | 10mm thickened iron frame. 2-tier shelves and 200 lb top. Space-saving design. 26.7\" L x 51.2\" W x 33.5\" H. Rustic Brown",
     "imageUrl": "https://m.media-amazon.com/images/I/512Ky6j0HKL._AC_US600_.jpg",
@@ -87472,7 +85866,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "宠物家具",
-    "titleZh": "Dog 家具式狗笼，防水、加固承重"
+    "titleZh": "Dog 家具式狗笼，防水、加固承重",
+    "variantAsins": [
+      "B0H2DXF4FC",
+      "B0H6HYQRS3"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H2DXF4FC",
+      "B0H6HYQRS3"
+    ]
   },
   {
     "asin": "B0F2N4H42X",
@@ -89743,59 +88146,6 @@
     ],
     "family": "厨房岛与隐藏垃圾柜",
     "titleZh": "Double 农舍风 隐藏垃圾桶柜，适合家居与商业空间使用，适用于厨房、洗衣房，灰色"
-  },
-  {
-    "asin": "B0H6HYQRS3",
-    "title": "Dog Crate Furniture 32in, Heavy Duty End Table with Perforated Steel Chew-Proof Panels, Escape-Proof Indoor Dog Kennel for Medium Dogs (25-40 lbs) Waterproof & Scratch-Resistant",
-    "imageUrl": "https://m.media-amazon.com/images/I/81xa3qbD9GL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H6HYQRS3",
-      "asin": "B0H6HYQRS3"
-    },
-    "category": "Pet Supplies:Dogs:Crates, Houses & Pens:Crates:Furniture-Style Crates",
-    "price": 139.99,
-    "rating": 4.5,
-    "reviews": 9,
-    "bsr": 154672,
-    "subcategoryBsr": 455,
-    "launchDays": 25,
-    "dateFirstAvailable": "2026-06-26",
-    "salesGrowth": 1.678,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=511",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "82.30 x 58.93 x 67.31 cm",
-    "weight": 44.4,
-    "packageDimensionsCm": "89.92 x 70.87 x 14.48 cm",
-    "packageGrossKg": 20.14,
-    "material": "Engineered Wood",
-    "brand": "Ironovacage",
-    "parentAsin": "B0H6HYQRS3",
-    "sourceUrl": "https://www.amazon.com/dp/B0H6HYQRS3",
-    "amazonUrl": "https://www.amazon.com/dp/B0H6HYQRS3",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 511,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H6HYQRS3",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "B",
-    "track": "blue-ocean-red",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "宠物家具",
-    "titleZh": "Dog 家具式狗笼，防水、加固承重"
   },
   {
     "asin": "B0F32NFSW6",
@@ -95017,7 +93367,16 @@
       "类目待确认"
     ],
     "family": "爬宠箱与爬宠家具",
-    "titleZh": "Bearded 16英寸 爬宠箱，滑动柜门，黑色"
+    "titleZh": "Bearded 16英寸 爬宠箱，滑动柜门，黑色",
+    "variantAsins": [
+      "B0FLJC2Q4B",
+      "B0FLJM683J"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8N29J48",
+      "B0FLJM683J"
+    ]
   },
   {
     "asin": "B0FLJVRW7Z",
@@ -97331,61 +95690,6 @@
     "dataPendingReasons": [],
     "family": "玄关与鞋柜",
     "titleZh": "Unikito 鞋柜，适合家居与商业空间使用，适用于客厅、卧室、玄关，白色"
-  },
-  {
-    "asin": "B0FLJM683J",
-    "title": "Bearded Dragon Tank 60 Gallon, 40 x 20 x 20 Inch Wooden Reptile Enclosure with Metal Mesh Top, Clear Acrylic Sliding Doors and Lock, Large Lizard and Snake Tank, Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/71fUTNcb-vL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0FLJM683J",
-      "asin": "B0FLJM683J"
-    },
-    "category": "Pet Supplies:Reptiles & Amphibians:Terrariums",
-    "price": 159.99,
-    "rating": 3.8,
-    "reviews": 14,
-    "bsr": 113391,
-    "subcategoryBsr": 508,
-    "launchDays": 294,
-    "dateFirstAvailable": "2025-09-30",
-    "salesGrowth": 0.131,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=759",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "107.95 x 57.15 x 15.24 cm",
-    "weight": 27.85,
-    "packageDimensionsCm": "107.95 x 57.15 x 15.24 cm",
-    "packageGrossKg": 12.63,
-    "material": "Acrylic, Wood",
-    "brand": "PROLEE",
-    "parentAsin": "B0FLJM683J",
-    "sourceUrl": "https://www.amazon.com/dp/B0FLJM683J",
-    "amazonUrl": "https://www.amazon.com/dp/B0FLJM683J",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 759,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0FLJM683J",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "blue-ocean-red",
-    "dataStatus": "needs_data",
-    "dataPendingReasons": [
-      "类目待确认"
-    ],
-    "family": "爬宠箱与爬宠家具",
-    "titleZh": "Bearded 20英寸 爬宠箱，滑动柜门，黑色"
   },
   {
     "asin": "B0DS5V67BW",
@@ -106598,7 +104902,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "宠物家具",
-    "titleZh": "LEMBERI 44英寸 家具式狗笼，适合家居与商业空间使用"
+    "titleZh": "LEMBERI 44英寸 家具式狗笼，适合家居与商业空间使用",
+    "variantAsins": [
+      "B0D7HP7CNJ",
+      "B0GF1GRHV6"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H97P95DT",
+      "B0H98CJR6X"
+    ]
   },
   {
     "asin": "B08YMHP7TY",
@@ -107193,60 +105506,6 @@
     "dataPendingReasons": [],
     "family": "玄关与鞋柜",
     "titleZh": "Foldable 鞋柜，可折叠，适用于玄关"
-  },
-  {
-    "asin": "B0GF1GRHV6",
-    "title": "LEMBERI 44 Inch Large Dog Crate Furniture with 2 Storage Drawers, Wooden Dog Kennel Furniture as End Table, Decorative Pet Cage Dog House Indoor for Dogs, Grey",
-    "imageUrl": "https://m.media-amazon.com/images/I/81YSBYyfNXL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GF1GRHV6",
-      "asin": "B0GF1GRHV6"
-    },
-    "category": "Pet Supplies:Dogs:Crates, Houses & Pens:Crates:Furniture-Style Crates",
-    "price": 179.99,
-    "rating": 4.3,
-    "reviews": 6,
-    "bsr": 88188,
-    "subcategoryBsr": 262,
-    "launchDays": 195,
-    "dateFirstAvailable": "2026-01-07",
-    "salesGrowth": -0.3736,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1108",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "113.03 x 59.94 x 87.63 cm",
-    "weight": 105.6,
-    "packageDimensionsCm": "129.03 x 68.07 x 17.53 cm",
-    "packageGrossKg": 47.9,
-    "material": "Engineered Wood, Metal",
-    "variants": "Color: Grey | Number of Items: 1",
-    "brand": "LEMBERI",
-    "parentAsin": "B0H98CJR6X",
-    "sourceUrl": "https://www.amazon.com/dp/B0GF1GRHV6",
-    "amazonUrl": "https://www.amazon.com/dp/B0GF1GRHV6",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1108,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GF1GRHV6",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "blue-ocean-red",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "宠物家具",
-    "titleZh": "LEMBERI 44英寸 家具式狗笼，适合家居与商业空间使用，灰色"
   },
   {
     "asin": "B0DX6BKQK5",
@@ -112858,7 +111117,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "Pet Supplies:Cats:Beds & Furniture:Trees",
-    "titleZh": "Tinnmao 75英寸 现代 猫爬架，高度可调、带猫抓板"
+    "titleZh": "Tinnmao 75英寸 现代 猫爬架，高度可调、带猫抓板",
+    "variantAsins": [
+      "B0FJLBP8LW",
+      "B0FJLV2F4T"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H7RR5F79",
+      "B0FJLV2F4T"
+    ]
   },
   {
     "asin": "B0H4679VF1",
@@ -115998,59 +114266,6 @@
     "titleZh": "鞋柜，带脚轮、可折叠，适用于客厅、玄关，白色"
   },
   {
-    "asin": "B0FJLV2F4T",
-    "title": "Tinnmao Solid Real Wood Floor to Ceiling Cat Tree, 7 Level Adjustable Height (105\"-122\"), Modern Climbing Tower with Thickened Wooden Sisal Scratching Posts & Cozy Bed for Indoor Cats Large Adult",
-    "imageUrl": "https://m.media-amazon.com/images/I/61fTnB4OwlL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0FJLV2F4T",
-      "asin": "B0FJLV2F4T"
-    },
-    "category": "Pet Supplies:Cats:Beds & Furniture:Trees",
-    "price": 189.99,
-    "rating": 3.8,
-    "reviews": 4,
-    "bsr": 84693,
-    "subcategoryBsr": 675,
-    "launchDays": 301,
-    "dateFirstAvailable": "2025-09-23",
-    "salesGrowth": 0.1129,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1445",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "29.97 x 29.97 x 310.13 cm",
-    "weight": 47.9,
-    "packageDimensionsCm": "48.51 x 45.47 x 40.64 cm",
-    "packageGrossKg": 21.73,
-    "material": "Cotton Blend, Faux Fur, Jute, Pine Wood, Wood",
-    "brand": "tinnmao",
-    "parentAsin": "B0FJLV2F4T",
-    "sourceUrl": "https://www.amazon.com/dp/B0FJLV2F4T",
-    "amazonUrl": "https://www.amazon.com/dp/B0FJLV2F4T",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1445,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0FJLV2F4T",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "Pet Supplies:Cats:Beds & Furniture:Trees",
-    "titleZh": "Tinnmao 105英寸 现代 猫爬架，高度可调、带猫抓板"
-  },
-  {
     "asin": "B0DZ5ZCDV6",
     "title": "ELPHECO 9 Tier 36 Pairs Large Shoe Rack Organizer - Foldable Sneaker Cabinet Bins, Stackable Shoe Storage Shelf, Collapsible Shoe Cabinet with Double Doors for Entryway",
     "imageUrl": "https://m.media-amazon.com/images/I/818QHmTqXGL._AC_US600_.jpg",
@@ -118189,49 +116404,49 @@
     "titleZh": "Rev-A-Shelf 32英寸 旋转收纳盘，适合家居与商业空间使用，适用于厨房"
   },
   {
-    "asin": "B00V98JA4O",
-    "title": "Rev-A-Shelf 35 Qt Top Mount Double Pullout Under Cabinet Kitchen Trash Cans for Base Cabinets, 150 Pound Rated Full-Extension Slides, Min Opening Width of 14.75\", White, 4WCTM-18DM2-162",
-    "imageUrl": "https://m.media-amazon.com/images/I/313LROmqvBL._SX600_SY600_CR,0,0,600,600_.jpg",
+    "asin": "B00KQL8JSS",
+    "title": "Rev-A-Shelf 35 Qt Top Mount Double Pullout Under Cabinet Kitchen Trash Cans for Base Cabinets, 150 Pound Rated Full-Extension Slides, Min Opening Width of 14.5\", White, 4WCTM-18DM2-175",
+    "imageUrl": "https://m.media-amazon.com/images/I/317g9FT6LKL._SX600_SY600_CR,0,0,600,600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B00V98JA4O",
-      "asin": "B00V98JA4O"
+      "sourceUrl": "https://www.amazon.com/dp/B00KQL8JSS",
+      "asin": "B00KQL8JSS"
     },
     "category": "Home & Kitchen:Storage & Organization:Trash, Recycling & Compost:Kitchen Trash Cans",
-    "price": 176.99,
-    "rating": 4.5,
-    "reviews": 125,
-    "bsr": 240245,
-    "subcategoryBsr": 606,
-    "launchDays": 3542,
-    "dateFirstAvailable": "2016-11-08",
-    "salesGrowth": -0.175,
+    "price": 180.99,
+    "rating": 4.6,
+    "reviews": 137,
+    "bsr": 478609,
+    "subcategoryBsr": 1047,
+    "launchDays": 4057,
+    "dateFirstAvailable": "2015-06-12",
+    "salesGrowth": -0.1667,
     "monthlySalesEstimate": {
       "min": 50,
       "max": 99,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1526",
+      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1575",
       "confidence": "third-party-estimate"
     },
-    "dimensions": "57.78 x 37.47 x 45.42 cm",
-    "weight": 15.1,
-    "packageDimensionsCm": "58.67 x 40.89 x 35.56 cm",
-    "packageGrossKg": 8.19,
-    "material": "Wood",
-    "variants": "Size: 14.75\" Minimum Cabinet Opening | Style: 35 QT",
+    "dimensions": "56.52 x 36.83 x 45.42 cm",
+    "weight": 16.5,
+    "packageDimensionsCm": "58.42 x 40.64 x 36.83 cm",
+    "packageGrossKg": 8.1,
+    "material": "Plastic",
+    "variants": "Size: 14.5\" W Double",
     "brand": "Rev-A-Shelf",
-    "parentAsin": "B0H2WW9ZGM",
-    "sourceUrl": "https://www.amazon.com/dp/B00V98JA4O",
-    "amazonUrl": "https://www.amazon.com/dp/B00V98JA4O",
+    "parentAsin": "B0GYP9FFB5",
+    "sourceUrl": "https://www.amazon.com/dp/B00KQL8JSS",
+    "amazonUrl": "https://www.amazon.com/dp/B00KQL8JSS",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1526,
+    "sourceRow": 1575,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B00V98JA4O",
+      "sourceUrl": "https://www.amazon.com/dp/B00KQL8JSS",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
@@ -118240,7 +116455,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "厨房岛与隐藏垃圾柜",
-    "titleZh": "Rev-A-Shelf 14.75英寸 置物架，适合家居与商业空间使用，适用于厨房，白色"
+    "titleZh": "Rev-A-Shelf 14.5英寸 置物架，适合家居与商业空间使用，适用于厨房，白色",
+    "variantAsins": [
+      "B00KQL8JSS",
+      "B00V98JA4O"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H2WW9ZGM",
+      "B0GYP9FFB5"
+    ]
   },
   {
     "asin": "B0H1R2QWQ3",
@@ -119150,60 +117374,6 @@
     "dataPendingReasons": [],
     "family": "Pet Supplies:Cats:Beds & Furniture:Trees",
     "titleZh": "PETSITE 68.5英寸 现代 猫爬架，带猫抓板"
-  },
-  {
-    "asin": "B00KQL8JSS",
-    "title": "Rev-A-Shelf 35 Qt Top Mount Double Pullout Under Cabinet Kitchen Trash Cans for Base Cabinets, 150 Pound Rated Full-Extension Slides, Min Opening Width of 14.5\", White, 4WCTM-18DM2-175",
-    "imageUrl": "https://m.media-amazon.com/images/I/317g9FT6LKL._SX600_SY600_CR,0,0,600,600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B00KQL8JSS",
-      "asin": "B00KQL8JSS"
-    },
-    "category": "Home & Kitchen:Storage & Organization:Trash, Recycling & Compost:Kitchen Trash Cans",
-    "price": 180.99,
-    "rating": 4.6,
-    "reviews": 137,
-    "bsr": 478609,
-    "subcategoryBsr": 1047,
-    "launchDays": 4057,
-    "dateFirstAvailable": "2015-06-12",
-    "salesGrowth": -0.1667,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1575",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "56.52 x 36.83 x 45.42 cm",
-    "weight": 16.5,
-    "packageDimensionsCm": "58.42 x 40.64 x 36.83 cm",
-    "packageGrossKg": 8.1,
-    "material": "Plastic",
-    "variants": "Size: 14.5\" W Double",
-    "brand": "Rev-A-Shelf",
-    "parentAsin": "B0GYP9FFB5",
-    "sourceUrl": "https://www.amazon.com/dp/B00KQL8JSS",
-    "amazonUrl": "https://www.amazon.com/dp/B00KQL8JSS",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1575,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B00KQL8JSS",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "unmatched",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "厨房岛与隐藏垃圾柜",
-    "titleZh": "Rev-A-Shelf 14.5英寸 置物架，适合家居与商业空间使用，适用于厨房，白色"
   },
   {
     "asin": "B0GRBY152D",
@@ -120597,7 +118767,16 @@
     "dataStatus": "complete",
     "dataPendingReasons": [],
     "family": "宠物家具",
-    "titleZh": "41英寸 家具式狗笼，加固承重，胡桃木色"
+    "titleZh": "41英寸 家具式狗笼，加固承重，胡桃木色",
+    "variantAsins": [
+      "B0FKGMMSWN",
+      "B0FKGSJYFT"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8F2STS3",
+      "B0FKGRQ9LM"
+    ]
   },
   {
     "asin": "B0DY1H76QW",
@@ -122534,60 +120713,6 @@
     ],
     "family": "Home & Kitchen:Storage & Organization:Baskets, Bins & Containers:Storage Boxes",
     "titleZh": "4英寸 收纳箱，适合家居与商业空间使用"
-  },
-  {
-    "asin": "B0FKGSJYFT",
-    "title": "46'' Dog Crate Furniture Large Breed Dog Crate Dog Kennels for Inside Wooden Dog Crates End Table Heavy Duty Indoor Combination Cage for Medium to Large Dogs Walnut",
-    "imageUrl": "https://m.media-amazon.com/images/I/91P76O4dNmL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0FKGSJYFT",
-      "asin": "B0FKGSJYFT"
-    },
-    "category": "Pet Supplies:Dogs:Crates, Houses & Pens:Crates:Furniture-Style Crates",
-    "price": 249.99,
-    "rating": 3.9,
-    "reviews": 5,
-    "bsr": 202922,
-    "subcategoryBsr": 168,
-    "launchDays": 245,
-    "dateFirstAvailable": "2025-11-18",
-    "salesGrowth": 0.137,
-    "monthlySalesEstimate": {
-      "min": 1,
-      "max": 49,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1740",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "116.59 x 70.10 x 82.30 cm",
-    "weight": 20,
-    "packageDimensionsCm": "127.00 x 83.82 x 15.24 cm",
-    "packageGrossKg": 31.03,
-    "material": "Ecological wood, Metal",
-    "variants": "Size: 46.1\"L x 28.7\"W x 31.9\"H | Color: Walnut",
-    "brand": "CABZOON",
-    "parentAsin": "B0FKGRQ9LM",
-    "sourceUrl": "https://www.amazon.com/dp/B0FKGSJYFT",
-    "amazonUrl": "https://www.amazon.com/dp/B0FKGSJYFT",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1740,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0FKGSJYFT",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "C",
-    "track": "blue-ocean-red",
-    "dataStatus": "complete",
-    "dataPendingReasons": [],
-    "family": "宠物家具",
-    "titleZh": "家具式狗笼，加固承重，胡桃木色"
   },
   {
     "asin": "B0H5R5B6V4",
@@ -125228,7 +123353,16 @@
       "decision": "restored-formal-pool"
     },
     "restoredFromTrashAt": "2026-07-23T03:11:39.654Z",
-    "restoredFromTrashReason": "Legacy solid-wood keyword evidence did not meet the whole-product material threshold."
+    "restoredFromTrashReason": "Legacy solid-wood keyword evidence did not meet the whole-product material threshold.",
+    "variantAsins": [
+      "B0GRYJ86MB",
+      "B0GYNTRG6Q"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H7RVMWQQ",
+      "B0H3P3RRBC"
+    ]
   },
   {
     "asin": "B0GZCNKS4N",
@@ -127704,66 +125838,16 @@
       "decision": "restored-formal-pool"
     },
     "restoredFromTrashAt": "2026-07-23T03:11:39.654Z",
-    "restoredFromTrashReason": "Legacy solid-wood keyword evidence did not meet the whole-product material threshold."
-  },
-  {
-    "asin": "B0GYDGT13S",
-    "title": "King Size Bed Frame with Tall Headboard, Mid Century Modern Wood Platform Bed with Charging Ports and LED Lights, Solid Wood Slat Support, No Box Spring Needed, Easy Assembly, Warm Brown",
-    "imageUrl": "https://m.media-amazon.com/images/I/51eLyqpKCEL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GYDGT13S",
-      "asin": "B0GYDGT13S"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 429.99,
-    "rating": 3.9,
-    "reviews": 12,
-    "bsr": 513244,
-    "subcategoryBsr": 2307,
-    "launchDays": 82,
-    "dateFirstAvailable": "2026-04-30",
-    "salesGrowth": 1.3095,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=823",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "216.99 x 201.93 x 108.97 cm",
-    "weight": 111.3,
-    "packageDimensionsCm": "212.09 x 52.07 x 14.99 cm",
-    "packageGrossKg": 53,
-    "material": "Metal, Wood",
-    "brand": "Uteeran",
-    "parentAsin": "B0GYDGT13S",
-    "sourceUrl": "https://www.amazon.com/dp/B0GYDGT13S",
-    "amazonUrl": "https://www.amazon.com/dp/B0GYDGT13S",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 823,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GYDGT13S",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "titleZh": "中世纪现代风 床架，带LED灯、无需弹簧床垫，棕色",
-    "materialReview": {
-      "reviewedAt": "2026-07-23T03:11:39.654Z",
-      "trigger": "legacy-solid-wood-keyword-rule",
-      "evidenceStatus": "local-component",
-      "evidenceReason": "仅确认局部实木或混合材质，不能判定整件纯实木",
-      "amazonDetailVerification": "pending-access-retry",
-      "evidenceScope": "SellerSprite import record fields and canonical Amazon URL; no current Amazon detail-page confirmation",
-      "decision": "restored-formal-pool"
-    },
-    "restoredFromTrashAt": "2026-07-23T03:11:39.654Z",
-    "restoredFromTrashReason": "Legacy solid-wood keyword evidence did not meet the whole-product material threshold."
+    "restoredFromTrashReason": "Legacy solid-wood keyword evidence did not meet the whole-product material threshold.",
+    "variantAsins": [
+      "B0GYDJ3CDS",
+      "B0GYDGT13S"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GYDJ3CDS",
+      "B0GYDGT13S"
+    ]
   },
   {
     "asin": "B0GR5LTJV9",
@@ -131681,66 +129765,6 @@
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "titleZh": "玄关桌，带抽屉，适用于客厅、玄关",
-    "materialReview": {
-      "reviewedAt": "2026-07-23T03:11:39.654Z",
-      "trigger": "legacy-solid-wood-keyword-rule",
-      "evidenceStatus": "ambiguous",
-      "evidenceReason": "只有营销标题或泛化木材名称，尚不能确认整件纯实木",
-      "amazonDetailVerification": "pending-access-retry",
-      "evidenceScope": "SellerSprite import record fields and canonical Amazon URL; no current Amazon detail-page confirmation",
-      "decision": "restored-formal-pool"
-    },
-    "restoredFromTrashAt": "2026-07-23T03:11:39.654Z",
-    "restoredFromTrashReason": "Legacy solid-wood keyword evidence did not meet the whole-product material threshold."
-  },
-  {
-    "asin": "B0GYNTRG6Q",
-    "title": "AMERLIFE King Bed Frame, Solid Wood Platform Bed with Vertical Slats Headboard, Wooden Bedframe King-Size, Sturdy Wooden Slats Support, No Box Spring Needed, Noise Free, Walnut",
-    "imageUrl": "https://m.media-amazon.com/images/I/81gQZ1YRt2L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GYNTRG6Q",
-      "asin": "B0GYNTRG6Q"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Beds, Frames & Bases:Bed Frames",
-    "price": 269.99,
-    "rating": 4.2,
-    "reviews": 10,
-    "bsr": 270632,
-    "subcategoryBsr": 1175,
-    "launchDays": 83,
-    "dateFirstAvailable": "2026-04-29",
-    "salesGrowth": -0.3226,
-    "monthlySalesEstimate": {
-      "min": 1,
-      "max": 49,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1575",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "210.57 x 195.07 x 116.59 cm",
-    "weight": 75.8,
-    "packageDimensionsCm": "202.44 x 66.55 x 13.46 cm",
-    "packageGrossKg": 68.08,
-    "material": "Pine Wood",
-    "variants": "Color: Walnut | Size: King",
-    "brand": "AMERLIFE",
-    "parentAsin": "B0H3P3RRBC",
-    "sourceUrl": "https://www.amazon.com/dp/B0GYNTRG6Q",
-    "amazonUrl": "https://www.amazon.com/dp/B0GYNTRG6Q",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1575,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GYNTRG6Q",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "titleZh": "AMERLIFE 床架，无需弹簧床垫，胡桃木色",
     "materialReview": {
       "reviewedAt": "2026-07-23T03:11:39.654Z",
       "trigger": "legacy-solid-wood-keyword-rule",

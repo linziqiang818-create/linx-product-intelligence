@@ -18,7 +18,8 @@
     "grade": "D",
     "rejectionReason": "Confirmed standardized metal-frame equipment rack, triggering the unsupported standardized metal product hard rule.",
     "observedAt": "2026-07-20T19:07:00+08:00",
-    "movedToTrashAt": "2026-07-20T19:07:00+08:00"
+    "movedToTrashAt": "2026-07-20T19:07:00+08:00",
+    "parentAsin": "B0DSW9NXM6"
   },
   {
     "asin": "B08KXSBJQJ",
@@ -38,7 +39,8 @@
       "observedAt": "2026-07-16T09:10:00+08:00",
       "confidence": "medium"
     },
-    "titleZh": "Sewing 缝纫工作台，可调层板、可上锁、带脚轮、可折叠，棕色"
+    "titleZh": "Sewing 缝纫工作台，可调层板、可上锁、带脚轮、可折叠，棕色",
+    "parentAsin": "B08KXSBJQJ"
   },
   {
     "asin": "B08Z3R5DGX",
@@ -58,7 +60,8 @@
       "observedAt": "2026-07-16T09:10:00+08:00",
       "confidence": "medium"
     },
-    "titleZh": "HOMFY 缝纫工作台，可上锁、带脚轮、可折叠，棕色"
+    "titleZh": "HOMFY 缝纫工作台，可上锁、带脚轮、可折叠，棕色",
+    "parentAsin": "B08Z3R5DGX"
   },
   {
     "asin": "B0C6THJH5X",
@@ -83,7 +86,8 @@
       "kind": "public-product-manual-image",
       "sourceUrl": "https://manuals.plus/ae/1005006953106738",
       "asin": "B0C6THJH5X"
-    }
+    },
+    "parentAsin": "B0C6THJH5X"
   },
   {
     "asin": "B0BHVNLJXG",
@@ -102,7 +106,8 @@
       "observedAt": "2026-07-16T09:12:00+08:00",
       "confidence": "medium"
     },
-    "titleZh": "USIKEY 桌类家具，带充电站、带LED灯，白色"
+    "titleZh": "USIKEY 桌类家具，带充电站、带LED灯，白色",
+    "parentAsin": "B0BHVNLJXG"
   },
   {
     "asin": "B0C7FXVDK3",
@@ -121,7 +126,8 @@
       "observedAt": "2026-07-16T09:12:00+08:00",
       "confidence": "medium"
     },
-    "titleZh": "SMOOL 47英寸 办公桌，带电源插座，白色"
+    "titleZh": "SMOOL 47英寸 办公桌，带电源插座，白色",
+    "parentAsin": "B0C7FXVDK3"
   },
   {
     "asin": "B0DF2G92HC",
@@ -147,7 +153,8 @@
       "kind": "public-ranking-product-image",
       "sourceUrl": "https://www.asinsight.com/report/US/bookshelf-arched",
       "asin": "B0DF2G92HC"
-    }
+    },
+    "parentAsin": "B0DF2G92HC"
   },
   {
     "asin": "B0D9JF83XV",
@@ -227,7 +234,8 @@
       "kind": "public-price-history-product-image",
       "sourceUrl": "https://pricehistory.app/p/55-75-gallon-aquarium-stand-power-outlet-bVQitDSj",
       "asin": "B0GCYDV9V8"
-    }
+    },
+    "parentAsin": "B0GCYDV9V8"
   },
   {
     "asin": "B0DD664BYP",
@@ -252,7 +260,8 @@
       "kind": "public-review-product-image",
       "sourceUrl": "https://www.testmarket.io/proview/tables/multifunctional-sensory-table-with-2-chairs-paper-roll-wooden-sand-and-water-activity-table-with-double-sided-board-foldable-storage-bins-for-kids-indoor-and-outdoor-play/12524",
       "asin": "B0DD664BYP"
-    }
+    },
+    "parentAsin": "B0DD664BYP"
   },
   {
     "asin": "B0D77FZXG2",
@@ -279,7 +288,8 @@
       "sourceUrl": "https://uspto.report/TM/99172138/APP20250506170449/8.pdf",
       "asin": "B0D77FZXG2",
       "relatedAsin": "B0DMT47JKY"
-    }
+    },
+    "parentAsin": "B0D77FZXG2"
   },
   {
     "asin": "B0D28GBK64",
@@ -305,7 +315,8 @@
       "kind": "public-price-history-product-image",
       "sourceUrl": "https://pricehistory.app/p/record-player-stand-vinyl-record-cabinet-power-WDKv0wce",
       "asin": "B0D28GBK64"
-    }
+    },
+    "parentAsin": "B0D28GBK64"
   },
   {
     "asin": "B0GVJQW75K",
@@ -4624,55 +4635,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "玻璃或镜面产品不在当前开发范围；板式家具材质信息不足或不明确",
-    "titleZh": "67英寸 书架，玻璃柜门，黑色"
-  },
-  {
-    "asin": "B0GKNC1NWX",
-    "title": "67\" Display Cabinet with Glass Doors, 4-Tier Curio Cabinet with Many Color Lights for Collectibles, Glass Display Case, Bookcase with 4 Shelves, Storage Cabinets, White",
-    "imageUrl": "https://m.media-amazon.com/images/I/51SBeGRlNPL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GKNC1NWX",
-      "asin": "B0GKNC1NWX"
-    },
-    "category": "Home & Kitchen:Furniture:Dining Room Furniture:Glass Display Cabinets",
-    "price": 179.99,
-    "rating": 4.2,
-    "reviews": 31,
-    "bsr": 182055,
-    "subcategoryBsr": 34,
-    "launchDays": 163,
-    "dateFirstAvailable": "2026-02-08",
-    "salesGrowth": 0.9836,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=509",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 80.01 x 170.18 cm",
-    "weight": 94,
-    "material": "Metal",
-    "brand": "baoliwo",
-    "parentAsin": "B0GKNC1NWX",
-    "sourceUrl": "https://www.amazon.com/dp/B0GKNC1NWX",
-    "amazonUrl": "https://www.amazon.com/dp/B0GKNC1NWX",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 509,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GKNC1NWX",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "玻璃或镜面产品不在当前开发范围；板式家具材质信息不足或不明确",
-    "titleZh": "67英寸 书架，玻璃柜门，白色"
+    "titleZh": "67英寸 书架，玻璃柜门，黑色",
+    "variantAsins": [
+      "B0GKNRZCCT",
+      "B0GKNC1NWX"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GKNRZCCT",
+      "B0GKNC1NWX"
+    ]
   },
   {
     "asin": "B0GN2RLRM7",
@@ -9284,7 +9256,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "玻璃或镜面产品不在当前开发范围",
-    "titleZh": "现代 办公桌，带充电站，黑色"
+    "titleZh": "现代 办公桌，带充电站，黑色",
+    "variantAsins": [
+      "B0FG7DTHW8",
+      "B0GY36BR4J"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0FG7DTHW8",
+      "B0GY36BR4J"
+    ]
   },
   {
     "asin": "B0GZ2XFW3S",
@@ -11800,56 +11781,6 @@
     "grade": "D",
     "rejectionReason": "沙发类纯软包产品不匹配现有板式家具供应链；板式家具材质信息不足或不明确；数据待补：缺少包装尺寸、材质待确认，补齐前不进入推荐榜",
     "titleZh": "Faux 座椅，适合家居与商业空间使用，适用于客厅，黑色"
-  },
-  {
-    "asin": "B0GY36BR4J",
-    "title": "Large Vanity Desk with 3 Color Touch Screen Dimming Mirror, Vanity Desk with Charging Station, Modern Retractable Makeup Dressing Table, Makeup Table With storage shelves and 5 Sliding Drawers, Brown",
-    "imageUrl": "https://m.media-amazon.com/images/I/81lPLUO75kL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GY36BR4J",
-      "asin": "B0GY36BR4J"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Vanities & Vanity Benches",
-    "price": 189.99,
-    "rating": 3.6,
-    "reviews": 5,
-    "bsr": 1611969,
-    "subcategoryBsr": 1692,
-    "launchDays": 36,
-    "dateFirstAvailable": "2026-06-15",
-    "salesGrowth": 0,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1433",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 90.17 x 139.95 cm",
-    "weight": 52,
-    "packageDimensionsCm": "88.90 x 54.61 x 26.67 cm",
-    "packageGrossKg": 36.74,
-    "material": "Engineered Wood",
-    "brand": "Ieejdn",
-    "parentAsin": "B0GY36BR4J",
-    "sourceUrl": "https://www.amazon.com/dp/B0GY36BR4J",
-    "amazonUrl": "https://www.amazon.com/dp/B0GY36BR4J",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1433,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GY36BR4J",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "玻璃或镜面产品不在当前开发范围",
-    "titleZh": "现代 办公桌，带充电站，棕色"
   },
   {
     "asin": "B0GXDBQVPN",
@@ -17623,7 +17554,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；板式家具材质信息不足或不明确",
-    "titleZh": "Vari 桌类家具，适合家居与商业空间使用，适用于办公室、沙龙，黑色"
+    "titleZh": "Vari 桌类家具，适合家居与商业空间使用，适用于办公室、沙龙，黑色",
+    "variantAsins": [
+      "B00JI6NCCK",
+      "B00UVHTGJ8"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0FV13CLWN",
+      "B0FZM5LS7R"
+    ]
   },
   {
     "asin": "B0CLJKHG9G",
@@ -20099,51 +20039,60 @@
     "titleZh": "Fancyango 42.8英寸 狗屋，适合家居与商业空间使用，灰色"
   },
   {
-    "asin": "B0H38DF5RL",
-    "title": "2-Drawer Farmhouse File Cabinet with Lock, Lateral Filing Cabinet for Letter/Legal/A4 Size, Wood File Storage Cabinets Printer Stand with Large Storage for Home Office School, Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/61is43hWdiL._AC_US600_.jpg",
+    "asin": "B0H38C25B7",
+    "title": "2 Drawer Farmhouse File Cabinet with Lock, Lateral Filing Cabinet for Letter/Legal/A4 Size, Wood File Storage Cabinets Printer Stand with Large Storage for Home Office School, White",
+    "imageUrl": "https://m.media-amazon.com/images/I/31-rdhwmWZL._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H38DF5RL",
-      "asin": "B0H38DF5RL"
+      "sourceUrl": "https://www.amazon.com/dp/B0H38C25B7",
+      "asin": "B0H38C25B7"
     },
-    "category": "Office Products:Office Furniture & Lighting:Cabinets, Racks & Shelves:File Cabinets:Lateral File Cabinets",
+    "category": "Office Products:Office Furniture & Lighting:Cabinets, Racks & Shelves:File Cabinets:Mobile File Cabinets",
     "price": 124.99,
     "rating": 4,
-    "reviews": 174,
-    "bsr": 15076,
-    "subcategoryBsr": 164,
-    "launchDays": 37,
-    "dateFirstAvailable": "2026-06-14",
+    "reviews": 177,
+    "bsr": 119884,
+    "subcategoryBsr": 93,
+    "launchDays": 38,
+    "dateFirstAvailable": "2026-06-13",
     "salesGrowth": 0.9547,
     "monthlySalesEstimate": {
       "min": 200,
       "max": 499,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=236",
+      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=263",
       "confidence": "third-party-estimate"
     },
-    "dimensions": "39.88 x 71.88 x 71.12 cm",
+    "dimensions": "39.98 x 72.01 x 70.99 cm",
     "material": "Alloy Steel",
     "brand": "LISSIMO",
-    "parentAsin": "B0H38DF5RL",
-    "sourceUrl": "https://www.amazon.com/dp/B0H38DF5RL",
-    "amazonUrl": "https://www.amazon.com/dp/B0H38DF5RL",
+    "parentAsin": "B0H38C25B7",
+    "sourceUrl": "https://www.amazon.com/dp/B0H38C25B7",
+    "amazonUrl": "https://www.amazon.com/dp/B0H38C25B7",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 236,
+    "sourceRow": 263,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H38DF5RL",
+      "sourceUrl": "https://www.amazon.com/dp/B0H38C25B7",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确；数据待补：缺少包装重量，补齐前不进入推荐榜",
-    "titleZh": "农舍风 储物柜，可上锁，适用于办公室，黑色"
+    "titleZh": "农舍风 储物柜，可上锁，适用于办公室，白色",
+    "variantAsins": [
+      "B0H38C25B7",
+      "B0H38DF5RL"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H38DF5RL",
+      "B0H38C25B7"
+    ]
   },
   {
     "asin": "B0FW38MQQF",
@@ -20950,53 +20899,6 @@
     "titleZh": "62英寸 小宠物笼，带脚轮、防水，灰色"
   },
   {
-    "asin": "B0H38C25B7",
-    "title": "2 Drawer Farmhouse File Cabinet with Lock, Lateral Filing Cabinet for Letter/Legal/A4 Size, Wood File Storage Cabinets Printer Stand with Large Storage for Home Office School, White",
-    "imageUrl": "https://m.media-amazon.com/images/I/31-rdhwmWZL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0H38C25B7",
-      "asin": "B0H38C25B7"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Cabinets, Racks & Shelves:File Cabinets:Mobile File Cabinets",
-    "price": 124.99,
-    "rating": 4,
-    "reviews": 177,
-    "bsr": 119884,
-    "subcategoryBsr": 93,
-    "launchDays": 38,
-    "dateFirstAvailable": "2026-06-13",
-    "salesGrowth": 0.9547,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=263",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.98 x 72.01 x 70.99 cm",
-    "material": "Alloy Steel",
-    "brand": "LISSIMO",
-    "parentAsin": "B0H38C25B7",
-    "sourceUrl": "https://www.amazon.com/dp/B0H38C25B7",
-    "amazonUrl": "https://www.amazon.com/dp/B0H38C25B7",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 263,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0H38C25B7",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确；数据待补：缺少包装重量，补齐前不进入推荐榜",
-    "titleZh": "农舍风 储物柜，可上锁，适用于办公室，白色"
-  },
-  {
     "asin": "B0DQXP4797",
     "title": "KINYING Outdoor Storage Cabinet Waterproof, Resin 62 Gallon Storage Box for Patio Furniture Cushions, Garden Tools, Pool Accessories (Dark Brown with 1 Shelving)",
     "imageUrl": "https://m.media-amazon.com/images/I/61EbGa7zZ9L._AC_US600_.jpg",
@@ -21247,7 +21149,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确",
-    "titleZh": "Metal 文件柜，可上锁，适用于办公室，黑色"
+    "titleZh": "Metal 文件柜，可上锁，适用于办公室，黑色",
+    "variantAsins": [
+      "B0GYCSPHTY",
+      "B0GYD5DK89"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GYCSPHTY",
+      "B0GYD5DK89"
+    ]
   },
   {
     "asin": "B0D9YP2VKD",
@@ -21752,55 +21663,6 @@
     "grade": "D",
     "rejectionReason": "纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势；板式家具材质信息不足或不明确",
     "titleZh": "E3C 59.5英寸 衣柜，加固承重，黑色"
-  },
-  {
-    "asin": "B0GYD5DK89",
-    "title": "Metal Lateral 3 Drawer File Cabinet, Wide Filing Cabinet with Lock for Home Office Organization Hanging Files Letter/Legal/F4/A4 Size (White, Assembly Required)",
-    "imageUrl": "https://m.media-amazon.com/images/I/61e+kqUyv9L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GYD5DK89",
-      "asin": "B0GYD5DK89"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Cabinets, Racks & Shelves:File Cabinets:Mobile File Cabinets",
-    "price": 159.99,
-    "rating": 4,
-    "reviews": 174,
-    "bsr": 577095,
-    "subcategoryBsr": 374,
-    "launchDays": 81,
-    "dateFirstAvailable": "2026-05-01",
-    "salesGrowth": 0.9547,
-    "monthlySalesEstimate": {
-      "min": 200,
-      "max": 499,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=305",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 71.88 x 101.09 cm",
-    "weight": 48.5,
-    "packageGrossKg": 17.24,
-    "material": "Alloy Steel",
-    "brand": "LISSIMO",
-    "parentAsin": "B0GYD5DK89",
-    "sourceUrl": "https://www.amazon.com/dp/B0GYD5DK89",
-    "amazonUrl": "https://www.amazon.com/dp/B0GYD5DK89",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 305,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GYD5DK89",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确",
-    "titleZh": "Metal 文件柜，可上锁，适用于办公室，白色"
   },
   {
     "asin": "B0F4KCLWY1",
@@ -26589,7 +26451,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：专业工作场景与实用结构结合",
-    "titleZh": "Halitaa 农舍风 储物柜，带抽屉，适用于办公室，黑色"
+    "titleZh": "Halitaa 农舍风 储物柜，带抽屉，适用于办公室，黑色",
+    "variantAsins": [
+      "B0F43XZG9Z",
+      "B0F43Q31RR"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H8D2JX4R",
+      "B0F43Q31RR"
+    ]
   },
   {
     "asin": "B07Z27FG9J",
@@ -30705,7 +30576,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势；板式家具材质信息不足或不明确；数据待补：材质待确认，补齐前不进入推荐榜",
-    "titleZh": "Metal 家具产品，适合家居与商业空间使用，适用于办公室"
+    "titleZh": "Metal 家具产品，适合家居与商业空间使用，适用于办公室",
+    "variantAsins": [
+      "B0GJD4YT81",
+      "B0GJCYLTYT"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0H7RP6K55",
+      "B0GJCYLTYT"
+    ]
   },
   {
     "asin": "B0F38GDDTS",
@@ -33264,54 +33144,6 @@
     "titleZh": "SEDETA 农舍风 文件柜，适合家居与商业空间使用，适用于办公室，白色"
   },
   {
-    "asin": "B0GJCYLTYT",
-    "title": "Metal Lockers for Employees, 18 Doors Metal Storage Locker | with Card Slot and Ventilation Holes, Steel Employee lockers for Home Office School Gym Garage, Requires Installation",
-    "imageUrl": "https://m.media-amazon.com/images/I/71PNEp9YZ9L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GJCYLTYT",
-      "asin": "B0GJCYLTYT"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Cabinets, Racks & Shelves:Shelving & Storage:Storage Lockers",
-    "price": 269.99,
-    "rating": 2.5,
-    "reviews": 3,
-    "bsr": 223226,
-    "subcategoryBsr": 200,
-    "launchDays": 161,
-    "dateFirstAvailable": "2026-02-10",
-    "salesGrowth": 1.787,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=885",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 89.92 x 170.18 cm",
-    "weight": 102,
-    "material": "67IN 18 Doors",
-    "brand": "erosoei",
-    "parentAsin": "B0GJCYLTYT",
-    "sourceUrl": "https://www.amazon.com/dp/B0GJCYLTYT",
-    "amazonUrl": "https://www.amazon.com/dp/B0GJCYLTYT",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 885,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GJCYLTYT",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势；板式家具材质信息不足或不明确；数据待补：材质待确认，补齐前不进入推荐榜",
-    "titleZh": "Metal 家具产品，适合家居与商业空间使用，适用于办公室"
-  },
-  {
     "asin": "B0G56VZY9N",
     "title": "Insulated Duck Coop Warm Duck House for Outside Wooden Duck House with Larger Windows, Chicken coop with Perches, Ramp, Openable Roof",
     "imageUrl": "https://m.media-amazon.com/images/I/41ZKHZkgGNL._AC_US600_.jpg",
@@ -34870,55 +34702,6 @@
     "titleZh": "FLEXIMOUNTS 置物架，加固承重"
   },
   {
-    "asin": "B0F43Q31RR",
-    "title": "Halitaa Lateral File Cabinet with 4 Drawers, Farmhouse File Cabinet for Letter/Legal/A4 Size Hanging Files, Large Wood File Storage Cabinets Printer Stand for Home Office Cabinets, Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/71qWBxaCaRL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0F43Q31RR",
-      "asin": "B0F43Q31RR"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Cabinets, Racks & Shelves:File Cabinets:Lateral File Cabinets",
-    "price": 168.99,
-    "rating": 4,
-    "reviews": 16,
-    "bsr": 238929,
-    "subcategoryBsr": 50,
-    "launchDays": 468,
-    "dateFirstAvailable": "2025-04-09",
-    "salesGrowth": 0.1325,
-    "monthlySalesEstimate": {
-      "min": 100,
-      "max": 199,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=950",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 84.58 x 73.41 cm",
-    "weight": 59.52,
-    "packageGrossKg": 29,
-    "material": "Engineered Wood, Metal",
-    "brand": "Halitaa",
-    "parentAsin": "B0F43Q31RR",
-    "sourceUrl": "https://www.amazon.com/dp/B0F43Q31RR",
-    "amazonUrl": "https://www.amazon.com/dp/B0F43Q31RR",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 950,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0F43Q31RR",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：专业工作场景与实用结构结合",
-    "titleZh": "Halitaa 农舍风 储物柜，带抽屉，适用于办公室，黑色"
-  },
-  {
     "asin": "B0GVRWSXZW",
     "title": "4 Drawer File Cabinet with Lock, File Cabinet, Steel Vertical Filing Cabinets for Home Office, Heavy Duty File Storage Cabinet for Legal/Letter/A4 Documents, Easy to Assemble, Black",
     "imageUrl": "https://m.media-amazon.com/images/I/61QFNz78kAL._AC_US600_.jpg",
@@ -36424,7 +36207,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确；数据待补：材质待确认，补齐前不进入推荐榜",
-    "titleZh": "Staples 25英寸 文件柜，可上锁，黑色"
+    "titleZh": "Staples 25英寸 文件柜，可上锁，黑色",
+    "variantAsins": [
+      "B00WKYIN0S",
+      "B00WKZ3PF0"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B07YNGML6Z",
+      "B0GZ8NDDZ6"
+    ]
   },
   {
     "asin": "B0GVLV8QYX",
@@ -37079,7 +36871,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；暂未识别到公司擅长的家具形态；板式家具材质信息不足或不明确",
-    "titleZh": "Tribesigns 桌类家具，适合家居与商业空间使用，灰色"
+    "titleZh": "Tribesigns 桌类家具，适合家居与商业空间使用，灰色",
+    "variantAsins": [
+      "B0DGQG9GZT",
+      "B0F29QTL6Q"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0DWDSZVS3",
+      "B0F29NHRFH"
+    ]
   },
   {
     "asin": "B0DNHGL1J9",
@@ -40996,56 +40797,6 @@
     "grade": "D",
     "rejectionReason": "玻璃或镜面产品不在当前开发范围；类目超出现有室内板式家具能力；暂未识别到公司擅长的家具形态；板式家具材质信息不足或不明确；数据待补：类目待确认，补齐前不进入推荐榜",
     "titleZh": "REPTIZOO 20英寸 爬宠箱，适合家居与商业空间使用"
-  },
-  {
-    "asin": "B00WKZ3PF0",
-    "title": "STAPLES 3-Drawer Vertical File Cabinet, Letter Size Documents, Lockable, 19.88\" D x 15\" W x 27.75\" H, Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/31-1YzSsBBL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B00WKZ3PF0",
-      "asin": "B00WKZ3PF0"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Cabinets, Racks & Shelves:File Cabinets:Mobile File Cabinets",
-    "price": 179.99,
-    "rating": 4,
-    "reviews": 22,
-    "bsr": 40366,
-    "subcategoryBsr": 81,
-    "launchDays": 3576,
-    "dateFirstAvailable": "2016-10-05",
-    "salesGrowth": -0.1472,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1206",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "50.50 x 38.10 x 70.48 cm",
-    "weight": 67.8,
-    "packageDimensionsCm": "77.22 x 58.42 x 45.72 cm",
-    "packageGrossKg": 30.75,
-    "variants": "Size: 1 Pack | Style: 20'' Depth | Color: Black",
-    "brand": "STAPLES",
-    "parentAsin": "B0GZ8NDDZ6",
-    "sourceUrl": "https://www.amazon.com/dp/B00WKZ3PF0",
-    "amazonUrl": "https://www.amazon.com/dp/B00WKZ3PF0",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1206,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B00WKZ3PF0",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确；数据待补：材质待确认，补齐前不进入推荐榜",
-    "titleZh": "STAPLES 19.88英寸 文件柜，可上锁，黑色"
   },
   {
     "asin": "B09F6MZPSP",
@@ -46361,57 +46112,6 @@
     "titleZh": "35英寸 办公桌，带脚轮、可折叠、高度可调，白色"
   },
   {
-    "asin": "B0F29QTL6Q",
-    "title": "Tribesigns 47-Inch Round Conference Table for 4-6 People, Wooden Meeting Room Table with Thicken Tabletop and Wood Base (Black)",
-    "imageUrl": "https://m.media-amazon.com/images/I/51zlwY6N7rL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0F29QTL6Q",
-      "asin": "B0F29QTL6Q"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Tables:Conference Room Tables",
-    "price": 189.99,
-    "rating": 4.8,
-    "reviews": 19,
-    "bsr": 48422,
-    "subcategoryBsr": 10,
-    "launchDays": 480,
-    "dateFirstAvailable": "2025-03-28",
-    "salesGrowth": 0.088,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1439",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "119.99 x 119.99 x 74.93 cm",
-    "weight": 53.6,
-    "packageDimensionsCm": "119.38 x 66.04 x 12.70 cm",
-    "packageGrossKg": 26.76,
-    "material": "Engineered Wood",
-    "variants": "Color: Black",
-    "brand": "Tribesigns",
-    "parentAsin": "B0F29NHRFH",
-    "sourceUrl": "https://www.amazon.com/dp/B0F29QTL6Q",
-    "amazonUrl": "https://www.amazon.com/dp/B0F29QTL6Q",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1439,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0F29QTL6Q",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；暂未识别到公司擅长的家具形态",
-    "titleZh": "Tribesigns 桌类家具，适合家居与商业空间使用，黑色"
-  },
-  {
     "asin": "B0FN3SQXFV",
     "title": "GUTINNEEN Heated Dog House Outdoor Dog Kennel with Safe Heated Pad, Chew-Proof Metal Frame and Rotating Food Bowl for Small to Medium Dogs, 39.7\"x25.5\"x32.2\" (Dark Brown)",
     "imageUrl": "https://m.media-amazon.com/images/I/41woKPIRL6L._AC_US600_.jpg",
@@ -47821,7 +47521,16 @@
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势；板式家具材质信息不足或不明确",
-    "titleZh": "METAN 工业风 柜类家具，适合家居与商业空间使用，适用于卧室、办公室，黑色"
+    "titleZh": "METAN 工业风 柜类家具，适合家居与商业空间使用，适用于卧室、办公室，黑色",
+    "variantAsins": [
+      "B0D53RQDKZ",
+      "B0D8KWSGZD"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0BNV9TYV6",
+      "B0GF21YT55"
+    ]
   },
   {
     "asin": "B0H4FRXPKK",
@@ -51581,56 +51290,6 @@
     "titleZh": "Collapsible 30英寸 家具式狗笼，可上锁、带脚轮、加固承重"
   },
   {
-    "asin": "B00UVHTGJ8",
-    "title": "Vari VariDesk Pro Plus 48 - Adjustable Desk Converter with 11 Height Settings - Laptop Sit Stand Desk Riser for Home Office, Table Tops, Workspace - Fully Assembled with Spring Loaded Lift - Black",
-    "imageUrl": "https://m.media-amazon.com/images/I/61IdUwn8EyL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B00UVHTGJ8",
-      "asin": "B00UVHTGJ8"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Desks & Workstations:Computer Workstations",
-    "price": 549,
-    "rating": 4.7,
-    "reviews": 1417,
-    "bsr": 70777,
-    "subcategoryBsr": 163,
-    "launchDays": 4128,
-    "dateFirstAvailable": "2015-04-02",
-    "salesGrowth": -0.05,
-    "monthlySalesEstimate": {
-      "min": 50,
-      "max": 99,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1637",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "129.54 x 85.85 x 18.29 cm",
-    "weight": 57,
-    "packageDimensionsCm": "129.54 x 86.36 x 17.78 cm",
-    "packageGrossKg": 34.02,
-    "variants": "Color: Black | Size: 48\" - Pro Plus",
-    "brand": "Vari",
-    "parentAsin": "B0FZM5LS7R",
-    "sourceUrl": "https://www.amazon.com/dp/B00UVHTGJ8",
-    "amazonUrl": "https://www.amazon.com/dp/B00UVHTGJ8",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1637,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B00UVHTGJ8",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；板式家具材质信息不足或不明确；数据待补：材质待确认，补齐前不进入推荐榜",
-    "titleZh": "Vari 桌类家具，适合家居与商业空间使用，适用于办公室、沙龙，黑色"
-  },
-  {
     "asin": "B0DSG143ZD",
     "title": "47in Wall Mounted Wine Rack with LED Lights, Floating Industrial Liquor Glass Holder 3 Tiers, Large Metal Wine Bottle Display Rack Hanging Shelf, for Home Bar Dining Room Decorative",
     "imageUrl": "https://m.media-amazon.com/images/I/91pCTf8LbkL._AC_US600_.jpg",
@@ -54787,53 +54446,64 @@
     "titleZh": "REPTI 爬宠箱，玻璃柜门"
   },
   {
-    "asin": "B0GL1XR188",
-    "title": "L-Shaped Large Wooden Reception Desk, Modern Front Desk Reception Counter with Lockable Drawers & Storage & Keyboard Tray, for Checkout, Lobby (Left-Walnut/Gray 87''L x 42''W x 41''H)",
+    "asin": "B0FJ83TCQR",
+    "title": "L-Shaped Large Wooden Reception Desk, Modern Front Desk Reception Counter with Lockable Drawers & Storage & Keyboard Tray, for Checkout, Lobby (Right-Walnut/Gray, 71''L x 42''W x 41''H)",
     "imageUrl": "https://m.media-amazon.com/images/I/41ivCrJKn3L._AC_US600_.jpg",
     "imageEvidence": {
       "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GL1XR188",
-      "asin": "B0GL1XR188"
+      "sourceUrl": "https://www.amazon.com/dp/B0FJ83TCQR",
+      "asin": "B0FJ83TCQR"
     },
     "category": "Office Products:Office Furniture & Lighting:Tables:Reception Room Tables",
-    "price": 679,
-    "rating": 3.2,
-    "reviews": 3,
-    "bsr": 79695,
-    "subcategoryBsr": 7,
-    "launchDays": 168,
-    "dateFirstAvailable": "2026-02-03",
+    "price": 459,
+    "rating": 4.4,
+    "reviews": 21,
+    "bsr": 106523,
+    "subcategoryBsr": 14,
+    "launchDays": 363,
+    "dateFirstAvailable": "2025-07-23",
     "salesGrowth": 0.1395,
     "monthlySalesEstimate": {
       "min": 1,
       "max": 49,
       "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1745",
+      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1749",
       "confidence": "third-party-estimate"
     },
-    "dimensions": "87.00 x 24.00 x 41.00 cm",
+    "dimensions": "199.90 x 199.90 x 76.20 cm",
     "weight": 54,
     "packageGrossKg": 97.98,
-    "material": "Wood",
+    "variants": "Color: Right-walnut/Gray | Size: 71''L x 42''W x 41''H",
     "brand": "Yorkgargen",
-    "parentAsin": "B0GL1XR188",
-    "sourceUrl": "https://www.amazon.com/dp/B0GL1XR188",
-    "amazonUrl": "https://www.amazon.com/dp/B0GL1XR188",
+    "parentAsin": "B0H9LD7NVM",
+    "sourceUrl": "https://www.amazon.com/dp/B0FJ83TCQR",
+    "amazonUrl": "https://www.amazon.com/dp/B0FJ83TCQR",
     "sourceDataProvider": "SellerSprite",
     "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1745,
+    "sourceRow": 1749,
     "sourceObservedWindow": "US last 30 days export",
     "observedAt": "2026-07-21T15:30:00+08:00",
     "importedAt": "2026-07-21T15:30:00+08:00",
     "admissionEvidence": {
       "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GL1XR188",
+      "sourceUrl": "https://www.amazon.com/dp/B0FJ83TCQR",
       "observedAt": "2026-07-21T15:30:00+08:00"
     },
     "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
     "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：细分场景与一体化功能结合；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确",
-    "titleZh": "L-Shaped 现代 前台接待台，可上锁，胡桃木色"
+    "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：细分场景与一体化功能结合；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确；数据待补：材质待确认，补齐前不进入推荐榜",
+    "titleZh": "L-Shaped 现代 前台接待台，可上锁，胡桃木色",
+    "variantAsins": [
+      "B0FJ83TCQR",
+      "B0GL1XR188",
+      "B0FJ841QMN"
+    ],
+    "variantCount": 3,
+    "relatedParentAsins": [
+      "B0GL1XR188",
+      "B0FJ841QMN",
+      "B0H9LD7NVM"
+    ]
   },
   {
     "asin": "B0GKZNZQYK",
@@ -54886,54 +54556,6 @@
     "titleZh": "L-Shaped 现代 前台接待台，可上锁"
   },
   {
-    "asin": "B0FJ841QMN",
-    "title": "L-Shaped Large Wooden Reception Desk, Modern Front Desk Reception Counter with Lockable Drawers & Storage & Keyboard Tray, for Checkout, Lobby (Right-Walnut/Gray 87''L x 42''W x 41''H)",
-    "imageUrl": "https://m.media-amazon.com/images/I/41WHUgx+o+L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0FJ841QMN",
-      "asin": "B0FJ841QMN"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Tables:Reception Room Tables",
-    "price": 679,
-    "rating": 4.4,
-    "reviews": 21,
-    "bsr": 79695,
-    "subcategoryBsr": 7,
-    "launchDays": 363,
-    "dateFirstAvailable": "2025-07-23",
-    "salesGrowth": 0.1395,
-    "monthlySalesEstimate": {
-      "min": 1,
-      "max": 49,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1747",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "199.90 x 199.90 x 76.20 cm",
-    "weight": 54,
-    "packageGrossKg": 97.98,
-    "brand": "Yorkgargen",
-    "parentAsin": "B0FJ841QMN",
-    "sourceUrl": "https://www.amazon.com/dp/B0FJ841QMN",
-    "amazonUrl": "https://www.amazon.com/dp/B0FJ841QMN",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1747,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0FJ841QMN",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：细分场景与一体化功能结合；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确；数据待补：材质待确认，补齐前不进入推荐榜",
-    "titleZh": "L-Shaped 现代 前台接待台，可上锁，胡桃木色"
-  },
-  {
     "asin": "B0F23BJ2NX",
     "title": "Agilestic L Shaped Standing Desk, Corner Desk with Monitor Shelf, Adjustable Height Gaming Table, Sit Stand Up Table, 63 x 55 Inch Home Office Computer Workstation, Splice Board, Rustic Brown",
     "imageUrl": "https://m.media-amazon.com/images/I/71y-qCgRwfL._AC_US600_.jpg",
@@ -54982,55 +54604,6 @@
     "grade": "D",
     "rejectionReason": "类目超出现有室内板式家具能力；板式家具材质信息不足或不明确",
     "titleZh": "Agilestic 55英寸 乡村风 办公桌，高度可调，适用于办公室，棕色"
-  },
-  {
-    "asin": "B0FJ83TCQR",
-    "title": "L-Shaped Large Wooden Reception Desk, Modern Front Desk Reception Counter with Lockable Drawers & Storage & Keyboard Tray, for Checkout, Lobby (Right-Walnut/Gray, 71''L x 42''W x 41''H)",
-    "imageUrl": "https://m.media-amazon.com/images/I/41ivCrJKn3L._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0FJ83TCQR",
-      "asin": "B0FJ83TCQR"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Tables:Reception Room Tables",
-    "price": 459,
-    "rating": 4.4,
-    "reviews": 21,
-    "bsr": 106523,
-    "subcategoryBsr": 14,
-    "launchDays": 363,
-    "dateFirstAvailable": "2025-07-23",
-    "salesGrowth": 0.1395,
-    "monthlySalesEstimate": {
-      "min": 1,
-      "max": 49,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1749",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "199.90 x 199.90 x 76.20 cm",
-    "weight": 54,
-    "packageGrossKg": 97.98,
-    "variants": "Color: Right-walnut/Gray | Size: 71''L x 42''W x 41''H",
-    "brand": "Yorkgargen",
-    "parentAsin": "B0H9LD7NVM",
-    "sourceUrl": "https://www.amazon.com/dp/B0FJ83TCQR",
-    "amazonUrl": "https://www.amazon.com/dp/B0FJ83TCQR",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1749,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0FJ83TCQR",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；校准偏好：细分场景与一体化功能结合；校准偏好：专业工作场景与实用结构结合；板式家具材质信息不足或不明确；数据待补：材质待确认，补齐前不进入推荐榜",
-    "titleZh": "L-Shaped 现代 前台接待台，可上锁，胡桃木色"
   },
   {
     "asin": "B0CLNKXMP3",
@@ -57388,57 +56961,6 @@
     "titleZh": "PawHut 79英寸 狗屋，适合家居与商业空间使用"
   },
   {
-    "asin": "B0D8KWSGZD",
-    "title": "METAN Metal Locker for School Office Gym Bedroom, 18 Doors Black Steel Storage Locker Cabinet for Employees, Industrial Storage Locker, Assembly Required (18 Door-Black)",
-    "imageUrl": "https://m.media-amazon.com/images/I/41BMcbMQigL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0D8KWSGZD",
-      "asin": "B0D8KWSGZD"
-    },
-    "category": "Office Products:Office Furniture & Lighting:Cabinets, Racks & Shelves:Shelving & Storage:Storage Lockers",
-    "price": 319.99,
-    "rating": 4.5,
-    "reviews": 25,
-    "bsr": 113132,
-    "subcategoryBsr": 113,
-    "launchDays": 749,
-    "dateFirstAvailable": "2024-07-02",
-    "salesGrowth": -0.0556,
-    "monthlySalesEstimate": {
-      "min": 1,
-      "max": 49,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx#row=1830",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "39.88 x 89.99 x 182.88 cm",
-    "weight": 110,
-    "packageDimensionsCm": "177.80 x 48.26 x 22.86 cm",
-    "packageGrossKg": 53.07,
-    "material": "Metal",
-    "variants": "Color: Black | Style: Big 18 Doors",
-    "brand": "METAN",
-    "parentAsin": "B0GF21YT55",
-    "sourceUrl": "https://www.amazon.com/dp/B0D8KWSGZD",
-    "amazonUrl": "https://www.amazon.com/dp/B0D8KWSGZD",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Arts,Crafts&Sewing-US-Last-30-days-605993.xlsx",
-    "sourceRow": 1830,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0D8KWSGZD",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "类目超出现有室内板式家具能力；纯金属标准化器材架、金属柜或普通铁床架，缺少公司差异化优势；板式家具材质信息不足或不明确",
-    "titleZh": "METAN 工业风 柜类家具，适合家居与商业空间使用，适用于卧室、办公室，黑色"
-  },
-  {
     "asin": "B0FCFMRTYX",
     "title": "FLEXISPOT Standing Desk with Drawer, 55 x 24 Inch Whole Piece Electric Adjustable Height Stand Up Computer Workstation for Home, Office, Dark Walnut",
     "imageUrl": "https://m.media-amazon.com/images/I/41OkwAZCT8L._AC_US600_.jpg",
@@ -58143,7 +57665,16 @@
       "amazonDetailVerification": "pending-access-retry",
       "evidenceScope": "SellerSprite import record fields and canonical Amazon URL; no current Amazon detail-page confirmation",
       "decision": "kept-rejected"
-    }
+    },
+    "variantAsins": [
+      "B0GVN7HY4F",
+      "B0GVMYSM6R"
+    ],
+    "variantCount": 2,
+    "relatedParentAsins": [
+      "B0GVN7HY4F",
+      "B0GVMYSM6R"
+    ]
   },
   {
     "asin": "B0H1W52479",
@@ -58255,65 +57786,6 @@
       "trigger": "legacy-solid-wood-keyword-rule",
       "evidenceStatus": "confirmed-whole-product",
       "evidenceReason": "材质字段明确确认整件纯实木",
-      "amazonDetailVerification": "pending-access-retry",
-      "evidenceScope": "SellerSprite import record fields and canonical Amazon URL; no current Amazon detail-page confirmation",
-      "decision": "kept-rejected"
-    }
-  },
-  {
-    "asin": "B0GVMYSM6R",
-    "title": "Small Vanity Desk with Mirror, Solid Wood Dressing Table, Movable Drawer Divider, Extendable Table Board for Bedroom, Natural Color, 30 \"D x 16.5\" W x 50\" H",
-    "imageUrl": "https://m.media-amazon.com/images/I/617yeJTEqjL._AC_US600_.jpg",
-    "imageEvidence": {
-      "kind": "amazon-media-main-image",
-      "sourceUrl": "https://www.amazon.com/dp/B0GVMYSM6R",
-      "asin": "B0GVMYSM6R"
-    },
-    "category": "Home & Kitchen:Furniture:Bedroom Furniture:Vanities & Vanity Benches",
-    "price": 415.99,
-    "rating": 4.5,
-    "reviews": 8,
-    "bsr": 3199229,
-    "subcategoryBsr": 3913,
-    "launchDays": 110,
-    "dateFirstAvailable": "2026-04-02",
-    "salesGrowth": 0.2,
-    "monthlySalesEstimate": {
-      "min": 1,
-      "max": 49,
-      "evidence": "SellerSprite 月销量列，仅按区间保存",
-      "source": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx#row=1717",
-      "confidence": "third-party-estimate"
-    },
-    "dimensions": "41.91 x 76.20 x 127.00 cm",
-    "weight": 54,
-    "packageDimensionsCm": "81.28 x 71.12 x 53.34 cm",
-    "packageGrossKg": 24.49,
-    "material": "Oak Wood",
-    "brand": "Wayshome",
-    "parentAsin": "B0GVMYSM6R",
-    "sourceUrl": "https://www.amazon.com/dp/B0GVMYSM6R",
-    "amazonUrl": "https://www.amazon.com/dp/B0GVMYSM6R",
-    "sourceDataProvider": "SellerSprite",
-    "sourceWorkbook": "Product-Home&Kitchen-US-Last-30-days-606553.xlsx",
-    "sourceRow": 1717,
-    "sourceObservedWindow": "US last 30 days export",
-    "observedAt": "2026-07-21T15:30:00+08:00",
-    "importedAt": "2026-07-21T15:30:00+08:00",
-    "admissionEvidence": {
-      "kind": "user-provided-sellersprite-export",
-      "sourceUrl": "https://www.amazon.com/dp/B0GVMYSM6R",
-      "observedAt": "2026-07-21T15:30:00+08:00"
-    },
-    "note": "用户提供的卖家精灵美国站近30天数据导入。字段按源表保存；月销量仅保存区间、来源与第三方估算可信度，未保存为伪精确销量。",
-    "grade": "D",
-    "rejectionReason": "玻璃或镜面产品不在当前开发范围",
-    "titleZh": "30英寸 办公桌，可伸缩，适用于卧室，原木色",
-    "materialReview": {
-      "reviewedAt": "2026-07-23T03:11:39.654Z",
-      "trigger": "legacy-solid-wood-keyword-rule",
-      "evidenceStatus": "ambiguous",
-      "evidenceReason": "只有营销标题或泛化木材名称，尚不能确认整件纯实木",
       "amazonDetailVerification": "pending-access-retry",
       "evidenceScope": "SellerSprite import record fields and canonical Amazon URL; no current Amazon detail-page confirmation",
       "decision": "kept-rejected"
