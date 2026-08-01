@@ -40,6 +40,24 @@ test("never uses the title when the Amazon category is missing or unrecognized",
   assert.equal(majorCategoryFor({ title: "Cat Litter Box Cabinet", category: "宠物场景 / 猫砂柜" }).id, "unclassified");
 });
 
+test("allows a manual LINX category only while Amazon category evidence is unclassified", () => {
+  assert.equal(majorCategoryFor({
+    title: "Modern Reception Desk",
+    category: "Legacy import",
+    manualMajorCategoryId: "reception-furniture",
+  }).id, "reception-furniture");
+  assert.equal(majorCategoryFor({
+    title: "Modern Reception Desk",
+    category: "Home & Kitchen:Furniture:Kitchen Furniture:Storage Islands & Carts",
+    manualMajorCategoryId: "reception-furniture",
+  }).id, "kitchen-islands");
+  assert.equal(majorCategoryFor({
+    title: "Modern Reception Desk",
+    category: "Legacy import",
+    manualMajorCategoryId: "not-a-real-category",
+  }).id, "unclassified");
+});
+
 test("collapses the full product pool into a manageable complete category list", () => {
   const files = ["../app/real-products.json", "../app/rejected-products.json"];
   const products = files.flatMap((path) => JSON.parse(readFileSync(new URL(path, import.meta.url), "utf8")));

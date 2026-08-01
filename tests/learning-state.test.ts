@@ -61,6 +61,32 @@ test("merges independent device operations and deduplicates immutable evidence",
   assert.equal(mergeLearningStates(merged, left).events.length, 2);
 });
 
+test("persists and merges manual major-category corrections by ASIN", () => {
+  const base = emptyLearningState("2026-07-20T00:00:00.000Z");
+  const left = normalizeLearningState({
+    ...base,
+    categoryOverrides: { ASIN1: { categoryId: "bookcases-display", updatedAt: "2026-07-21T00:00:00.000Z" } },
+  });
+  const right = normalizeLearningState({
+    ...base,
+    categoryOverrides: {
+      ASIN1: { categoryId: "sideboards-buffets", updatedAt: "2026-07-22T00:00:00.000Z" },
+      ASIN2: { categoryId: "not-a-real-category", updatedAt: "2026-07-22T00:00:00.000Z" },
+    },
+  });
+  const merged = mergeLearningStates(left, right);
+  assert.equal(merged.categoryOverrides.ASIN1.categoryId, "sideboards-buffets");
+  assert.equal(merged.categoryOverrides.ASIN2, undefined);
+  assert.ok(learningEvidenceCount(merged) > 0);
+});
+
+test("a newer manual-category reset wins across devices", () => {
+  const base = emptyLearningState("2026-07-20T00:00:00.000Z");
+  const assigned = normalizeLearningState({ ...base, categoryOverrides: { ASIN1: { categoryId: "bookcases-display", updatedAt: "2026-07-21T00:00:00.000Z" } } });
+  const cleared = normalizeLearningState({ ...base, categoryOverrides: { ASIN1: { categoryId: null, updatedAt: "2026-07-22T00:00:00.000Z" } } });
+  assert.equal(mergeLearningStates(assigned, cleared).categoryOverrides.ASIN1.categoryId, null);
+});
+
 test("stores an actual reflection report as learning evidence", () => {
   const state = appendReflectionReport(emptyLearningState(), {
     id: "report-one",

@@ -66,6 +66,17 @@ test("keeps durable preference actions and removes the redundant candidate-list 
   assert.match(actions, /decision-recycle/);
 });
 
+test("unclassified products expose a durable bilingual manual category control", () => {
+  const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const picker = readFileSync(new URL("../app/manual-major-category.tsx", import.meta.url), "utf8");
+  const learning = readFileSync(new URL("../app/learning-state.ts", import.meta.url), "utf8");
+  assert.match(page, /ManualCategoryProvider/);
+  assert.match(page, /kind:"category"/);
+  assert.match(picker, /未分类 · 手动归类/);
+  assert.match(picker, /category\.zh.*category\.en/);
+  assert.match(learning, /categoryOverrides/);
+});
+
 test("product decisions keep the current page and every product area exposes favorites", () => {
   const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
   const garbage = readFileSync(new URL("../app/garbage-bin.tsx", import.meta.url), "utf8");

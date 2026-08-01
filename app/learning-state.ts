@@ -1,4 +1,5 @@
 import type { Grade } from "./recommendation-grade.ts";
+import { isManualMajorCategoryId } from "./major-category.ts";
 
 export const recycleRetentionDays = 30;
 const retentionMs = recycleRetentionDays * 24 * 60 * 60 * 1000;
@@ -8,7 +9,12 @@ export type GradeOverride = {
   updatedAt: string;
 };
 
-export type LearningEventKind = "grade" | "favorite" | "research" | "group" | "challenge" | "recycle" | "restore";
+export type CategoryOverride = {
+  categoryId: string | null;
+  updatedAt: string;
+};
+
+export type LearningEventKind = "grade" | "category" | "favorite" | "research" | "group" | "challenge" | "recycle" | "restore";
 
 export type LearningEvent = {
   id: string;
@@ -55,6 +61,7 @@ export type RecycledProduct = {
 export type LearningState = {
   version: 2;
   gradeOverrides: Record<string, GradeOverride>;
+  categoryOverrides: Record<string, CategoryOverride>;
   recycleBin: Record<string, RecycledProduct>;
   purgedAsins: string[];
   favorites: string[];
@@ -70,6 +77,7 @@ export function emptyLearningState(now = new Date().toISOString()): LearningStat
   return {
     version: 2,
     gradeOverrides: {},
+    categoryOverrides: {},
     recycleBin: {},
     purgedAsins: [],
     favorites: [],
@@ -84,7 +92,7 @@ export function emptyLearningState(now = new Date().toISOString()): LearningStat
 
 const isGrade = (value: unknown): value is Grade => value === "A" || value === "B" || value === "C" || value === "D";
 const validDate = (value: unknown) => typeof value === "string" && Number.isFinite(Date.parse(value));
-const eventKinds = new Set<LearningEventKind>(["grade", "favorite", "research", "group", "challenge", "recycle", "restore"]);
+const eventKinds = new Set<LearningEventKind>(["grade", "category", "favorite", "research", "group", "challenge", "recycle", "restore"]);
 
 function normalizeEvent(value: unknown): LearningEvent | null {
   if (!value || typeof value !== "object") return null;
@@ -161,6 +169,11 @@ export function normalizeLearningState(value: unknown, now = Date.now()): Learni
     const item = record as GradeOverride;
     return isGrade(item.grade) && validDate(item.updatedAt) ? [[asin, item]] : [];
   }));
+  const categoryOverrides = Object.fromEntries(Object.entries(raw.categoryOverrides ?? {}).flatMap(([asin, record]) => {
+    if (!record || typeof record !== "object") return [];
+    const item = record as CategoryOverride;
+    return (item.categoryId === null || isManualMajorCategoryId(item.categoryId)) && validDate(item.updatedAt) ? [[asin, item]] : [];
+  }));
   const recycleBin = Object.fromEntries(Object.entries(raw.recycleBin ?? {}).flatMap(([asin, record]) => {
     if (!record || typeof record !== "object") return [];
     const item = record as RecycledProduct;
@@ -186,6 +199,7 @@ export function normalizeLearningState(value: unknown, now = Date.now()): Learni
   return purgeExpiredLearningState({
     version: 2,
     gradeOverrides,
+    categoryOverrides,
     recycleBin,
     purgedAsins: [...new Set((raw.purgedAsins ?? []).filter((asin): asin is string => typeof asin === "string" && asin.length > 0))],
     favorites: [...new Set((raw.favorites ?? []).filter((asin): asin is string => typeof asin === "string" && asin.length > 0))],
@@ -273,6 +287,7 @@ export function mergeLearningStates(leftValue: unknown, rightValue: unknown, now
     .sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
     .slice(0, 100);
   const gradeOverrides = mergeTimedRecordMaps(left.gradeOverrides, right.gradeOverrides);
+  const categoryOverrides = mergeTimedRecordMaps(left.categoryOverrides, right.categoryOverrides);
   const preferenceRuleSettings = mergeTimedRecordMaps(left.preferenceRuleSettings, right.preferenceRuleSettings);
   const purgedAsins = [...new Set([...left.purgedAsins, ...right.purgedAsins])];
   const recycleCandidates = new Map<string, RecycledProduct>();
@@ -296,6 +311,7 @@ export function mergeLearningStates(leftValue: unknown, rightValue: unknown, now
   return purgeExpiredLearningState({
     version: 2,
     gradeOverrides,
+    categoryOverrides,
     recycleBin,
     purgedAsins,
     favorites: [...favorites],
@@ -342,7 +358,7 @@ export function learningEvidenceCount(state: LearningState) {
     ? Object.values(state.batchCalibration).reduce((total, value) => total + (value && typeof value === "object" ? Object.keys(value).length : 0), 0)
     : 0;
   const legacy = state.legacyCalibration && typeof state.legacyCalibration === "object" ? Object.keys(state.legacyCalibration).length : 0;
-  return Object.keys(state.gradeOverrides).length + Object.keys(state.recycleBin).length + state.purgedAsins.length + state.favorites.length + calibration + legacy + state.events.length + state.reflectionReports.length;
+  return Object.keys(state.gradeOverrides).length + Object.keys(state.categoryOverrides).length + Object.keys(state.recycleBin).length + state.purgedAsins.length + state.favorites.length + calibration + legacy + state.events.length + state.reflectionReports.length;
 }
 
 export function migrateLegacyCalibration(state: LearningState, value: unknown, now = new Date().toISOString()): LearningState {

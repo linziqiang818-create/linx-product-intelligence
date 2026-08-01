@@ -1,6 +1,7 @@
 export type MajorCategoryProduct = {
   title: string;
   category: string;
+  manualMajorCategoryId?: string;
 };
 
 export type MajorCategory = {
@@ -37,10 +38,20 @@ export const majorCategories: readonly MajorCategory[] = [
   { id: "unclassified", zh: "未分类", en: "Unclassified", amazonCategoryPattern: /[\s\S]*/ },
 ] as const;
 
-export function majorCategoryFor(product: MajorCategoryProduct) {
+export function isManualMajorCategoryId(value: unknown): value is string {
+  return typeof value === "string" && value !== "unclassified" && majorCategories.some((category) => category.id === value);
+}
+
+export function amazonMajorCategoryFor(product: MajorCategoryProduct) {
   const category = String(product.category ?? "").trim();
   return majorCategories.find((item) => item.amazonCategoryPattern.test(category))
     ?? majorCategories[majorCategories.length - 1];
+}
+
+export function majorCategoryFor(product: MajorCategoryProduct) {
+  const amazonCategory = amazonMajorCategoryFor(product);
+  if (amazonCategory.id !== "unclassified" || !isManualMajorCategoryId(product.manualMajorCategoryId)) return amazonCategory;
+  return majorCategories.find((category) => category.id === product.manualMajorCategoryId) ?? amazonCategory;
 }
 
 export function majorCategoryLabel(product: MajorCategoryProduct) {

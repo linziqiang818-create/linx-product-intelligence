@@ -4,6 +4,7 @@
 import { useMemo, useRef, useState } from "react";
 import PaginationControls, { usePagination } from "./pagination";
 import { fullTitleZh } from "./full-title-translations";
+import { ManualMajorCategoryField } from "./manual-major-category";
 import ProductDecisionActions from "./product-decision-actions";
 import type { Grade } from "./recommendation-grade";
 
@@ -12,6 +13,7 @@ type GarbageProduct = {
   title: string;
   titleZh?: string;
   category: string;
+  manualMajorCategoryId?: string;
   price: number;
   sourceUrl: string;
   imageUrl?: string;
@@ -80,7 +82,7 @@ export default function GarbageBin({ products, selected, favorites, toggleSelect
         <thead><tr><th className="check-col"></th><th>主图 / ASIN / 商品</th><th>类目</th><th>价格</th><th>淘汰依据</th><th>操作</th></tr></thead>
         <tbody>{pager.pageItems.map(product => <tr key={product.asin} className={selected.has(product.asin) ? "selected-row" : ""}>
           <td><input type="checkbox" checked={selected.has(product.asin)} onChange={() => toggleSelected(product.asin)} /></td>
-          <td><div className="table-product"><GarbageImage product={product} /><button className={`heart ${favorites.has(product.asin) ? "active" : ""}`} onClick={() => onFavorite(product.asin)} aria-label={favorites.has(product.asin) ? "取消收藏" : "收藏产品"}>♥</button><div><b>{product.asin}</b><span><a href={product.sourceUrl} target="_blank" rel="noreferrer">{product.title}</a><small className="title-zh">{fullTitleZh(product.asin, product.titleZh, product.title, product.category)}</small></span></div></div></td>
+          <td><div className="table-product"><GarbageImage product={product} /><button className={`heart ${favorites.has(product.asin) ? "active" : ""}`} onClick={() => onFavorite(product.asin)} aria-label={favorites.has(product.asin) ? "取消收藏" : "收藏产品"}>♥</button><div><b>{product.asin}</b><span><a href={product.sourceUrl} target="_blank" rel="noreferrer">{product.title}</a><small className="title-zh">{fullTitleZh(product.asin, product.titleZh, product.title, product.category)}</small><ManualMajorCategoryField product={product} /></span></div></div></td>
           <td><span className="category-ellipsis" title={product.category}>{product.category}</span></td>
           <td>{product.price > 0 ? `$${product.price}` : "待补"}</td>
           <td><div className="rejection-reason"><span className="risk risk-高">筛选依据</span><small>{product.hardRejectReasons?.slice(0, 3).join("；") || "系统判断暂不适合当前开发方向，等待人工复核"}</small></div></td>
