@@ -35,7 +35,8 @@ export type FormalProductRecord = {
   manualFavorite?: boolean;
   manualGrade?: Grade;
   learnedGrade?: Exclude<Grade, "D">;
-  learnedGradeEvidence?: { family: string; count: number };
+  learnedScoreAdjustment?: number;
+  learnedGradeEvidence?: { family: string; count: number; reasons?: string[] };
 };
 
 function monthlySalesFor(product: FormalProductRecord) {
@@ -92,7 +93,9 @@ export function classifyFormalProduct(product: FormalProductRecord, origin: Prod
   const automaticGrade = gradeFromDecision(assessment.decision);
   const grade = product.manualGrade ?? automaticGrade;
   const learnedAdjustment = !product.manualGrade && automaticGrade !== "D"
-    ? product.learnedGrade === "A" ? 8 : product.learnedGrade === "C" ? -8 : 0
+    ? Number.isFinite(product.learnedScoreAdjustment)
+      ? Math.max(-12, Math.min(8, Math.round(Number(product.learnedScoreAdjustment))))
+      : product.learnedGrade === "A" ? 8 : product.learnedGrade === "C" ? -8 : 0
     : 0;
   const score = Math.max(0, Math.min(100, assessment.score + learnedAdjustment));
   const opportunity = grade === "D"
@@ -118,6 +121,7 @@ export function classifyFormalProduct(product: FormalProductRecord, origin: Prod
     reasons: [
       ...(product.manualGrade ? [`用户手动调整为 ${product.manualGrade} 类`] : []),
       ...(!product.manualGrade && product.learnedGrade ? [`根据 ${product.learnedGradeEvidence?.count ?? 5} 条“${product.learnedGradeEvidence?.family ?? "同类产品"}”人工反馈，仅${learnedAdjustment > 0 ? "提升" : learnedAdjustment < 0 ? "降低" : "保持"}排序，不自动改变 ABCD`] : []),
+      ...(!product.manualGrade && product.learnedGradeEvidence?.reasons?.length ? [`学习信号：${product.learnedGradeEvidence.reasons.join("；")}`] : []),
       ...assessment.reasons,
       ...(opportunity?.reasons ?? []),
     ],

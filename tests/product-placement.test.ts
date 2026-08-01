@@ -134,10 +134,14 @@ test("learned family preference changes ranking only, not ABCD", () => {
   const automatic = classifyFormalProduct(base, "historical");
   const promoted = classifyFormalProduct({ ...base, learnedGrade: "A", learnedGradeEvidence: { family: "Storage Cabinet", count: 5 } }, "historical");
   const lowered = classifyFormalProduct({ ...base, learnedGrade: "C", learnedGradeEvidence: { family: "Storage Cabinet", count: 5 } }, "historical");
+  const nuanced = classifyFormalProduct({ ...base, learnedGrade: "C", learnedScoreAdjustment: -5, learnedGradeEvidence: { family: "多维偏好", count: 20, reasons: ["竞争偏高：更谨慎"] } }, "historical");
   assert.equal(promoted.grade, automatic.grade);
   assert.equal(lowered.grade, automatic.grade);
+  assert.equal(nuanced.grade, automatic.grade);
   assert.equal(promoted.score, Math.min(100, automatic.score + 8));
   assert.equal(lowered.score, Math.max(0, automatic.score - 8));
+  assert.equal(nuanced.score, Math.max(0, automatic.score - 5));
+  assert.ok(nuanced.reasons.some((reason) => reason.includes("竞争偏高")));
   assert.ok(promoted.reasons.some((reason) => reason.includes("不自动改变 ABCD")));
 });
 
