@@ -39,6 +39,17 @@ test("every product-bearing navigation uses the shared capped paginator", () => 
   assert.match(recycle, /pager\.pageItems\.map/);
 });
 
+test("card and D-list pagination can select only the current page", () => {
+  const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const garbage = readFileSync(new URL("../app/garbage-bin.tsx", import.meta.url), "utf8");
+  const pagination = readFileSync(new URL("../app/pagination.tsx", import.meta.url), "utf8");
+  assert.match(page, /pageSelection=\{\{checked:pager\.pageItems\.length/);
+  assert.match(page, /toggleSelected\(p\.asin\)/);
+  assert.match(garbage, /selectVisible\(pager\.pageItems, checked\)/);
+  assert.match(pagination, /全选当前页/);
+  assert.match(pagination, /取消当前页/);
+});
+
 test("product imports are cumulative ASIN updates and cannot replace history", () => {
   const source = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.match(source, /按 ASIN 累计追加\/更新/);

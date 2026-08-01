@@ -51,7 +51,8 @@ export default function GarbageBin({ products, selected, favorites, toggleSelect
     pager.setPage(page);
     window.requestAnimationFrame(() => anchor.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
-  const controls = () => <PaginationControls page={pager.page} totalPages={pager.totalPages} start={pager.start} end={pager.end} total={filtered.length} pageSize={pager.pageSize} onPageChange={goPage} onPageSizeChange={pager.setPageSize} />;
+  const pageSelected = pager.pageItems.filter((product) => selected.has(product.asin)).length;
+  const controls = () => <PaginationControls page={pager.page} totalPages={pager.totalPages} start={pager.start} end={pager.end} total={filtered.length} pageSize={pager.pageSize} pageSelection={{ checked: pager.pageItems.length > 0 && pageSelected === pager.pageItems.length, selectedCount: pageSelected, total: pager.pageItems.length, onChange: (checked) => selectVisible(pager.pageItems, checked) }} onPageChange={goPage} onPageSizeChange={pager.setPageSize} />;
   const visibleSelected = filtered.filter((product) => selected.has(product.asin)).length;
   const allSelected = filtered.length > 0 && visibleSelected === filtered.length;
 
@@ -69,7 +70,7 @@ export default function GarbageBin({ products, selected, favorites, toggleSelect
       <span>{filtered.length} 款匹配</span>
     </div>
     <div className="bulk-bar">
-      <label><input type="checkbox" checked={allSelected} onChange={(event) => selectVisible(filtered, event.target.checked)} /><span>{allSelected ? "取消全选" : "选择全部筛选结果"}</span></label>
+      <label><input type="checkbox" checked={allSelected} onChange={(event) => selectVisible(filtered, event.target.checked)} /><span>{allSelected ? "取消全部筛选结果" : "选择全部筛选结果"}</span></label>
       <span className="result-count">{filtered.length} 个结果</span>
       {selected.size > 0 && <div className="bulk-actions"><b>已选 {selected.size}</b><button onClick={onFavoriteSelected}>♥ 批量收藏</button><span className="bulk-grade-label">批量定级</span>{(["A", "B", "C", "D"] as Grade[]).map((grade) => <button className={`bulk-grade bulk-grade-${grade}`} key={grade} onClick={() => onGradeSelected(grade)}>{grade}</button>)}<button className="danger-action" onClick={onRecycleSelected}>批量回收</button></div>}
     </div>

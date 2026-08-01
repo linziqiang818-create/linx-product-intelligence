@@ -43,6 +43,7 @@ export default function PaginationControls({
   end,
   total,
   pageSize,
+  pageSelection,
   onPageChange,
   onPageSizeChange,
 }: {
@@ -52,13 +53,22 @@ export default function PaginationControls({
   end: number;
   total: number;
   pageSize: number;
+  pageSelection?: {
+    checked: boolean;
+    selectedCount: number;
+    total: number;
+    onChange: (checked: boolean) => void;
+  };
   onPageChange: (page: number) => void;
   onPageSizeChange: (pageSize: number) => void;
 }) {
   if (!total) return null;
   return <div className="pagination" aria-label="产品分页">
-    <span><b>{start + 1}–{end}</b> / 共 {total} 款</span>
-    <div>
+    <div className="page-summary">
+      <span><b>{start + 1}–{end}</b> / 共 {total} 款</span>
+      {pageSelection && <label className="page-select"><input type="checkbox" checked={pageSelection.checked} onChange={(event) => pageSelection.onChange(event.target.checked)} /><span>{pageSelection.checked ? `取消当前页（${pageSelection.total}）` : pageSelection.selectedCount > 0 ? `全选当前页（已选 ${pageSelection.selectedCount}/${pageSelection.total}）` : `全选当前页（${pageSelection.total}）`}</span></label>}
+    </div>
+    <div className="page-navigation">
       <button onClick={() => onPageChange(1)} disabled={page === 1} aria-label="第一页">首页</button>
       <button onClick={() => onPageChange(page - 1)} disabled={page === 1} aria-label="上一页">上一页</button>
       <label>第
