@@ -80,6 +80,17 @@ test("syncs learning decisions as bounded cloud patches instead of whole profile
   assert.match(worker, /concurrent update; retry/);
 });
 
+test("syncs product imports and edits as per-ASIN cloud records", () => {
+  const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const worker = readFileSync(new URL("../worker/index.ts", import.meta.url), "utf8");
+  assert.match(page, /queueWorkspaceProducts\(incoming,"active",importedAt\)/);
+  assert.match(page, /queueWorkspaceProducts\(\[normalized\]\)/);
+  assert.match(page, /linx-product-overrides-v1/);
+  assert.match(page, /fetchCloudWorkspaceMeta/);
+  assert.match(worker, /linx_product_overrides/);
+  assert.match(worker, /excluded\.updated_at > linx_product_overrides\.updated_at/);
+});
+
 test("unclassified products expose a durable bilingual manual category control", () => {
   const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
   const picker = readFileSync(new URL("../app/manual-major-category.tsx", import.meta.url), "utf8");
