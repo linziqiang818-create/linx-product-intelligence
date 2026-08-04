@@ -75,9 +75,10 @@ test("syncs learning decisions as bounded cloud patches instead of whole profile
   assert.match(page, /setInterval\(\(\)=>\{void pull\(\)\},5000\)/);
   assert.match(page, /learningPatchCount\(createLearningPatch\(latestLearning\.current,cloudLearning\.current\)\)/);
   assert.doesNotMatch(page, /body:JSON\.stringify\(\{state:next\}\)/);
-  assert.match(worker, /WHERE id = \?3 AND revision = \?4/);
+  assert.match(worker, /linx_learning_entries/);
+  assert.match(worker, /ON CONFLICT\(kind, entry_key\) DO UPDATE/);
+  assert.doesNotMatch(worker, /SET payload = \?1, revision = revision \+ 1/);
   assert.match(worker, /searchParams\.get\("meta"\) === "1"/);
-  assert.match(worker, /concurrent update; retry/);
 });
 
 test("syncs product imports and edits as per-ASIN cloud records", () => {

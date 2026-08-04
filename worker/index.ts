@@ -2,6 +2,7 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 import { emptyLearningState, mergeLearningStates, normalizeLearningState } from "../app/learning-state";
+import { learningEntriesToState, learningPatchToEntries, type LearningStorageEntry } from "../app/learning-storage";
 
 interface Env {
   ASSETS: Fetcher;
@@ -60,6 +61,20 @@ const learningStateSchema = `CREATE TABLE IF NOT EXISTS linx_learning_state (
   updated_at TEXT NOT NULL
 )`;
 
+const learningEntrySchema = `CREATE TABLE IF NOT EXISTS linx_learning_entries (
+  kind TEXT NOT NULL,
+  entry_key TEXT NOT NULL,
+  payload TEXT NOT NULL,
+  updated_at TEXT NOT NULL,
+  PRIMARY KEY (kind, entry_key)
+)`;
+
+const learningMetaSchema = `CREATE TABLE IF NOT EXISTS linx_learning_meta (
+  id TEXT PRIMARY KEY NOT NULL,
+  revision INTEGER NOT NULL DEFAULT 0,
+  updated_at TEXT NOT NULL
+)`;
+
 const productOverrideSchema = `CREATE TABLE IF NOT EXISTS linx_product_overrides (
   asin TEXT PRIMARY KEY NOT NULL,
   location TEXT NOT NULL,
@@ -74,16 +89,18 @@ const workspaceMetaSchema = `CREATE TABLE IF NOT EXISTS linx_workspace_meta (
 )`;
 
 async function handleLearningState(request: Request, db: D1Database) {
-  await db.prepare(learningStateSchema).run();
+  await db.batch([
+    db.prepare(learningStateSchema),
+    db.prepare(learningEntrySchema),
+    db.prepare(learningMetaSchema),
+  ]);
+  const meta = await ensureLearningMeta(db);
   if (request.method === "GET") {
-    const row = await db.prepare("SELECT payload, revision, updated_at FROM linx_learning_state WHERE id = ?1").bind("company").first<{ payload: string; revision: number; updated_at: string }>();
     if (new URL(request.url).searchParams.get("meta") === "1") {
-      return Response.json({ revision: row?.revision ?? 0, updatedAt: row?.updated_at ?? null }, { headers: { "Cache-Control": "no-store" } });
+      return Response.json({ revision: meta.revision, updatedAt: meta.updated_at }, { headers: { "Cache-Control": "no-store" } });
     }
-    let stored: unknown = emptyLearningState();
-    if (row) try { stored = JSON.parse(row.payload); } catch { stored = emptyLearningState(); }
-    const state = normalizeLearningState(stored);
-    return Response.json({ state, revision: row?.revision ?? 0 }, { headers: { "Cache-Control": "no-store" } });
+    const state = await readLearningState(db, meta.updated_at);
+    return Response.json({ state, revision: meta.revision }, { headers: { "Cache-Control": "no-store" } });
   }
   if (request.method === "PUT" || request.method === "PATCH") {
     const origin = request.headers.get("origin");
@@ -95,31 +112,67 @@ async function handleLearningState(request: Request, db: D1Database) {
     catch { return Response.json({ error: "invalid JSON" }, { status: 400 }); }
     const incoming = Object.prototype.hasOwnProperty.call(parsed, "patch") ? parsed.patch : parsed.state;
     if (!incoming || typeof incoming !== "object") return Response.json({ error: "learning state or patch required" }, { status: 400 });
-    for (let attempt = 0; attempt < 5; attempt += 1) {
-      await db.prepare(`INSERT OR IGNORE INTO linx_learning_state (id, payload, revision, updated_at)
-        VALUES (?1, ?2, 0, ?3)`)
-        .bind("company", JSON.stringify(emptyLearningState()), new Date().toISOString()).run();
-      const existing = await db.prepare("SELECT payload, revision FROM linx_learning_state WHERE id = ?1")
-        .bind("company").first<{ payload: string; revision: number }>();
-      let existingState: unknown = emptyLearningState();
-      if (existing) try { existingState = JSON.parse(existing.payload); } catch { existingState = emptyLearningState(); }
-      const state = mergeLearningStates(existingState, incoming);
-      const updatedAt = new Date().toISOString();
-      state.updatedAt = updatedAt;
-      const result = await db.prepare(`UPDATE linx_learning_state
-        SET payload = ?1, revision = revision + 1, updated_at = ?2
-        WHERE id = ?3 AND revision = ?4`)
-        .bind(JSON.stringify(state), updatedAt, "company", existing?.revision ?? 0).run();
-      if (Number(result.meta?.changes ?? 0) === 1) {
-        const revision = (existing?.revision ?? 0) + 1;
-        return request.method === "PATCH"
-          ? Response.json({ revision, updatedAt }, { headers: { "Cache-Control": "no-store" } })
-          : Response.json({ state, revision }, { headers: { "Cache-Control": "no-store" } });
-      }
+    const updatedAt = new Date().toISOString();
+    const entries = learningPatchToEntries(incoming, updatedAt);
+    if (!entries.length) return Response.json({ error: "learning patch contains no valid records" }, { status: 400 });
+    const encoder = new TextEncoder();
+    if (entries.some((entry) => encoder.encode(entry.payload).byteLength > 750_000)) {
+      return Response.json({ error: "individual learning record too large" }, { status: 413 });
     }
-    return Response.json({ error: "concurrent update; retry" }, { status: 409 });
+    for (let index = 0; index < entries.length; index += 40) {
+      await db.batch(entries.slice(index, index + 40).map((entry) => db.prepare(`INSERT INTO linx_learning_entries (kind, entry_key, payload, updated_at)
+        VALUES (?1, ?2, ?3, ?4)
+        ON CONFLICT(kind, entry_key) DO UPDATE SET payload = excluded.payload, updated_at = excluded.updated_at
+        WHERE excluded.updated_at > linx_learning_entries.updated_at`)
+        .bind(entry.kind, entry.key, entry.payload, entry.updatedAt)));
+    }
+    await db.prepare("UPDATE linx_learning_meta SET revision = revision + 1, updated_at = ?1 WHERE id = ?2").bind(updatedAt, "company").run();
+    const current = await db.prepare("SELECT revision FROM linx_learning_meta WHERE id = ?1").bind("company").first<{ revision: number }>();
+    const revision = current?.revision ?? meta.revision + 1;
+    if (request.method === "PATCH") return Response.json({ revision, updatedAt }, { headers: { "Cache-Control": "no-store" } });
+    const state = await readLearningState(db, updatedAt);
+    return Response.json({ state, revision }, { headers: { "Cache-Control": "no-store" } });
   }
   return new Response("Method not allowed", { status: 405, headers: { Allow: "GET, PUT, PATCH" } });
+}
+
+async function ensureLearningMeta(db: D1Database) {
+  let meta = await db.prepare("SELECT revision, updated_at FROM linx_learning_meta WHERE id = ?1").bind("company").first<{ revision: number; updated_at: string }>();
+  if (meta) return meta;
+  const legacy = await db.prepare("SELECT revision, updated_at FROM linx_learning_state WHERE id = ?1").bind("company").first<{ revision: number; updated_at: string }>();
+  const updatedAt = legacy?.updated_at ?? new Date().toISOString();
+  await db.prepare("INSERT OR IGNORE INTO linx_learning_meta (id, revision, updated_at) VALUES (?1, ?2, ?3)")
+    .bind("company", legacy?.revision ?? 0, updatedAt).run();
+  meta = await db.prepare("SELECT revision, updated_at FROM linx_learning_meta WHERE id = ?1").bind("company").first<{ revision: number; updated_at: string }>();
+  return meta ?? { revision: legacy?.revision ?? 0, updated_at: updatedAt };
+}
+
+async function readLearningEntries(db: D1Database) {
+  const entries: LearningStorageEntry[] = [];
+  let kind = "";
+  let key = "";
+  while (true) {
+    const rows = await db.prepare(`SELECT kind, entry_key, payload, updated_at
+      FROM linx_learning_entries
+      WHERE kind > ?1 OR (kind = ?1 AND entry_key > ?2)
+      ORDER BY kind, entry_key LIMIT 501`).bind(kind, key).all<{ kind: LearningStorageEntry["kind"]; entry_key: string; payload: string; updated_at: string }>();
+    const page = rows.results.slice(0, 500);
+    entries.push(...page.map((row) => ({ kind: row.kind, key: row.entry_key, payload: row.payload, updatedAt: row.updated_at })));
+    if (rows.results.length <= 500 || !page.length) break;
+    kind = page.at(-1)!.kind;
+    key = page.at(-1)!.entry_key;
+  }
+  return entries;
+}
+
+async function readLearningState(db: D1Database, updatedAt: string) {
+  const legacy = await db.prepare("SELECT payload FROM linx_learning_state WHERE id = ?1").bind("company").first<{ payload: string }>();
+  let base: unknown = emptyLearningState(updatedAt);
+  if (legacy) try { base = JSON.parse(legacy.payload); } catch { base = emptyLearningState(updatedAt); }
+  const delta = learningEntriesToState(await readLearningEntries(db), updatedAt);
+  const state = mergeLearningStates(base, delta);
+  state.updatedAt = updatedAt;
+  return normalizeLearningState(state);
 }
 
 function urlOrigin(value: string) {
