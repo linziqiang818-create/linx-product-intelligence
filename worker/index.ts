@@ -60,33 +60,49 @@ async function handleLearningState(request: Request, db: D1Database) {
   await db.prepare(learningStateSchema).run();
   if (request.method === "GET") {
     const row = await db.prepare("SELECT payload, revision, updated_at FROM linx_learning_state WHERE id = ?1").bind("company").first<{ payload: string; revision: number; updated_at: string }>();
+    if (new URL(request.url).searchParams.get("meta") === "1") {
+      return Response.json({ revision: row?.revision ?? 0, updatedAt: row?.updated_at ?? null }, { headers: { "Cache-Control": "no-store" } });
+    }
     let stored: unknown = emptyLearningState();
     if (row) try { stored = JSON.parse(row.payload); } catch { stored = emptyLearningState(); }
     const state = normalizeLearningState(stored);
     return Response.json({ state, revision: row?.revision ?? 0 }, { headers: { "Cache-Control": "no-store" } });
   }
-  if (request.method === "PUT") {
+  if (request.method === "PUT" || request.method === "PATCH") {
     const origin = request.headers.get("origin");
     if (origin !== urlOrigin(request.url)) return Response.json({ error: "same-origin write required" }, { status: 403 });
     const bodyText = await request.text();
     if (bodyText.length > 5_000_000) return Response.json({ error: "learning state too large" }, { status: 413 });
-    let parsed: { state?: unknown };
+    let parsed: { state?: unknown; patch?: unknown };
     try { parsed = JSON.parse(bodyText) as { state?: unknown }; }
     catch { return Response.json({ error: "invalid JSON" }, { status: 400 }); }
-    const existing = await db.prepare("SELECT payload FROM linx_learning_state WHERE id = ?1").bind("company").first<{ payload: string }>();
-    let existingState: unknown = emptyLearningState();
-    if (existing) try { existingState = JSON.parse(existing.payload); } catch { existingState = emptyLearningState(); }
-    const state = mergeLearningStates(existingState, parsed.state);
-    const updatedAt = new Date().toISOString();
-    state.updatedAt = updatedAt;
-    await db.prepare(`INSERT INTO linx_learning_state (id, payload, revision, updated_at)
-      VALUES (?1, ?2, 1, ?3)
-      ON CONFLICT(id) DO UPDATE SET payload = excluded.payload, revision = revision + 1, updated_at = excluded.updated_at`)
-      .bind("company", JSON.stringify(state), updatedAt).run();
-    const row = await db.prepare("SELECT revision FROM linx_learning_state WHERE id = ?1").bind("company").first<{ revision: number }>();
-    return Response.json({ state, revision: row?.revision ?? 1 }, { headers: { "Cache-Control": "no-store" } });
+    const incoming = Object.prototype.hasOwnProperty.call(parsed, "patch") ? parsed.patch : parsed.state;
+    if (!incoming || typeof incoming !== "object") return Response.json({ error: "learning state or patch required" }, { status: 400 });
+    for (let attempt = 0; attempt < 5; attempt += 1) {
+      await db.prepare(`INSERT OR IGNORE INTO linx_learning_state (id, payload, revision, updated_at)
+        VALUES (?1, ?2, 0, ?3)`)
+        .bind("company", JSON.stringify(emptyLearningState()), new Date().toISOString()).run();
+      const existing = await db.prepare("SELECT payload, revision FROM linx_learning_state WHERE id = ?1")
+        .bind("company").first<{ payload: string; revision: number }>();
+      let existingState: unknown = emptyLearningState();
+      if (existing) try { existingState = JSON.parse(existing.payload); } catch { existingState = emptyLearningState(); }
+      const state = mergeLearningStates(existingState, incoming);
+      const updatedAt = new Date().toISOString();
+      state.updatedAt = updatedAt;
+      const result = await db.prepare(`UPDATE linx_learning_state
+        SET payload = ?1, revision = revision + 1, updated_at = ?2
+        WHERE id = ?3 AND revision = ?4`)
+        .bind(JSON.stringify(state), updatedAt, "company", existing?.revision ?? 0).run();
+      if (Number(result.meta?.changes ?? 0) === 1) {
+        const revision = (existing?.revision ?? 0) + 1;
+        return request.method === "PATCH"
+          ? Response.json({ revision, updatedAt }, { headers: { "Cache-Control": "no-store" } })
+          : Response.json({ state, revision }, { headers: { "Cache-Control": "no-store" } });
+      }
+    }
+    return Response.json({ error: "concurrent update; retry" }, { status: 409 });
   }
-  return new Response("Method not allowed", { status: 405, headers: { Allow: "GET, PUT" } });
+  return new Response("Method not allowed", { status: 405, headers: { Allow: "GET, PUT, PATCH" } });
 }
 
 function urlOrigin(value: string) {

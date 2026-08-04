@@ -66,6 +66,20 @@ test("keeps durable preference actions and removes the redundant candidate-list 
   assert.match(actions, /decision-recycle/);
 });
 
+test("syncs learning decisions as bounded cloud patches instead of whole profiles", () => {
+  const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const worker = readFileSync(new URL("../worker/index.ts", import.meta.url), "utf8");
+  assert.match(page, /method:"PATCH"/);
+  assert.match(page, /splitLearningPatch/);
+  assert.match(page, /fetchCloudLearningMeta/);
+  assert.match(page, /setInterval\(\(\)=>\{void pull\(\)\},5000\)/);
+  assert.match(page, /learningPatchCount\(createLearningPatch\(latestLearning\.current,cloudLearning\.current\)\)/);
+  assert.doesNotMatch(page, /body:JSON\.stringify\(\{state:next\}\)/);
+  assert.match(worker, /WHERE id = \?3 AND revision = \?4/);
+  assert.match(worker, /searchParams\.get\("meta"\) === "1"/);
+  assert.match(worker, /concurrent update; retry/);
+});
+
 test("unclassified products expose a durable bilingual manual category control", () => {
   const page = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
   const picker = readFileSync(new URL("../app/manual-major-category.tsx", import.meta.url), "utf8");
