@@ -25,6 +25,7 @@ const base: FormalProductRecord = {
   estimatedMargin: 24,
   priceUplift: 5,
   sourceUrl: "https://www.amazon.com/dp/PLACEMENT01",
+  imageUrl: "https://images.example.com/placement.jpg",
 };
 
 function businessSnapshot(origin: ProductOrigin) {
@@ -107,6 +108,15 @@ test("keeps potential, data pending and favorites orthogonal to the B grade and 
   const audit = auditProductPlacements([placement]);
   assert.equal(audit.overlaps.allThree, 1);
   assert.equal(audit.valid, true);
+});
+
+test("marks a missing main image as data pending without changing ABCD or destination", () => {
+  const complete = classifyFormalProduct(base, "import");
+  const missingImage = classifyFormalProduct({ ...base, imageUrl: "" }, "import");
+  assert.equal(missingImage.grade, complete.grade);
+  assert.equal(missingImage.destination, complete.destination);
+  assert.equal(missingImage.needsData, true);
+  assert.ok(missingImage.reasons.some((reason) => reason.includes("商品主图")));
 });
 
 test("maps A, B, C and D to the agreed business meanings", () => {

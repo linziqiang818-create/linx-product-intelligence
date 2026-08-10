@@ -52,8 +52,14 @@ test("card and D-list pagination can select only the current page", () => {
 
 test("product imports are cumulative ASIN updates and cannot replace history", () => {
   const source = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const importLogic = readFileSync(new URL("../app/product-import.ts", import.meta.url), "utf8");
+  const preview = readFileSync(new URL("../app/product-import-preview.tsx", import.meta.url), "utf8");
   assert.match(source, /按 ASIN 累计追加\/更新/);
   assert.doesNotMatch(source, /importMode|导入后替换当前批次/);
+  assert.match(source, /prepareProductImport\(products,patches\)/);
+  assert.match(importLogic, /mergeProvidedProductFields/);
+  assert.match(preview, /确认导入/);
+  assert.match(preview, /缺图产品会正常进入产品库/);
 });
 
 test("keeps durable preference actions and removes the redundant candidate-list entry", () => {

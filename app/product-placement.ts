@@ -3,7 +3,7 @@ import { classifyOpportunityTrack, trackLabels, type OpportunityTrack } from "./
 import { isPotentialProduct } from "./product-potential.ts";
 import { gradeFromDecision, type Grade } from "./recommendation-grade.ts";
 
-export const productPlacementClassifierVersion = "2026-07-23-v3";
+export const productPlacementClassifierVersion = "2026-08-10-v4";
 
 export type ProductOrigin = "real-products" | "historical" | "daily" | "import" | "candidate-enrichment";
 export type ProductDestination = "garbage" | OpportunityTrack;
@@ -32,6 +32,7 @@ export type FormalProductRecord = {
   estimatedMargin?: number;
   priceUplift?: number;
   sourceUrl?: string;
+  imageUrl?: string;
   manualFavorite?: boolean;
   manualGrade?: Grade;
   learnedGrade?: Exclude<Grade, "D">;
@@ -106,6 +107,7 @@ export function classifyFormalProduct(product: FormalProductRecord, origin: Prod
       );
   const opportunityTrack = opportunity?.track ?? null;
   const destination: ProductDestination = grade === "D" ? "garbage" : opportunityTrack ?? "unmatched";
+  const missingImage = !String(product.imageUrl ?? "").trim();
 
   return {
     asin: input.asin,
@@ -114,7 +116,7 @@ export function classifyFormalProduct(product: FormalProductRecord, origin: Prod
     opportunityTrack,
     opportunityTrackLabel: opportunityTrack ? trackLabels[opportunityTrack] : null,
     potential: isPotentialProduct(input),
-    needsData: assessment.dataStatus === "needs_data",
+    needsData: assessment.dataStatus === "needs_data" || missingImage,
     favorite: product.manualFavorite === true,
     favoriteSource: "manual",
     score,
@@ -123,6 +125,7 @@ export function classifyFormalProduct(product: FormalProductRecord, origin: Prod
       ...(!product.manualGrade && product.learnedGrade ? [`根据 ${product.learnedGradeEvidence?.count ?? 5} 条“${product.learnedGradeEvidence?.family ?? "同类产品"}”人工反馈，仅${learnedAdjustment > 0 ? "提升" : learnedAdjustment < 0 ? "降低" : "保持"}排序，不自动改变 ABCD`] : []),
       ...(!product.manualGrade && product.learnedGradeEvidence?.reasons?.length ? [`学习信号：${product.learnedGradeEvidence.reasons.join("；")}`] : []),
       ...assessment.reasons,
+      ...(missingImage ? ["数据待补：商品主图"] : []),
       ...(opportunity?.reasons ?? []),
     ],
     trace: {
