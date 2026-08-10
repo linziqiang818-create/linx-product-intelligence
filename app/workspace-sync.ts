@@ -31,12 +31,20 @@ export function newerWorkspaceRecords<T extends { asin: string }>(
   });
 }
 
-export function splitWorkspaceRecords<T extends { asin: string }>(records: WorkspaceRecord<T>[], maxBytes = 350_000) {
+function jsonByteLength(value: unknown) {
+  return new TextEncoder().encode(JSON.stringify(value)).byteLength;
+}
+
+export function splitWorkspaceRecords<T extends { asin: string }>(
+  records: WorkspaceRecord<T>[],
+  maxBytes = 350_000,
+  maxRecords = 100,
+) {
   const chunks: WorkspaceRecord<T>[][] = [];
   let current: WorkspaceRecord<T>[] = [];
   for (const record of records) {
     const candidate = [...current, record];
-    if (current.length && JSON.stringify({ records: candidate }).length > maxBytes) {
+    if (current.length && (candidate.length > maxRecords || jsonByteLength({ records: candidate }) > maxBytes)) {
       chunks.push(current);
       current = [record];
     } else current = candidate;

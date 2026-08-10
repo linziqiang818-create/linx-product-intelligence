@@ -231,8 +231,8 @@ async function handleProductOverrides(request: Request, db: D1Database) {
       ON CONFLICT(asin) DO UPDATE SET location = excluded.location, payload = excluded.payload, updated_at = excluded.updated_at
       WHERE excluded.updated_at > linx_product_overrides.updated_at`)
       .bind(record.asin, record.location, record.location === "deleted" ? null : JSON.stringify(record.product), record.updatedAt));
-    statements.push(db.prepare(`UPDATE linx_workspace_meta SET revision = revision + 1, updated_at = ?1 WHERE id = ?2`).bind(updatedAt, "products"));
-    await db.batch(statements);
+    for (let index = 0; index < statements.length; index += 50) await db.batch(statements.slice(index, index + 50));
+    await db.prepare(`UPDATE linx_workspace_meta SET revision = revision + 1, updated_at = ?1 WHERE id = ?2`).bind(updatedAt, "products").run();
     const meta = await db.prepare("SELECT revision FROM linx_workspace_meta WHERE id = ?1").bind("products").first<{ revision: number }>();
     return Response.json({ revision: meta?.revision ?? 0, updatedAt }, { headers: { "Cache-Control": "no-store" } });
   }

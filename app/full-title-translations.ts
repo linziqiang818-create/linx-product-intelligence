@@ -1,4 +1,4 @@
-import { furnitureTitleZh } from "./title-translation.ts";
+import { furnitureTitleZh, shouldRegenerateChineseTitle } from "./title-translation.ts";
 
 const translations: Record<string, string> = {
   B0FN3HXZC1: "71英寸高中世纪风拱形展示柜书架，圆弧造型，配波纹柜门与开放式层架，适用于餐厅，黑色",
@@ -55,7 +55,7 @@ const translations: Record<string, string> = {
 
 export function fullTitleZh(asin: string, saved?: string, title?: string, category?: string) {
   const stored = String(saved ?? "").trim();
-  if (stored && !/待自动翻译|待补充中文标题/.test(stored)) return stored;
+  if (stored && !/待自动翻译|待补充中文标题/.test(stored) && !shouldRegenerateChineseTitle(stored, String(title ?? ""), String(category ?? ""))) return stored;
   return translations[asin] || furnitureTitleZh(String(title ?? ""), String(category ?? ""));
 }
 

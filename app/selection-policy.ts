@@ -81,8 +81,8 @@ export function hasStrongDifferentiation(text: string) {
   return strongDifferentiationTerms.test(text);
 }
 
-export function isStandardizedMetalCommodity(text: string, hasPanelMaterial: boolean) {
-  return !hasPanelMaterial && metalTerms.test(text) && (standardizedMetalRackTerms.test(text) || standardMetalBedTerms.test(text)) && !hasStrongDifferentiation(text);
+export function isStandardizedMetalCommodity(text: string, hasFurnitureMaterial: boolean) {
+  return !hasFurnitureMaterial && metalTerms.test(text) && (standardizedMetalRackTerms.test(text) || standardMetalBedTerms.test(text)) && !hasStrongDifferentiation(text);
 }
 
 export function marginScoreFor(marginPercent: number) {

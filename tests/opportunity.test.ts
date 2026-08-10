@@ -244,6 +244,40 @@ test("does not reject furniture merely because its category mentions lighting", 
   assert.ok(!result.hardRejectReasons.some((reason) => reason.includes("类目超出")));
 });
 
+test("keeps aquarium stands as a supported pet-furniture direction", () => {
+  const result = assess({
+    ...base,
+    title: "55-75 Gallon Fish Tank Stand with Storage Cabinet and Power Outlet",
+    category: "Aquarium Stands",
+    material: "Engineered wood with metal hardware",
+  });
+  assert.equal(result.hardRejected, false);
+  assert.ok(result.affinity.includes("水族家具化"));
+  assert.ok(!result.hardRejectReasons.some((reason) => reason.includes("类目超出")));
+});
+
+test("does not treat baby shower event furniture as a baby product", () => {
+  const result = assess({
+    ...base,
+    title: "Wooden Donut Wall Display Stand for Wedding and Baby Shower",
+    category: "Event Display Stands",
+    material: "Engineered wood",
+  });
+  assert.equal(result.hardRejected, false);
+  assert.ok(!result.hardRejectReasons.some((reason) => reason.includes("婴儿")));
+});
+
+test("does not treat wooden cabinets with metal hardware as pure metal commodities", () => {
+  const result = assess({
+    ...base,
+    title: "Fluted Shoe Storage Cabinet with Metal Handles and Legs",
+    category: "Shoe Cabinets",
+    material: "Wood with metal handles and legs",
+  });
+  assert.equal(result.hardRejected, false);
+  assert.ok(!result.hardRejectReasons.some((reason) => reason.includes("纯金属")));
+});
+
 test("applies the confirmed ceiling storage rack rule even when the rack is motorized", () => {
   const rack = assess({
     ...base,

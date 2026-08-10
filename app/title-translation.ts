@@ -3,6 +3,7 @@ const hasChinese = (value: string) => /[\u3400-\u9fff]/.test(value);
 const productTypes: [RegExp, string][] = [
   [/reception desk|front desk|checkout counter/i, "前台接待台"],
   [/manicure (?:table|desk)|nail (?:table|desk)/i, "美甲工作台"],
+  [/vanity desk|makeup vanity/i, "梳妆台"],
   [/sewing (?:table|cabinet|desk)/i, "缝纫工作台"],
   [/adjustable bed (?:base|frame)/i, "电动可调床架"],
   [/bunk bed/i, "双层床"],
@@ -16,6 +17,11 @@ const productTypes: [RegExp, string][] = [
   [/cat house|cat condo/i, "猫屋"],
   [/litter box enclosure|litter box furniture|cat litter cabinet/i, "猫砂盆隐藏柜"],
   [/terrarium|reptile enclosure/i, "爬宠箱"],
+  [/aquarium stand|fish tank stand/i, "鱼缸底柜"],
+  [/reptile tank stand/i, "爬宠缸底柜"],
+  [/chicken coop/i, "鸡舍"],
+  [/rabbit hutch/i, "兔舍"],
+  [/hamster cage/i, "仓鼠笼"],
   [/animal cage|small animal cage|rabbit cage|guinea pig cage/i, "小宠物笼"],
   [/computer desk|office desk|writing desk|standing desk|executive desk|desk with/i, "办公桌"],
   [/tv stand|media console|entertainment center/i, "电视媒体柜"],
@@ -39,13 +45,23 @@ const productTypes: [RegExp, string][] = [
   [/dining table and chairs|dining set|table and chair set/i, "餐桌椅组合"],
   [/dining table/i, "餐桌"],
   [/storage bench|entryway bench/i, "玄关储物凳"],
+  [/breakfast nook bench|dining bench|ottoman bench|storage ottoman/i, "储物长凳"],
+  [/ottoman|footstool|foot rest stool/i, "脚凳"],
+  [/hall tree/i, "门厅衣帽柜"],
   [/garment rack|clothes rack/i, "衣帽架"],
   [/luggage rack/i, "行李架"],
   [/room divider|privacy screen/i, "屏风隔断"],
-  [/bar cart|serving cart/i, "餐酒推车"],
+  [/bar cart|serving cart|dessert cart|candy cart/i, "餐饮展示推车"],
+  [/kitchen cart|kitchen storage cart/i, "厨房收纳推车"],
+  [/utility cart|service cart|platform truck|flatbed cart/i, "多功能推车"],
   [/puzzle table/i, "拼图桌"],
   [/puzzle board/i, "拼图板"],
   [/storage bin|storage box/i, "收纳箱"],
+  [/trash can|waste bin|garbage bin|waste receptacle/i, "垃圾桶"],
+  [/phone locker|cell phone lock box/i, "手机存放柜"],
+  [/champagne wall|display arch|display stand/i, "活动展示架"],
+  [/ribbon organizer/i, "手工材料收纳架"],
+  [/shelf liner|furniture liner/i, "柜架衬垫"],
   [/drawer organizer|cabinet organizer|pull[- ]out organizer/i, "抽拉收纳架"],
   [/lazy susan/i, "旋转收纳盘"],
   [/wine rack/i, "酒架"],
@@ -103,7 +119,7 @@ const roomTerms: [RegExp, string][] = [
   [/bathroom/i, "浴室"], [/salon|spa/i, "沙龙"], [/retail store|shop/i, "商铺"],
 ];
 
-const genericFirstWords = new Set(["a", "an", "the", "modern", "farmhouse", "industrial", "wood", "wooden", "large", "small", "new", "twin", "full", "queen", "king", "california"]);
+const genericFirstWords = new Set(["a", "an", "the", "modern", "farmhouse", "industrial", "wood", "wooden", "large", "small", "new", "twin", "full", "queen", "king", "california", "mobile", "outdoor", "indoor", "commercial", "heavy", "slim", "oversized", "multi-layer", "three-layer", "platform", "furniture"]);
 
 function firstMatch(value: string, choices: [RegExp, string][]) {
   return choices.find(([pattern]) => pattern.test(value))?.[1];
@@ -137,10 +153,19 @@ export function furnitureTitleZh(title: string, category = "") {
 }
 
 export function chineseTitleFromRow(row: Record<string, unknown>) {
+  const sourceTitle = String(row["商品标题"] ?? row.title ?? "");
+  const sourceCategory = String(row["小类目"] ?? row["类目路径"] ?? row.category ?? "");
   const keys = ["中文标题", "商品中文标题", "标题中文", "中文翻译", "titleZh"];
   for (const key of keys) {
     const value = String(row[key] ?? "").trim();
-    if (value && !/待自动翻译|待补充中文标题/.test(value)) return value;
+    if (value && !/待自动翻译|待补充中文标题/.test(value) && !shouldRegenerateChineseTitle(value, sourceTitle, sourceCategory)) return value;
   }
-  return furnitureTitleZh(String(row["商品标题"] ?? row.title ?? ""), String(row["小类目"] ?? row["类目路径"] ?? row.category ?? ""));
+  return furnitureTitleZh(sourceTitle, sourceCategory);
+}
+
+export function shouldRegenerateChineseTitle(saved: string, title: string, category = "") {
+  const source = `${title} ${category}`;
+  if (/适用于沙龙/.test(saved) && !/salon|spa|manicure|nail|barber/i.test(source)) return true;
+  if (/家居产品/.test(saved) && !/家居产品/.test(furnitureTitleZh(title, category))) return true;
+  return false;
 }

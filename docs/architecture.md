@@ -4,7 +4,7 @@
 
 LINX 是 React + TypeScript + Vinext/Vite 构建的选品工作台。页面可通过本地开发服务器运行，也可以构建成内嵌 CSS、JavaScript 和基础产品数据的 Chrome 单文件。
 
-在线 Sites 版本已绑定 D1：人工分类与学习档案通过 `/api/learning-state` 同步，产品新增/编辑/位置变化通过 `/api/product-overrides` 按 ASIN 增量同步。本机浏览器同时保留待同步副本；Chrome 单文件版没有云端 API 时仍可本地使用和 JSON 备份。
+在线 Sites 版本已绑定 D1：人工分类与学习档案通过 `/api/learning-state` 同步，产品新增/编辑/位置变化通过 `/api/product-overrides` 按 ASIN 增量同步。产品补丁同时受每批 100 条和 350 KB 双重限制；本机大批量待同步记录保存在 IndexedDB。Chrome 单文件版没有云端 API 时仍可本地使用和 JSON 备份。
 
 `examples/` 是脚手架示例，不是 LINX 业务数据源；D1 业务结构以 `db/`、`drizzle/` 和 `worker/` 的当前实现为准。
 
@@ -17,7 +17,7 @@ LINX 是 React + TypeScript + Vinext/Vite 构建的选品工作台。页面可�
 | 扩池进度 | `app/acquisition-state.json` | 自动任务累计发现、深挖、入库、停止原因和最近批次 |
 | 云端产品增量 | D1 `/api/product-overrides` | 新增、编辑、淘汰、恢复和删除，以 ASIN 记录 |
 | 云端学习档案 | D1 `/api/learning-state` | 人工 ABCD、类目、收藏、校准、回收站和复盘 |
-| 浏览器产品副本 | `furniture-radar-v6`、`linx-product-overrides-v1` | 基础池差异和网络中断时的待同步产品记录 |
+| 浏览器产品副本 | IndexedDB `linx-workspace-v1` | 网络中断时的待同步产品记录；旧 `localStorage` 数据会自动迁移 |
 | 浏览器学习副本 | `linx-learning-profile-v1` | 网络中断时的待同步人工决策与学习证据 |
 
 页面启动时会把随版本发布的正式基础池、本机增量和云端增量合并，以更新时间解决同一 ASIN 的记录冲突；不会用新版本静默覆盖用户已有修改。JSON 备份包含产品和持续学习档案。

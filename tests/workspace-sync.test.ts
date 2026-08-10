@@ -24,3 +24,15 @@ test("large product imports are split into bounded patches", () => {
   assert.ok(chunks.every((chunk) => JSON.stringify({ records: chunk }).length <= 2_000));
   assert.equal(chunks.flat().length, records.length);
 });
+
+test("product patches never exceed the server record limit", () => {
+  const records: WorkspaceRecord<Product>[] = Array.from({ length: 255 }, (_, index) => ({
+    asin: `ASIN${String(index).padStart(6, "0")}`,
+    location: "active",
+    product: { asin: `ASIN${String(index).padStart(6, "0")}`, title: `中文产品 ${index}` },
+    updatedAt: "2026-08-10T00:00:00.000Z",
+  }));
+  const chunks = splitWorkspaceRecords(records, 10_000_000);
+  assert.deepEqual(chunks.map((chunk) => chunk.length), [100, 100, 55]);
+  assert.equal(chunks.flat().length, records.length);
+});
