@@ -432,6 +432,11 @@ input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
 .end-note::before, .end-note::after { content: "◆"; font-size: 7px; color: var(--bronze); vertical-align: 2px; margin: 0 10px; }
 .spinner { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--line-2); border-top-color: var(--bronze); animation: spin 0.8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- 分页器：明确的 60/页翻页，不做无底洞 ---------- */
+.pager { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 26px 0 6px; }
+.pager-info { color: var(--ink-2); font-size: 13px; font-variant-numeric: tabular-nums; }
+.pager-info b { font-family: var(--font-display); font-size: 16px; color: var(--ink); }
 .empty {
   grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; gap: 8px;
   padding: 64px 24px; text-align: center; color: var(--ink-2);

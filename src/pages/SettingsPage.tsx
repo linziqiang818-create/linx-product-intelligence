@@ -353,9 +353,9 @@ export default function SettingsPage() {
             </div>
             <div className="panel danger-zone">
               <h4>重置</h4>
-              <button className="btn btn-sm" onClick={() => resetPreference("keep-calibration")}>清空日常反馈，保留历史校准</button>
-              <button className="btn btn-sm btn-danger" onClick={() => resetPreference("all")}>清空全部偏好</button>
-              <p className="muted">收藏夹里的产品不会被删除，只是不再作为偏好信号。</p>
+              <button className="btn btn-sm" onClick={() => resetPreference("keep-calibration")}>清空学习反馈，重新开始学习</button>
+              <button className="btn btn-sm btn-danger" onClick={() => resetPreference("all")}>清空全部偏好（含钉住的层级）</button>
+              <p className="muted">两个按钮都会把手动的层级钉住清空、回到白纸期；收藏夹里的产品不会被删除，只是不再作为偏好信号。历史校准灌入已废除（2026-09-18），两条都从零开始。</p>
             </div>
           </aside>
         </div>

@@ -272,3 +272,51 @@ test("旧版 localStorage 迁移：产品、收藏、校准反馈", () => {
   assert.ok(store.counts().events >= 4);
   store.close();
 });
+
+test("类目否决豁免：以「类目不做」移除后，该类目不再有 top-20% 保底代表", () => {
+  const store = createStore(":memory:");
+  store.upsertProducts([
+    sample("B0VETO00001", { category: "Home & Kitchen:Furniture:Pet Crates", monthlySalesEstimate: { min: 100, max: 199 } }),
+    sample("B0VETO00002", { category: "Home & Kitchen:Furniture:Pet Crates", monthlySalesEstimate: { min: 400, max: 499 } }),
+    sample("B0VETO00003", { category: "Home & Kitchen:Furniture:Pet Crates", monthlySalesEstimate: { min: 900, max: 999 } }),
+    sample("B0CONTROL01", { category: "Home & Kitchen:Furniture:Wine Cabinets" }),
+  ]);
+  store.recomputeAll();
+  // 白纸期：Pet Crates 3 款取最优 1 款 + Wine Cabinets 1 款 → 2 款自动进第二大脑
+  assert.equal(store.counts().space3, 2);
+
+  // 以「这个类目不做」移除 Pet Crates 的头部款 → 整个类目失去保底，不再硬推代表
+  store.moveProducts(["B0VETO00003"], "library", "这个类目不做");
+  store.recomputeAll();
+  assert.equal(store.getProduct("B0VETO00002").autoBrain, 0);
+  assert.equal(store.counts().space3, 1); // 只剩 Wine Cabinets 的代表
+
+  // 锚点直通不受类目否决影响：真喜欢仍然升得上去
+  store.moveProducts(["B0VETO00001"], "brain");
+  store.recomputeAll();
+  assert.equal(store.counts().space3, 2);
+  store.close();
+});
+
+test("发现箱「不要」：记 −1 弱负票、错题本可撤销（放回发现箱）", () => {
+  const store = createStore(":memory:");
+  store.upsertProducts([sample("B0DISMIS01"), sample("B0DISMIS02")]);
+  store.db.prepare("UPDATE products SET discoveryState = 'new'").run();
+  const result = store.dismissDiscoveries(["B0DISMIS01"]);
+  assert.equal(result.dismissed, 1);
+  store.recomputeAll();
+  assert.equal(store.getProduct("B0DISMIS01").discoveryState, "dismissed");
+
+  const moves = store.listMoves(10);
+  assert.equal(moves.length, 1);
+  assert.equal(moves[0].action, "dismiss");
+  assert.equal(moves[0].weight, -1);
+  assert.ok(moves[0].canUndo);
+
+  store.undoMoves([{ asin: "B0DISMIS01", eventId: moves[0].eventId }]);
+  store.recomputeAll();
+  assert.equal(store.getProduct("B0DISMIS01").discoveryState, "new");
+  assert.equal(store.counts().discovery, 2);
+  assert.equal(store.counts().events, 0);
+  store.close();
+});

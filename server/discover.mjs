@@ -18,11 +18,13 @@ export const DEFAULT_DISCOVERY_CONFIG = {
     "trash can cabinet kitchen",
   ],
   autoDaily: true,
-  dailySearchLimit: 10,
-  dailyDetailLimit: 30,
-  dailyRefreshLimit: 10,
-  monthlyRequestCap: 4000,
-  maxPerKeyword: 12,
+  // 额度档位（2026-09-21 用户定稿：把免费档薅满）：30 搜索 + 120 详情 ≈ 150/天 ≈ 4500/月，
+  // 月度硬停 5000 兜底；每个词多细看几款让详情额度真的用得掉
+  dailySearchLimit: 30,
+  dailyDetailLimit: 120,
+  dailyRefreshLimit: 30,
+  monthlyRequestCap: 5000,
+  maxPerKeyword: 48,
   priceMin: 100,
   priceMax: 650,
 };

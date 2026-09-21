@@ -155,6 +155,7 @@ export function createApi(store) {
     const asins = asList(req.body?.asins).map((a) => a.toUpperCase());
     if (!asins.length) return res.status(400).json({ error: "缺少 asins" });
     const result = store.dismissDiscoveries(asins);
+    store.recomputeAll(); // 「不要」记了弱负票，重算让相似款的排序跟上
     res.json({ ok: true, ...result, counts: store.counts() });
   });
 

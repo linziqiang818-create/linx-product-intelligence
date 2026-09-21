@@ -14,6 +14,7 @@ export const EVENT_WEIGHTS = {
   not_interested: 0, // 👎 的降层由手动钉住（tier='pool'）直接完成，不产生泛化锚点
   rescue: 3, // 无视硬性规则也要它，意图明确的正向
   exclude: -4, // 主负向锚点（带移除原因，决定负向泛化通道）
+  dismiss: -1, // 发现箱「不要」弱负票（2026-09-21 定稿）：看过图和价格后的否决，仅产品级通道，可在错题本撤销
   cal_develop: 3,
   cal_reject: -5,
   cal_uncertain: -1,

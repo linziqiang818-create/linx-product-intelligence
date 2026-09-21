@@ -341,11 +341,17 @@ export function createStore(dbPath) {
     }
 
     // 第二遍：类目优中选优——每个类目（leaf）按推荐分取前 20%（至少 1 款）标记 autoBrain，
-    // 与锚点直通（prefScore ≥40）共同构成第二大脑的"模型挑选"部分
+    // 与锚点直通（prefScore ≥40）共同构成第二大脑的"模型挑选"部分。
+    // 你以「类目不做」移除过的类目不再享受保底代表（2026-09-21 定稿）：
+    // 否决的是整个类目的"优中选优"，但锚点直通与手动钉住不受影响——真喜欢永远赢过类目否决。
+    const vetoedCats = new Set(
+      profile.negatives.filter((s) => s.channel === "category").map((s) => s.attrs.category).filter(Boolean),
+    );
     const byCat = new Map();
     for (const s of staged) {
       if (s.p.placement !== "pass") continue;
       const cat = s.attrs.category;
+      if (vetoedCats.has(cat)) continue;
       (byCat.get(cat) ?? byCat.set(cat, []).get(cat)).push(s.finalScore);
     }
     const brainLine = new Map();
@@ -529,6 +535,8 @@ export function createStore(dbPath) {
         if (!event || event.source !== "user") throw new Error("找不到可撤销的移动记录");
         if (latestId.get(asin).id !== eventId) throw new Error("这个产品之后还有更新的手动调整，请先撤销最新的一条");
         db.prepare("DELETE FROM feedback_events WHERE id = ?").run(eventId);
+        // 撤销「不要」= 这事没发生过：产品放回发现箱重新等你过目
+        if (event.action === "dismiss") db.prepare("UPDATE products SET discoveryState = 'new' WHERE asin = ?").run(asin);
         const prev = event.prev ? JSON.parse(event.prev) : null;
         if (prev) {
           db.prepare("UPDATE products SET tier = ?, interest = ? WHERE asin = ?").run(prev.tier ?? "", prev.interest ?? "", asin);
@@ -801,9 +809,17 @@ export function createStore(dbPath) {
   function dismissDiscoveries(asins) {
     const stmt = db.prepare("UPDATE products SET discoveryState = 'dismissed' WHERE asin = ? AND discoveryState = 'new'");
     let dismissed = 0;
+    const at = now();
     db.exec("BEGIN");
     try {
-      for (const asin of asins) dismissed += stmt.run(asin).changes;
+      for (const asin of asins) {
+        if (!stmt.run(asin).changes) continue;
+        dismissed++;
+        // 「不要」也是你的实时判断（看过主图和价格）：记一条弱负票供偏好引擎参考，可在错题本撤销
+        const p = db.prepare("SELECT tier, interest FROM products WHERE asin = ?").get(asin);
+        const prev = { tier: p?.tier ?? "", interest: p?.interest ?? "", override: getOverrideRow.get(asin) ?? null };
+        addEvent(asin, "dismiss", "user", at, EVENT_WEIGHTS.dismiss, "", prev);
+      }
       db.exec("COMMIT");
     } catch (error) {
       db.exec("ROLLBACK");

@@ -41,7 +41,6 @@ export default function SpacePage({ space }: { space: SpaceKey }) {
   const [leaving, setLeaving] = useState<Set<string>>(new Set());
   const [importOpen, setImportOpen] = useState(false);
   const requestId = useRef(0);
-  const sentinel = useRef<HTMLDivElement | null>(null);
   const rowsRef = useRef<Product[]>([]);
   rowsRef.current = rows;
 
@@ -78,16 +77,13 @@ export default function SpacePage({ space }: { space: SpaceKey }) {
     load(1, true);
   }, [load]);
 
-  // 滚到底部自动加载下一页
-  useEffect(() => {
-    const el = sentinel.current;
-    if (!el) return;
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !loading && rows.length < total) load(page + 1, false);
-    }, { rootMargin: "600px" });
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [loading, rows.length, total, page, load]);
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const goPage = (next: number) => {
+    const clamped = Math.min(totalPages, Math.max(1, next));
+    if (clamped === page && !error) return;
+    load(clamped, true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // 产品移动后：不再属于这一层的卡片滑出列表；撤销后回来的卡片放回列表顶部
   useMoveListener(
@@ -250,9 +246,16 @@ export default function SpacePage({ space }: { space: SpaceKey }) {
         </div>
       )}
 
-      <div ref={sentinel} className="sentinel">
-        {loading && <span className="spinner" aria-label="加载中" />}
-        {!loading && rows.length > 0 && rows.length >= total && <span className="end-note">已显示全部 {total.toLocaleString("zh-CN")} 款</span>}
+      <div className="pager" role="navigation" aria-label="分页">
+        <button className="btn btn-sm" disabled={page <= 1 || loading} onClick={() => goPage(page - 1)}>
+          上一页
+        </button>
+        <span className="pager-info">
+          第 <b>{page}</b> / {totalPages.toLocaleString("zh-CN")} 页 · 共 {total.toLocaleString("zh-CN")} 款 · 每页 {PAGE_SIZE}
+        </span>
+        <button className="btn btn-sm" disabled={page >= totalPages || loading} onClick={() => goPage(page + 1)}>
+          下一页
+        </button>
       </div>
 
       {importOpen && (

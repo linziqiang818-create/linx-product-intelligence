@@ -182,6 +182,7 @@ export const MOVE_ACTION_LABELS: Record<string, string> = {
   auto_reset: "恢复自动判定",
   favorite: "收藏",
   unfavorite: "取消收藏",
+  dismiss: "发现箱不要",
 };
 
 export type ProfileCell = { dim: string; dimLabel: string; value: string; label?: string; weight: number; pos: number; neg: number };
