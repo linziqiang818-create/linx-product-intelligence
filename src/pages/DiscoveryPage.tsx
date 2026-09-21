@@ -59,8 +59,10 @@ export default function DiscoveryPage() {
       const errors = result.report?.errors ?? [];
       const refreshed = result.report?.refreshed ?? 0;
       const kept = result.report?.kept ?? 0;
+      const dup = result.report?.dupImage ?? 0;
+      const dupNote = dup > 0 ? `，跳过同图 ${dup} 款` : "";
       notify(
-        errors.length ? `采集完成：新发现 ${kept} 款、刷新跟进 ${refreshed} 款，${errors.length} 条跳过` : `采集完成：新发现 ${kept} 款、刷新跟进 ${refreshed} 款`,
+        errors.length ? `采集完成：新发现 ${kept} 款、刷新跟进 ${refreshed} 款${dupNote}，${errors.length} 条跳过` : `采集完成：新发现 ${kept} 款、刷新跟进 ${refreshed} 款${dupNote}`,
         errors.length ? "info" : "success",
       );
       await load();

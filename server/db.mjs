@@ -7,6 +7,7 @@ import { assess } from "./assess.mjs";
 import { compileRules, placeProduct } from "./rules.mjs";
 import { defaultRules, normalizeRules } from "./rules-config.mjs";
 import { EVENT_WEIGHTS, BRAIN_AUTO_THRESHOLD, BRAIN_CATEGORY_TOP, buildProfile, extractAttrs, finalScoreFor, profileSummary, reasonsFor, scorePreference } from "./preference.mjs";
+import { planImageDedup, imageIdOf, isPinned } from "./dedupe.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 export const projectRoot = join(here, "..");
@@ -88,7 +89,8 @@ CREATE TABLE IF NOT EXISTS visual_vectors (
 // 产品库（全部）→ 适配池 = 过硬性条件的全体（默认层）→ 第二大脑 = 锚点直通（prefScore ≥40）
 // + 各类目优中选优（每类目推荐分前 20%，至少 1 款，autoBrain 在重算时标好）+ 手动升入（tier='brain'）。
 // 负向反馈不连坐：移出/👎 只作用于个体；模型只做正向挑选，不因你移出什么而降级别的产品。
-const SPACES_DISCOVERY = `p.discoveryState IN ('', 'kept')`;
+// 同图变体（variantOf != ''）不进任何空间（2026-09-21 定稿：同一张主图只展示一次）。
+const SPACES_DISCOVERY = `p.discoveryState IN ('', 'kept') AND p.variantOf = ''`;
 const BRAIN_WHERE = `(p.placement = 'pass' AND ${SPACES_DISCOVERY} AND (p.tier = 'brain' OR (p.tier = '' AND (p.prefScore >= ${BRAIN_AUTO_THRESHOLD} OR p.autoBrain = 1))))`;
 const POOL_WHERE = `(p.placement = 'pass' AND ${SPACES_DISCOVERY} AND (p.tier = 'pool' OR (p.tier = '' AND p.prefScore < ${BRAIN_AUTO_THRESHOLD} AND p.autoBrain = 0)))`;
 
@@ -183,6 +185,7 @@ export function createStore(dbPath) {
   ensureColumn("products", "tier", "TEXT NOT NULL DEFAULT ''");
   ensureColumn("products", "discoveryState", "TEXT NOT NULL DEFAULT ''");
   ensureColumn("products", "autoBrain", "INTEGER NOT NULL DEFAULT 0");
+  ensureColumn("products", "variantOf", "TEXT NOT NULL DEFAULT ''");
   ensureColumn("feedback_events", "reason", "TEXT NOT NULL DEFAULT ''");
   ensureColumn("feedback_events", "prev", "TEXT NOT NULL DEFAULT ''");
 
@@ -363,6 +366,31 @@ export function createStore(dbPath) {
 
     db.exec("BEGIN");
     try {
+      // 同图变体合并（URL 同图 ID 这一级，向量 cos≥0.99 这一级在 vision.mjs 管道里做）。
+      // 先清后设，但保留仍有效的向量级合并：逐条验证（同图 ID，或向量 cos≥0.99），图换掉/代表款失效才清。
+      const hiddenByCanonical = planImageDedup(products.filter((p) => p.discoveryState !== "dismissed"));
+      const byAsin = new Map(products.map((p) => [p.asin, p]));
+      const vecCos = (a, b) => {
+        const va = vectors.get(a);
+        const vb = vectors.get(b);
+        if (!va || !vb) return 0;
+        let dot = 0;
+        for (let k = 0; k < va.length && k < vb.length; k++) dot += va[k] * vb[k];
+        return dot; // 两边都是 L2 归一化向量，内积即余弦
+      };
+      const VECTOR_DUP_COS = 0.99;
+      const setVariant = db.prepare("UPDATE products SET variantOf = ? WHERE asin = ?");
+      for (const p of products) {
+        let target = hiddenByCanonical.get(p.asin) ?? "";
+        if (!target && (p.variantOf ?? "") !== "" && !isPinned(p)) {
+          const canonicalRow = byAsin.get(p.variantOf);
+          const sameImage = imageIdOf(p.imageUrl) !== "" && imageIdOf(p.imageUrl) === imageIdOf(canonicalRow?.imageUrl);
+          const stillDup = Boolean(canonicalRow) && canonicalRow.variantOf === "" && canonicalRow.discoveryState !== "dismissed" && (sameImage || vecCos(p.asin, canonicalRow.asin) >= VECTOR_DUP_COS);
+          if (stillDup) target = p.variantOf;
+        }
+        if ((p.variantOf ?? "") !== target) setVariant.run(target, p.asin);
+        p.variantOf = target;
+      }
       for (const s of staged) {
         const autoBrain = s.p.placement === "pass" && (s.prefScore >= BRAIN_AUTO_THRESHOLD || s.finalScore >= (brainLine.get(s.attrs.category) ?? Infinity) - 1e-9) ? 1 : 0;
         updateDerived.run({
@@ -760,10 +788,11 @@ export function createStore(dbPath) {
       removed: one(`SELECT COUNT(*) AS n FROM products WHERE placement = 'removed' AND ${SPACES_DISCOVERY.replace(/p\./g, "")}`),
       space3: one(`SELECT COUNT(*) AS n FROM products p WHERE ${BRAIN_WHERE}`),
       favorites: one("SELECT COUNT(*) AS n FROM favorites"),
-      discovery: one("SELECT COUNT(*) AS n FROM products WHERE discoveryState = 'new'"),
+      discovery: one("SELECT COUNT(*) AS n FROM products WHERE discoveryState = 'new' AND variantOf = ''"),
       poolPinned: one("SELECT COUNT(*) AS n FROM products WHERE placement = 'pass' AND tier = 'pool'"),
       poolAuto: one(`SELECT COUNT(*) AS n FROM products p WHERE placement = 'pass' AND tier = '' AND p.prefScore < ${BRAIN_AUTO_THRESHOLD} AND p.autoBrain = 0`),
       events: one("SELECT COUNT(*) AS n FROM feedback_events"),
+      variantsHidden: one("SELECT COUNT(*) AS n FROM products WHERE variantOf != ''"),
     };
   }
 
@@ -829,7 +858,7 @@ export function createStore(dbPath) {
   }
 
   function listDiscoveryRows() {
-    return db.prepare("SELECT * FROM products WHERE discoveryState = 'new' ORDER BY finalScore DESC, asin ASC").all().map(hydrate);
+    return db.prepare("SELECT * FROM products WHERE discoveryState = 'new' AND variantOf = '' ORDER BY finalScore DESC, asin ASC").all().map(hydrate);
   }
 
   function backup() {

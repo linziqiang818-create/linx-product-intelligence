@@ -341,6 +341,12 @@ export default function SettingsPage() {
           </div>
           <aside className="settings-side">
             <div className="panel">
+              <h4>同图变体</h4>
+              <p className="muted">
+                已自动隐藏 <b>{counts?.variantsHidden ?? 0}</b> 款与库内产品主图相同的重复链接（同一张图只展示一次，代表款取评论最多、被你动过的优先）。收藏或 👍 过的款永远不会被当成变体藏掉。
+              </p>
+            </div>
+            <div className="panel">
               <h4>怎么训练它</h4>
               <ul className="howto">
                 <li><b>收藏</b> 是最强的正面信号。</li>

@@ -123,6 +123,7 @@ export type Counts = {
   poolPinned: number;
   poolAuto: number;
   events: number;
+  variantsHidden: number;
 };
 
 /** 自动采集配置（server/discover.mjs 的 normalizeDiscoveryConfig） */
@@ -145,7 +146,8 @@ export type DiscoveryReport = {
   kept: number;
   refreshed: number;
   refreshTotal: number;
-  keywords: { keyword: string; found: number; newCount: number; kept: number; skippedExisting: number; filtered: number; error?: string }[];
+  dupImage: number;
+  keywords: { keyword: string; found: number; newCount: number; kept: number; skippedExisting: number; filtered: number; dupImage: number; error?: string }[];
   errors: string[];
 };
 

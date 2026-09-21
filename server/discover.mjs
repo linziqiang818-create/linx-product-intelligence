@@ -3,6 +3,7 @@
 // 采集流水线先干两件事：① 刷新跟进名单里最久没看过的产品（收藏 ∪ 感兴趣 ∪ 第二大脑，吃详情额度）；
 // ② 再按关键词找新品进发现箱。已存在的产品不会因为关键词搜索被重复抓详情。
 import { normalizeProduct, parseSales } from "./db.mjs";
+import { imageIdOf } from "./dedupe.mjs";
 
 export const DEFAULT_DISCOVERY_CONFIG = {
   keywords: [
@@ -224,7 +225,15 @@ export async function runDiscovery(store, fetchPage, options = {}) {
   const delayMs = options.delayMs ?? 4000; // 请求间隔：贴着免费号的自适应限流边缘走，宁慢勿烧
   const ledger = getLedger(store, now);
   const known = new Set(store.db.prepare("SELECT asin FROM products").all().map((r) => r.asin));
-  const report = { at: new Date(now).toISOString(), keywords: [], searchRequests: 0, detailRequests: 0, kept: 0, refreshed: 0, refreshTotal: 0, errors: [] };
+  // 同图去重：主图 ID 已在库里（或本批已排队）的候选不再细看——省 credits，也符合"同一张图只展示一次"
+  const knownImages = new Set(
+    store.db
+      .prepare("SELECT imageUrl FROM products WHERE discoveryState != 'dismissed'")
+      .all()
+      .map((r) => imageIdOf(r.imageUrl))
+      .filter(Boolean),
+  );
+  const report = { at: new Date(now).toISOString(), keywords: [], searchRequests: 0, detailRequests: 0, kept: 0, refreshed: 0, refreshTotal: 0, dupImage: 0, errors: [] };
   const pause = () => new Promise((resolve) => setTimeout(resolve, delayMs));
   const applyRefresh = refreshStatement(store);
 
@@ -274,7 +283,7 @@ export async function runDiscovery(store, fetchPage, options = {}) {
     if (monthlyExhausted(ledger, config)) { report.errors.push("月度额度已用完（免费档 5000/月硬停），次月自动归零恢复"); break; }
     if (ledger.search >= config.dailySearchLimit) { report.errors.push("搜索额度用完，剩余关键词下次再跑"); break; }
     if (ledger.detail >= config.dailyDetailLimit) { report.errors.push("详情额度用完，剩余候选下次再跑"); break; }
-    const stat = { keyword, found: 0, newCount: 0, kept: 0, skippedExisting: 0, filtered: 0 };
+    const stat = { keyword, found: 0, newCount: 0, kept: 0, skippedExisting: 0, filtered: 0, dupImage: 0 };
     try {
       spend(store, ledger, "search");
       report.searchRequests++;
@@ -283,9 +292,12 @@ export async function runDiscovery(store, fetchPage, options = {}) {
       const queue = [];
       for (const listing of listings) {
         if (known.has(listing.asin)) { stat.skippedExisting++; continue; }
+        const imgId = imageIdOf(listing.imageUrl);
+        if (imgId && knownImages.has(imgId)) { stat.dupImage++; continue; }
         const verdict = prefilterCandidate(listing, config);
         if (!verdict.ok) { stat.filtered++; continue; }
         queue.push(listing);
+        if (imgId) knownImages.add(imgId);
         if (queue.length >= config.maxPerKeyword) break;
       }
       for (const candidate of queue) {
@@ -312,6 +324,7 @@ export async function runDiscovery(store, fetchPage, options = {}) {
     }
     stat.kept = stat.newCount;
     report.kept += stat.newCount;
+    report.dupImage += stat.dupImage;
     report.keywords.push(stat);
     await pause();
   }
