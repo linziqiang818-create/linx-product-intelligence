@@ -1,44 +1,36 @@
 {
-  "name": "site-creator-vinext-starter",
-  "version": "0.1.0",
+  "name": "linx",
+  "version": "2.0.0",
   "private": true,
+  "description": "LINX 家具选品工作台：三空间（产品库 → 适配池 → 第二大脑）+ 本地 SQLite 数据服务",
   "engines": {
     "node": ">=22.13.0"
   },
+  "type": "module",
   "scripts": {
-    "dev": "vinext dev",
-    "build": "vinext build",
-    "build:pages": "vite build --config vite.pages.config.ts",
-    "build:portable": "vite build --config vite.pages.config.ts --mode portable && node scripts/inline-portable.mjs",
-    "start": "vinext start",
-    "test": "npm run build && npm run build:portable && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/portable-build.test.mjs tests/opportunity.test.ts tests/opportunity-track.test.ts tests/opportunity-diversity.test.ts tests/demo-products.test.ts tests/import-images.test.ts tests/real-products.test.ts tests/product-potential.test.ts tests/title-translation.test.ts tests/calibration.test.ts tests/batch-calibration.test.ts tests/acquisition-policy.test.ts tests/product-placement.test.ts",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern dist-pages --ignore-pattern .next --ignore-pattern .run",
-    "db:generate": "drizzle-kit generate"
+    "start": "node server/index.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "scan": "node server/gap-scan.mjs",
+    "vision": "node server/vision.mjs",
+    "shortcut": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/create-desktop-shortcut.ps1"
   },
   "dependencies": {
-    "drizzle-orm": "0.45.2",
-    "next": "16.2.6",
+    "@huggingface/transformers": "^3.8.1",
+    "express": "^5.2.1",
+    "multer": "^2.4.0",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.37.1",
-    "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
-    "@vitejs/plugin-rsc": "0.5.26",
-    "drizzle-kit": "0.31.10",
-    "eslint": "9.39.4",
-    "eslint-config-next": "16.2.6",
-    "react-server-dom-webpack": "19.2.6",
-    "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
-    "vinext": "0.0.50",
-    "vite": "8.0.13",
-    "wrangler": "4.92.0"
-  },
-  "type": "module"
+    "vite": "8.0.13"
+  }
 }
