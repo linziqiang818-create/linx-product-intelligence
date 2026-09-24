@@ -1,4 +1,4 @@
-import type { Counts, DiscoverState, DiscoveryConfig, Facets, Filters, ListResponse, MoveRecord, MoveTarget, Product, Profile, Status } from "./types";
+import type { Counts, DevelopmentDecision, DevelopmentFacts, DevelopmentReason, DevelopmentReasonDefinition, DevelopmentRevision, DevelopmentSample, DiscoverState, DiscoveryConfig, Facets, Filters, ListResponse, MoveRecord, MoveTarget, Product, Profile, ReferenceScope, Status } from "./types";
 
 type ConnectionListener = (online: boolean) => void;
 let connectionListener: ConnectionListener | null = null;
@@ -49,6 +49,17 @@ export function buildQuery(space: string, filters: Partial<Filters>, extra: Reco
 
 export const api = {
   status: () => request<Status>("/api/status"),
+  developmentReasons: () => request<{ reasons: DevelopmentReasonDefinition[] }>("/api/development-samples/reasons"),
+  developmentList: (decision: DevelopmentDecision | "" = "", page = 1) =>
+    request<{ total: number; page: number; pageSize: number; rows: DevelopmentSample[] }>(`/api/development-samples?decision=${decision}&page=${page}`),
+  developmentCreate: (inputs: string[]) => request<{ rows: { input: string; asin?: string; inserted?: boolean; linkedProduct?: boolean; error?: string }[] }>("/api/development-samples", json("POST", { inputs })),
+  developmentSample: (asin: string) => request<DevelopmentSample>(`/api/development-samples/${encodeURIComponent(asin)}`),
+  developmentRevisions: (asin: string) => request<{ rows: DevelopmentRevision[] }>(`/api/development-samples/${encodeURIComponent(asin)}/revisions`),
+  developmentFacts: (asin: string, facts: Partial<DevelopmentFacts>) => request<DevelopmentSample>(`/api/development-samples/${encodeURIComponent(asin)}/facts`, json("PATCH", { facts })),
+  developmentFetch: (asin: string) => request<DevelopmentSample>(`/api/development-samples/${encodeURIComponent(asin)}/facts/fetch`, json("POST", {})),
+  developmentSuggest: (asin: string) => request<DevelopmentSample>(`/api/development-samples/${encodeURIComponent(asin)}/suggestions`, json("POST", {})),
+  developmentConfirm: (asin: string, data: { decision: DevelopmentDecision; confirmedReasons: DevelopmentReason[]; referenceScope: ReferenceScope; specificFeature: string; note: string; suggestionId: string | null; withdraw?: boolean }) =>
+    request<{ sample: DevelopmentSample; changed: boolean }>(`/api/development-samples/${encodeURIComponent(asin)}/confirmation`, json("PUT", data)),
   facets: (space: string) => request<Facets>(`/api/facets?space=${encodeURIComponent(space)}`),
   list: (space: string, filters: Partial<Filters>, page: number, pageSize = 60) =>
     request<ListResponse>(`/api/products?${buildQuery(space, filters, { page, pageSize })}`),

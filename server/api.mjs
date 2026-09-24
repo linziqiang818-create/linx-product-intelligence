@@ -6,15 +6,20 @@ import { GROUP_LABELS } from "./rules.mjs";
 import { categoryDictionary } from "./category-zh.mjs";
 import { buildWorkbook, parseWorkbook, toCsv, workbookToBuffer } from "./importer.mjs";
 import { bdConfigured, bdFetchMarkdown } from "./bd.mjs";
-import { getLedger, normalizeDiscoveryConfig, runDiscovery } from "./discover.mjs";
+import { getLedger, normalizeDiscoveryConfig, parseDetailPage, reserveDiscoveryRequest, runDiscovery } from "./discover.mjs";
+import { createDevelopmentStore, factsFromDetail } from "./development.mjs";
+import { REASONS } from "./development-reasons.mjs";
+import { aiConfig } from "./ai-provider.mjs";
+import { suggestForSample } from "./development-suggestion.mjs";
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 80 * 1024 * 1024 } });
 
 const asList = (value) => (Array.isArray(value) ? value : String(value ?? "").split(",")).map((s) => String(s).trim()).filter(Boolean);
 
-export function createApi(store) {
+export function createApi(store, { fetchDevelopmentPage = bdFetchMarkdown, suggestDevelopment = suggestForSample } = {}) {
   const api = express.Router();
   api.use(express.json({ limit: "80mb" }));
+  const development = createDevelopmentStore(store);
 
   api.get("/status", (_req, res) => {
     res.json({
@@ -26,7 +31,60 @@ export function createApi(store) {
       profile: store.kvGet("profile"),
       groupLabels: GROUP_LABELS,
       categoryZh: categoryDictionary,
+      aiConfigured: aiConfig().configured,
     });
+  });
+
+  api.get("/development-samples/reasons", (_req, res) => res.json({ reasons: REASONS }));
+  api.get("/development-samples", (req, res) => {
+    try { res.json(development.list(req.query)); }
+    catch (error) { res.status(400).json({ error: error.message }); }
+  });
+  api.post("/development-samples", (req, res) => {
+    try { res.json({ rows: development.create(req.body?.inputs) }); }
+    catch (error) { res.status(400).json({ error: error.message }); }
+  });
+  api.get("/development-samples/:asin", (req, res) => {
+    const sample = development.get(String(req.params.asin).toUpperCase());
+    if (!sample) return res.status(404).json({ error: "开发样本不存在" });
+    res.json(sample);
+  });
+  api.get("/development-samples/:asin/revisions", (req, res) => {
+    const asin = String(req.params.asin).toUpperCase();
+    if (!development.get(asin)) return res.status(404).json({ error: "开发样本不存在" });
+    res.json({ rows: development.revisions(asin) });
+  });
+  api.patch("/development-samples/:asin/facts", (req, res) => {
+    try { res.json(development.updateFacts(String(req.params.asin).toUpperCase(), req.body?.facts)); }
+    catch (error) { res.status(400).json({ error: error.message }); }
+  });
+  api.post("/development-samples/:asin/facts/fetch", async (req, res) => {
+    const asin = String(req.params.asin).toUpperCase();
+    const sample = development.get(asin);
+    if (!sample) return res.status(404).json({ error: "开发样本不存在" });
+    if (!bdConfigured() && fetchDevelopmentPage === bdFetchMarkdown) return res.status(503).json({ error: "Bright Data 未配置，请人工补录产品事实" });
+    try {
+      reserveDiscoveryRequest(store, "detail");
+      const detail = parseDetailPage(await fetchDevelopmentPage(sample.sourceUrl), asin);
+      if (!detail.title) throw new Error("Amazon 详情没有可识别的标题，请人工补录");
+      // 只修改样本事实，不调用正式产品导入或评分管道。
+      res.json(development.updateFacts(asin, factsFromDetail(detail), "amazon"));
+    } catch (error) { res.status(502).json({ error: error.message }); }
+  });
+  api.post("/development-samples/:asin/suggestions", async (req, res) => {
+    const asin = String(req.params.asin).toUpperCase();
+    const sample = development.get(asin);
+    if (!sample) return res.status(404).json({ error: "开发样本不存在" });
+    if (!sample.facts.title) return res.status(400).json({ error: "请先抓取或填写产品标题" });
+    if (!aiConfig().configured && suggestDevelopment === suggestForSample) return res.status(503).json({ error: "AI 未配置，可直接人工标注" });
+    try {
+      const output = await suggestDevelopment(sample, store.getRules());
+      res.json(development.addSuggestion(asin, { ...output, factsVersion: sample.factsVersion }));
+    } catch (error) { res.status(503).json({ error: error.message }); }
+  });
+  api.put("/development-samples/:asin/confirmation", (req, res) => {
+    try { res.json(development.confirm(String(req.params.asin).toUpperCase(), req.body)); }
+    catch (error) { res.status(400).json({ error: error.message }); }
   });
 
   api.get("/facets", (req, res) => res.json(store.facets(String(req.query.space ?? "1"))));
@@ -253,7 +311,7 @@ export function createApi(store) {
     const data = req.body;
     if (!data || !Array.isArray(data.products)) return res.status(400).json({ error: "备份文件无效" });
     // 兼容旧版备份（products/favorites/calibration）
-    const result = data.version === 2 ? store.restore(data, req.body.mode === "merge" ? "merge" : "replace") : store.migrateLegacy(data);
+    const result = data.version === 2 || data.version === 3 ? store.restore(data, req.body.mode === "merge" ? "merge" : "replace") : store.migrateLegacy(data);
     store.recomputeAll();
     res.json({ ok: true, ...result, counts: store.counts() });
   });

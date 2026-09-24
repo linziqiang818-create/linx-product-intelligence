@@ -135,6 +135,14 @@ export default function DetailDrawer() {
                 </button>
                 <TierActions product={p} size={13} />
                 <MoveMenu product={p} />
+                <a className="btn btn-sm" href={`#/development?asin=${encodeURIComponent(p.asin)}`} onClick={async (event) => {
+                  event.preventDefault();
+                  try {
+                    await api.developmentCreate([p.asin]);
+                    openDetail(null);
+                    window.location.hash = `/development?asin=${encodeURIComponent(p.asin)}`;
+                  } catch (error) { notify((error as Error).message, "error"); }
+                }}>加入开发样本</a>
               </div>
               <section className="panel">
                 <h4>所在层级</h4>

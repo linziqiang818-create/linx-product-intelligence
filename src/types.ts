@@ -8,7 +8,58 @@ export type Tier = "brain" | "pool" | "floor";
 /** 移动目标：auto=恢复自动判定 */
 export type MoveTarget = "brain" | "pool" | "library" | "auto";
 export type SpaceKey = "1" | "2" | "3" | "favorites";
-export type ViewKey = SpaceKey | "settings" | "notebook" | "discover";
+export type ViewKey = SpaceKey | "settings" | "notebook" | "discover" | "development";
+
+export type DevelopmentDecision = "unconfirmed" | "want" | "maybe" | "reject";
+export type ReferenceScope = "unspecified" | "whole" | "local" | "both";
+export type DevelopmentReason = {
+  reason_code: string;
+  category: string;
+  scope: "whole" | "local";
+  detail: string;
+  evidenceFields?: string[];
+};
+export type DevelopmentFacts = Record<string, string | number | null>;
+export type DevelopmentSuggestion = {
+  id: string;
+  reasons: DevelopmentReason[];
+  unknowns: string[];
+  provider: string;
+  model: string;
+  createdAt: string;
+  stale: boolean;
+};
+export type DevelopmentRevision = {
+  id: string;
+  decision: DevelopmentDecision;
+  confirmedReasons: DevelopmentReason[];
+  referenceScope: ReferenceScope;
+  specificFeature: string;
+  note: string;
+  suggestionId: string | null;
+  aiSuggestedReasons: DevelopmentReason[];
+  aiUnknowns: string[];
+  createdAt: string;
+};
+export type DevelopmentSample = {
+  asin: string;
+  sourceUrl: string;
+  facts: DevelopmentFacts;
+  factsSource: string;
+  factsObservedAt: string;
+  factsVersion: number;
+  decision: DevelopmentDecision;
+  confirmedReasons: DevelopmentReason[];
+  referenceScope: ReferenceScope;
+  specificFeature: string;
+  note: string;
+  confirmedAt: string | null;
+  createdAt: string;
+  updatedAt: string;
+  linkedProduct: boolean;
+  suggestion: DevelopmentSuggestion | null;
+};
+export type DevelopmentReasonDefinition = { code: string; category: string; label: string };
 
 /** 自动升入第二大脑的正向偏好分门槛（与 server/preference.mjs 保持一致） */
 export const BRAIN_AUTO_THRESHOLD = 40;
@@ -192,6 +243,7 @@ export type Profile = { eventCount: number; strength: number; builtAt?: string; 
 
 export type Status = {
   ok: boolean;
+  aiConfigured: boolean;
   counts: Counts;
   seeded: unknown;
   migratedAt: string | null;

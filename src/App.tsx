@@ -5,11 +5,12 @@ import SpacePage from "./pages/SpacePage";
 import SettingsPage from "./pages/SettingsPage";
 import NotebookPage from "./pages/NotebookPage";
 import DiscoveryPage from "./pages/DiscoveryPage";
+import DevelopmentPage from "./pages/DevelopmentPage";
 import DetailDrawer from "./components/DetailDrawer";
 import CompareModal from "./components/CompareModal";
 import MigrationBanner from "./components/MigrationBanner";
 
-const VIEWS: ViewKey[] = ["1", "2", "3", "favorites", "notebook", "discover", "settings"];
+const VIEWS: ViewKey[] = ["1", "2", "3", "favorites", "notebook", "discover", "development", "settings"];
 
 function viewFromHash(): ViewKey {
   const key = window.location.hash.replace(/^#\/?/, "").split("?")[0] as ViewKey;
@@ -56,6 +57,7 @@ function TopBar({ view, go }: { view: ViewKey; go: (v: ViewKey) => void }) {
         ))}
       </nav>
       <div className="topbar-right">
+        <button className={`nav-pill ${view === "development" ? "active" : ""}`} onClick={() => go("development")} title="独立记录值得开发的产品与原因，不影响第二大脑排序">开发样本</button>
         <button className={`nav-pill ${view === "favorites" ? "active" : ""}`} onClick={() => go("favorites")}>
           <HeartIcon filled={view === "favorites"} />
           收藏夹
@@ -152,7 +154,7 @@ function Shell() {
       <TopBar view={view} go={go} />
       <MigrationBanner />
       <main className="main">
-        {view === "settings" ? <SettingsPage /> : view === "notebook" ? <NotebookPage /> : view === "discover" ? <DiscoveryPage /> : <SpacePage key={view} space={view} />}
+        {view === "settings" ? <SettingsPage /> : view === "notebook" ? <NotebookPage /> : view === "discover" ? <DiscoveryPage /> : view === "development" ? <DevelopmentPage /> : <SpacePage key={view} space={view} />}
       </main>
       <DetailDrawer />
       <CompareModal />

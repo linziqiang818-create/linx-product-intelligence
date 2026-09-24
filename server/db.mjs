@@ -83,6 +83,48 @@ CREATE TABLE IF NOT EXISTS visual_vectors (
   model TEXT NOT NULL,
   computed_at TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS development_samples (
+  asin TEXT PRIMARY KEY,
+  source_url TEXT NOT NULL,
+  facts_json TEXT NOT NULL DEFAULT '{}',
+  facts_source TEXT NOT NULL DEFAULT 'pending',
+  facts_observed_at TEXT NOT NULL DEFAULT '',
+  facts_version INTEGER NOT NULL DEFAULT 1,
+  decision TEXT NOT NULL DEFAULT 'unconfirmed' CHECK (decision IN ('unconfirmed', 'want', 'maybe', 'reject')),
+  confirmed_reasons_json TEXT NOT NULL DEFAULT '[]',
+  reference_scope TEXT NOT NULL DEFAULT 'unspecified',
+  specific_feature TEXT NOT NULL DEFAULT '',
+  note TEXT NOT NULL DEFAULT '',
+  confirmed_at TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_development_samples_decision ON development_samples(decision, updated_at);
+CREATE TABLE IF NOT EXISTS development_suggestions (
+  id TEXT PRIMARY KEY,
+  asin TEXT NOT NULL,
+  facts_version INTEGER NOT NULL,
+  raw_output TEXT NOT NULL,
+  suggestions_json TEXT NOT NULL,
+  unknowns_json TEXT NOT NULL,
+  provider TEXT NOT NULL,
+  model TEXT NOT NULL,
+  prompt_version TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_development_suggestions_asin ON development_suggestions(asin, created_at);
+CREATE TABLE IF NOT EXISTS development_sample_revisions (
+  id TEXT PRIMARY KEY,
+  asin TEXT NOT NULL,
+  decision TEXT NOT NULL,
+  confirmed_reasons_json TEXT NOT NULL,
+  reference_scope TEXT NOT NULL,
+  specific_feature TEXT NOT NULL,
+  note TEXT NOT NULL,
+  suggestion_id TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_development_revisions_asin ON development_sample_revisions(asin, created_at);
 `;
 
 // 三层池成员谓词（p 为 products 别名）。漏斗语义（2026-09-18 用户定稿）：
@@ -863,12 +905,15 @@ export function createStore(dbPath) {
 
   function backup() {
     return {
-      version: 2,
+      version: 3,
       exportedAt: now(),
       products: db.prepare(`SELECT asin, ${[...TEXT_FIELDS, ...NUMBER_FIELDS].join(", ")}, extra, interest, tier, discoveryState FROM products`).all(),
       favorites: db.prepare("SELECT * FROM favorites").all(),
       overrides: db.prepare("SELECT * FROM overrides").all(),
       feedback_events: db.prepare("SELECT * FROM feedback_events").all(),
+      development_samples: db.prepare("SELECT * FROM development_samples").all(),
+      development_suggestions: db.prepare("SELECT * FROM development_suggestions").all(),
+      development_sample_revisions: db.prepare("SELECT * FROM development_sample_revisions").all(),
       rules: getRules(),
     };
   }
@@ -877,7 +922,7 @@ export function createStore(dbPath) {
     db.exec("BEGIN");
     try {
       if (mode === "replace") {
-        db.exec("DELETE FROM products; DELETE FROM favorites; DELETE FROM overrides; DELETE FROM feedback_events;");
+        db.exec("DELETE FROM products; DELETE FROM favorites; DELETE FROM overrides; DELETE FROM feedback_events; DELETE FROM development_samples; DELETE FROM development_suggestions; DELETE FROM development_sample_revisions;");
       }
       db.exec("COMMIT");
     } catch (error) {
@@ -892,6 +937,27 @@ export function createStore(dbPath) {
       for (const f of data.favorites ?? []) db.prepare("INSERT OR IGNORE INTO favorites (asin, created_at) VALUES (?, ?)").run(f.asin, f.created_at ?? now());
       for (const o of data.overrides ?? []) db.prepare("INSERT OR REPLACE INTO overrides (asin, action, reason, created_at) VALUES (?, ?, ?, ?)").run(o.asin, o.action, o.reason ?? "", o.created_at ?? now());
       for (const e of data.feedback_events ?? []) db.prepare("INSERT INTO feedback_events (asin, action, weight, reason, prev, source, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)").run(e.asin, e.action, e.weight, e.reason ?? "", e.prev ?? "", e.source ?? "restore", e.created_at ?? now());
+      const sampleSql = db.prepare(`INSERT INTO development_samples
+        (asin, source_url, facts_json, facts_source, facts_observed_at, facts_version, decision, confirmed_reasons_json,
+         reference_scope, specific_feature, note, confirmed_at, created_at, updated_at)
+        VALUES (@asin, @source_url, @facts_json, @facts_source, @facts_observed_at, @facts_version, @decision,
+                @confirmed_reasons_json, @reference_scope, @specific_feature, @note, @confirmed_at, @created_at, @updated_at)
+        ON CONFLICT(asin) DO UPDATE SET
+          source_url = excluded.source_url, facts_json = excluded.facts_json, facts_source = excluded.facts_source,
+          facts_observed_at = excluded.facts_observed_at, facts_version = excluded.facts_version,
+          decision = excluded.decision, confirmed_reasons_json = excluded.confirmed_reasons_json,
+          reference_scope = excluded.reference_scope, specific_feature = excluded.specific_feature, note = excluded.note,
+          confirmed_at = excluded.confirmed_at, updated_at = excluded.updated_at
+        WHERE excluded.updated_at > development_samples.updated_at`);
+      for (const sample of data.development_samples ?? []) sampleSql.run(sample);
+      const suggestionSql = db.prepare(`INSERT OR IGNORE INTO development_suggestions
+        (id, asin, facts_version, raw_output, suggestions_json, unknowns_json, provider, model, prompt_version, created_at)
+        VALUES (@id, @asin, @facts_version, @raw_output, @suggestions_json, @unknowns_json, @provider, @model, @prompt_version, @created_at)`);
+      for (const suggestion of data.development_suggestions ?? []) suggestionSql.run(suggestion);
+      const revisionSql = db.prepare(`INSERT OR IGNORE INTO development_sample_revisions
+        (id, asin, decision, confirmed_reasons_json, reference_scope, specific_feature, note, suggestion_id, created_at)
+        VALUES (@id, @asin, @decision, @confirmed_reasons_json, @reference_scope, @specific_feature, @note, @suggestion_id, @created_at)`);
+      for (const revision of data.development_sample_revisions ?? []) revisionSql.run(revision);
       db.exec("COMMIT");
     } catch (error) {
       db.exec("ROLLBACK");

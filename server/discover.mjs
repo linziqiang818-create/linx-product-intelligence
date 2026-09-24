@@ -66,12 +66,19 @@ export function getLedger(store, now = Date.now()) {
   if (ledger.month === fresh.month) fresh.monthTotal = ledger.monthTotal ?? 0;
   return fresh;
 }
-function spend(store, ledger, kind) {
-  ledger[kind] = (ledger[kind] ?? 0) + 1;
-  ledger.monthTotal = (ledger.monthTotal ?? 0) + 1;
-  store.kvSet("discoveryLedger", ledger);
-}
 const monthlyExhausted = (ledger, config) => config.monthlyRequestCap > 0 && (ledger.monthTotal ?? 0) >= config.monthlyRequestCap;
+
+// 自动采集和开发样本共用同一本账；请求发出前同步预留，避免异步等待期间互相覆盖计数。
+export function reserveDiscoveryRequest(store, kind, config = normalizeDiscoveryConfig(store.kvGet("discoveryConfig")), now = Date.now()) {
+  if (kind !== "search" && kind !== "detail") throw new Error("请求类型无效");
+  const ledger = getLedger(store, now);
+  if (monthlyExhausted(ledger, config)) throw new Error("Bright Data 月度额度已用完");
+  if (ledger[kind] >= (kind === "search" ? config.dailySearchLimit : config.dailyDetailLimit)) throw new Error("Bright Data 今日详情/搜索额度已用完");
+  ledger[kind]++;
+  ledger.monthTotal++;
+  store.kvSet("discoveryLedger", ledger);
+  return ledger;
+}
 
 // ---------- 解析器：容错优先，抓不到就留空（不瞎猜），字段缺失让正式规则和用户去判断 ----------
 
@@ -253,7 +260,7 @@ export async function runDiscovery(store, fetchPage, options = {}) {
       if (ledger.detail >= config.dailyDetailLimit || monthlyExhausted(ledger, config)) break;
       await pause();
       try {
-        spend(store, ledger, "detail");
+        Object.assign(ledger, reserveDiscoveryRequest(store, "detail", config, now));
         report.detailRequests++;
         const detail = parseDetailPage(await fetchPage(`https://www.amazon.com/dp/${asin}`), asin);
         if (!detail.title) { report.errors.push(`${asin}：刷新时没解析到页面，跳过`); continue; }
@@ -285,7 +292,7 @@ export async function runDiscovery(store, fetchPage, options = {}) {
     if (ledger.detail >= config.dailyDetailLimit) { report.errors.push("详情额度用完，剩余候选下次再跑"); break; }
     const stat = { keyword, found: 0, newCount: 0, kept: 0, skippedExisting: 0, filtered: 0, dupImage: 0 };
     try {
-      spend(store, ledger, "search");
+      Object.assign(ledger, reserveDiscoveryRequest(store, "search", config, now));
       report.searchRequests++;
       const listings = parseSearchPage(await fetchPage(`https://www.amazon.com/s?k=${encodeURIComponent(keyword)}`));
       stat.found = listings.length;
@@ -305,7 +312,7 @@ export async function runDiscovery(store, fetchPage, options = {}) {
         if (ledger.detail >= config.dailyDetailLimit) { report.errors.push("详情额度用完，剩余候选下次再跑"); break; }
         await pause();
         try {
-          spend(store, ledger, "detail");
+          Object.assign(ledger, reserveDiscoveryRequest(store, "detail", config, now));
           report.detailRequests++;
           const detail = parseDetailPage(await fetchPage(`https://www.amazon.com/dp/${candidate.asin}`), candidate.asin);
           if (!detail.title) { stat.filtered++; report.errors.push(`${candidate.asin}：详情页没解析到标题，跳过`); continue; }
